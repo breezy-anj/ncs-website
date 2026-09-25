@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import AboutSection from "../components/AboutSection"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 
@@ -184,9 +183,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
             </div>
           </div>
 
-          {/* About Section ("Where Ideas Go Digital") */}
-          <AboutSection />
-
           <div
             className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[1400px]"
             data-node-id="1:48"
@@ -367,7 +363,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </p>
                 </div>
                 <div
-                  className="col-1 ml-[965px] mt-0 relative rounded-[16px] row-1 size-[120px]"
                   data-node-id="1:156"
                   data-name="badge-1"
                   className="col-1 ml-[965px] mt-0 relative rounded-[16px] row-1 size-[120px] transition-all duration-300 hover:scale-110 hover:rotate-3 hover:shadow-xl cursor-pointer"
@@ -381,7 +376,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <div
-                  className="col-1 h-[120px] ml-[564px] mt-[151px] relative rounded-[16px] row-1 w-[119.9px]"
                   data-node-id="1:157"
                   data-name="badge-2"
                   className="col-1 h-[120px] ml-[564px] mt-[151px] relative rounded-[16px] row-1 w-[119.9px] transition-all duration-300 hover:scale-110 hover:-rotate-3 hover:shadow-xl cursor-pointer"
@@ -395,7 +389,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <div
-                  className="col-1 ml-[1138px] mt-[339px] relative rounded-[16px] row-1 size-[120px]"
                   data-node-id="1:158"
                   data-name="badge-3"
                   className="col-1 ml-[1138px] mt-[339px] relative rounded-[16px] row-1 size-[120px] transition-all duration-300 hover:scale-110 hover:rotate-3 hover:shadow-xl cursor-pointer"
@@ -409,7 +402,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <div
-                  className="col-1 h-[110.625px] ml-[36px] mt-[120px] relative rounded-[20px] row-1 w-[110.25px]"
                   data-node-id="1:159"
                   data-name="badge-4"
                   className="col-1 h-[110.625px] ml-[36px] mt-[120px] relative rounded-[20px] row-1 w-[110.25px] transition-all duration-300 hover:scale-110 hover:-rotate-3 hover:shadow-xl cursor-pointer"
