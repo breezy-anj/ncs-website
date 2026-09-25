@@ -202,9 +202,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
             >
               {/* Row 1: PROGRAMMING + Yellow Card */}
               <div
-                className="group flex items-center justify-between w-full cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex items-center justify-between w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] relative"
                 data-node-id="1:52"
               >
+                {/* Hover Description Card */}
+                <div className="absolute top-1/2 left-[40%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                  <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
+                    <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Programming</span>
+                    <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
+                      Where problem-solving meets pure creativity. We take tricky problems and turn them into clean, working code,taking abstract logic and turning it into tools that actually work.
+                    </p>
+                  </div>
+                </div>
                 <p
                   className="font-['Inter:Bold'] font-bold leading-none not-italic text-[156.816px] text-white tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300"
                   data-node-id="1:53"
@@ -226,11 +235,20 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </div>
               </div>
 
-              {/* Row 2: Purple Card + DEVLOPMENT */}
+              {/* Row 2: Purple Card + DEVELOPMENT */}
               <div
-                className="group flex items-center justify-start gap-[35px] w-full cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex items-center justify-start gap-[35px] w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] relative"
                 data-node-id="1:56"
               >
+                {/* Hover Description Card */}
+                <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                  <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
+                    <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Development</span>
+                    <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
+                      From a rough idea to something you can actually use. We build, tweak, and polish, creating web and mobile apps that bring fresh concepts to life.
+                    </p>
+                  </div>
+                </div>
                 <div
                   className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
                   data-node-id="1:58"
@@ -248,15 +266,24 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   className="font-['Inter:Bold'] font-bold leading-none not-italic text-[156.816px] text-white tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300"
                   data-node-id="1:57"
                 >
-                  DEVLOPMENT
+                  DEVELOPMENT
                 </p>
               </div>
 
               {/* Row 3: DESIGNING + Pink Card */}
               <div
-                className="group flex items-center justify-center gap-[35px] w-full ml-[60px] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex items-center justify-center gap-[35px] w-full ml-[60px] cursor-pointer transition-all duration-300 hover:scale-[1.01] relative"
                 data-node-id="1:60"
               >
+                {/* Hover Description Card */}
+                <div className="absolute top-1/2 left-[40%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                  <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
+                    <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Design</span>
+                    <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
+                      Giving ideas a visual voice. We focus on clean visuals, good user experience, and smart UI, creating designs that look great and feel effortless to use.
+                    </p>
+                  </div>
+                </div>
                 <p
                   className="font-['Inter:Bold'] font-bold leading-none not-italic text-[156.816px] text-white tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300"
                   data-node-id="1:61"
@@ -280,9 +307,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 4: Green Card + TECHNICAL */}
               <div
-                className="group flex items-center justify-start gap-[35px] w-full ml-[70px] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex items-center justify-start gap-[35px] w-full ml-[70px] cursor-pointer transition-all duration-300 hover:scale-[1.01] relative"
                 data-node-id="1:64"
               >
+                {/* Hover Description Card */}
+                <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                  <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
+                    <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Technical</span>
+                    <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
+                      Exploring what's coming next in tech. We dive hands-on into AI, open-source projects, and new tools, figuring out how the newest tech works under the hood.
+                    </p>
+                  </div>
+                </div>
                 <div
                   className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(179,253,68,0.4)]"
                   data-node-id="1:66"
