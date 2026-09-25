@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import AboutSection from "../components/AboutSection"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 
@@ -182,6 +183,10 @@ export default function Home({ activePage = "Home", onNavigate }) {
               />
             </div>
           </div>
+
+          {/* About Section ("Where Ideas Go Digital") */}
+          <AboutSection />
+
           <div
             className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[1400px]"
             data-node-id="1:48"

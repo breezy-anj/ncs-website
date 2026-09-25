@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
+import About from "./pages/About"
 import Project from "./pages/Project"
 import Teams from "./pages/Teams"
 import Alumni from "./pages/Alumni"
@@ -11,6 +12,7 @@ export default function App() {
   const location = useLocation()
   const getPageFromPath = (path) => {
     if (path === "/") return "Home"
+    if (path === "/about") return "About"
     if (path === "/project") return "Project"
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
@@ -90,6 +92,7 @@ export default function App() {
         >
           <Routes>
             <Route path="/" element={<Home activePage={page} />} />
+            <Route path="/about" element={<About activePage={page} />} />
             <Route path="/project" element={<Project activePage={page} />} />
             <Route path="/team" element={<Teams activePage={page} />} />
             <Route path="/alumni" element={<Alumni activePage={page} />} />
