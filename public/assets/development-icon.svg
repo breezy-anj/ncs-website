@@ -1,0 +1,18 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Browser Window Frame -->
+  <rect x="16" y="16" width="88" height="88" rx="18" stroke="black" stroke-width="10" stroke-linejoin="round" />
+  
+  <!-- Header Divider Line -->
+  <line x1="16" y1="42" x2="104" y2="42" stroke="black" stroke-width="8.5" />
+  
+  <!-- Header Dots -->
+  <circle cx="32" cy="29" r="4.5" fill="black" />
+  <circle cx="45" cy="29" r="4.5" fill="black" />
+  
+  <!-- Code Brackets < > Centered at (60, 73) -->
+  <!-- Left Bracket < -->
+  <path d="M51 60L38 73L51 86" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Right Bracket > -->
+  <path d="M69 60L82 73L69 86" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

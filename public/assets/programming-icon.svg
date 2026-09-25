@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Monitor Outer Bezel -->
+  <rect x="16" y="20" width="88" height="60" rx="17" stroke="black" stroke-width="10" stroke-linejoin="round" />
+  
+  <!-- < / > code centered at (60, 50) -->
+  <!-- Left bracket < -->
+  <path d="M37 40L25 50L37 60" stroke="black" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Slash / -->
+  <path d="M64 38L56 62" stroke="black" stroke-width="9" stroke-linecap="round" />
+  
+  <!-- Right bracket > -->
+  <path d="M83 40L95 50L83 60" stroke="black" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Stand Neck -->
+  <path d="M60 80V98" stroke="black" stroke-width="10.5" stroke-linecap="round" />
+  
+  <!-- Stand Base -->
+  <path d="M38 98H82" stroke="black" stroke-width="10.5" stroke-linecap="round" />
+</svg>
