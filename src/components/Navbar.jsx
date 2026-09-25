@@ -29,9 +29,8 @@ export default function Navbar() {
       }
     }
     if (page === "About") {
-      const aboutEl = document.getElementById("about")
-      if (aboutEl) {
-        aboutEl.scrollIntoView({ behavior: "smooth" })
+      if (location.pathname === "/about") {
+        window.scrollTo({ top: 0, behavior: "smooth" })
       } else {
         navigate("/about")
       }
