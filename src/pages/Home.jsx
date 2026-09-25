@@ -206,7 +206,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:52"
               >
                 {/* Hover Description Card */}
-                <div className="absolute top-1/2 left-[40%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                <div className="absolute top-1/2 right-[5%] -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
                   <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
                     <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Programming</span>
                     <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
@@ -241,7 +241,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:56"
               >
                 {/* Hover Description Card */}
-                <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                <div className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
                   <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
                     <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Development</span>
                     <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
@@ -276,7 +276,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:60"
               >
                 {/* Hover Description Card */}
-                <div className="absolute top-1/2 left-[40%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                <div className="absolute top-1/2 right-[5%] -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
                   <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
                     <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Design</span>
                     <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
@@ -311,7 +311,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:64"
               >
                 {/* Hover Description Card */}
-                <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
+                <div className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-[-50%]">
                   <div className="bg-[#2a2a2a]/95 backdrop-blur-xl border border-white/10 rounded-[24px] p-[40px] w-[600px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-4">
                     <span className="text-white/60 text-[14px] font-['Space_Mono',monospace] uppercase tracking-[2px]">Technical</span>
                     <p className="text-white/95 text-[22px] font-['Helvetica_Neue:Regular'] leading-[1.6]">
