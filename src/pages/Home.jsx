@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
+import { CircularGallery } from "../components/ui/circular-gallery"
 
 const assetPathPrefix = "/assets"
 const imgFrame1171276288 = `${assetPathPrefix}/4f846.png`
@@ -90,6 +91,75 @@ const imgLine1 = `${assetPathPrefix}/2d226.svg`
 const imgProgrammingIcon = `${assetPathPrefix}/programming-icon.svg`
 const imgDevelopmentIcon = `${assetPathPrefix}/development-icon.svg`
 const imgTechnicalIcon = `${assetPathPrefix}/technical-icon.svg`
+
+const eventGalleryItems = [
+  {
+    common: "Orientation Programme",
+    binomial: "Welcome to Nibble Computer Society",
+    href: "https://www.instagram.com/p/DNxMB5Z0g6w/?stkn=MzRlODBiNWFlZA==",
+    photo: {
+      url: imgRectangle45,
+      text: "Orientation Programme event poster",
+      by: "Nibble Computer Society",
+    },
+  },
+  {
+    common: "Nibble Month Workshop",
+    binomial: "Learn, build, and create together",
+    href: "https://www.instagram.com/p/DQzn6p7EvXs/?stkn=MzRlODBiNWFlZA==",
+    photo: {
+      url: imgRectangle48,
+      text: "Nibble Month Workshop event poster",
+      by: "Nibble Computer Society",
+    },
+  },
+  {
+    common: "INOUT Hacks",
+    binomial: "Hackathon by Nibble Computer Society",
+    href: "https://www.instagram.com/reel/DXtnr23iQ6Y/?stkn=MzRlODBiNWFlZA==",
+    photo: {
+      url: imgRectangle50,
+      text: "INOUT Hacks event poster",
+      by: "Nibble Computer Society",
+    },
+  },
+  {
+    common: "ATOMS Design Workshop",
+    binomial: "Workshop Series · Week 2",
+    photo: {
+      url: img581563659182268897793053042502331000629764086N1,
+      text: "ATOMS design workshop poster",
+      by: "Nibble Computer Society",
+    },
+  },
+  {
+    common: "Blind Code",
+    binomial: "Zealicon 2025",
+    photo: {
+      url: img623285865179398910581122732442702553504556033N1,
+      text: "Blind Code event poster for Zealicon 2025",
+      by: "Nibble Computer Society",
+    },
+  },
+  {
+    common: "Craftli",
+    binomial: "Zealicon 2025 · Creative Workshop",
+    photo: {
+      url: img625070985180983354599209501403270473272173120N1,
+      text: "Craftli creative workshop poster",
+      by: "Nibble Computer Society",
+    },
+  },
+  {
+    common: "Annual Recruitment",
+    binomial: "Nibble Computer Society · 2026",
+    photo: {
+      url: img639494071182369026933053048550229231404010493N1,
+      text: "Nibble Computer Society annual recruitment poster for 2026",
+      by: "Nibble Computer Society",
+    },
+  },
+]
 
 export default function Home({ activePage = "Home", onNavigate }) {
   return (
@@ -345,179 +415,20 @@ export default function Home({ activePage = "Home", onNavigate }) {
               EVENTS
             </p>
             <div
-              className="content-stretch flex flex-col gap-[76px] items-center relative shrink-0 w-full"
+              className="content-stretch flex flex-col gap-[32px] items-center relative shrink-0 w-full"
               data-node-id="1:153"
             >
-              <div
-                className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
-                data-node-id="1:154"
-              >
-                <div
-                  className="[word-break:break-word] col-1 font-['Inter:Semi_Bold'] font-semibold ml-0 mt-[15px] not-italic relative row-1 text-[128px] text-center text-white tracking-[-5.12px] whitespace-nowrap"
-                  data-node-id="1:155"
-                >
-                  <p className="leading-[normal] mb-0 whitespace-pre">{`CREATING `}</p>
-                  <p className="leading-[normal] mb-0 whitespace-pre">{`COLLEGE EVENTS THAT `}</p>
-                  <p className="leading-[normal] whitespace-pre">
-                    LEAVE A MARK.
-                  </p>
-                </div>
-                <div
-                  data-node-id="1:156"
-                  data-name="badge-1"
-                  className="col-1 ml-[965px] mt-0 relative rounded-[16px] row-1 size-[120px] transition-all duration-300 hover:scale-110 hover:rotate-3 hover:shadow-xl cursor-pointer"
-                >
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[16px]">
-                    <img
-                      alt=""
-                      className="absolute h-[135.12%] left-[-4.25%] max-w-none top-0 w-[108.05%]"
-                      src={img581563659182268897793053042502331000629764086N1}
-                    />
-                  </div>
-                </div>
-                <div
-                  data-node-id="1:157"
-                  data-name="badge-2"
-                  className="col-1 h-[120px] ml-[564px] mt-[151px] relative rounded-[16px] row-1 w-[119.9px] transition-all duration-300 hover:scale-110 hover:-rotate-3 hover:shadow-xl cursor-pointer"
-                >
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[16px]">
-                    <img
-                      alt=""
-                      className="absolute h-[149.38%] left-[-10.34%] max-w-none top-0 w-[119.6%]"
-                      src={img623285865179398910581122732442702553504556033N1}
-                    />
-                  </div>
-                </div>
-                <div
-                  data-node-id="1:158"
-                  data-name="badge-3"
-                  className="col-1 ml-[1138px] mt-[339px] relative rounded-[16px] row-1 size-[120px] transition-all duration-300 hover:scale-110 hover:rotate-3 hover:shadow-xl cursor-pointer"
-                >
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[16px]">
-                    <img
-                      alt=""
-                      className="absolute h-[154.91%] left-[-11.67%] max-w-none top-[-22.2%] w-[123.92%]"
-                      src={img625070985180983354599209501403270473272173120N1}
-                    />
-                  </div>
-                </div>
-                <div
-                  data-node-id="1:159"
-                  data-name="badge-4"
-                  className="col-1 h-[110.625px] ml-[36px] mt-[120px] relative rounded-[20px] row-1 w-[110.25px] transition-all duration-300 hover:scale-110 hover:-rotate-3 hover:shadow-xl cursor-pointer"
-                >
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px]">
-                    <img
-                      alt=""
-                      className="absolute h-[162.16%] left-[-13.11%] max-w-none top-[-15.43%] w-[122.03%]"
-                      src={img639494071182369026933053048550229231404010493N1}
-                    />
-                  </div>
-                </div>
+              <div className="font-['Inter:Semi_Bold'] font-semibold text-[128px] text-center text-white tracking-[-5.12px] leading-[1.08]">
+                <p className="mb-0">CREATING</p>
+                <p className="mb-0">COLLEGE EVENTS THAT</p>
+                <p className="mb-0">LEAVE A MARK.</p>
               </div>
-              <div
-                className="content-stretch flex gap-[80px] items-center relative shrink-0"
-                data-node-id="1:160"
-              >
-                {/* Event Card 1: OP */}
-                <a
-                  href="https://www.instagram.com/p/DNxMB5Z0g6w/?stkn=MzRlODBiNWFlZA=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Orientation Programme on Instagram"
-                  className="bg-white h-[460px] overflow-clip relative rounded-[28.8px] shrink-0 w-[395px] group cursor-pointer transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(255,255,255,0.2)] block no-underline"
-                  data-node-id="1:161"
-                >
-                  <div
-                    className="-translate-x-1/2 absolute h-[352.8px] left-[calc(50%-0.17px)] rounded-[28.8px] top-[103px] w-[386.669px] overflow-hidden"
-                    data-node-id="1:162"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[28.8px]">
-                      <img
-                        alt="Orientation Programme Poster"
-                        className="absolute h-[137%] left-0 max-w-none top-[0.31%] w-full transition-transform duration-500 group-hover:scale-105"
-                        src={imgRectangle45}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="absolute border-[2.88px] border-black border-solid h-[57.6px] left-[28px] overflow-clip rounded-[86.4px] top-[25px] w-[138.24px] transition-transform duration-300 group-hover:scale-105"
-                    data-node-id="1:163"
-                  >
-                    <p
-                      className="-translate-x-1/2 [word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[66.12px] not-italic text-[28.8px] text-black text-center top-[8.12px] tracking-[-1.152px] whitespace-nowrap"
-                      data-node-id="1:164"
-                    >
-                      OP
-                    </p>
-                  </div>
-                </a>
-
-                {/* Event Card 2: WORKSHOP */}
-                <a
-                  href="https://www.instagram.com/p/DQzn6p7EvXs/?stkn=MzRlODBiNWFlZA=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Nibble Month Workshop on Instagram"
-                  className="bg-white h-[460px] overflow-clip relative rounded-[28.8px] shrink-0 w-[395px] group cursor-pointer transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(255,255,255,0.2)] block no-underline"
-                  data-node-id="1:165"
-                >
-                  <div
-                    className="absolute border-[2.88px] border-black border-solid h-[58px] left-[28px] overflow-clip rounded-[86.4px] top-[25px] w-[228px] transition-transform duration-300 group-hover:scale-105"
-                    data-node-id="1:166"
-                  >
-                    <p
-                      className="-translate-x-1/2 [word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-1/2 not-italic text-[28.8px] text-black text-center top-[calc(50%-17px)] tracking-[-1.152px] whitespace-nowrap"
-                      data-node-id="1:167"
-                    >
-                      WORKSHOP
-                    </p>
-                  </div>
-                  <div
-                    className="-translate-x-1/2 absolute h-[352.8px] left-[calc(50%-0.22px)] rounded-[28.8px] top-[103px] w-[386.56px] overflow-hidden"
-                    data-node-id="1:168"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[28.8px]">
-                      <img
-                        alt="Nibble Month Workshop Poster"
-                        className="absolute h-[137%] left-[-0.22%] max-w-none top-[-0.2%] w-full transition-transform duration-500 group-hover:scale-105"
-                        src={imgRectangle48}
-                      />
-                    </div>
-                  </div>
-                </a>
-
-                {/* Event Card 3: INOUT */}
-                <a
-                  href="https://www.instagram.com/reel/DXtnr23iQ6Y/?stkn=MzRlODBiNWFlZA=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="INOUT Hacks on Instagram"
-                  className="bg-white h-[460px] overflow-clip relative rounded-[28.8px] shrink-0 w-[395px] group cursor-pointer transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(255,255,255,0.2)] block no-underline"
-                  data-node-id="1:169"
-                >
-                  <div
-                    className="absolute border-[2.88px] border-black border-solid h-[58px] left-[28px] overflow-clip rounded-[86.4px] top-[25px] w-[164px] transition-transform duration-300 group-hover:scale-105"
-                    data-node-id="1:170"
-                  >
-                    <p
-                      className="-translate-x-1/2 [word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[calc(50%+0.5px)] not-italic text-[28.8px] text-black text-center top-[calc(50%-17px)] tracking-[-1.152px] whitespace-nowrap"
-                      data-node-id="1:171"
-                    >
-                      INOUT
-                    </p>
-                  </div>
-                  <div
-                    className="-translate-x-1/2 absolute h-[352.8px] left-[calc(50%-0.16px)] rounded-[28.8px] top-[103px] w-[386.67px] overflow-hidden"
-                    data-node-id="1:172"
-                  >
-                    <img
-                      alt="INOUT Hacks Poster"
-                      className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[28.8px] size-full transition-transform duration-500 group-hover:scale-105"
-                      src={imgRectangle50}
-                    />
-                  </div>
-                </a>
+              <div className="relative h-[620px] w-full overflow-hidden">
+                <CircularGallery
+                  items={eventGalleryItems}
+                  radius={490}
+                  autoRotateSpeed={0.12}
+                />
               </div>
             </div>
           </div>
