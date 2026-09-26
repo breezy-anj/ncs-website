@@ -221,3 +221,7 @@ html {
 .marquee-group:hover .animate-marquee-left {
   animation-play-state: paused;
 }
+
+.liquid-metal-button-subtle canvas {
+  opacity: 0.58 !important;
+}

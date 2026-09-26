@@ -1,7 +1,7 @@
 import React from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 
-import { LiquidMetalButton } from "./LiquidMetalButton"
+import { LiquidMetalButton } from "./ui/liquid-metal-button"
 
 const imgNcsLogo = "/assets/8f22e.svg"
 
@@ -114,6 +114,7 @@ export default function Navbar() {
           width={168}
           height={54}
           fontSize={23}
+          subtle
           textColor="#ffffff"
           onClick={handleConnectClick}
         />
@@ -121,3 +122,4 @@ export default function Navbar() {
     </nav>
   )
 }
+
