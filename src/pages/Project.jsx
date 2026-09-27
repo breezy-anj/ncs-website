@@ -7,10 +7,49 @@ const imgRectangle124 = `${assetPathPrefix}/0e70d.png`
 const imgRectangle125 = `${assetPathPrefix}/a201b.png`
 const imgRectangle126 = `${assetPathPrefix}/86c2d.png`
 const imgRectangle127 = `${assetPathPrefix}/12f0d.png`
+const imgRectangle128 = `${assetPathPrefix}/9fda2.png`
+const imgRectangle129 = `${assetPathPrefix}/92e35.png`
+const imgRectangle130 = `${assetPathPrefix}/ccb7c.png`
+const imgRectangle131 = `${assetPathPrefix}/5eeea.png`
 const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`
 const imgVector = `${assetPathPrefix}/79f69.svg`
 const imgVector1 = `${assetPathPrefix}/54ba9.svg`
 const imgLine1 = `${assetPathPrefix}/57d57.svg`
+
+const additionalProjects = [
+  {
+    name: "Know Your College",
+    image: imgRectangle128,
+    description:
+      "'Know Your College', is a nifty web application that's your virtual compass for navigating the expansive world of JSS. It's your go-to guide for unraveling the intriguing corners of the college and its lively neighborhood.",
+    technologies: ["React", "Node", "MongoDB"],
+    url: "https://github.com/ncs-jss/Proj_kc01",
+  },
+  {
+    name: "Codepad",
+    image: imgRectangle129,
+    description:
+      "An online IDE (compiler) for running programs in C, C++, Python, Java with frequent questions to solve.",
+    technologies: ["PHP", "Laravel", "MySQL"],
+    url: "https://github.com/ncs-jss/Code-Pad",
+  },
+  {
+    name: "Registration Module",
+    image: imgRectangle130,
+    description:
+      "A platform for registration of students with record of their Unique IDs for various events like Zealicon.",
+    technologies: ["JavaScript"],
+    url: "https://github.com/ncs-jss/Registration_Module",
+  },
+  {
+    name: "Plexus",
+    image: imgRectangle131,
+    description:
+      "It is an online platform to host all kinds of digital events like Quizes etc. without any friction or technical know-how.",
+    technologies: ["PHP", "Laravel", "MySQL"],
+    url: "https://github.com/ncs-jss/plexus",
+  },
+]
 
 export default function Project({ activePage = "Project", onNavigate }) {
   return (
@@ -39,7 +78,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
             PROJECTS
           </p>
           <div
-            className="content-stretch flex gap-[77px] items-start relative shrink-0 w-full"
+            className="content-stretch flex flex-wrap justify-center gap-x-[77px] gap-y-[100px] items-start relative shrink-0 w-full"
             data-node-id="1:203"
           >
             <div
@@ -552,6 +591,75 @@ export default function Project({ activePage = "Project", onNavigate }) {
                 >{`An online portal for managing & automating the recruitment procedure for T&P Centre.`}</p>
               </div>
             </div>
+            {additionalProjects.map((project) => (
+              <div
+                key={project.name}
+                className="group content-stretch flex flex-col gap-[15px] items-center relative shrink-0 w-[335px] cursor-pointer transition-all duration-300 hover:-translate-y-4"
+              >
+                <div className="bg-[rgba(255,255,255,0.15)] backdrop-blur-md h-[455px] overflow-clip relative rounded-[40px] shrink-0 w-full border border-white/20 transition-all duration-300 group-hover:shadow-[0_20px_40px_rgba(255,255,255,0.2)] group-hover:border-white/40">
+                  <div className="absolute contents left-[15px] top-[19px]">
+                    <div className="absolute contents inset-[4.18%_4.9%_3.77%_4.48%]">
+                      <div className="absolute inset-[4.18%_4.9%_3.77%_4.48%]">
+                        <img
+                          alt=""
+                          className="absolute block inset-0 max-w-none size-full"
+                          src={imgVector}
+                        />
+                      </div>
+                      <div className="absolute border-3 border-solid border-white inset-[20.22%_7.46%_27.91%_7.16%] overflow-hidden rounded-[8px]">
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                          <img
+                            alt={project.name}
+                            className="absolute h-[131.12%] left-[-22.03%] max-w-none top-[-15.28%] w-[144.06%] transition-transform duration-500 group-hover:scale-105"
+                            src={project.image}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute left-[141px] top-[344px] z-30">
+                      <LiquidMetalButton
+                        label="View Project"
+                        width={157}
+                        height={38}
+                        fontSize={15}
+                        icon={
+                          <div className="relative shrink-0 size-[12px] opacity-90">
+                            <img
+                              alt=""
+                              className="block size-full object-contain"
+                              src={imgVector1}
+                            />
+                          </div>
+                        }
+                        onClick={() =>
+                          window.open(project.url, "_blank", "noopener,noreferrer")
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center gap-[3px] w-full">
+                  <p className="font-['Helvetica_Neue:Regular'] leading-[normal] text-[32px] text-center text-white tracking-[-1.28px] group-hover:text-amber-200 transition-colors">
+                    {project.name}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-[8px]">
+                    {project.technologies.map((technology) => (
+                      <span
+                        key={technology}
+                        className="bg-[rgba(255,255,255,0.2)] px-[7px] py-[2px] rounded-[24px] font-['Helvetica_Neue:Medium'] text-[8px] text-center text-white"
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex flex-col items-center gap-[6px] w-full">
+                  <p className="font-['Helvetica_Neue:Regular'] leading-[normal] text-[18px] text-center text-white/90 tracking-[-0.5px] w-[286px]">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <Footer />
