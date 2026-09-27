@@ -1578,12 +1578,6 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                   </div>
                 </div>
               </div>
-              <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
-                data-node-id="1:482"
-              >
-                2nd Year
-              </p>
               <div
                 className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]"
                 data-node-id="1:483"
