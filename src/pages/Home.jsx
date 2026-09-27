@@ -190,7 +190,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <img
                 alt="NCS Hero Illustration"
                 className="absolute block inset-0 max-w-none size-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
-                src="/assets/hero-illustration.png"
+                src="/assets/hero1.svg"
               />
             </div>
 
