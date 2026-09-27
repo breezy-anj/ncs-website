@@ -7,6 +7,7 @@ import Teams from "./pages/Teams"
 import Alumni from "./pages/Alumni"
 import Recruitment from "./pages/Recruitment"
 import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
+import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
 
@@ -20,6 +21,7 @@ export default function App() {
     if (path === "/alumni") return "Alumni"
     if (path === "/recruitment") return "Recruitment"
     if (path === "/gallery") return "Gallery"
+    if (path === "/fan-carousel") return "Fan Carousel"
     return "Home"
   }
   const page = getPageFromPath(location.pathname)
@@ -75,7 +77,7 @@ export default function App() {
   return (
     <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-hidden text-white relative">
       {/* 3D Ethereal Light Beams Background on Home/Team/Alumni, Special 3D Rotating Layers on Project */}
-      {page === "Gallery" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
+      {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
 
       {/* Responsive Scaled Page Content Layer */}
       <main
@@ -102,6 +104,7 @@ export default function App() {
             <Route path="/alumni" element={<Alumni activePage={page} />} />
             <Route path="/recruitment" element={<Recruitment activePage={page} />} />
             <Route path="/gallery" element={<CircularGalleryDemo />} />
+            <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
           </Routes>
         </div>
       </main>

@@ -2,7 +2,9 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
-import { CircularGallery } from "../components/ui/circular-gallery"
+import SocialCards from "../components/ui/card-fan-carousel"
+import HighlightsWheel from "../components/ui/highlights-wheel"
+
 
 const assetPathPrefix = "/assets"
 const imgFrame1171276288 = `${assetPathPrefix}/4f846.png`
@@ -161,6 +163,12 @@ const eventGalleryItems = [
   },
 ]
 
+const eventFanCards = eventGalleryItems.map((item) => ({
+  imgUrl: item.photo.url,
+  alt: item.photo.text,
+  linkUrl: item.href,
+}))
+
 export default function Home({ activePage = "Home", onNavigate }) {
   return (
     <div
@@ -257,16 +265,21 @@ export default function Home({ activePage = "Home", onNavigate }) {
             className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[1400px]"
             data-node-id="1:48"
           >
-            <p
-              className="[text-underline-position:from-font] [word-break:break-word] bg-clip-text decoration-from-font decoration-solid font-['Helvetica_Neue:Regular'] leading-[normal] min-w-full not-italic relative shrink-0 text-[80px] text-[transparent] tracking-[-3.2px] underline w-[min-content]"
-              data-node-id="1:49"
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1400 95' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(70 0 0 19.4 700 47.5)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")",
-              }}
-            >
-              CLUBS
-            </p>
+            <div className="flex flex-col items-center text-center gap-4 w-full mb-6">
+              <h2
+                className="font-['Inter'] font-black text-[70px] sm:text-[85px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 10px 40px rgba(0,0,0,0.9)",
+                }}
+              >
+                CLUBS
+              </h2>
+              <p className="font-['Inter'] font-normal text-[17px] sm:text-[19px] md:text-[20px] leading-[1.6] text-white/80 max-w-[960px] text-center tracking-[-0.01em]">
+                Explore our specialized clubs in Web Development, Programming, Design, and Technology. Discover new skills, unleash your creativity, and turn your ideas into reality. Join our vibrant community and build your future with us!
+              </p>
+            </div>
             <div
               className="flex flex-col gap-[90px] items-stretch relative shrink-0 w-[1400px]"
               data-node-id="1:50"
@@ -400,6 +413,19 @@ export default function Home({ activePage = "Home", onNavigate }) {
               </div>
             </div>
           </div>
+
+          {/* HIGHLIGHTS */}
+          <section className="mx-auto w-full max-w-[1446px] text-center shrink-0">
+            <h2 className="text-[52px] sm:text-[68px] md:text-[80px] font-black tracking-tight uppercase bg-clip-text text-transparent bg-gradient-to-b from-white via-[#dcdcdc] to-[#71717a]">
+              HIGHLIGHTS
+            </h2>
+            <p className="mx-auto mt-6 max-w-[1240px] text-[18px] sm:text-[22px] md:text-[24px] font-normal leading-[1.45] text-[#b3b3b3]">
+              From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
+            </p>
+            <div className="relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
+              <HighlightsWheel label="NCS FAMILY" action="View" className="h-full w-full bg-transparent" />
+            </div>
+          </section>
           <div
             className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[1446px]"
             data-node-id="1:151"
@@ -423,13 +449,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 <p className="mb-0">COLLEGE EVENTS THAT</p>
                 <p className="mb-0">LEAVE A MARK.</p>
               </div>
-              <div className="relative h-[620px] w-full overflow-hidden">
-                <CircularGallery
-                  items={eventGalleryItems}
-                  radius={490}
-                  autoRotateSpeed={0.12}
-                />
-              </div>
+              <SocialCards cards={eventFanCards} />
             </div>
           </div>
           <Footer />
