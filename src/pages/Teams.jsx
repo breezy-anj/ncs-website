@@ -43,13 +43,383 @@ const imgRectangle69 = `${assetPathPrefix}/33794.png`;
 const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`;
 const imgLine1 = `${assetPathPrefix}/2d226.svg`;
 
+
+const assetPathPrefix = "/assets"
+const imgRectangle31 = `${assetPathPrefix}/e4014.png`
+const imgRectangle32 = `${assetPathPrefix}/13843.png`
+const imgRectangle33 = `${assetPathPrefix}/a965c.png`
+const imgRectangle34 = `${assetPathPrefix}/4fb82.png`
+const imgRectangle35 = `${assetPathPrefix}/2ba54.png`
+const imgRectangle36 = `${assetPathPrefix}/76ffc.png`
+const imgRectangle37 = `${assetPathPrefix}/b08c2.png`
+const imgRectangle38 = `${assetPathPrefix}/d6099.png`
+const imgRectangle39 = `${assetPathPrefix}/95320.png`
+const imgRectangle40 = `${assetPathPrefix}/8de3e.png`
+const imgRectangle41 = `${assetPathPrefix}/fa11a.png`
+const imgRectangle42 = `${assetPathPrefix}/d4363.png`
+const imgRectangle43 = `${assetPathPrefix}/ab3fe.png`
+const imgRectangle44 = `${assetPathPrefix}/1a3f7.png`
+const imgRectangle45 = `${assetPathPrefix}/e7c41.png`
+const imgRectangle46 = `${assetPathPrefix}/54c1e.png`
+const imgRectangle47 = `${assetPathPrefix}/45d44.png`
+const imgRectangle48 = `${assetPathPrefix}/eded3.png`
+const imgRectangle49 = `${assetPathPrefix}/5936a.png`
+const imgRectangle50 = `${assetPathPrefix}/bcc5d.png`
+const imgRectangle51 = `${assetPathPrefix}/1f7da.png`
+const imgRectangle52 = `${assetPathPrefix}/9992e.png`
+const imgRectangle53 = `${assetPathPrefix}/8a0a2.png`
+const imgRectangle54 = `${assetPathPrefix}/3e9a1.png`
+const imgRectangle55 = `${assetPathPrefix}/3598f.png`
+const imgRectangle56 = `${assetPathPrefix}/3fe2c.png`
+const imgRectangle57 = `${assetPathPrefix}/80f54.png`
+const imgRectangle58 = `${assetPathPrefix}/66178.png`
+const imgRectangle59 = `${assetPathPrefix}/19109.png`
+const imgRectangle60 = `${assetPathPrefix}/fefeb.png`
+const imgRectangle61 = `${assetPathPrefix}/dae7e.png`
+const imgRectangle62 = `${assetPathPrefix}/00b92.png`
+const imgRectangle63 = `${assetPathPrefix}/98caf.png`
+const imgRectangle64 = `${assetPathPrefix}/36acf.png`
+const imgRectangle65 = `${assetPathPrefix}/0bf96.png`
+const imgRectangle66 = `${assetPathPrefix}/7555f.png`
+const imgRectangle67 = `${assetPathPrefix}/70fac.png`
+const imgRectangle68 = `${assetPathPrefix}/a110b.png`
+const imgRectangle69 = `${assetPathPrefix}/33794.png`
+const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`
+const imgLine1 = `${assetPathPrefix}/2d226.svg`
+const imgGithubIcon = `${assetPathPrefix}/e31ad.svg`
+const imgLinkedinIcon = `${assetPathPrefix}/linkedin-icon.svg`
+
+const secondYearMembers = [
+  {
+    firstName: "Anjneya",
+    lastName: "Singh",
+    role: "Developer",
+    group: 1,
+    order: 4,
+    marginLeft: "651px",
+    marginTop: "177px",
+    image: imgRectangle63,
+    cardColor: "bg-[#cbd5d4]",
+    imageStyle: {
+      height: "499px",
+      left: "calc(50% + 16.58px)",
+      boxShadow: "10.161px 10.161px 10.161px 0px rgba(0,0,0,0.25)",
+      top: "5.88px",
+      width: "309px",
+    },
+    github: "https://github.com/breezy-anj",
+  },
+  {
+    firstName: "Tanishka",
+    lastName: "Israni",
+    role: "Developer",
+    group: 2,
+    order: 1,
+    marginLeft: "0px",
+    marginTop: "177px",
+    image: imgRectangle69,
+    cardColor: "bg-[#cbd5d4]",
+    imageStyle: {
+      height: "586px",
+      left: "calc(50% + 18.08px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "-19.12px",
+      width: "394px",
+    },
+    linkedin:
+      "https://www.linkedin.com/in/tanishka-israni-852923380?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+  {
+    firstName: "Saishree",
+    lastName: "Saxena",
+    role: "Developer",
+    group: 1,
+    order: 5,
+    marginLeft: "868px",
+    marginTop: "0px",
+    image: imgRectangle62,
+    cardColor: "bg-[#cbd5d4]",
+    imageStyle: {
+      height: "548px",
+      left: "calc(50% + 17.08px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "37.88px",
+      width: "368px",
+    },
+    linkedin: "https://www.linkedin.com/in/saishree-saxena-605580372",
+    github: "https://github.com/saitee5",
+  },
+  {
+    firstName: "Ansh",
+    lastName: "Mittal",
+    role: "Technical",
+    group: 2,
+    order: 3,
+    marginLeft: "434px",
+    marginTop: "177px",
+    image: imgRectangle68,
+    cardColor: "bg-[#e4dcd2]",
+    imageStyle: {
+      height: "599px",
+      left: "calc(50% + 13.58px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "-21.12px",
+      width: "347px",
+    },
+    linkedin: "https://www.linkedin.com/in/ansh-mittal-xr/",
+    github: "https://github.com/phoenix-xr",
+  },
+  {
+    firstName: "Tanishq",
+    lastName: "Marwari",
+    role: "Technical",
+    group: 2,
+    order: 2,
+    marginLeft: "217px",
+    marginTop: "0px",
+    image: imgRectangle67,
+    cardColor: "bg-[#e4dcd2]",
+    imageStyle: {
+      height: "558px",
+      left: "calc(50% + 20.08px)",
+      boxShadow: "10.161px 10.161px 10.161px 0px rgba(0,0,0,0.25)",
+      top: "106.88px",
+      width: "346px",
+    },
+    linkedin: "https://www.linkedin.com/in/tanishq-marwari-109772390/",
+  },
+  {
+    firstName: "Sidhi",
+    lastName: "Saxena",
+    role: "Programmer",
+    group: 0,
+    order: 5,
+    marginLeft: "868px",
+    marginTop: "0px",
+    image: imgRectangle61,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "1168px",
+      left: "calc(50% - 0.94px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "-535.12px",
+      width: "785px",
+    },
+    linkedin: "https://www.linkedin.com/in/sidhi-saxena-672068377",
+    codolio: "https://codolio.com/profile/Sidhisaxena/card",
+  },
+  {
+    firstName: "Aryan",
+    lastName: "Singh",
+    role: "Programmer",
+    group: 1,
+    order: 1,
+    marginLeft: "0px",
+    marginTop: "0px",
+    image: imgRectangle64,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "474px",
+      left: "calc(50% - 0.82px)",
+      boxShadow: "2.88px 2.88px 2.88px 0px rgba(0,0,0,0.25)",
+      top: "14.88px",
+      width: "319px",
+    },
+    linkedin: "https://www.linkedin.com/in/oxy8en",
+    codolio: "https://codolio.com/profile/oxy8en",
+  },
+  {
+    firstName: "Aanya",
+    lastName: "Gogia",
+    role: "Programmer",
+    group: 1,
+    order: 2,
+    marginLeft: "217px",
+    marginTop: "177px",
+    image: imgRectangle65,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "410px",
+      left: "calc(50% + 13.24px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "66px",
+      width: "276px",
+    },
+    linkedin: "https://www.linkedin.com/in/aanya-gogia-732608385/",
+    codolio: "https://codolio.com/profile/AanyaGogia",
+  },
+  {
+    firstName: "Karnika",
+    lastName: "",
+    role: "Programmer",
+    group: 0,
+    order: 4,
+    marginLeft: "652px",
+    marginTop: "177px",
+    image: imgRectangle59,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "415px",
+      left: "calc(50% + 8.5px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "12px",
+      width: "279px",
+    },
+    github: "https://github.com/karnika404x",
+    linkedin: "https://www.linkedin.com/in/karnika-jaiswal-a2507a383",
+    codolio: "https://codolio.com/profile/serious_am",
+  },
+  {
+    firstName: "Sanskar",
+    lastName: "Pal",
+    role: "Programmer",
+    group: 0,
+    order: 6,
+    marginLeft: "1086px",
+    marginTop: "179px",
+    image: imgRectangle60,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "375px",
+      left: "calc(50% + 0.12px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "37px",
+      width: "282px",
+    },
+    linkedin: "https://www.linkedin.com/in/sanskarpal23/",
+    codolio: "https://codolio.com/profile/sanskarpal",
+  },
+  {
+    firstName: "Mohd",
+    lastName: "Fahad",
+    role: "Programmer",
+    group: 1,
+    order: 3,
+    marginLeft: "434px",
+    marginTop: "0px",
+    image: imgRectangle66,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "486px",
+      left: "calc(50% + 45.66px)",
+      boxShadow: "4.32px 4.32px 4.32px 0px rgba(0,0,0,0.25)",
+      top: "30.88px",
+      width: "327px",
+    },
+    linkedin: "https://www.linkedin.com/in/fahadxiii/",
+  },
+  {
+    firstName: "Darshita",
+    lastName: "Jain",
+    role: "Designer",
+    group: 0,
+    order: 2,
+    marginLeft: "217px",
+    marginTop: "177px",
+    image: imgRectangle58,
+    cardColor: "bg-[#ffc931]",
+    imageStyle: {
+      height: "472px",
+      left: "calc(50% - 0.5px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "25px",
+      width: "305px",
+    },
+    linkedin: "https://www.linkedin.com/in/darshita-jain-23144137b",
+  },
+  {
+    firstName: "Bhaskar",
+    lastName: "Shah",
+    role: "Designer",
+    group: 0,
+    order: 1,
+    marginLeft: "0px",
+    marginTop: "0px",
+    image: imgRectangle56,
+    cardColor: "bg-[#ffc931]",
+    imageStyle: {
+      height: "588px",
+      left: "calc(50% + 12.58px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "11.88px",
+      width: "395px",
+    },
+    github: "https://github.com/BhaskarShah05",
+    linkedin: "https://www.linkedin.com/in/BhaskarShah05",
+  },
+  {
+    firstName: "Piyush",
+    lastName: "Gautam",
+    role: "Designer",
+    group: 0,
+    order: 3,
+    marginLeft: "435px",
+    marginTop: "0px",
+    image: imgRectangle57,
+    cardColor: "bg-[#ffc931]",
+    imageStyle: {
+      height: "436px",
+      left: "calc(50% - 0.5px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "61px",
+      width: "293px",
+    },
+  },
+]
+
+export default function Teams({ activePage = "Team", onNavigate }) {
+  const [selectedMember, setSelectedMember] = useState(null)
+  const [flippedMember, setFlippedMember] = useState(null)
+
+  const handleCardClick = (e) => {
+    const card = e.target.closest(".member-card")
+    if (card) {
+      const textContainer = card.querySelector(".text-center")
+
+      let name = "Unknown"
+      let role = "Unknown"
+
+      if (textContainer) {
+        const nameDiv = textContainer.querySelector("div")
+        if (nameDiv) {
+          const pTags = Array.from(nameDiv.querySelectorAll("p"))
+          name = pTags.map((p) => p.innerText || p.textContent).join(" ")
+        }
+
+        const pTagsInContainer = Array.from(textContainer.querySelectorAll("p"))
+        const roleP = pTagsInContainer.find(p => p.parentElement === textContainer)
+        if (roleP) {
+          role = roleP.innerText || roleP.textContent
+        }
+      }
+
+      const imgElement = card.querySelector("img")
+      const imgSrc = imgElement ? imgElement.getAttribute("src") : null
+      const github = card.dataset.github || null
+      const linkedin = card.dataset.linkedin || null
+      const bgColorMatch = card.className.match(/bg-\[([^\]]+)\]/)
+      const bgColor =
+        card.style.backgroundColor ||
+        (bgColorMatch ? bgColorMatch[1] : "#feb9ce")
+
+      setSelectedMember({ 
+        name, 
+        role, 
+        imgSrc, 
+        github,
+        linkedin,
+        bgColor,
+        x: e.clientX,
+        y: e.clientY
+      })
+    }
+  }
 function TeamCard({ 
   className, dataNodeId, 
   imgContainerClass, imgSrc, imgClass, 
   name, role, socials = []
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
-
   return (
     <div
       className={className + " [perspective:1000px] cursor-pointer"}
@@ -284,6 +654,586 @@ export default function Teams({
               <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]" data-node-id="1:482">
                 2nd Year
               </p>
+
+              <div
+                className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]"
+                data-node-id="1:483"
+              >
+                <div
+                  className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                  data-node-id="1:484"
+                >
+                  <div
+                    className="hidden bg-[#ffc931] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:485"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[588px] left-[calc(50%+12.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[11.88px] w-[395px]"
+                      data-node-id="1:486"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle56}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:487"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:488"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:489"
+                      >
+                        <p className="leading-[1.25] mb-0">Bhaskar</p>
+                        <p className="leading-[1.25]">Shah</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:490"
+                      >
+                        Designer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="hidden bg-[#ffc931] col-1 h-[600px] ml-[435px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:491"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]"
+                      data-node-id="1:492"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle57}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:493"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:494"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:495"
+                      >
+                        <p className="leading-[1.25] mb-0">Piyush</p>
+                        <p className="leading-[1.25]">Gautam</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:496"
+                      >
+                        Designer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="hidden bg-[#ffc931] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:497"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[472px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[25px] w-[305px]"
+                      data-node-id="1:498"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle58}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:499"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:500"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:501"
+                      >
+                        <p className="leading-[1.25] mb-0">Darshita</p>
+                        <p className="leading-[1.25]">Jain</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:502"
+                      >
+                        Designer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[652px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:503"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px]"
+                      data-node-id="1:504"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle59}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:505"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:506"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:507"
+                      >
+                        <p className="leading-[1.25]">Karnika</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:508"
+                      >
+                        Programmer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[1086px] mt-[179px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:509"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px]"
+                      data-node-id="1:510"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle60}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:511"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:512"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:513"
+                      >
+                        <p className="leading-[1.25] mb-0">Sanskar</p>
+                        <p className="leading-[1.25]">Pal</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:514"
+                      >
+                        Programmer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[869px] mt-0 place-items-start relative row-1"
+                    data-node-id="1:515"
+                  >
+                    <div
+                      className="hidden bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                      data-node-id="1:516"
+                    >
+                      <div
+                        className="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px]"
+                        data-node-id="1:517"
+                      >
+                        <img
+                          alt=""
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          src={imgRectangle61}
+                        />
+                      </div>
+                      <div
+                        className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                        data-node-id="1:518"
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                        }}
+                      />
+                      <div
+                        className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                        data-node-id="1:519"
+                      >
+                        <div
+                          className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                          data-node-id="1:520"
+                        >
+                          <p className="leading-[1.25] mb-0">Sidhi</p>
+                          <p className="leading-[1.25]">Saxena</p>
+                        </div>
+                        <p
+                          className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                          data-node-id="1:521"
+                        >
+                          Programmer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                  data-node-id="1:522"
+                >
+                  <div
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:535"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px]"
+                      data-node-id="1:536"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle64}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:537"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:538"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:539"
+                      >
+                        <p className="leading-[1.25] mb-0">Aryan</p>
+                        <p className="leading-[1.25]">Singh</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:540"
+                      >
+                        Programmer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:541"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px]"
+                      data-node-id="1:542"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle65}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:543"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:544"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:545"
+                      >
+                        <p className="leading-[1.25] mb-0">Aanya</p>
+                        <p className="leading-[1.25]">Gogia</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:546"
+                      >
+                        Programmer
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:547"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px]"
+                      data-node-id="1:548"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle66}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:549"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:550"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:551"
+                      >
+                        <p className="leading-[1.25] mb-0">Mohd</p>
+                        <p className="leading-[1.25]">Fahad</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:552"
+                      >
+                        Programmer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                  data-node-id="1:553"
+                >
+                  <div
+                    className="hidden bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    data-node-id="1:554"
+                  >
+                    <div
+                      className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px]"
+                      data-node-id="1:555"
+                    >
+                      <img
+                        alt=""
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        src={imgRectangle67}
+                      />
+                    </div>
+                    <div
+                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
+                      data-node-id="1:556"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div
+                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
+                      data-node-id="1:557"
+                    >
+                      <div
+                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
+                        data-node-id="1:558"
+                      >
+                        <p className="leading-[1.25] mb-0">Tanishq</p>
+                        <p className="leading-[1.25]">Marwari</p>
+                      </div>
+                      <p
+                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
+                        data-node-id="1:559"
+                      >
+                        Technical
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section className="mt-[80px] flex w-full flex-col items-center gap-[50px]">
+          <h2 className="font-['Inter:Bold'] text-[100px] font-bold leading-[normal] text-center text-white tracking-[-4px]">
+            2nd Year
+          </h2>
+          <div className="grid w-[1285px] grid-cols-6 items-start gap-x-[17px] gap-y-[17px]">
+            {secondYearMembers
+              .slice()
+              .sort((a, b) => a.group - b.group || a.order - b.order)
+              .map((member) => {
+              const memberKey = `${member.firstName}-${member.lastName}`
+              const memberName = [member.firstName, member.lastName]
+                .filter(Boolean)
+                .join(" ")
+              const isFlipped = flippedMember === memberKey
+              const toggleFlip = () =>
+                setFlippedMember((current) =>
+                  current === memberKey ? null : memberKey,
+                )
+
+              return (
+                <div
+                  key={memberKey}
+                  data-github={member.github}
+                  data-linkedin={member.linkedin}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${memberName}, ${member.role}. Show profile links`}
+                  aria-pressed={isFlipped}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    toggleFlip()
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault()
+                      event.stopPropagation()
+                      toggleFlip()
+                    }
+                  }}
+                  className={`${member.cardColor} group member-card relative h-[600px] w-[200px] cursor-pointer overflow-clip rounded-[300px] [perspective:1000px]`}
+                  style={{
+                    gridColumnStart: member.group === 2 ? member.order + 1 : member.order,
+                    gridRowStart: member.group + 1,
+                    marginTop: member.order % 2 === 0 ? "192px" : "0px",
+                  }}
+                >
+                  <div
+                    className="absolute left-1/2 top-0 -translate-x-1/2 transition-transform duration-500 group-hover:scale-105"
+                    style={member.imageStyle}
+                  >
+                    <img
+                      alt=""
+                      className="pointer-events-none size-full object-contain"
+                      src={member.image}
+                    />
+                  </div>
+                  <div
+                    className="absolute inset-0 z-10 h-full w-full transition-transform duration-500 will-change-transform"
+                    style={{
+                      transformStyle: "preserve-3d",
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                    }}
+                  >
+                    <div
+                      className="absolute inset-0 top-[352px] flex h-[248px] flex-col items-center justify-end rounded-bl-[200px] rounded-br-[200px] pb-8"
+                      style={{
+                        backfaceVisibility: "hidden",
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    >
+                      <div className="mb-2 flex flex-col text-center font-['Poppins:SemiBold'] text-[28px] leading-[1.25] text-white">
+                        <p className="mb-0">{member.firstName}</p>
+                        {member.lastName && <p className="mb-0">{member.lastName}</p>}
+                      </div>
+                      <p className="m-0 font-['Poppins:Regular'] text-[16px] text-[#ffd9e5]">
+                        {member.role}
+                      </p>
+                    </div>
+                    <div
+                      className="absolute inset-0 top-[352px] flex h-[248px] flex-col items-center justify-end rounded-bl-[200px] rounded-br-[200px] pb-12"
+                      style={{
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)",
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 30%, rgb(0, 0, 0) 100%)",
+                      }}
+                    >
+                      <div className="flex gap-4">
+                        {!member.linkedin && !member.github && !member.codolio && (
+                          <p className="text-sm text-white/70">No links found</p>
+                        )}
+                        {member.codolio && (
+                          <a
+                            href={member.codolio}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${memberName} Codolio`}
+                            title="Codolio"
+                            onClick={(event) => event.stopPropagation()}
+                            className="flex size-6 items-center justify-center rounded-full bg-white font-['Inter'] text-[13px] font-bold text-black"
+                          >
+                            C
+                          </a>
+                        )}
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${memberName} LinkedIn`}
+                            title="LinkedIn"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <img
+                              src={imgLinkedinIcon}
+                              alt="LinkedIn"
+                              className="size-6 object-contain"
+                            />
+                          </a>
+                        )}
+                        {member.github && (
+                          <a
+                            href={member.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${memberName} GitHub`}
+                            title="GitHub"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <img
+                              src={imgGithubIcon}
+                              alt="GitHub"
+                              className="size-6 object-contain brightness-0 invert"
+                            />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+=======
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]" data-node-id="1:483">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:484">
                   <TeamCard className="bg-[#ffc931] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]" dataNodeId="1:485" imgContainerClass="-translate-x-1/2 absolute h-[588px] left-[calc(50%+12.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[11.88px] w-[395px]" imgClass="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105" imgSrc={imgRectangle56} name={["Bhaskar", "Shah"]} role="Designer" socials={[]} />
@@ -310,15 +1260,138 @@ export default function Teams({
                   <TeamCard className="bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]" dataNodeId="1:554" imgContainerClass="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px]" imgClass="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105" imgSrc={imgRectangle67} name={["Tanishq", "Marwari"]} role="Technical" socials={[]} />
                   <TeamCard className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]" dataNodeId="1:560" imgContainerClass="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px]" imgClass="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105" imgSrc={imgRectangle68} name={["Ansh", "Mittal"]} role="Technical" socials={[]} />
                   <TeamCard className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]" dataNodeId="1:566" imgContainerClass="-translate-x-1/2 absolute h-[586px] left-[calc(50%+18.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-19.12px] w-[394px]" imgClass="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105" imgSrc={imgRectangle69} name={["Tanishka", "Israni"]} role="Developer" socials={[]} />
+
                 </div>
-              </div>
-            </div>
+              )
+              })}
           </div>
-        </div>
+        </section>
 
         <Footer />
 
-        
+        {selectedMember && (
+          <>
+            <div
+              className="fixed inset-0 z-40"
+              onClick={() => setSelectedMember(null)}
+            ></div>
+            <div
+              className="fixed z-50 bg-[#1a1a1a]/90 backdrop-blur-xl border border-white/10 rounded-[24px] p-8 w-[340px] shadow-2xl transition-all duration-300 transform"
+              style={{
+                left: `${selectedMember.x}px`,
+                top: `${selectedMember.y}px`,
+                transform: "translate(-50%, -50%)",
+                borderTop: `4px solid ${
+                  selectedMember.bgColor.startsWith("#")
+                    ? selectedMember.bgColor
+                    : "#" + selectedMember.bgColor
+                }`,
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/10"
+                onClick={() => setSelectedMember(null)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+
+              <div className="flex flex-col items-center text-center mt-2">
+                <h3 className="text-[22px] font-['Poppins',sans-serif] font-semibold text-white mb-1 leading-tight">
+                  {selectedMember.name}
+                </h3>
+                <p className="text-[#ffd9e5] font-['Poppins',sans-serif] text-[14px] mb-5">
+                  {selectedMember.role}
+                </p>
+
+                <div className="w-full h-[1px] bg-white/10 mb-5"></div>
+
+                <p className="text-white/70 font-['Inter',sans-serif] text-[13px] leading-relaxed mb-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+
+                {(selectedMember.github || selectedMember.linkedin) && (
+                  <div className="mb-4 flex gap-4">
+                    {selectedMember.github && (
+                      <a
+                        href={selectedMember.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${selectedMember.name} GitHub`}
+                        title="GitHub"
+                        className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/15"
+                      >
+                        <span className="text-[10px] font-bold" aria-hidden="true">
+                          GH
+                        </span>
+                      </a>
+                    )}
+                    {selectedMember.linkedin && (
+                      <a
+                        href={selectedMember.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${selectedMember.name} LinkedIn`}
+                        title="LinkedIn"
+                        className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/15"
+                      >
+                        <span className="text-[12px] font-bold" aria-hidden="true">
+                          in
+                        </span>
+                      </a>
+                    )}
+                  </div>
+                )}
+
+                <div className={selectedMember.github || selectedMember.linkedin ? "hidden" : "flex gap-4"}>
+                  <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center cursor-not-allowed hover:bg-white/10 transition-colors border border-white/5">
+                    <svg
+                      className="w-4 h-4 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                    </svg>
+                  </div>
+                  <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center cursor-not-allowed hover:bg-white/10 transition-colors border border-white/5">
+                    <svg
+                      className="w-4 h-4 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </div>
+                  <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center cursor-not-allowed hover:bg-white/10 transition-colors border border-white/5">
+                    <svg
+                      className="w-4 h-4 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+       
       </div>
     </div>;
 }
