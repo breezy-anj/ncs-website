@@ -1,13 +1,5 @@
 "use client"
 
-// Keep DPR to 1.0 for particle canvas to conserve battery/GPU
-
-// Draw initial static state
-
-// If mouse is away and all particles are resting, sleep loop to save 100% CPU/battery
-
-// Ensure fonts are loaded before reading pixels
-
 import React, { useEffect, useRef } from "react"
 
 function cn(...classes) {
@@ -15,17 +7,6 @@ function cn(...classes) {
 }
 
 class Particle {
-  x
-  y
-  originX
-  originY
-  vx
-  vy
-  size
-  color
-  dispersion
-  returnSpd
-
   constructor(x, y, size, color, dispersion, returnSpd) {
     this.x = x + (Math.random() - 0.5) * 10
     this.y = y + (Math.random() - 0.5) * 10
@@ -87,10 +68,10 @@ class Particle {
 export function CursorDrivenParticleTypography({
   className,
   text,
-  fontSize = 120,
-  fontFamily = "Inter, sans-serif",
-  particleSize = 1.6,
-  particleDensity = 5.5,
+  fontSize = 200,
+  fontFamily = "'Inter', sans-serif",
+  particleSize = 1.8,
+  particleDensity = 5,
   dispersionStrength = 18,
   returnSpeed = 0.08,
   color = "#ffffff",
@@ -103,12 +84,12 @@ export function CursorDrivenParticleTypography({
     const container = containerRef.current
     if (!canvas || !container) return
 
-    const ctx = canvas.getContext("2d")
+    const ctx = canvas.getContext("2d", { willReadFrequently: true })
     if (!ctx) return
 
     let animationFrameId = null
     let particles = []
-    let isVisible = false
+    let isVisible = true
     let isRunning = false
 
     let mouseX = -1000
@@ -120,24 +101,30 @@ export function CursorDrivenParticleTypography({
     const init = () => {
       if (!container) return
 
-      containerWidth = container.clientWidth || 1058
-      containerHeight = container.clientHeight || 350
-      const dpr = 1.0
-      canvas.width = containerWidth
-      canvas.height = containerHeight
+      containerWidth = container.clientWidth || 1200
+      containerHeight = container.clientHeight || 280
+
+      const dpr = window.devicePixelRatio || 1
+      canvas.width = containerWidth * dpr
+      canvas.height = containerHeight * dpr
       canvas.style.width = `${containerWidth}px`
       canvas.style.height = `${containerHeight}px`
 
       ctx.setTransform(1, 0, 0, 1, 0, 0)
+      ctx.scale(dpr, dpr)
 
       const computedStyle = window.getComputedStyle(container)
       const textColor = color || computedStyle.color || "#ffffff"
 
       ctx.clearRect(0, 0, containerWidth, containerHeight)
 
-      const effectiveFontSize = fontSize || Math.min(280, containerWidth * 0.28)
+      const effectiveFontSize = Math.min(
+        fontSize,
+        containerWidth * 0.22,
+        containerHeight * 0.85,
+      )
       ctx.fillStyle = textColor
-      ctx.font = `bold ${effectiveFontSize}px ${fontFamily}`
+      ctx.font = `900 ${effectiveFontSize}px ${fontFamily}`
       ctx.textAlign = "center"
       ctx.textBaseline = "middle"
 
@@ -151,7 +138,8 @@ export function CursorDrivenParticleTypography({
       )
 
       particles = []
-      const step = Math.max(3, Math.floor(particleDensity))
+
+      const step = Math.max(1, Math.floor(particleDensity * dpr))
 
       for (let y = 0; y < textCoordinates.height; y += step) {
         for (let x = 0; x < textCoordinates.width; x += step) {
@@ -161,8 +149,8 @@ export function CursorDrivenParticleTypography({
           if (alpha > 128) {
             particles.push(
               new Particle(
-                x,
-                y,
+                x / dpr,
+                y / dpr,
                 particleSize,
                 textColor,
                 dispersionStrength,
@@ -172,6 +160,7 @@ export function CursorDrivenParticleTypography({
           }
         }
       }
+
       ctx.clearRect(0, 0, containerWidth, containerHeight)
       for (let i = 0; i < particles.length; i++) {
         particles[i].draw(ctx)
@@ -199,9 +188,10 @@ export function CursorDrivenParticleTypography({
           const move = Math.abs(particles[i].vx) + Math.abs(particles[i].vy)
           if (move > maxMovement) maxMovement = move
         }
+
         if (mouseX === -1000 && maxMovement < 0.05) {
           idleFrames++
-          if (idleFrames > 30) {
+          if (idleFrames > 40) {
             isRunning = false
             animationFrameId = null
             return
@@ -232,14 +222,17 @@ export function CursorDrivenParticleTypography({
       init()
       startLoop()
     }
+
     if (document.fonts) {
       document.fonts.ready.then(() => {
         init()
+        startLoop()
       })
     }
 
     const timeoutId = setTimeout(() => {
       init()
+      startLoop()
     }, 100)
 
     const resizeObserver = new ResizeObserver(handleResize)
@@ -259,7 +252,7 @@ export function CursorDrivenParticleTypography({
           isRunning = false
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.05 },
     )
     intersectionObserver.observe(container)
 
@@ -291,13 +284,13 @@ export function CursorDrivenParticleTypography({
     <div
       ref={containerRef}
       className={cn(
-        "w-full h-full min-h-[320px] flex items-center justify-center relative touch-none select-none",
+        "w-full h-full min-h-[220px] flex items-center justify-center relative touch-none select-none",
         className,
       )}
     >
       <canvas
         ref={canvasRef}
-        className="block w-full h-full pointer-events-auto"
+        className="block w-full h-full pointer-events-auto cursor-pointer"
       />
     </div>
   )
