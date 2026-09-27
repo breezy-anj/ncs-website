@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useRef } from "react"
 import { LiquidMetalButton } from "./LiquidMetalButton"
 import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography"
+import SphereImageGrid from "./ui/img-sphere"
+import { ALL_38_TEAM_MEMBERS } from "../data/teamMembers"
 
 const assetPathPrefix = "/assets"
 
 // Assets
 const imgHeroIllustration = `${assetPathPrefix}/hero sec illust.svg`
 const imgVectorLeaf = `${assetPathPrefix}/Vector.svg`
+const imgSphereLeafLeft = `${assetPathPrefix}/cbf28.svg`
+const imgSphereLeafRight = `${assetPathPrefix}/ac2ff.svg`
 const imgPhoto1 = `${assetPathPrefix}/82f8e.png` // Offline session in lab
 const imgPhoto2 = `${assetPathPrefix}/1e5cf.png` // Large group community photo
 const imgPhoto3 = `${assetPathPrefix}/2890e.png` // Event team members photo
@@ -339,6 +343,38 @@ export default function AboutSection() {
               <img src={imgLinkedin} alt="LinkedIn" className="size-full object-contain" />
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center z-10">
+        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+          <img
+            src={imgSphereLeafLeft}
+            alt=""
+            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
+          />
+        </div>
+        <div className="relative z-20 flex justify-center items-center py-4">
+          <SphereImageGrid
+            images={ALL_38_TEAM_MEMBERS}
+            containerSize={640}
+            sphereRadius={240}
+            dragSensitivity={0.8}
+            momentumDecay={0.96}
+            maxRotationSpeed={6}
+            baseImageScale={0.15}
+            hoverScale={1.3}
+            perspective={1000}
+            autoRotate={true}
+            autoRotateSpeed={0.25}
+          />
+        </div>
+        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+          <img
+            src={imgSphereLeafRight}
+            alt=""
+            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(236,72,153,0.6)]"
+          />
         </div>
       </div>
 
