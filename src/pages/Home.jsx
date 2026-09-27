@@ -2,7 +2,9 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
-import { CircularGallery } from "../components/ui/circular-gallery"
+import SocialCards from "../components/ui/card-fan-carousel"
+import HighlightsWheel from "../components/ui/highlights-wheel"
+
 
 const assetPathPrefix = "/assets"
 const imgFrame1171276288 = `${assetPathPrefix}/4f846.png`
@@ -160,6 +162,12 @@ const eventGalleryItems = [
     },
   },
 ]
+
+const eventFanCards = eventGalleryItems.map((item) => ({
+  imgUrl: item.photo.url,
+  alt: item.photo.text,
+  linkUrl: item.href,
+}))
 
 export default function Home({ activePage = "Home", onNavigate }) {
   return (
@@ -400,6 +408,19 @@ export default function Home({ activePage = "Home", onNavigate }) {
               </div>
             </div>
           </div>
+
+          {/* HIGHLIGHTS */}
+          <section className="mx-auto w-full max-w-[1446px] text-center shrink-0">
+            <h2 className="text-[52px] sm:text-[68px] md:text-[80px] font-black tracking-tight uppercase bg-clip-text text-transparent bg-gradient-to-b from-white via-[#dcdcdc] to-[#71717a]">
+              HIGHLIGHTS
+            </h2>
+            <p className="mx-auto mt-6 max-w-[1240px] text-[18px] sm:text-[22px] md:text-[24px] font-normal leading-[1.45] text-[#b3b3b3]">
+              From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
+            </p>
+            <div className="relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
+              <HighlightsWheel label="NCS FAMILY" action="View" className="h-full w-full bg-transparent" />
+            </div>
+          </section>
           <div
             className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[1446px]"
             data-node-id="1:151"
@@ -423,13 +444,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 <p className="mb-0">COLLEGE EVENTS THAT</p>
                 <p className="mb-0">LEAVE A MARK.</p>
               </div>
-              <div className="relative h-[620px] w-full overflow-hidden">
-                <CircularGallery
-                  items={eventGalleryItems}
-                  radius={490}
-                  autoRotateSpeed={0.12}
-                />
-              </div>
+              <SocialCards cards={eventFanCards} />
             </div>
           </div>
           <Footer />
