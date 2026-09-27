@@ -39,11 +39,10 @@ export default function Navbar() {
     if (page === "Team") navigate("/team")
     if (page === "Alumni") navigate("/alumni")
     if (page === "Recruitment") {
-      const recEl = document.getElementById("recruitment")
-      if (recEl) {
-        recEl.scrollIntoView({ behavior: "smooth" })
+      if (location.pathname === "/recruitment") {
+        window.scrollTo({ top: 0, behavior: "smooth" })
       } else {
-        window.open("https://hackncs.in", "_blank")
+        navigate("/recruitment")
       }
     }
   }

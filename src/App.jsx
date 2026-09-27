@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Project from "./pages/Project"
 import Teams from "./pages/Teams"
 import Alumni from "./pages/Alumni"
+import Recruitment from "./pages/Recruitment"
 import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
@@ -17,6 +18,7 @@ export default function App() {
     if (path === "/project") return "Project"
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
+    if (path === "/recruitment") return "Recruitment"
     if (path === "/gallery") return "Gallery"
     return "Home"
   }
@@ -98,6 +100,7 @@ export default function App() {
             <Route path="/project" element={<Project activePage={page} />} />
             <Route path="/team" element={<Teams activePage={page} />} />
             <Route path="/alumni" element={<Alumni activePage={page} />} />
+            <Route path="/recruitment" element={<Recruitment activePage={page} />} />
             <Route path="/gallery" element={<CircularGalleryDemo />} />
           </Routes>
         </div>
