@@ -198,7 +198,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <img
                 alt="NCS Hero Illustration"
                 className="absolute block inset-0 max-w-none size-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
-                src="/assets/hero-illustration.png"
+                src="/assets/hero1.svg"
               />
             </div>
 
@@ -265,16 +265,21 @@ export default function Home({ activePage = "Home", onNavigate }) {
             className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[1400px]"
             data-node-id="1:48"
           >
-            <p
-              className="[text-underline-position:from-font] [word-break:break-word] bg-clip-text decoration-from-font decoration-solid font-['Helvetica_Neue:Regular'] leading-[normal] min-w-full not-italic relative shrink-0 text-[80px] text-[transparent] tracking-[-3.2px] underline w-[min-content]"
-              data-node-id="1:49"
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1400 95' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(70 0 0 19.4 700 47.5)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")",
-              }}
-            >
-              CLUBS
-            </p>
+            <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
+              <h2
+                className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 10px 40px rgba(0,0,0,0.9)",
+                }}
+              >
+                CLUBS
+              </h2>
+              <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+                Explore our specialized clubs in Web Development, Programming, Design, and Technology. Discover new skills, unleash your creativity, and turn your ideas into reality. Join our vibrant community and build your future with us!
+              </p>
+            </div>
             <div
               className="flex flex-col gap-[90px] items-stretch relative shrink-0 w-[1400px]"
               data-node-id="1:50"
@@ -328,7 +333,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
                     src={imgDevelopmentIcon}
                   />
-                  <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-white">
+                  <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
                     <span className="opacity-70 text-[10px] font-['Space_Mono',monospace] uppercase tracking-[1px] mb-2">Development</span>
                     <p className="opacity-100 text-[12px] font-['Helvetica_Neue:Regular'] leading-[1.3]">
                       From a rough idea to something you can actually use. We build, tweak, and polish, creating web and mobile apps that bring fresh concepts to life.
@@ -411,12 +416,21 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
           {/* HIGHLIGHTS */}
           <section className="mx-auto w-full max-w-[1446px] text-center shrink-0">
-            <h2 className="text-[52px] sm:text-[68px] md:text-[80px] font-black tracking-tight uppercase bg-clip-text text-transparent bg-gradient-to-b from-white via-[#dcdcdc] to-[#71717a]">
-              HIGHLIGHTS
-            </h2>
-            <p className="mx-auto mt-6 max-w-[1240px] text-[18px] sm:text-[22px] md:text-[24px] font-normal leading-[1.45] text-[#b3b3b3]">
-              From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
-            </p>
+            <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
+              <h2
+                className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 10px 40px rgba(0,0,0,0.9)",
+                }}
+              >
+                HIGHLIGHTS
+              </h2>
+              <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+                From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
+              </p>
+            </div>
             <div className="relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
               <HighlightsWheel label="NCS FAMILY" action="View" className="h-full w-full bg-transparent" />
             </div>

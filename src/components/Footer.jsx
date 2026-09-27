@@ -1,5 +1,8 @@
+
 import SphereImageGrid from "./ui/img-sphere"
 import { ALL_38_TEAM_MEMBERS } from "../data/teamMembers"
+import React from "react"
+import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography"
 
 const assetPathPrefix = "/assets"
 
@@ -138,19 +141,20 @@ export default function Footer() {
     >
       <GlassFilter />
 
-      {/* 1. Top: Giant NIBBLE Heading */}
-      <div className="w-full flex flex-col items-center max-w-[1500px] px-4 mb-8">
-        <div className="flex justify-center items-center w-full">
-          <h1
-            className="font-['Inter'] font-black text-[110px] sm:text-[170px] md:text-[230px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 50%, #4B5563 100%)",
-              textShadow: "0 10px 40px rgba(0,0,0,0.8)",
-            }}
-          >
-            NIBBLE
-          </h1>
+      {/* 1. Top: Giant Interactive Particle Physics NIBBLE Heading */}
+      <div className="w-full flex flex-col items-center max-w-[1500px] px-4 mb-6 relative z-20">
+        <div className="flex justify-center items-center w-full h-[240px] sm:h-[280px] md:h-[320px]">
+          <CursorDrivenParticleTypography
+            text="NIBBLE"
+            fontSize={230}
+            fontFamily="'Inter', sans-serif"
+            particleSize={2.2}
+            particleDensity={4.5}
+            dispersionStrength={24}
+            returnSpeed={0.08}
+            color="#FFFFFF"
+            className="w-full h-full min-h-0"
+          />
         </div>
       </div>
 
@@ -200,6 +204,40 @@ export default function Footer() {
 
             {/* Liquid Glass Social Icons Dock */}
             <div className="flex items-center justify-center gap-4 sm:gap-6 mt-3">
+              <a
+                href="https://github.com/ncs-jss"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="relative shrink-0 size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
+                style={{
+                  transitionTimingFunction:
+                    "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
+                }}
+              >
+                <img
+                  alt="GitHub"
+                  className="block size-full object-contain"
+                  src={imgGithub}
+                />
+              </a>
+              <a
+                href="https://facebook.com/nibblecomputersociety"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="relative shrink-0 size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
+                style={{
+                  transitionTimingFunction:
+                    "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
+                }}
+              >
+                <img
+                  alt="Facebook"
+                  className="block size-full object-contain"
+                  src={imgFacebook}
+                />
+              </a>
               <a
                 href="https://instagram.com/hackncs"
                 target="_blank"

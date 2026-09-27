@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Project from "./pages/Project"
 import Teams from "./pages/Teams"
 import Alumni from "./pages/Alumni"
+import Recruitment from "./pages/Recruitment"
 import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
 import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
@@ -18,6 +19,7 @@ export default function App() {
     if (path === "/project") return "Project"
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
+    if (path === "/recruitment") return "Recruitment"
     if (path === "/gallery") return "Gallery"
     if (path === "/fan-carousel") return "Fan Carousel"
     return "Home"
@@ -100,6 +102,7 @@ export default function App() {
             <Route path="/project" element={<Project activePage={page} />} />
             <Route path="/team" element={<Teams activePage={page} />} />
             <Route path="/alumni" element={<Alumni activePage={page} />} />
+            <Route path="/recruitment" element={<Recruitment activePage={page} />} />
             <Route path="/gallery" element={<CircularGalleryDemo />} />
             <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
           </Routes>

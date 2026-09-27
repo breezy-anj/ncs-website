@@ -87,22 +87,32 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
             className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:588"
           >
-            <p
-              className="[text-underline-position:from-font] [word-break:break-word] bg-clip-text decoration-from-font decoration-solid font-['Helvetica_Neue:Regular'] leading-[normal] not-italic relative shrink-0 text-[160px] text-[transparent] text-center tracking-[-6.4px] underline w-full"
-              data-node-id="1:589"
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1305.8 191' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(65.292 0 0 39.004 652.92 95.5)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")",
-              }}
-            >
-              Alumni
-            </p>
+            <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
+              <h1
+                className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 10px 40px rgba(0,0,0,0.9)",
+                }}
+              >
+                ALUMNI
+              </h1>
+              <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+                Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we&apos;ve spent over two decades shaping curious minds into visionaries and leaders.
+              </p>
+            </div>
             <div
               className="content-stretch flex flex-col gap-[110px] items-start relative shrink-0 w-full"
               data-node-id="1:590"
             >
               <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
+                className="font-['Inter:Bold',sans-serif] font-bold text-[60px] sm:text-[72px] md:text-[80px] leading-none min-w-full not-italic relative shrink-0 text-center tracking-[-0.03em] w-full text-transparent bg-clip-text my-2"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 8px 30px rgba(0,0,0,0.8)",
+                }}
                 data-node-id="1:591"
               >
                 2026
