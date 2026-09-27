@@ -1,3 +1,4 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,600,500,400&display=swap');
 @import 'tailwindcss';
 
 /* Inter */
@@ -134,6 +135,20 @@
   font-weight: 400;
   font-display: swap;
   src: local('SF Pro Text'), local('SFProText-Regular'), local('-apple-system'), local('BlinkMacSystemFont'), local('Helvetica Neue');
+}
+
+@font-face {
+  font-family: 'Playfair Display:Italic';
+  src: url('https://static.figma.com/font/PlayfairDisplay-Italic_wght__1') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color: white;
+  background: black;
+  font-family: 'Satoshi', 'SF Pro:Regular', Inter, Arial, sans-serif;
 }
 
 /* Animations */
