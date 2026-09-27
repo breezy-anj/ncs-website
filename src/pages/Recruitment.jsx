@@ -53,35 +53,40 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
           >
             {/* Main Heading */}
             <div className="flex flex-col leading-none mb-8 tracking-tight">
-              <h1 className="font-['Inter',sans-serif] font-black text-[95px] lg:text-[115px] text-white tracking-[-0.04em] leading-[0.95]">
+              <h1 className="font-['Inter',sans-serif] font-normal text-[95px] lg:text-[118px] text-white tracking-[-0.03em] leading-[0.95]">
                 OOPS!
               </h1>
-              <h2 className="font-['Inter',sans-serif] font-black text-[70px] lg:text-[88px] text-white tracking-[-0.04em] leading-[1.05] mt-2">
-                <span className="text-[#3b82f6] drop-shadow-[0_0_35px_rgba(59,130,246,0.6)]">NOT</span> STARTED YET.
+              <h2 className="font-['Inter',sans-serif] font-normal text-[68px] lg:text-[84px] text-white tracking-[-0.03em] leading-[1.05] mt-2 whitespace-nowrap">
+                <span className="bg-gradient-to-r from-[#2563eb] via-[#ec4899] to-[#3b82f6] bg-clip-text text-transparent font-normal">
+                  NOT
+                </span>
+                <span className="text-white font-normal ml-3">
+                  STARTED YET.
+                </span>
               </h2>
             </div>
 
             {/* Explanatory Body Copy */}
-            <div className="flex flex-col gap-1 text-[22px] lg:text-[25px] font-['Inter',sans-serif] text-[#e5e7eb] leading-[1.4] tracking-[-0.02em]">
-              <p className="font-normal text-[#d1d5db]">
+            <div className="flex flex-col gap-1.5 text-[22px] lg:text-[25px] font-['Inter',sans-serif] text-white leading-[1.4] tracking-[-0.01em]">
+              <p className="font-normal text-white">
                 Good things takes time, just like great people.
               </p>
-              <p className="font-normal text-[#d1d5db]">
+              <p className="font-normal text-white">
                 Recruitment at NCS is{" "}
-                <span className="text-[#f59e0b] font-semibold drop-shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+                <span className="text-[#f59e0b] font-normal">
                   Coming Soon!
                 </span>
               </p>
 
               {/* Minimal Line Divider */}
-              <div className="w-[84px] h-[2px] bg-white/35 rounded-full my-5" />
+              <div className="w-[68px] h-[1.5px] bg-white my-4" />
 
-              <p className="font-normal text-[#d1d5db]">
+              <p className="font-normal text-white">
                 Stay connected to get updated.
               </p>
-              <p className="font-normal text-[#d1d5db]">
+              <p className="font-normal text-white">
                 You can be our next{" "}
-                <span className="text-[#6366f1] font-medium drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                <span className="text-[#3b82f6] font-normal">
                   NCS family member.
                 </span>
               </p>
