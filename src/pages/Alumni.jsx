@@ -87,27 +87,32 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
             className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:588"
           >
-          <div className="flex flex-col items-center text-center gap-4 w-full mb-2">
-            <h1
-              className="font-['Inter'] font-black text-[70px] sm:text-[85px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
-                textShadow: "0 10px 40px rgba(0,0,0,0.9)",
-              }}
-            >
-              ALUMNI
-            </h1>
-            <p className="font-['Inter'] font-normal text-[17px] sm:text-[19px] md:text-[20px] leading-[1.6] text-white/80 max-w-[960px] text-center tracking-[-0.01em]">
-              Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we&apos;ve spent over two decades shaping curious minds into visionaries and leaders.
-            </p>
-          </div>
+            <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
+              <h1
+                className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 10px 40px rgba(0,0,0,0.9)",
+                }}
+              >
+                ALUMNI
+              </h1>
+              <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+                Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we&apos;ve spent over two decades shaping curious minds into visionaries and leaders.
+              </p>
+            </div>
             <div
               className="content-stretch flex flex-col gap-[110px] items-start relative shrink-0 w-full"
               data-node-id="1:590"
             >
               <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
+                className="font-['Inter:Bold',sans-serif] font-bold text-[60px] sm:text-[72px] md:text-[80px] leading-none min-w-full not-italic relative shrink-0 text-center tracking-[-0.03em] w-full text-transparent bg-clip-text my-2"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                  textShadow: "0 8px 30px rgba(0,0,0,0.8)",
+                }}
                 data-node-id="1:591"
               >
                 2026
