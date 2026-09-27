@@ -1,9 +1,26 @@
 import React from "react"
 import { useNavigate, useLocation } from "react-router-dom"
-
-import { LiquidMetalButton } from "./ui/liquid-metal-button"
+import { motion } from "framer-motion"
+import {
+  FolderGit2,
+  GraduationCap,
+  Home as HomeIcon,
+  Info,
+  UserPlus,
+  Users,
+} from "lucide-react"
+import { cn } from "../lib/utils"
 
 const imgNcsLogo = "/assets/8f22e.svg"
+
+const navItems = [
+  { label: "Home", page: "Home", icon: HomeIcon },
+  { label: "About", page: "About", icon: Info },
+  { label: "Project", page: "Project", icon: FolderGit2 },
+  { label: "Team", page: "Team", icon: Users },
+  { label: "Alumni", page: "Alumni", icon: GraduationCap },
+  { label: "Recruitment", page: "Recruitment", icon: UserPlus },
+]
 
 export default function Navbar() {
   const navigate = useNavigate()
@@ -57,66 +74,84 @@ export default function Navbar() {
     }
   }
 
-  const navItems = [
-    { label: "Home", page: "Home" },
-    { label: "About", page: "About" },
-    { label: "Project", page: "Project" },
-    { label: "Team", page: "Team" },
-    { label: "Alumni", page: "Alumni" },
-    { label: "Recruitment", page: "Recruitment" },
-  ]
-
   return (
     <nav className="relative z-30 select-none shrink-0 flex items-center justify-center">
-      <div className="bg-white/95 backdrop-blur-md h-[106px] w-[1380px] max-w-full rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] px-[45px] flex items-center justify-between border border-white/20 transition-all duration-300">
-        {/* NCS Logo */}
+      <div className="relative mx-auto h-[106px] w-[1539px] max-w-full rounded-[53px] bg-white shadow-xl px-[40px] flex items-center justify-between">
         <button
           type="button"
           onClick={() => onNavigate?.("Home")}
-          className="h-[52px] w-[118px] shrink-0 flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
+          className="relative h-[54.39px] w-[122.96px] shrink-0 cursor-pointer transition-transform hover:scale-105 focus:outline-none"
           aria-label="Nibble Computer Society - Home"
         >
           <img
-            alt="NCS Logo"
-            className="block w-full h-full object-contain pointer-events-none"
+            alt=""
+            className="block size-full max-w-none object-contain pointer-events-none"
             src={imgNcsLogo}
           />
         </button>
 
-        {/* Navigation Items */}
-        <div className="flex items-center gap-[28px] lg:gap-[36px]">
+        <div className="flex items-center h-[68px] px-3 rounded-[34px] bg-neutral-100/90 border border-black/5 shadow-inner gap-2 xl:gap-3">
           {navItems.map((item) => {
+            const Icon = item.icon
             const isActive = activePage === item.page
+
             return (
-              <button
+              <motion.button
                 key={item.page}
                 type="button"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => onNavigate?.(item.page)}
-                className={`relative text-[22px] lg:text-[25px] font-['Inter',sans-serif] tracking-[-0.5px] cursor-pointer transition-all duration-200 py-1.5 px-3 rounded-full focus:outline-none leading-none flex items-center justify-center group ${
+                className={cn(
+                  "relative flex items-center justify-center gap-2.5 h-[52px] px-5 rounded-full cursor-pointer transition-colors duration-200 focus:outline-none select-none",
                   isActive
-                    ? "font-bold text-black opacity-100 scale-105"
-                    : "font-normal text-black/60 hover:text-black hover:opacity-100 hover:scale-105"
-                }`}
-              >
-                {item.label}
-                {isActive && (
-                  <span className="absolute bottom-0 left-3 right-3 h-[3px] bg-black rounded-full transition-all duration-300" />
+                    ? "text-white"
+                    : "text-neutral-700 hover:text-black hover:bg-white/80",
                 )}
-              </button>
+                aria-label={item.label}
+                aria-current={isActive ? "page" : undefined}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="activeNavPill"
+                    className="absolute inset-0 rounded-full bg-black shadow-md z-0"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+
+                <Icon
+                  size={22}
+                  strokeWidth={2.2}
+                  aria-hidden
+                  className={cn(
+                    "relative z-10 shrink-0 transition-colors duration-200",
+                    isActive ? "text-white" : "text-neutral-800",
+                  )}
+                />
+                <span
+                  className={cn(
+                    "relative z-10 whitespace-nowrap text-[20px] tracking-[0.1px] transition-colors duration-200 leading-none",
+                    isActive
+                      ? "font-semibold text-white"
+                      : "font-medium text-neutral-800",
+                  )}
+                  style={{ fontFamily: "'Satoshi', Arial, sans-serif" }}
+                >
+                  {item.label}
+                </span>
+              </motion.button>
             )
           })}
         </div>
 
-        {/* Connect Button with Liquid Metal Shader */}
-        <LiquidMetalButton
-          label="Connect"
-          width={168}
-          height={54}
-          fontSize={23}
-          subtle
-          textColor="#ffffff"
+        <button
+          type="button"
           onClick={handleConnectClick}
-        />
+          className="flex h-[66px] px-[38px] shrink-0 cursor-pointer items-center justify-center rounded-[33px] bg-black text-center font-normal tracking-[0.11px] text-[#fffefe] transition-all hover:bg-neutral-800 focus:outline-none"
+          style={{ fontFamily: "'Satoshi', Arial, sans-serif", fontSize: "29.1px" }}
+        >
+          <span style={{ lineHeight: 1 }}>Connect</span>
+        </button>
       </div>
     </nav>
   )
