@@ -109,16 +109,21 @@ export default function Teams({ activePage = "Team", onNavigate }) {
             className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:306"
           >
-            <p
-              className="[text-underline-position:from-font] [word-break:break-word] bg-clip-text decoration-from-font decoration-solid font-['Helvetica_Neue:Regular'] leading-[normal] not-italic relative shrink-0 text-[160px] text-[transparent] text-center tracking-[-6.4px] underline w-full"
-              data-node-id="1:307"
+          <div className="flex flex-col items-center text-center gap-4 w-full mb-2">
+            <h1
+              className="font-['Inter'] font-black text-[70px] sm:text-[85px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
               style={{
                 backgroundImage:
-                  "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1302.8 191' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(65.142 0 0 39.004 651.42 95.5)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")",
+                  "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
+                textShadow: "0 10px 40px rgba(0,0,0,0.9)",
               }}
             >
               TEAMS
+            </h1>
+            <p className="font-['Inter'] font-normal text-[17px] sm:text-[19px] md:text-[20px] leading-[1.6] text-white/80 max-w-[1020px] text-center tracking-[-0.01em]">
+              For over two decades, NCS has been the heart of technical culture on campus. Founded in 2000, we bring together students who live and breathe code, development, and design. Through hands-on projects, workshops, and real-world building, we turn curiosity into capability, creating an environment where bold ideas take root and thrive.
             </p>
+          </div>
             <div
               className="content-stretch flex flex-col gap-[110px] items-end relative shrink-0 w-full"
               data-node-id="1:308"
