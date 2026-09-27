@@ -44,9 +44,290 @@ const imgRectangle68 = `${assetPathPrefix}/a110b.png`
 const imgRectangle69 = `${assetPathPrefix}/33794.png`
 const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`
 const imgLine1 = `${assetPathPrefix}/2d226.svg`
+const imgGithubIcon = `${assetPathPrefix}/e31ad.svg`
+const imgLinkedinIcon = `${assetPathPrefix}/linkedin-icon.svg`
+
+const secondYearMembers = [
+  {
+    firstName: "Anjneya",
+    lastName: "Singh",
+    role: "Developer",
+    group: 1,
+    order: 4,
+    marginLeft: "651px",
+    marginTop: "177px",
+    image: imgRectangle63,
+    cardColor: "bg-[#cbd5d4]",
+    imageStyle: {
+      height: "499px",
+      left: "calc(50% + 16.58px)",
+      boxShadow: "10.161px 10.161px 10.161px 0px rgba(0,0,0,0.25)",
+      top: "5.88px",
+      width: "309px",
+    },
+    github: "https://github.com/breezy-anj",
+  },
+  {
+    firstName: "Tanishka",
+    lastName: "Israni",
+    role: "Developer",
+    group: 2,
+    order: 1,
+    marginLeft: "0px",
+    marginTop: "177px",
+    image: imgRectangle69,
+    cardColor: "bg-[#cbd5d4]",
+    imageStyle: {
+      height: "586px",
+      left: "calc(50% + 18.08px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "-19.12px",
+      width: "394px",
+    },
+    linkedin:
+      "https://www.linkedin.com/in/tanishka-israni-852923380?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+  {
+    firstName: "Saishree",
+    lastName: "Saxena",
+    role: "Developer",
+    group: 1,
+    order: 5,
+    marginLeft: "868px",
+    marginTop: "0px",
+    image: imgRectangle62,
+    cardColor: "bg-[#cbd5d4]",
+    imageStyle: {
+      height: "548px",
+      left: "calc(50% + 17.08px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "37.88px",
+      width: "368px",
+    },
+    linkedin: "https://www.linkedin.com/in/saishree-saxena-605580372",
+    github: "https://github.com/saitee5",
+  },
+  {
+    firstName: "Ansh",
+    lastName: "Mittal",
+    role: "Technical",
+    group: 2,
+    order: 3,
+    marginLeft: "434px",
+    marginTop: "177px",
+    image: imgRectangle68,
+    cardColor: "bg-[#e4dcd2]",
+    imageStyle: {
+      height: "599px",
+      left: "calc(50% + 13.58px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "-21.12px",
+      width: "347px",
+    },
+    linkedin: "https://www.linkedin.com/in/ansh-mittal-xr/",
+    github: "https://github.com/phoenix-xr",
+  },
+  {
+    firstName: "Tanishq",
+    lastName: "Marwari",
+    role: "Technical",
+    group: 2,
+    order: 2,
+    marginLeft: "217px",
+    marginTop: "0px",
+    image: imgRectangle67,
+    cardColor: "bg-[#e4dcd2]",
+    imageStyle: {
+      height: "558px",
+      left: "calc(50% + 20.08px)",
+      boxShadow: "10.161px 10.161px 10.161px 0px rgba(0,0,0,0.25)",
+      top: "106.88px",
+      width: "346px",
+    },
+    linkedin: "https://www.linkedin.com/in/tanishq-marwari-109772390/",
+  },
+  {
+    firstName: "Sidhi",
+    lastName: "Saxena",
+    role: "Programmer",
+    group: 0,
+    order: 5,
+    marginLeft: "868px",
+    marginTop: "0px",
+    image: imgRectangle61,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "1168px",
+      left: "calc(50% - 0.94px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "-535.12px",
+      width: "785px",
+    },
+    linkedin: "https://www.linkedin.com/in/sidhi-saxena-672068377",
+    codolio: "https://codolio.com/profile/Sidhisaxena/card",
+  },
+  {
+    firstName: "Aryan",
+    lastName: "Singh",
+    role: "Programmer",
+    group: 1,
+    order: 1,
+    marginLeft: "0px",
+    marginTop: "0px",
+    image: imgRectangle64,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "474px",
+      left: "calc(50% - 0.82px)",
+      boxShadow: "2.88px 2.88px 2.88px 0px rgba(0,0,0,0.25)",
+      top: "14.88px",
+      width: "319px",
+    },
+    linkedin: "https://www.linkedin.com/in/oxy8en",
+    codolio: "https://codolio.com/profile/oxy8en",
+  },
+  {
+    firstName: "Aanya",
+    lastName: "Gogia",
+    role: "Programmer",
+    group: 1,
+    order: 2,
+    marginLeft: "217px",
+    marginTop: "177px",
+    image: imgRectangle65,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "410px",
+      left: "calc(50% + 13.24px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "66px",
+      width: "276px",
+    },
+    linkedin: "https://www.linkedin.com/in/aanya-gogia-732608385/",
+    codolio: "https://codolio.com/profile/AanyaGogia",
+  },
+  {
+    firstName: "Karnika",
+    lastName: "",
+    role: "Programmer",
+    group: 0,
+    order: 4,
+    marginLeft: "652px",
+    marginTop: "177px",
+    image: imgRectangle59,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "415px",
+      left: "calc(50% + 8.5px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "12px",
+      width: "279px",
+    },
+    github: "https://github.com/karnika404x",
+    linkedin: "https://www.linkedin.com/in/karnika-jaiswal-a2507a383",
+    codolio: "https://codolio.com/profile/serious_am",
+  },
+  {
+    firstName: "Sanskar",
+    lastName: "Pal",
+    role: "Programmer",
+    group: 0,
+    order: 6,
+    marginLeft: "1086px",
+    marginTop: "179px",
+    image: imgRectangle60,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "375px",
+      left: "calc(50% + 0.12px)",
+      boxShadow: "3.6px 3.6px 3.6px 0px rgba(0,0,0,0.25)",
+      top: "37px",
+      width: "282px",
+    },
+    linkedin: "https://www.linkedin.com/in/sanskarpal23/",
+    codolio: "https://codolio.com/profile/sanskarpal",
+  },
+  {
+    firstName: "Mohd",
+    lastName: "Fahad",
+    role: "Programmer",
+    group: 1,
+    order: 3,
+    marginLeft: "434px",
+    marginTop: "0px",
+    image: imgRectangle66,
+    cardColor: "bg-[#feb9ce]",
+    imageStyle: {
+      height: "486px",
+      left: "calc(50% + 45.66px)",
+      boxShadow: "4.32px 4.32px 4.32px 0px rgba(0,0,0,0.25)",
+      top: "30.88px",
+      width: "327px",
+    },
+    linkedin: "https://www.linkedin.com/in/fahadxiii/",
+  },
+  {
+    firstName: "Darshita",
+    lastName: "Jain",
+    role: "Designer",
+    group: 0,
+    order: 2,
+    marginLeft: "217px",
+    marginTop: "177px",
+    image: imgRectangle58,
+    cardColor: "bg-[#ffc931]",
+    imageStyle: {
+      height: "472px",
+      left: "calc(50% - 0.5px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "25px",
+      width: "305px",
+    },
+    linkedin: "https://www.linkedin.com/in/darshita-jain-23144137b",
+  },
+  {
+    firstName: "Bhaskar",
+    lastName: "Shah",
+    role: "Designer",
+    group: 0,
+    order: 1,
+    marginLeft: "0px",
+    marginTop: "0px",
+    image: imgRectangle56,
+    cardColor: "bg-[#ffc931]",
+    imageStyle: {
+      height: "588px",
+      left: "calc(50% + 12.58px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "11.88px",
+      width: "395px",
+    },
+    github: "https://github.com/BhaskarShah05",
+    linkedin: "https://www.linkedin.com/in/BhaskarShah05",
+  },
+  {
+    firstName: "Piyush",
+    lastName: "Gautam",
+    role: "Designer",
+    group: 0,
+    order: 3,
+    marginLeft: "435px",
+    marginTop: "0px",
+    image: imgRectangle57,
+    cardColor: "bg-[#ffc931]",
+    imageStyle: {
+      height: "436px",
+      left: "calc(50% - 0.5px)",
+      boxShadow: "4px 4px 4px 0px rgba(0,0,0,0.25)",
+      top: "61px",
+      width: "293px",
+    },
+  },
+]
 
 export default function Teams({ activePage = "Team", onNavigate }) {
   const [selectedMember, setSelectedMember] = useState(null)
+  const [flippedMember, setFlippedMember] = useState(null)
 
   const handleCardClick = (e) => {
     const card = e.target.closest(".member-card")
@@ -63,8 +344,6 @@ export default function Teams({ activePage = "Team", onNavigate }) {
           name = pTags.map((p) => p.innerText || p.textContent).join(" ")
         }
 
-        // The role element is usually the direct p child of textContainer
-        // So we can find the paragraph that isn't inside nameDiv
         const pTagsInContainer = Array.from(textContainer.querySelectorAll("p"))
         const roleP = pTagsInContainer.find(p => p.parentElement === textContainer)
         if (roleP) {
@@ -74,6 +353,8 @@ export default function Teams({ activePage = "Team", onNavigate }) {
 
       const imgElement = card.querySelector("img")
       const imgSrc = imgElement ? imgElement.getAttribute("src") : null
+      const github = card.dataset.github || null
+      const linkedin = card.dataset.linkedin || null
       const bgColorMatch = card.className.match(/bg-\[([^\]]+)\]/)
       const bgColor =
         card.style.backgroundColor ||
@@ -83,6 +364,8 @@ export default function Teams({ activePage = "Team", onNavigate }) {
         name, 
         role, 
         imgSrc, 
+        github,
+        linkedin,
         bgColor,
         x: e.clientX,
         y: e.clientY
@@ -1310,7 +1593,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                   data-node-id="1:484"
                 >
                   <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#ffc931] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:485"
                   >
                     <div
@@ -1351,7 +1634,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     </div>
                   </div>
                   <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-[435px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#ffc931] col-1 h-[600px] ml-[435px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:491"
                   >
                     <div
@@ -1392,7 +1675,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     </div>
                   </div>
                   <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#ffc931] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:497"
                   >
                     <div
@@ -1433,7 +1716,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     </div>
                   </div>
                   <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[652px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[652px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:503"
                   >
                     <div
@@ -1473,7 +1756,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     </div>
                   </div>
                   <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[1086px] mt-[179px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[1086px] mt-[179px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:509"
                   >
                     <div
@@ -1518,7 +1801,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     data-node-id="1:515"
                   >
                     <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                      className="hidden bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                       data-node-id="1:516"
                     >
                       <div
@@ -1565,89 +1848,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                   data-node-id="1:522"
                 >
                   <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
-                    data-node-id="1:523"
-                  >
-                    <div
-                      className="-translate-x-1/2 absolute h-[548px] left-[calc(50%+17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37.88px] w-[368px]"
-                      data-node-id="1:524"
-                    >
-                      <img
-                        alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
-                        src={imgRectangle62}
-                      />
-                    </div>
-                    <div
-                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
-                      data-node-id="1:525"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
-                      }}
-                    />
-                    <div
-                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
-                      data-node-id="1:526"
-                    >
-                      <div
-                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
-                        data-node-id="1:527"
-                      >
-                        <p className="leading-[1.25] mb-0">Saishree</p>
-                        <p className="leading-[1.25]">Saxena</p>
-                      </div>
-                      <p
-                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
-                        data-node-id="1:528"
-                      >
-                        Developer
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
-                    data-node-id="1:529"
-                  >
-                    <div
-                      className="-translate-x-1/2 absolute h-[499px] left-[calc(50%+16.58px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[5.88px] w-[309px]"
-                      data-node-id="1:530"
-                    >
-                      <img
-                        alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
-                        src={imgRectangle63}
-                      />
-                    </div>
-                    <div
-                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
-                      data-node-id="1:531"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
-                      }}
-                    />
-                    <div
-                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
-                      data-node-id="1:532"
-                    >
-                      <div
-                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
-                        data-node-id="1:533"
-                      >
-                        <p className="leading-[1.25] mb-0">Anjneya</p>
-                        <p className="leading-[1.25]">Singh</p>
-                      </div>
-                      <p
-                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
-                        data-node-id="1:534"
-                      >
-                        Developer
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:535"
                   >
                     <div
@@ -1688,7 +1889,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     </div>
                   </div>
                   <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:541"
                   >
                     <div
@@ -1729,7 +1930,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                     </div>
                   </div>
                   <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#feb9ce] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:547"
                   >
                     <div
@@ -1775,7 +1976,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                   data-node-id="1:553"
                 >
                   <div
-                    className="bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    className="hidden bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
                     data-node-id="1:554"
                   >
                     <div
@@ -1815,93 +2016,157 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                       </p>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
-                    data-node-id="1:560"
-                  >
-                    <div
-                      className="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px]"
-                      data-node-id="1:561"
-                    >
-                      <img
-                        alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
-                        src={imgRectangle68}
-                      />
-                    </div>
-                    <div
-                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
-                      data-node-id="1:562"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
-                      }}
-                    />
-                    <div
-                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
-                      data-node-id="1:563"
-                    >
-                      <div
-                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
-                        data-node-id="1:564"
-                      >
-                        <p className="leading-[1.25] mb-0">Ansh</p>
-                        <p className="leading-[1.25]">Mittal</p>
-                      </div>
-                      <p
-                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
-                        data-node-id="1:565"
-                      >
-                        Technical
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
-                    data-node-id="1:566"
-                  >
-                    <div
-                      className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+18.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-19.12px] w-[394px]"
-                      data-node-id="1:567"
-                    >
-                      <img
-                        alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
-                        src={imgRectangle69}
-                      />
-                    </div>
-                    <div
-                      className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]"
-                      data-node-id="1:568"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
-                      }}
-                    />
-                    <div
-                      className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap"
-                      data-node-id="1:569"
-                    >
-                      <div
-                        className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white"
-                        data-node-id="1:570"
-                      >
-                        <p className="leading-[1.25] mb-0">Tanishka</p>
-                        <p className="leading-[1.25]">Israni</p>
-                      </div>
-                      <p
-                        className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]"
-                        data-node-id="1:571"
-                      >
-                        Developer
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <section className="mt-[80px] flex w-full flex-col items-center gap-[50px]">
+          <h2 className="font-['Inter:Bold'] text-[100px] font-bold leading-[normal] text-center text-white tracking-[-4px]">
+            2nd Year
+          </h2>
+          <div className="grid w-[1285px] grid-cols-6 items-start gap-x-[17px] gap-y-[17px]">
+            {secondYearMembers
+              .slice()
+              .sort((a, b) => a.group - b.group || a.order - b.order)
+              .map((member) => {
+              const memberKey = `${member.firstName}-${member.lastName}`
+              const memberName = [member.firstName, member.lastName]
+                .filter(Boolean)
+                .join(" ")
+              const isFlipped = flippedMember === memberKey
+              const toggleFlip = () =>
+                setFlippedMember((current) =>
+                  current === memberKey ? null : memberKey,
+                )
+
+              return (
+                <div
+                  key={memberKey}
+                  data-github={member.github}
+                  data-linkedin={member.linkedin}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${memberName}, ${member.role}. Show profile links`}
+                  aria-pressed={isFlipped}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    toggleFlip()
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault()
+                      event.stopPropagation()
+                      toggleFlip()
+                    }
+                  }}
+                  className={`${member.cardColor} group member-card relative h-[600px] w-[200px] cursor-pointer overflow-clip rounded-[300px] [perspective:1000px]`}
+                  style={{
+                    gridColumnStart: member.group === 2 ? member.order + 1 : member.order,
+                    gridRowStart: member.group + 1,
+                    marginTop: member.order % 2 === 0 ? "192px" : "0px",
+                  }}
+                >
+                  <div
+                    className="absolute left-1/2 top-0 -translate-x-1/2 transition-transform duration-500 group-hover:scale-105"
+                    style={member.imageStyle}
+                  >
+                    <img
+                      alt=""
+                      className="pointer-events-none size-full object-contain"
+                      src={member.image}
+                    />
+                  </div>
+                  <div
+                    className="absolute inset-0 z-10 h-full w-full transition-transform duration-500 will-change-transform"
+                    style={{
+                      transformStyle: "preserve-3d",
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                    }}
+                  >
+                    <div
+                      className="absolute inset-0 top-[352px] flex h-[248px] flex-col items-center justify-end rounded-bl-[200px] rounded-br-[200px] pb-8"
+                      style={{
+                        backfaceVisibility: "hidden",
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                      }}
+                    >
+                      <div className="mb-2 flex flex-col text-center font-['Poppins:SemiBold'] text-[28px] leading-[1.25] text-white">
+                        <p className="mb-0">{member.firstName}</p>
+                        {member.lastName && <p className="mb-0">{member.lastName}</p>}
+                      </div>
+                      <p className="m-0 font-['Poppins:Regular'] text-[16px] text-[#ffd9e5]">
+                        {member.role}
+                      </p>
+                    </div>
+                    <div
+                      className="absolute inset-0 top-[352px] flex h-[248px] flex-col items-center justify-end rounded-bl-[200px] rounded-br-[200px] pb-12"
+                      style={{
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)",
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 30%, rgb(0, 0, 0) 100%)",
+                      }}
+                    >
+                      <div className="flex gap-4">
+                        {!member.linkedin && !member.github && !member.codolio && (
+                          <p className="text-sm text-white/70">No links found</p>
+                        )}
+                        {member.codolio && (
+                          <a
+                            href={member.codolio}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${memberName} Codolio`}
+                            title="Codolio"
+                            onClick={(event) => event.stopPropagation()}
+                            className="flex size-6 items-center justify-center rounded-full bg-white font-['Inter'] text-[13px] font-bold text-black"
+                          >
+                            C
+                          </a>
+                        )}
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${memberName} LinkedIn`}
+                            title="LinkedIn"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <img
+                              src={imgLinkedinIcon}
+                              alt="LinkedIn"
+                              className="size-6 object-contain"
+                            />
+                          </a>
+                        )}
+                        {member.github && (
+                          <a
+                            href={member.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${memberName} GitHub`}
+                            title="GitHub"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <img
+                              src={imgGithubIcon}
+                              alt="GitHub"
+                              className="size-6 object-contain brightness-0 invert"
+                            />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+              })}
+          </div>
+        </section>
 
         <Footer />
 
@@ -1961,7 +2226,40 @@ export default function Teams({ activePage = "Team", onNavigate }) {
                   Ut enim ad minim veniam.
                 </p>
 
-                <div className="flex gap-4">
+                {(selectedMember.github || selectedMember.linkedin) && (
+                  <div className="mb-4 flex gap-4">
+                    {selectedMember.github && (
+                      <a
+                        href={selectedMember.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${selectedMember.name} GitHub`}
+                        title="GitHub"
+                        className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/15"
+                      >
+                        <span className="text-[10px] font-bold" aria-hidden="true">
+                          GH
+                        </span>
+                      </a>
+                    )}
+                    {selectedMember.linkedin && (
+                      <a
+                        href={selectedMember.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${selectedMember.name} LinkedIn`}
+                        title="LinkedIn"
+                        className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/15"
+                      >
+                        <span className="text-[12px] font-bold" aria-hidden="true">
+                          in
+                        </span>
+                      </a>
+                    )}
+                  </div>
+                )}
+
+                <div className={selectedMember.github || selectedMember.linkedin ? "hidden" : "flex gap-4"}>
                   <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center cursor-not-allowed hover:bg-white/10 transition-colors border border-white/5">
                     <svg
                       className="w-4 h-4 text-white"
