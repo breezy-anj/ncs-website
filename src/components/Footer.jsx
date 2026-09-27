@@ -6,8 +6,6 @@ import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography
 
 const assetPathPrefix = "/assets"
 
-const imgGithub = `${assetPathPrefix}/e31ad.svg`
-const imgFacebook = `${assetPathPrefix}/70124.svg`
 const imgInstagram = `${assetPathPrefix}/42741.svg`
 const imgLinkedin = `${assetPathPrefix}/linkedin-icon.svg`
 
@@ -204,40 +202,6 @@ export default function Footer() {
 
             {/* Liquid Glass Social Icons Dock */}
             <div className="flex items-center justify-center gap-4 sm:gap-6 mt-3">
-              <a
-                href="https://github.com/ncs-jss"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="relative shrink-0 size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
-                style={{
-                  transitionTimingFunction:
-                    "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
-                }}
-              >
-                <img
-                  alt="GitHub"
-                  className="block size-full object-contain"
-                  src={imgGithub}
-                />
-              </a>
-              <a
-                href="https://facebook.com/nibblecomputersociety"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="relative shrink-0 size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
-                style={{
-                  transitionTimingFunction:
-                    "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
-                }}
-              >
-                <img
-                  alt="Facebook"
-                  className="block size-full object-contain"
-                  src={imgFacebook}
-                />
-              </a>
               <a
                 href="https://instagram.com/hackncs"
                 target="_blank"
