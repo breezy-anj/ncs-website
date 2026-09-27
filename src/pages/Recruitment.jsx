@@ -4,8 +4,8 @@ import Footer from "../components/Footer"
 import { motion, AnimatePresence } from "framer-motion"
 
 const assetPathPrefix = "/assets"
-const heroIllustration = `${assetPathPrefix}/hero-illustration.png`
-const imgNotifyBtn = `${assetPathPrefix}/notify-me-btn.png`
+const heroIllustration = `${assetPathPrefix}/reqruitment.svg`
+const imgNotifyBtn = `${assetPathPrefix}/notifysvg.svg`
 
 export default function Recruitment({ activePage = "Recruitment", onNavigate }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
