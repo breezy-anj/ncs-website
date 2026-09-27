@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { LiquidMetalButton } from "./LiquidMetalButton"
+import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography"
 
 const assetPathPrefix = "/assets"
 
@@ -262,19 +263,22 @@ export default function AboutSection() {
       </div>
 
       {/* =========================================================
-          5. MASSIVE "NIBBLE" WORDMARK
+          5. MASSIVE "NIBBLE" WORDMARK WITH INTERACTIVE PARTICLE PHYSICS
       ========================================================= */}
-      <div className="w-full flex justify-center items-center my-6 md:my-12 px-4 z-10">
-        <h2
-          className="font-['Inter'] font-black text-[110px] sm:text-[180px] md:text-[240px] lg:text-[280px] leading-none tracking-[-0.05em] text-transparent bg-clip-text select-none text-center"
-          style={{
-            backgroundImage:
-              "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
-            textShadow: "0 10px 40px rgba(0,0,0,0.9)",
-          }}
-        >
-          NIBBLE
-        </h2>
+      <div className="w-full flex justify-center items-center my-6 md:my-10 px-4 z-10">
+        <div className="flex justify-center items-center w-full h-[220px] sm:h-[260px] md:h-[300px]">
+          <CursorDrivenParticleTypography
+            text="NIBBLE"
+            fontSize={250}
+            fontFamily="'Inter', sans-serif"
+            particleSize={2.2}
+            particleDensity={4.5}
+            dispersionStrength={24}
+            returnSpeed={0.08}
+            color="#FFFFFF"
+            className="w-full h-full min-h-0"
+          />
+        </div>
       </div>
 
       {/* =========================================================
