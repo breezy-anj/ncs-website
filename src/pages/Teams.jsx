@@ -109,9 +109,9 @@ export default function Teams({ activePage = "Team", onNavigate }) {
             className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:306"
           >
-          <div className="flex flex-col items-center text-center gap-4 w-full mb-2">
+          <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
             <h1
-              className="font-['Inter'] font-black text-[70px] sm:text-[85px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+              className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -120,7 +120,7 @@ export default function Teams({ activePage = "Team", onNavigate }) {
             >
               TEAMS
             </h1>
-            <p className="font-['Inter'] font-normal text-[17px] sm:text-[19px] md:text-[20px] leading-[1.6] text-white/80 max-w-[1020px] text-center tracking-[-0.01em]">
+            <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
               For over two decades, NCS has been the heart of technical culture on campus. Founded in 2000, we bring together students who live and breathe code, development, and design. Through hands-on projects, workshops, and real-world building, we turn curiosity into capability, creating an environment where bold ideas take root and thrive.
             </p>
           </div>
