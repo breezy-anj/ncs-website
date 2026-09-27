@@ -156,40 +156,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 2. Interactive Team Image Sphere */}
-      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center">
-        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
-          <img
-            src={imgSphereLeafLeft}
-            alt=""
-            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
-          />
-        </div>
-        <div className="relative z-20 flex justify-center items-center py-4">
-          <SphereImageGrid
-            images={ALL_38_TEAM_MEMBERS}
-            containerSize={640}
-            sphereRadius={240}
-            dragSensitivity={0.8}
-            momentumDecay={0.96}
-            maxRotationSpeed={6}
-            baseImageScale={0.15}
-            hoverScale={1.3}
-            perspective={1000}
-            autoRotate={true}
-            autoRotateSpeed={0.25}
-          />
-        </div>
-        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
-          <img
-            src={imgSphereLeafRight}
-            alt=""
-            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(236,72,153,0.6)]"
-          />
-        </div>
-      </div>
-
-      {/* 3. Liquid Glass LET'S CONNECT Box */}
+      {/* 2. Liquid Glass LET'S CONNECT Box */}
       <div className="w-full flex flex-col items-center max-w-[1500px] px-4 my-8">
         <GlassEffect className="rounded-[36px] p-8 sm:p-10 hover:rounded-[42px] max-w-[660px] w-full border border-white/20">
           <div className="flex flex-col items-center gap-3.5 text-center w-full">
@@ -239,6 +206,39 @@ export default function Footer() {
             </div>
           </div>
         </GlassEffect>
+      </div>
+
+      {/* 3. Interactive Team Image Sphere */}
+      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center">
+        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+          <img
+            src={imgSphereLeafLeft}
+            alt=""
+            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
+          />
+        </div>
+        <div className="relative z-20 flex justify-center items-center py-4">
+          <SphereImageGrid
+            images={ALL_38_TEAM_MEMBERS}
+            containerSize={640}
+            sphereRadius={240}
+            dragSensitivity={0.8}
+            momentumDecay={0.96}
+            maxRotationSpeed={6}
+            baseImageScale={0.15}
+            hoverScale={1.3}
+            perspective={1000}
+            autoRotate={true}
+            autoRotateSpeed={0.25}
+          />
+        </div>
+        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+          <img
+            src={imgSphereLeafRight}
+            alt=""
+            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(236,72,153,0.6)]"
+          />
+        </div>
       </div>
 
       {/* 4. Bottom Content Container (Slogan & Attribution) */}
