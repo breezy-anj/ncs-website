@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+
 import Footer from "../components/Footer"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 
@@ -62,7 +62,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
         className="content-stretch flex flex-col gap-[50px] items-center w-[1571px]"
         data-node-id="1:189"
       >
-        <Navbar activePage={activePage} onNavigate={onNavigate} />
+
         <div
           className="content-stretch flex flex-col gap-[50px] items-center relative shrink-0 w-full"
           data-node-id="1:201"

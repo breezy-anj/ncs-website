@@ -1,38 +1,14 @@
 import React, { useState, useEffect, useRef } from "react"
 import { LiquidMetalButton } from "./LiquidMetalButton"
-import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography"
-import SphereImageGrid from "./ui/img-sphere"
-import { ALL_38_TEAM_MEMBERS } from "../data/teamMembers"
 
 const assetPathPrefix = "/assets"
 
 // Assets
 const imgHeroIllustration = `${assetPathPrefix}/hero sec illust.svg`
 const imgVectorLeaf = `${assetPathPrefix}/Vector.svg`
-const imgSphereLeafLeft = `${assetPathPrefix}/cbf28.svg`
-const imgSphereLeafRight = `${assetPathPrefix}/ac2ff.svg`
 const imgPhoto1 = `${assetPathPrefix}/82f8e.png` // Offline session in lab
 const imgPhoto2 = `${assetPathPrefix}/1e5cf.png` // Large group community photo
 const imgPhoto3 = `${assetPathPrefix}/2890e.png` // Event team members photo
-
-const imgInstagram = `${assetPathPrefix}/42741.svg`
-const imgLinkedin = `${assetPathPrefix}/linkedin-icon.svg`
-
-// Team Member photos for footer strip
-const teamMembers = [
-  { name: "Ajeet Bharti", photo: `${assetPathPrefix}/d7780.png` },
-  { name: "Pranjyaditya Singh", photo: `${assetPathPrefix}/09399.png` },
-  { name: "Athrva Gupta", photo: `${assetPathPrefix}/7f2b2.png` },
-  { name: "Bhaskar Shah", photo: `${assetPathPrefix}/2dcb7.png` },
-  { name: "Darshita Jain", photo: `${assetPathPrefix}/eb3f6.png` },
-  { name: "Piyush Gautam", photo: `${assetPathPrefix}/37c1c.png` },
-  { name: "Kuldeep Singh", photo: `${assetPathPrefix}/8c5e3.png` },
-  { name: "Naziya Praveen", photo: `${assetPathPrefix}/5f41c.png` },
-  { name: "Shivam Goyal", photo: `${assetPathPrefix}/57606.png` },
-  { name: "Khushi Mishra", photo: `${assetPathPrefix}/78659.png` },
-  { name: "Vibha Gupta", photo: `${assetPathPrefix}/aafdb.png` },
-  { name: "Saishree Saxena", photo: `${assetPathPrefix}/a155c.png` },
-]
 
 /**
  * Crescent Moon with Golden Star Icon Badge
@@ -264,177 +240,6 @@ export default function AboutSection() {
         </div>
       </div>
 
-      {/* =========================================================
-          5. MASSIVE "NIBBLE" WORDMARK WITH INTERACTIVE PARTICLE PHYSICS
-      ========================================================= */}
-      <div className="w-full flex justify-center items-center my-6 md:my-10 px-4 z-10">
-        <div className="flex justify-center items-center w-full h-[220px] sm:h-[260px] md:h-[300px]">
-          <CursorDrivenParticleTypography
-            text="NIBBLE"
-            fontSize={250}
-            fontFamily="'Inter', sans-serif"
-            particleSize={2.2}
-            particleDensity={4.5}
-            dispersionStrength={24}
-            returnSpeed={0.08}
-            color="#FFFFFF"
-            className="w-full h-full min-h-0"
-          />
-        </div>
-      </div>
-
-      {/* =========================================================
-          6. "LET'S CONNECT" PILL CONTAINER & SOCIAL ICONS
-      ========================================================= */}
-      <div className="w-full flex flex-col items-center px-4 my-8 z-10">
-        <div
-          className="rounded-[36px] p-8 sm:p-10 max-w-[620px] w-full flex flex-col items-center text-center gap-3.5 border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
-            backdropFilter: "blur(16px)",
-          }}
-        >
-          <h3 className="font-['Inter'] font-bold text-[32px] sm:text-[38px] leading-tight text-white tracking-[-0.03em] uppercase">
-            LET&apos;S CONNECT
-          </h3>
-          <p className="font-['Inter'] font-normal text-[16px] sm:text-[17px] text-white/80 tracking-[-0.01em] -mt-1">
-            Follow NCS and stay in the loop.
-          </p>
-
-          {/* Social Icons Dock */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 mt-3">
-            <a
-              href="https://instagram.com/hackncs"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 flex items-center justify-center shadow-lg cursor-pointer"
-            >
-              <img src={imgInstagram} alt="Instagram" className="size-full object-contain" />
-            </a>
-            <a
-              href="https://linkedin.com/company/hackncs"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 flex items-center justify-center shadow-lg cursor-pointer"
-            >
-              <img src={imgLinkedin} alt="LinkedIn" className="size-full object-contain" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center z-10">
-        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
-          <img
-            src={imgSphereLeafLeft}
-            alt=""
-            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
-          />
-        </div>
-        <div className="relative z-20 flex justify-center items-center py-4">
-          <SphereImageGrid
-            images={ALL_38_TEAM_MEMBERS}
-            containerSize={640}
-            sphereRadius={240}
-            dragSensitivity={0.8}
-            momentumDecay={0.96}
-            maxRotationSpeed={6}
-            baseImageScale={0.15}
-            hoverScale={1.3}
-            perspective={1000}
-            autoRotate={true}
-            autoRotateSpeed={0.25}
-          />
-        </div>
-        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
-          <img
-            src={imgSphereLeafRight}
-            alt=""
-            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(236,72,153,0.6)]"
-          />
-        </div>
-      </div>
-
-      {/* =========================================================
-          7. FOOTER STRIP: TEAM AVATARS + BOTANICAL LEAF ACCENTS
-      ========================================================= */}
-      <div className="relative w-full my-12 flex flex-col items-center">
-        {/* Top-Left Botanical Leaf Accent */}
-        <img
-          alt=""
-          src={imgVectorLeaf}
-          className="absolute -top-[44px] left-[30px] md:left-[60px] w-[75px] h-[80px] md:w-[95px] md:h-[100px] pointer-events-none z-30 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
-        />
-
-        {/* Liquid Glass Blue Ribbon Bar with Team Members */}
-        <div
-          className="marquee-group relative w-full overflow-hidden py-3.5 border-y border-blue-400/40"
-          style={{
-            backgroundColor: "rgba(0, 42, 105, 0.85)",
-            backdropFilter: "blur(10px)",
-            boxShadow:
-              "inset 0 2px 3px rgba(255,255,255,0.35), inset 0 -2px 3px rgba(255,255,255,0.2), 0 0 40px rgba(0,42,105,0.6)",
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%)",
-          }}
-        >
-          <div
-            className="flex items-center w-max animate-marquee-left"
-            style={{ ["--marquee-duration"]: "90s" }}
-          >
-            {/* Loop team member list twice for infinite continuous ribbon */}
-            {[...teamMembers, ...teamMembers, ...teamMembers].map((member, idx) => (
-              <div
-                key={`${member.name}-${idx}`}
-                className="flex items-center gap-3 shrink-0 px-4 group/avatar cursor-pointer"
-              >
-                <div
-                  className="size-[54px] sm:size-[62px] shrink-0 overflow-hidden bg-black/60 shadow-md transition-transform duration-300 group-hover/avatar:scale-110"
-                  style={{
-                    clipPath:
-                      "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)",
-                  }}
-                >
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="w-full h-full object-cover block"
-                    loading="lazy"
-                  />
-                </div>
-                <span className="text-white text-[14px] sm:text-[15px] font-medium whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover/avatar:text-blue-200 transition-colors">
-                  {member.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom-Right Botanical Leaf Accent */}
-        <img
-          alt=""
-          src={imgVectorLeaf}
-          className="absolute -bottom-[44px] right-[30px] md:right-[60px] w-[75px] h-[80px] md:w-[95px] md:h-[100px] pointer-events-none z-30 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
-          style={{ transform: "rotate(180deg) scaleX(-1)" }}
-        />
-      </div>
-
-      {/* =========================================================
-          8. BOTTOM TAGLINE & ATTRIBUTION
-      ========================================================= */}
-      <div className="w-full flex flex-col items-center text-center gap-3 px-4 mt-8 z-10">
-        <h3 className="font-['Inter'] font-semibold text-[26px] sm:text-[34px] md:text-[42px] leading-tight text-white tracking-[-0.03em]">
-          Designing, Coding, And Tomorrow&apos;s Innovations Today.
-        </h3>
-        <p className="font-['Inter'] font-normal text-[15px] sm:text-[18px] md:text-[20px] text-white/75 tracking-[-0.01em]">
-          Designed and developed with ❤️ by Nibble Computer Society
-        </p>
-      </div>
     </section>
   )
 }

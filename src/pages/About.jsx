@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Navbar from "../components/Navbar"
+
 import AboutSection from "../components/AboutSection"
 
 export default function About({ activePage = "About", onNavigate }) {
@@ -14,7 +14,7 @@ export default function About({ activePage = "About", onNavigate }) {
       data-name="About"
     >
       <div className="content-stretch flex flex-col gap-[50px] items-center w-[1518px]">
-        <Navbar activePage={activePage} onNavigate={onNavigate} />
+
         <div className="w-full flex flex-col items-center">
           <AboutSection />
         </div>

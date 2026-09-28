@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Navbar from "../components/Navbar"
+
 import Footer from "../components/Footer"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -35,8 +35,7 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
       data-name="Recruitment"
     >
       <div className="content-stretch flex flex-col gap-[60px] items-center w-[1518px]">
-        {/* Navbar */}
-        <Navbar activePage={activePage} onNavigate={onNavigate} />
+
 
         {/* Hero Section */}
         <div className="w-full flex items-center justify-between px-10 lg:px-16 pt-8 pb-12 relative min-h-[580px]">

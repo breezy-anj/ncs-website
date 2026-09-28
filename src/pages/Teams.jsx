@@ -1,4 +1,5 @@
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 const assetPathPrefix = "/assets";
 const imgRectangle31 = `${assetPathPrefix}/13843.png`;
 const imgRectangle32 = `${assetPathPrefix}/a965c.png`;
@@ -54,10 +55,11 @@ const imgVector9 = `${assetPathPrefix}/ac2ff.svg`;
 
 export default function Team() {
   return (
-    <div id="team" className="h-[9413px] w-[1627px] bg-black relative overflow-hidden" data-node-id="1:11" data-name="Team">
+    <div className="flex flex-col items-center w-full">
+    <div id="team" className="h-[8000px] w-[1627px] bg-transparent relative overflow-hidden" data-node-id="1:11" data-name="Team">
       <div className="absolute content-stretch flex flex-col gap-[100px] items-center left-[163px] top-[27px] w-[1302px]" data-node-id="1:12">
         <div className="content-stretch flex flex-col gap-[50px] items-center relative shrink-0 w-full" data-node-id="1:13">
-          <Navbar />
+
           <div className="h-[7882px] relative shrink-0 w-full" data-node-id="1:27">
             <div className="absolute content-stretch flex flex-col gap-[100px] items-center left-0 top-0 w-[1302px]" data-node-id="1:28">
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[50px] h-[531px] items-center leading-[normal] not-italic relative shrink-0 text-center w-full" data-node-id="1:29">
@@ -1117,134 +1119,9 @@ export default function Team() {
             </div>
           </div>
         </div>
-        <div className="h-[1238.983px] relative shrink-0 w-[1161px]" data-node-id="1:288">
-          <div className="absolute h-[431px] left-0 right-0 top-[807.98px]" data-node-id="1:289">
-            <div className="absolute h-[604.983px] left-[22.21px] top-[-375.98px] w-[1116.589px]" data-node-id="1:290" />
-            <div className="absolute content-stretch flex flex-col gap-[20px] items-center left-0 top-[-807.98px] w-[1161px]" data-node-id="1:291">
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[320px] text-[transparent] text-center tracking-[-12.8px] w-[min-content]" data-node-id="1:292" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1161 432' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(58.05 0 0 88.219 580.5 216)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
-                NIBBLE
-              </p>
-              <div id="connect" className="bg-[rgba(86,86,86,0.3)] h-[229px] overflow-clip relative rounded-[30px] shrink-0 w-[851px]" data-node-id="1:293">
-                <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[15px] items-center left-[calc(50%+0.5px)] top-[calc(50%+0.13px)] w-[390px]" data-node-id="1:294">
-                  <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] h-[51px] leading-[normal] min-w-full not-italic relative shrink-0 text-[48px] text-center text-white tracking-[1.92px] w-[min-content]" data-node-id="1:295">
-                    LET’S CONNECT
-                  </p>
-                  <p className="[word-break:break-word] font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[24px] text-center text-white tracking-[-0.96px] w-[min-content]" data-node-id="1:296">
-                    Follow NCS and stay in the loop.
-                  </p>
-                  <div className="content-stretch flex gap-[19.8px] items-start relative shrink-0" data-node-id="1:297">
-                    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="1:298">
-                      <div className="bg-black col-1 h-[33.089px] ml-[1.17px] mt-[1.17px] relative rounded-[15.571px] row-1 w-[30.753px]" data-node-id="1:299" />
-                      <div className="col-1 h-[33.219px] ml-0 mt-0 relative row-1 w-[33.22px]" data-node-id="1:300" data-name="Group">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
-                      </div>
-                    </div>
-                    <div className="relative shrink-0 size-[33.219px]" data-node-id="1:302" data-name="Vector">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
-                    </div>
-                    <div className="relative shrink-0 size-[33.22px]" data-node-id="1:303" data-name="Vector">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
-                    </div>
-                    <div className="relative shrink-0 size-[33.22px]" data-node-id="1:304" data-name="linkedin-icon 1">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLinkedinIcon1} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-col items-center leading-[0] relative shrink-0 w-full" data-node-id="1:309">
-                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid mb-[-12px] place-items-start relative shrink-0" data-node-id="1:310">
-                  <div className="bg-gradient-to-b col-1 from-[rgba(1,19,51,0.2)] h-[102px] ml-[90px] mt-[133.33px] overflow-clip relative row-1 to-[rgba(3,58,153,0.2)] w-[924.25px]" data-node-id="1:311">
-                    <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[12.5px] items-center left-1/2 top-1/2" data-node-id="1:312">
-                      <div className="content-stretch flex gap-[3.75px] items-center relative shrink-0" data-node-id="1:313">
-                        <div className="relative shrink-0 size-[67px]" data-node-id="1:314">
-                          <div className="absolute inset-[0_0_0.19%_0]">
-                            <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector3} width="67" />
-                          </div>
-                        </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:315">
-                          Ajeet Bharti
-                        </p>
-                      </div>
-                      <div className="content-stretch flex gap-[3.75px] items-center relative shrink-0" data-node-id="1:316">
-                        <div className="relative shrink-0 size-[67px]" data-node-id="1:317">
-                          <div className="absolute inset-[0_0_0.19%_0]">
-                            <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector4} width="67" />
-                          </div>
-                        </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:318">
-                          Pranjyaditya Singh Chauhan
-                        </p>
-                      </div>
-                      <div className="content-stretch flex gap-[3.75px] items-center relative shrink-0" data-node-id="1:319">
-                        <div className="relative shrink-0 size-[67px]" data-node-id="1:320">
-                          <div className="absolute inset-[0_0_0.19%_0]">
-                            <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector5} width="67" />
-                          </div>
-                        </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:321">
-                          Athrva Gupta
-                        </p>
-                      </div>
-                      <div className="content-stretch flex gap-[3.75px] items-center relative shrink-0" data-node-id="1:322">
-                        <div className="relative shrink-0 size-[67px]" data-node-id="1:323">
-                          <div className="absolute inset-[0_0_0.19%_0]">
-                            <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector6} width="67" />
-                          </div>
-                        </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:324">
-                          Bhaskar Shah
-                        </p>
-                      </div>
-                      <div className="content-stretch flex gap-[3.75px] items-center relative shrink-0" data-node-id="1:325">
-                        <div className="relative shrink-0 size-[67px]" data-node-id="1:326">
-                          <div className="absolute inset-[0_0_0.19%_0]">
-                            <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector7} width="67" />
-                          </div>
-                        </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:327">
-                          Darshita Jain
-                        </p>
-                      </div>
-                      <div className="content-stretch flex gap-[3.75px] items-center relative shrink-0" data-node-id="1:328">
-                        <div className="relative shrink-0 size-[67px]" data-node-id="1:329">
-                          <div className="absolute inset-[0_0_0.19%_0]">
-                            <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector8} width="67" />
-                          </div>
-                        </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:330">
-                          Piyush Gautam
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-1 flex h-[181.81px] items-center justify-center ml-0 mt-0 relative row-1 w-[141.953px]" data-node-id="1:331">
-                    <div className="flex-none rotate-[-43.66deg] scale-y-97 skew-x-[-12.9deg]">
-                      <div className="h-[124.86px] relative w-[107.942px]" data-name="Vector">
-                        <div className="absolute inset-[0_-1.78%_-3.08%_-1.78%]">
-                          <img alt="" className="block max-w-none size-full" src={imgVector2} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-1 flex h-[179.737px] items-center justify-center ml-[973px] mt-[196.25px] relative row-1 w-[143.591px]" data-node-id="1:332">
-                    <div className="-scale-y-97 flex-none rotate-[-59.24deg] skew-x-[-12.9deg]">
-                      <div className="h-[117.124px] relative w-[115.071px]" data-name="Vector">
-                        <div className="absolute inset-[0_-1.67%_-3.28%_-1.67%]">
-                          <img alt="" className="block max-w-none size-full" src={imgVector9} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="[word-break:break-word] font-['SF_Pro:Regular'] font-normal min-w-full not-italic relative shrink-0 text-[0px] text-center text-white tracking-[-1.92px] w-[min-content]" data-node-id="1:333" style={{ fontVariationSettings: '"wdth" 100' }}>
-                  <p className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[60px] mb-0 text-[48px]">Designing, Coding, And Tomorrow’s Innovations Today.</p>
-                  <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[70px] text-[30px]">{`Designed and developed with ❤️ by Nibble Computer Society `}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <Footer />
+  </div>
   );
 }

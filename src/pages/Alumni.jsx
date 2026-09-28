@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+
 import Footer from "../components/Footer"
 
 const assetPathPrefix = "/assets"
@@ -82,7 +82,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
           className="content-stretch flex flex-col gap-[47px] items-center relative shrink-0 w-[1305.84px]"
           data-node-id="1:577"
         >
-          <Navbar activePage={activePage} onNavigate={onNavigate} />
+
           <div
             className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:588"

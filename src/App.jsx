@@ -10,6 +10,7 @@ import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
 import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
+import Navbar from "./components/Navbar"
 
 export default function App() {
   const location = useLocation()
@@ -40,7 +41,7 @@ export default function App() {
       const baseW = 1668
       if (screenW < baseW) {
         const padding = screenW < 768 ? 8 : screenW < 1280 ? 20 : 32
-        const newScale = Math.min(
+        const newScale = page === "Home" ? 1 : Math.min(
           1,
           (screenW - padding) / baseW
         )
@@ -78,6 +79,13 @@ export default function App() {
     <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-hidden text-white relative">
       {/* 3D Ethereal Light Beams Background on Home/Team/Alumni, Special 3D Rotating Layers on Project */}
       {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
+
+      {/* Responsive Navbar */}
+      <div className="w-full relative z-50 flex justify-center pt-[27px]">
+        <div className="w-full max-w-[1668px] px-4 md:px-0">
+          <Navbar />
+        </div>
+      </div>
 
       {/* Responsive Scaled Page Content Layer */}
       <main
