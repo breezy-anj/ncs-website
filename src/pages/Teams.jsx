@@ -56,12 +56,12 @@ const imgVector9 = `${assetPathPrefix}/ac2ff.svg`;
 export default function Team() {
   return (
     <div className="flex flex-col items-center w-full">
-    <div id="team" className="h-[8000px] w-[1627px] bg-transparent relative overflow-hidden" data-node-id="1:11" data-name="Team">
-      <div className="absolute content-stretch flex flex-col gap-[100px] items-center left-[163px] top-[27px] w-[1302px]" data-node-id="1:12">
+    <div id="team" className="bg-transparent relative w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0" data-node-id="1:11" data-name="Team">
+      <div className="content-stretch flex flex-col gap-[100px] items-center w-[1668px]" data-node-id="1:12">
         <div className="content-stretch flex flex-col gap-[50px] items-center relative shrink-0 w-full" data-node-id="1:13">
 
-          <div className="h-[7882px] relative shrink-0 w-full" data-node-id="1:27">
-            <div className="absolute content-stretch flex flex-col gap-[100px] items-center left-0 top-0 w-[1302px]" data-node-id="1:28">
+          <div className="relative shrink-0 w-full" data-node-id="1:27">
+            <div className="content-stretch flex flex-col gap-[100px] items-center w-full" data-node-id="1:28">
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[50px] h-[531px] items-center leading-[normal] not-italic relative shrink-0 text-center w-full" data-node-id="1:29">
                 <p className="bg-clip-text font-['Satoshi:Black','Poppins:SemiBold',sans-serif] relative shrink-0 text-[80px] text-[transparent] tracking-[-3.2px] whitespace-nowrap" data-node-id="1:30" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                   TEAMS

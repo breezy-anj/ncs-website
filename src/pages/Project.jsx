@@ -54,12 +54,12 @@ const additionalProjects = [
 export default function Project({ activePage = "Project", onNavigate }) {
   return (
     <div
-      className="bg-transparent relative w-[1571px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0"
+      className="bg-transparent relative w-full max-w-[1571px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0"
       data-node-id="1:187"
       data-name="project"
     >
       <div
-        className="content-stretch flex flex-col gap-[50px] items-center w-[1571px]"
+        className="content-stretch flex flex-col gap-[50px] items-center w-full max-w-[1571px] px-4 md:px-8"
         data-node-id="1:189"
       >
 
@@ -69,7 +69,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
         >
           <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
             <h1
-              className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+              className="font-['Inter'] font-black text-[64px] sm:text-[100px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",

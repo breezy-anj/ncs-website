@@ -311,3 +311,11 @@ html {
   animation: shimmer 4s linear infinite;
 }
 
+/* Hide scrollbars for snap-scroll strips on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
