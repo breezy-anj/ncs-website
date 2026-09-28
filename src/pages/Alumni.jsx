@@ -2909,7 +2909,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer hideParticleLogo />
       </div>
     </div>
   )

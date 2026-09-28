@@ -1121,7 +1121,7 @@ export default function Team() {
         </div>
       </div>
     </div>
-    <Footer />
+    <Footer hideParticleLogo />
   </div>
   );
 }

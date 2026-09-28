@@ -146,7 +146,7 @@ const GlassEffect = ({
   )
 }
 
-export default function Footer() {
+export default function Footer({ hideParticleLogo = false }) {
   return (
     <footer
       id="connect-section"
@@ -155,21 +155,23 @@ export default function Footer() {
       <GlassFilter />
 
       {/* 1. Top: Giant Interactive Particle Physics NIBBLE Heading */}
-      <div className="hidden md:flex w-full flex-col items-center max-w-[1500px] px-4 mb-6 relative z-20">
-        <div className="flex justify-center items-center w-full h-[240px] sm:h-[280px] md:h-[320px]">
-          <CursorDrivenParticleTypography
-            text="NIBBLE"
-            fontSize={230}
-            fontFamily="'Inter', sans-serif"
-            particleSize={2.2}
-            particleDensity={4.5}
-            dispersionStrength={24}
-            returnSpeed={0.08}
-            color="#FFFFFF"
-            className="w-full h-full min-h-0"
-          />
+      {!hideParticleLogo && (
+        <div className="hidden md:flex w-full flex-col items-center max-w-[1500px] px-4 mb-6 relative z-20">
+          <div className="flex justify-center items-center w-full h-[240px] sm:h-[280px] md:h-[320px]">
+            <CursorDrivenParticleTypography
+              text="NIBBLE"
+              fontSize={230}
+              fontFamily="'Inter', sans-serif"
+              particleSize={2.2}
+              particleDensity={4.5}
+              dispersionStrength={24}
+              returnSpeed={0.08}
+              color="#FFFFFF"
+              className="w-full h-full min-h-0"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 2. Liquid Glass LET'S CONNECT Box */}
       <div className="w-full flex flex-col items-center max-w-[1500px] px-4 my-8">

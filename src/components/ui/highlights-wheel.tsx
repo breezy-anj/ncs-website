@@ -148,6 +148,7 @@ export default function HighlightsWheel({
       animId = requestAnimationFrame(tick)
       const diff = targetPos.current - currentPos.current
       if (Math.abs(diff) < 0.0005) {
+        if (currentPos.current === targetPos.current) return
         currentPos.current = targetPos.current
       } else {
         currentPos.current += diff * (prefersReducedMotion ? 1 : LERP_FACTOR)
