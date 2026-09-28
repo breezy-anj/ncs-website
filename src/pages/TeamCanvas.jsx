@@ -105,7 +105,11 @@ export default function Team() {
               </p>
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:33">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:34">
-                  <div className="bg-[#ffc931] col-1 h-[600px] ml-[1085px] mt-[192px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:35">
+                  
+<div className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:35">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px]" data-node-id="1:36">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle31} />
                     </div>
@@ -121,7 +125,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:41">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:41">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px]" data-node-id="1:42">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle32} />
                     </div>
@@ -136,7 +151,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#ffc931] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:47">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/om-tripathi-67332b26a/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/OmTripathi7095" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:47">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px]" data-node-id="1:48">
                       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle33} />
                     </div>
@@ -151,7 +180,15 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[217px] mt-[192px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:53">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:53">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-12.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[106px] w-[255.83px]" data-node-id="1:54">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle34} />
                     </div>
@@ -166,7 +203,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:59">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/AjinkyaMishra" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:59">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:60">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle35} />
                     </div>
@@ -181,8 +232,22 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/kuldeepchaudhary108/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/Kuldeepchaudhary108/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[651px] mt-[192px] place-items-start relative row-1" data-node-id="1:65">
-                    <div className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:66">
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:66">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px]" data-node-id="1:67">
                         <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle36} />
                       </div>
@@ -197,10 +262,24 @@ export default function Team() {
                         </p>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/pranjal-gupta-766898323" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/PranjalGupta280" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                   </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:72">
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:73">
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:73">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px]" data-node-id="1:74">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle37} />
                     </div>
@@ -215,7 +294,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:79">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/naziya-parveen-769428303/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/Naziya007" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:79">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px]" data-node-id="1:80">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle38} />
                     </div>
@@ -230,7 +323,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[651px] mt-[186px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:85">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/gaurangagarwal12" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[651px] mt-[186px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:85">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px]" data-node-id="1:86">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle39} />
                     </div>
@@ -245,7 +349,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:91">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/vibha-gupta-257952296/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/vibha32145" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:91">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:92">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle40} />
                     </div>
@@ -260,7 +378,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[217px] mt-[189px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:97">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-[189px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:97">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px]" data-node-id="1:98">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle41} />
                     </div>
@@ -275,6 +404,16 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/khushi-mishra-86502a26a" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/khushi8511" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                 </div>
               </div>
               <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:103" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 287 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.35 0 0 5.4 143.5 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
@@ -282,7 +421,11 @@ export default function Team() {
               </p>
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:104">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:105">
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:106">
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:106">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[110px] w-[255.83px]" data-node-id="1:107">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle42} />
                     </div>
@@ -297,7 +440,15 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:112">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:112">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px]" data-node-id="1:113">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle43} />
                     </div>
@@ -312,7 +463,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[650.89px] mt-[178.26px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:118">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/oxy8en" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/Coder-Aryan09" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[650.89px] mt-[178.26px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:118">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px]" data-node-id="1:119">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle44} />
                     </div>
@@ -327,7 +492,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[870.89px] mt-[4.26px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:124">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/utkarsh-shukla-b2442b329/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:124">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:125">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle45} />
                     </div>
@@ -342,7 +518,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#ffc931] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:130">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shreyansh-pandey-54949730b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:130">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]" data-node-id="1:131">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle46} />
                     </div>
@@ -357,9 +544,20 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/athrva-gupta-93936736a" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:136">
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:137">
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:137">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[548px] left-[calc(50%+13px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[368px]" data-node-id="1:138">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle47} />
                     </div>
@@ -374,7 +572,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[433.89px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:143">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shivangi-trivedi031" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:143">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:144">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle48} />
                     </div>
@@ -389,7 +598,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[650.89px] mt-[160px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:149">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/vasayu" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[650.89px] mt-[160px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:149">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px]" data-node-id="1:150">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle49} />
                     </div>
@@ -419,7 +642,15 @@ export default function Team() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[867.89px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:161">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[867.89px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:161">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px]" data-node-id="1:162">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle51} />
                     </div>
@@ -435,7 +666,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[216.79px] mt-[160px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:167">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:167">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px]" data-node-id="1:168">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle50} />
                     </div>
@@ -465,9 +707,17 @@ export default function Team() {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:179">
-                  <div className="bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:180">
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:180">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px]" data-node-id="1:181">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle52} />
                     </div>
@@ -482,7 +732,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:186">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/pragati-rajput-96100432b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/Pragati132005" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:186">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px]" data-node-id="1:187">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle53} />
                     </div>
@@ -497,7 +761,15 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-[179px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:192">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:192">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[472px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[25px] w-[305px]" data-node-id="1:193">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle54} />
                     </div>
@@ -512,6 +784,10 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                 </div>
               </div>
               <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:198" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 306 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(15.3 0 0 5.4 153 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
@@ -519,7 +795,11 @@ export default function Team() {
               </p>
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]" data-node-id="1:199">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:200">
-                  <div className="bg-[#ffc931] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:201">
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:201">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px]" data-node-id="1:202">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle55} />
                     </div>
@@ -534,7 +814,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#ffc931] col-1 h-[600px] ml-[435px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:207">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/darshita-jain-23144137b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:207">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]" data-node-id="1:208">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle56} />
                     </div>
@@ -549,7 +840,15 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#ffc931] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:213">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:213">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px]" data-node-id="1:214">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle57} />
                     </div>
@@ -564,7 +863,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[652px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:219">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/BhaskarShah05" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/BhaskarShah05" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:219">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px]" data-node-id="1:220">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle58} />
                     </div>
@@ -578,7 +891,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[1086px] mt-[179px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:225">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/karnika-jaiswal-a2507a383" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/karnika404x" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:225">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px]" data-node-id="1:226">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle59} />
                     </div>
@@ -593,8 +920,19 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/aanya-gogia-732608385/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[869px] mt-0 place-items-start relative row-1" data-node-id="1:231">
-                    <div className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:232">
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:232">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div className="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px]" data-node-id="1:233">
                         <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle60} />
                       </div>
@@ -609,10 +947,21 @@ export default function Team() {
                         </p>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/sidhi-saxena-672068377" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                   </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:238">
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:239">
+                  
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:239">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px]" data-node-id="1:240">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle61} />
                     </div>
@@ -627,7 +976,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:245">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/tanishka-israni-852923380?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:245">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[679px] left-[calc(50%-0.91px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-149.74px] w-[421px]" data-node-id="1:246">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle62} />
                     </div>
@@ -642,7 +1002,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:251">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/saishree-saxena-605580372" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/saitee5" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:251">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px]" data-node-id="1:252">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle63} />
                     </div>
@@ -657,7 +1031,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:257">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/oxy8en" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/Coder-Aryan09" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:257">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px]" data-node-id="1:258">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle64} />
                     </div>
@@ -672,7 +1060,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#feb9ce] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:263">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/sanskarpal23/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:263">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px]" data-node-id="1:264">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle65} />
                     </div>
@@ -687,9 +1086,20 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/fahadxiii/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:269">
-                  <div className="bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:270">
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:270">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px]" data-node-id="1:271">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle66} />
                     </div>
@@ -704,7 +1114,18 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:276">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/tanishq-marwari-109772390/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:276">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px]" data-node-id="1:277">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle67} />
                     </div>
@@ -719,7 +1140,21 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-[177px] overflow-clip relative rounded-[300px] row-1 w-[200px]" data-node-id="1:282">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/ansh-mittal-xr/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      <a href="https://github.com/phoenix-xr" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:282">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div className="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px]" data-node-id="1:283">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle68} />
                     </div>
@@ -734,6 +1169,13 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://github.com/breezy-anj" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                 </div>
               </div>
             </div>
