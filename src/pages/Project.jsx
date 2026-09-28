@@ -127,27 +127,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    <LiquidMetalButton
-                      label="View Project"
-                      width={157}
-                      height={38}
-                      fontSize={15}
-                      icon={
-                        <div className="relative shrink-0 size-[12px] opacity-90">
-                          <img
-                            alt=""
-                            className="block size-full object-contain"
-                            src={imgVector1}
-                          />
-                        </div>
-                      }
-                      onClick={() =>
-                        window.open(
-                          "https://github.com/ncs-jss/registration",
-                          "_blank",
-                        )
-                      }
-                    />
+                    
                   </div>
                 </div>
               </div>
@@ -255,27 +235,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    <LiquidMetalButton
-                      label="View Project"
-                      width={157}
-                      height={38}
-                      fontSize={15}
-                      icon={
-                        <div className="relative shrink-0 size-[12px] opacity-90">
-                          <img
-                            alt=""
-                            className="block size-full object-contain"
-                            src={imgVector1}
-                          />
-                        </div>
-                      }
-                      onClick={() =>
-                        window.open(
-                          "https://github.com/ncs-jss/MCQ-Module",
-                          "_blank",
-                        )
-                      }
-                    />
+                    
                   </div>
                 </div>
               </div>
@@ -385,27 +345,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    <LiquidMetalButton
-                      label="View Project"
-                      width={157}
-                      height={38}
-                      fontSize={15}
-                      icon={
-                        <div className="relative shrink-0 size-[12px] opacity-90">
-                          <img
-                            alt=""
-                            className="block size-full object-contain"
-                            src={imgVector1}
-                          />
-                        </div>
-                      }
-                      onClick={() =>
-                        window.open(
-                          "https://github.com/ncs-jss/registration",
-                          "_blank",
-                        )
-                      }
-                    />
+                    
                   </div>
                 </div>
               </div>
@@ -515,27 +455,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    <LiquidMetalButton
-                      label="View Project"
-                      width={157}
-                      height={38}
-                      fontSize={15}
-                      icon={
-                        <div className="relative shrink-0 size-[12px] opacity-90">
-                          <img
-                            alt=""
-                            className="block size-full object-contain"
-                            src={imgVector1}
-                          />
-                        </div>
-                      }
-                      onClick={() =>
-                        window.open(
-                          "https://github.com/ncs-jss/registration",
-                          "_blank",
-                        )
-                      }
-                    />
+                    
                   </div>
                 </div>
               </div>
@@ -622,24 +542,6 @@ export default function Project({ activePage = "Project", onNavigate }) {
                       </div>
                     </div>
                     <div className="absolute left-[141px] top-[344px] z-30">
-                      <LiquidMetalButton
-                        label="View Project"
-                        width={157}
-                        height={38}
-                        fontSize={15}
-                        icon={
-                          <div className="relative shrink-0 size-[12px] opacity-90">
-                            <img
-                              alt=""
-                              className="block size-full object-contain"
-                              src={imgVector1}
-                            />
-                          </div>
-                        }
-                        onClick={() =>
-                          window.open(project.url, "_blank", "noopener,noreferrer")
-                        }
-                      />
                     </div>
                   </div>
                 </div>

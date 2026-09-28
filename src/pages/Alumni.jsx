@@ -129,7 +129,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:594"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -171,7 +171,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:599"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -217,7 +217,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:605"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -260,7 +260,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:610"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -302,7 +302,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:615"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -344,7 +344,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:620"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -391,7 +391,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:626"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -433,7 +433,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:631"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -476,7 +476,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:636"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -521,7 +521,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:641"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -563,7 +563,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:646"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -626,7 +626,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:655"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -668,7 +668,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:660"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -714,7 +714,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:666"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                         <div
@@ -757,7 +757,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:671"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -799,7 +799,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:676"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -841,7 +841,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:681"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -888,7 +888,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:687"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -928,9 +928,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
       <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </a>
-      <a href="https://github.com/vasayu" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
+      
     </div>
   </div>
 </div>
@@ -938,7 +936,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:692"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -984,7 +982,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:698"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                         <div
@@ -1027,7 +1025,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:703"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1069,7 +1067,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:708"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1116,7 +1114,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:714"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1158,7 +1156,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:719"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1207,7 +1205,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:725"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                         <div
@@ -1250,7 +1248,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:730"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1295,7 +1293,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:735"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1346,7 +1344,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[217px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:742"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                         <div
@@ -1388,7 +1386,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:747"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                         <div
@@ -1488,7 +1486,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:761"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1530,7 +1528,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:766"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1571,7 +1569,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:771"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1613,7 +1611,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:776"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1655,7 +1653,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:781"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1702,7 +1700,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:787"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1744,7 +1742,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:792"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1786,7 +1784,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:797"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1824,9 +1822,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
       <a href="https://www.linkedin.com/in/om-tripathi-67332b26a/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </a>
-      <a href="https://github.com/OmTripathi7095" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
+      
     </div>
   </div>
 </div>
@@ -1834,7 +1830,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:802"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1876,7 +1872,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:807"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -1935,7 +1931,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:815"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -1977,7 +1973,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:820"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2023,7 +2019,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:826"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2061,9 +2057,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
       <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </a>
-      <a href="https://github.com/vasayu" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
+      
     </div>
   </div>
 </div>
@@ -2072,7 +2066,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:831"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2114,7 +2108,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:836"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2156,7 +2150,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:841"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2203,7 +2197,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:847"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2245,7 +2239,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:852"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2291,7 +2285,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:858"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2334,7 +2328,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:863"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2376,7 +2370,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:868"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2421,7 +2415,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:873"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                     <div
@@ -2487,7 +2481,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:882"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2529,7 +2523,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:887"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2571,7 +2565,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:892"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2613,7 +2607,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:897"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2655,7 +2649,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:902"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2703,7 +2697,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:908"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2745,7 +2739,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:913"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2787,7 +2781,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:918"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2829,7 +2823,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:923"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div
@@ -2871,7 +2865,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 <div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:928"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
     <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
                       <div

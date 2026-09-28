@@ -42,7 +42,7 @@ export default function App() {
         const padding = screenW < 768 ? 8 : screenW < 1280 ? 20 : 32
         const newScale = Math.min(
           1,
-          Math.max(0.45, (screenW - padding) / baseW),
+          (screenW - padding) / baseW
         )
         setScale(newScale)
       } else {
