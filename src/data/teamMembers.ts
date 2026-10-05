@@ -268,3 +268,23 @@ export const ALL_38_TEAM_MEMBERS: ImageData[] = [
     description: "Nibble Computer Society Team"
   }
 ];
+
+export const TEAM_FAN_CARDS = ALL_38_TEAM_MEMBERS.map((member) => {
+  const filename = member.src.split("/").pop()?.replace(".png", ".webp") || ""
+  return {
+    imgUrl: `/assets/team_avatars/thumbs/${filename}`,
+    fullImgUrl: member.src,
+    title: member.title || member.alt,
+    alt: member.alt,
+    description: member.description || "Nibble Computer Society",
+  }
+});
+
+export const SPHERE_TEAM_MEMBERS: ImageData[] = ALL_38_TEAM_MEMBERS.map((m) => {
+  const filename = m.src.split("/").pop()?.replace(".png", ".webp") || ""
+  return {
+    ...m,
+    src: `/assets/team_avatars/thumbs/${filename}`,
+    fullSrc: m.src,
+  }
+});

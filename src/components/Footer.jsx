@@ -2,28 +2,13 @@
 
 import React from "react"
 import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography"
+import SphereImageGrid from "./ui/img-sphere"
+import { SPHERE_TEAM_MEMBERS } from "../data/teamMembers"
 
 const assetPathPrefix = "/assets"
 
 const imgInstagram = `${assetPathPrefix}/42741.svg`
 const imgLinkedin = `${assetPathPrefix}/linkedin-icon.svg`
-const imgVectorLeaf = `${assetPathPrefix}/Vector.svg`
-
-const teamMembers = [
-  { name: "Ajeet Bharti", photo: `${assetPathPrefix}/d7780.png` },
-  { name: "Pranjyaditya Singh", photo: `${assetPathPrefix}/09399.png` },
-  { name: "Athrva Gupta", photo: `${assetPathPrefix}/7f2b2.png` },
-  { name: "Bhaskar Shah", photo: `${assetPathPrefix}/2dcb7.png` },
-  { name: "Darshita Jain", photo: `${assetPathPrefix}/eb3f6.png` },
-  { name: "Piyush Gautam", photo: `${assetPathPrefix}/37c1c.png` },
-  { name: "Kuldeep Singh", photo: `${assetPathPrefix}/8c5e3.png` },
-  { name: "Naziya Praveen", photo: `${assetPathPrefix}/5f41c.png` },
-  { name: "Shivam Goyal", photo: `${assetPathPrefix}/57606.png` },
-  { name: "Khushi Mishra", photo: `${assetPathPrefix}/78659.png` },
-  { name: "Vibha Gupta", photo: `${assetPathPrefix}/aafdb.png` },
-  { name: "Saishree Saxena", photo: `${assetPathPrefix}/a155c.png` },
-]
-
 const imgSphereLeafLeft = `${assetPathPrefix}/cbf28.svg`
 const imgSphereLeafRight = `${assetPathPrefix}/ac2ff.svg`
 
@@ -225,68 +210,37 @@ export default function Footer({ hideParticleLogo = false }) {
         </GlassEffect>
       </div>
 
-      {/* 3. FOOTER STRIP: TEAM AVATARS + BOTANICAL LEAF ACCENTS */}
-      <div className="relative w-full max-w-[1500px] my-12 flex flex-col items-center z-30">
-        {/* Top-Left Botanical Leaf Accent */}
-        <img
-          alt=""
-          src={imgVectorLeaf}
-          className="absolute -top-[44px] left-0 md:left-[30px] w-[75px] h-[80px] md:w-[95px] md:h-[100px] pointer-events-none z-30 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
-        />
-
-        {/* Liquid Glass Blue Ribbon Bar with Team Members */}
-        <div
-          className="marquee-group relative w-full overflow-hidden py-3.5 border-y border-blue-400/40"
-          style={{
-            backgroundColor: "rgba(0, 42, 105, 0.85)",
-            backdropFilter: "blur(10px)",
-            boxShadow:
-              "inset 0 2px 3px rgba(255,255,255,0.35), inset 0 -2px 3px rgba(255,255,255,0.2), 0 0 40px rgba(0,42,105,0.6)",
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%)",
-          }}
-        >
-          <div
-            className="flex items-center w-max animate-marquee-left"
-            style={{ ["--marquee-duration"]: "90s" }}
-          >
-            {/* Loop team member list twice for infinite continuous ribbon */}
-            {[...teamMembers, ...teamMembers, ...teamMembers].map((member, idx) => (
-              <div
-                key={`${member.name}-${idx}`}
-                className="flex items-center gap-3 shrink-0 px-4 group/avatar cursor-pointer"
-              >
-                <div
-                  className="size-[54px] sm:size-[62px] shrink-0 overflow-hidden bg-black/60 shadow-md transition-transform duration-300 group-hover/avatar:scale-110"
-                  style={{
-                    clipPath:
-                      "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)",
-                  }}
-                >
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="w-full h-full object-cover block"
-                    loading="lazy"
-                  />
-                </div>
-                <span className="text-white text-[14px] sm:text-[15px] font-medium whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover/avatar:text-blue-200 transition-colors">
-                  {member.name}
-                </span>
-              </div>
-            ))}
-          </div>
+      {/* 3. Interactive Team Image Sphere */}
+      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center z-30">
+        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+          <img
+            src={imgSphereLeafLeft}
+            alt=""
+            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
+          />
         </div>
-
-        {/* Bottom-Right Botanical Leaf Accent */}
-        <img
-          alt=""
-          src={imgVectorLeaf}
-          className="absolute -bottom-[44px] right-0 md:right-[30px] w-[75px] h-[80px] md:w-[95px] md:h-[100px] pointer-events-none z-30 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
-          style={{ transform: "rotate(180deg) scaleX(-1)" }}
-        />
+        <div className="relative z-20 flex justify-center items-center py-4">
+          <SphereImageGrid
+            images={SPHERE_TEAM_MEMBERS}
+            containerSize={640}
+            sphereRadius={240}
+            dragSensitivity={0.8}
+            momentumDecay={0.96}
+            maxRotationSpeed={6}
+            baseImageScale={85 / 640}
+            hoverScale={1.3}
+            perspective={1000}
+            autoRotate={true}
+            autoRotateSpeed={0.25}
+          />
+        </div>
+        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+          <img
+            src={imgSphereLeafRight}
+            alt=""
+            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(236,72,153,0.6)]"
+          />
+        </div>
       </div>
 
       {/* 4. Bottom Content Container (Slogan & Attribution) */}

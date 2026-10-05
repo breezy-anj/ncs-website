@@ -6,9 +6,9 @@ const assetPathPrefix = "/assets"
 // Assets
 const imgHeroIllustration = `${assetPathPrefix}/hero sec illust.svg`
 const imgVectorLeaf = `${assetPathPrefix}/Vector.svg`
-const imgPhoto1 = `${assetPathPrefix}/82f8e.png` // Offline session in lab
-const imgPhoto2 = `${assetPathPrefix}/1e5cf.png` // Large group community photo
-const imgPhoto3 = `${assetPathPrefix}/2890e.png` // Event team members photo
+const imgPhoto1 = `${assetPathPrefix}/about-learning-session.webp` // Offline session in lab
+const imgPhoto2 = `${assetPathPrefix}/about-tech-events.webp` // Large group community photo (IN OUT Grand Finale)
+const imgPhoto3 = `${assetPathPrefix}/about-community-family.webp` // Event team members photo
 
 /**
  * Crescent Moon with Golden Star Icon Badge

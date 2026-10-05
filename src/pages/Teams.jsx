@@ -1,3 +1,6 @@
+import TeamCardBottomOverlay from "../components/TeamCardBottomOverlay";
+import ProfileCardGhostOverlay from "../components/ProfileCardGhost";
+import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
 import Footer from "../components/Footer";
 
 const assetPathPrefix = "/assets";
@@ -76,15 +79,18 @@ export default function Team() {
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:33">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:34">
                   
-<div className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:35">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:35">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
+      <ProfileCardGhostOverlay src={imgRectangle31} />
 
-                    <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px]" data-node-id="1:36">
+      <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:36">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle31} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:37" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:38">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:37" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:38">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:39">
                         <p className="leading-[1.25] mb-0">Pranjyaditya</p>
                         <p className="leading-[1.25] mb-0">Singh</p>
@@ -94,24 +100,23 @@ export default function Team() {
                         HOC Design
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:41">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:41">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle32} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px]" data-node-id="1:42">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:42">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle32} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:43" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:44">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:43" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/om-tripathi-67332b26a/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:44">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:45">
                         <p className="leading-[1.25] mb-0">Om</p>
                         <p className="leading-[1.25]">Tripathi</p>
@@ -120,25 +125,23 @@ export default function Team() {
                         HOC Programming
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/om-tripathi-67332b26a/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:47">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:47">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
+      <ProfileCardGhostOverlay src={imgRectangle33} />
 
-                    <div className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px]" data-node-id="1:48">
+      <div className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:48">
                       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle33} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:49" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:50">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:49" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay>
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:50">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:51">
                         <p className="leading-[1.25] mb-0">Ajeet</p>
                         <p className="leading-[1.25]">Bharti</p>
@@ -147,21 +150,23 @@ export default function Team() {
                         Creative Head
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:53">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:53">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle34} />
 
-                    <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-12.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[106px] w-[255.83px]" data-node-id="1:54">
+      <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-12.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[106px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:54">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle34} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:55" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:56">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:55" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:56">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:57">
                         <p className="leading-[1.25] mb-0">Ajinkya</p>
                         <p className="leading-[1.25]">Mishra</p>
@@ -170,25 +175,23 @@ export default function Team() {
                         CTC
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:59">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:59">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle35} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:60">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:60">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle35} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:61" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:62">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:61" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/kuldeepchaudhary108/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:62">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:63">
                         <p className="leading-[1.25] mb-0">Kuldeep</p>
                         <p className="leading-[1.25]">Chaudhary</p>
@@ -197,26 +200,24 @@ export default function Team() {
                         President
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/kuldeepchaudhary108/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[651px] mt-[192px] place-items-start relative row-1" data-node-id="1:65">
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:66">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:66">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle36} />
 
-                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px]" data-node-id="1:67">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:67">
                         <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle36} />
                       </div>
-                      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:68" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                      <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:69">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:68" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/pranjal-gupta-766898323">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:69">
                         <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:70">
                           <p className="leading-[1.25] mb-0">Pranjal</p>
                           <p className="leading-[1.25]">Gupta</p>
@@ -225,12 +226,7 @@ export default function Team() {
                           Finance Head
                         </p>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/pranjal-gupta-766898323" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -238,15 +234,18 @@ export default function Team() {
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:72">
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:73">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:73">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle37} />
 
-                    <div className="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px]" data-node-id="1:74">
+      <div className="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:74">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle37} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:75" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:76">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:75" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/naziya-parveen-769428303/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:76">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:77">
                         <p className="leading-[1.25] mb-0">Naziya</p>
                         <p className="leading-[1.25]">Praveen</p>
@@ -255,25 +254,23 @@ export default function Team() {
                         HOC Development
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/naziya-parveen-769428303/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:79">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:79">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle38} />
 
-                    <div className="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px]" data-node-id="1:80">
+      <div className="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:80">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle38} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:81" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:82">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:81" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/gaurang-agarwal-a83688277/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:82">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:83">
                         <p className="leading-[1.25] mb-0">Gaurang</p>
                         <p className="leading-[1.25]">Agarwal</p>
@@ -282,24 +279,23 @@ export default function Team() {
                         General Secretary
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/gaurangagarwal12" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[651px] mt-[186px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:85">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[651px] mt-[186px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:85">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle39} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px]" data-node-id="1:86">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:86">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle39} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:87" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:88">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:87" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/vibha-gupta-841961280/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:88">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:89">
                         <p className="leading-[1.25] mb-0">Vibha</p>
                         <p className="leading-[1.25]">Gupta</p>
@@ -308,25 +304,23 @@ export default function Team() {
                         General Secretary
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/vibha-gupta-257952296/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:91">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:91">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle40} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:92">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:92">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle40} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:93" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:94">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:93" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shivam-goyal-a973a5281/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:94">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:95">
                         <p className="leading-[1.25] mb-0">Shivam</p>
                         <p className="leading-[1.25]">Goyal</p>
@@ -335,24 +329,23 @@ export default function Team() {
                         Management Head
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[189px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:97">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-[189px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:97">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle41} />
 
-                    <div className="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px]" data-node-id="1:98">
+      <div className="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:98">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle41} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:99" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:100">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:99" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/khushi-mishra-a110a1281/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:100">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:101">
                         <p className="leading-[1.25] mb-0">Khushi</p>
                         <p className="leading-[1.25]">Mishra</p>
@@ -361,12 +354,7 @@ export default function Team() {
                         Media Head
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/khushi-mishra-86502a26a" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -378,15 +366,18 @@ export default function Team() {
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:104">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:105">
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:106">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:106">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle42} />
 
-                    <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[110px] w-[255.83px]" data-node-id="1:107">
+      <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[110px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:107">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle42} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:108" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:109">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:108" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/anshika-saini-4876b528b">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:109">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:110">
                         <p className="leading-[1.25] mb-0">Anshika</p>
                         <p className="leading-[1.25]">Saini</p>
@@ -395,21 +386,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:112">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:112">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle43} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px]" data-node-id="1:113">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:113">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle43} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:114" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:115">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:114" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aryan-singh-665b16260">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:115">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:116">
                         <p className="leading-[1.25] mb-0">Aryan</p>
                         <p className="leading-[1.25]">Singh</p>
@@ -418,25 +411,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/oxy8en" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[650.89px] mt-[178.26px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:118">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[650.89px] mt-[178.26px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:118">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle44} />
 
-                    <div className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px]" data-node-id="1:119">
+      <div className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:119">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle44} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:120" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:121">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:120" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/utkarsh-shukla-310340277">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:121">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:122">
                         <p className="leading-[1.25] mb-0">Utkarsh</p>
                         <p className="leading-[1.25]">Shukla</p>
@@ -445,24 +436,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/utkarsh-shukla-b2442b329/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:124">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:124">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle45} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:125">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:125">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle45} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:126" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:127">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:126" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shreyansh-pandey-88b90b290">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:127">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:128">
                         <p className="leading-[1.25] mb-0">Shreyansh</p>
                         <p className="leading-[1.25]">Pandey</p>
@@ -471,24 +461,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shreyansh-pandey-54949730b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:130">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:130">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
+      <ProfileCardGhostOverlay src={imgRectangle46} />
 
-                    <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]" data-node-id="1:131">
+      <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:131">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle46} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:132" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:133">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:132" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/athrva-gupta-6126b428b">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:133">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:134">
                         <p className="leading-[1.25] mb-0">Athrva</p>
                         <p className="leading-[1.25]">Gupta</p>
@@ -497,52 +486,50 @@ export default function Team() {
                         Designer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/athrva-gupta-93936736a" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:136">
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:137">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:137">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle47} />
 
-                    <div className="-translate-x-1/2 absolute h-[548px] left-[calc(50%+13px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[368px]" data-node-id="1:138">
+      <div className="-translate-x-1/2 absolute h-[548px] left-[calc(50%+13px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[368px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:138">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle47} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:139" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:140">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:139" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shivangi-trivedi-02758128b">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:140">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:141">
                         <p className="leading-[1.25] mb-0">Shivangi</p>
                         <p className="leading-[1.25]">Trivedi</p>
                       </div>
                       <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:142">
-                        Developer
+                        Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shivangi-trivedi031" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:143">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:143">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle48} />
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:144">
+      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:144">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle48} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:145" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:146">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:145" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ayush-vashisth-4600a5338">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:146">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:147">
                         <p className="leading-[1.25] mb-0">Ayush</p>
                         <p className="leading-[1.25]">Vashisth</p>
@@ -551,63 +538,48 @@ export default function Team() {
                         Developer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[650.89px] mt-[160px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:149">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[650.89px] mt-[160px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:149">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle50} />
 
-                    <div className="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px]" data-node-id="1:150">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle49} />
-                    </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:151" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:152">
-                      <div className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:153">
-                        <p className="leading-[1.25] mb-0">Shreyansh</p>
-                        <p className="leading-[1.25]">Shrivastava</p>
-                      </div>
-                      <p className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:154">
-                        Developer
-                      </p>
-                    </div>
-                    <div className="absolute bg-[#cbd5d4] h-[600px] left-[-0.28px] overflow-clip rounded-[300px] top-0 w-[200px]" data-node-id="1:155">
-                      <div className="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px]" data-node-id="1:156">
-                        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle50} />
-                      </div>
-                      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:157" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                      <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:158">
-                        <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:159">
-                          <p className="leading-[1.25] mb-0">Lakshya</p>
-                          <p className="leading-[1.25]">Dubey</p>
-                        </div>
-                        <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:160">
-                          Developer
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <div className="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:156">
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle50} />
+      </div>
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:157" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay>
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:158">
+          <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:159">
+            <p className="leading-[1.25] mb-0">Lakshya</p>
+            <p className="leading-[1.25]">Dubey</p>
+          </div>
+          <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:160">
+            Developer
+          </p>
+        </div>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[867.89px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:161">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[867.89px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:161">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle51} />
 
-                    <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px]" data-node-id="1:162">
+      <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:162">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle51} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:163" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:164">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:163" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:164">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:165">
                         <p className="leading-[1.25] mb-0">Shreyansh</p>
                         <p className="leading-[1.25] mb-0">Shekhar</p>
@@ -617,64 +589,50 @@ export default function Team() {
                         Developer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:167">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:167">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle49} />
 
-                    <div className="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px]" data-node-id="1:168">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle50} />
-                    </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:169" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:170">
-                      <div className="flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:171">
-                        <p className="leading-[1.25] mb-0">Lakshya</p>
-                        <p className="leading-[1.25]">Dubey</p>
-                      </div>
-                      <p className="font-['Poppins:Regular'] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:172">
-                        Developer
-                      </p>
-                    </div>
-                    <div className="absolute bg-[#feb9ce] h-[600px] left-[-0.19px] overflow-clip rounded-[300px] top-0 w-[200px]" data-node-id="1:173">
-                      <div className="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px]" data-node-id="1:174">
-                        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle49} />
-                      </div>
-                      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:175" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                      <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:176">
-                        <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:177">
-                          <p className="leading-[1.25] mb-0">Shreyansh</p>
-                          <p className="leading-[1.25]">Shrivastava</p>
-                        </div>
-                        <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:178">
-                          Developer
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <div className="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:174">
+        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle49} />
+      </div>
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:175" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay>
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:176">
+          <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:177">
+            <p className="leading-[1.25] mb-0">Shreyansh</p>
+            <p className="leading-[1.25]">Shrivastava</p>
+          </div>
+          <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:178">
+            Programmer
+          </p>
+        </div>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:179">
                   
-<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:180">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:180">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
+      <ProfileCardGhostOverlay src={imgRectangle52} />
 
-                    <div className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px]" data-node-id="1:181">
+      <div className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:181">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle52} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:182" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:183">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:182" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/pragati-rajput-747667332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:183">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:184">
                         <p className="leading-[1.25] mb-0">Pragati</p>
                         <p className="leading-[1.25]">Rajput</p>
@@ -683,25 +641,23 @@ export default function Team() {
                         Technical
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/pragati-rajput-96100432b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:186">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:186">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
+      <ProfileCardGhostOverlay src={imgRectangle53} />
 
-                    <div className="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px]" data-node-id="1:187">
+      <div className="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:187">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle53} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:188" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:189">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:188" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/vishnu-tiwari-930267332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:189">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:190">
                         <p className="leading-[1.25] mb-0">Vishnu</p>
                         <p className="leading-[1.25]">Tiwari</p>
@@ -710,21 +666,23 @@ export default function Team() {
                         Technical
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:192">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:192">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle54} />
 
-                    <div className="-translate-x-1/2 absolute h-[472px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[25px] w-[305px]" data-node-id="1:193">
+      <div className="-translate-x-1/2 absolute h-[472px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[25px] w-[305px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:193">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle54} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:194" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:195">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:194" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:195">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:196">
                         <p className="leading-[1.25] mb-0">Aditya</p>
                         <p className="leading-[1.25]">Kumar</p>
@@ -733,8 +691,7 @@ export default function Team() {
                         Developer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -746,15 +703,18 @@ export default function Team() {
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]" data-node-id="1:199">
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:200">
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:201">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:201">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
+      <ProfileCardGhostOverlay src={imgRectangle55} />
 
-                    <div className="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px]" data-node-id="1:202">
+      <div className="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:202">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle55} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:203" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:204">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:203" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/darshita-jain-56747b31a/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:204">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:205">
                         <p className="leading-[1.25] mb-0">Darshita</p>
                         <p className="leading-[1.25]">Jain</p>
@@ -763,24 +723,23 @@ export default function Team() {
                         Designer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/darshita-jain-23144137b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:207">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:207">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
+      <ProfileCardGhostOverlay src={imgRectangle56} />
 
-                    <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]" data-node-id="1:208">
+      <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:208">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle56} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:209" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:210">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:209" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/piyush-gautam-625478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:210">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:211">
                         <p className="leading-[1.25] mb-0">Piyush</p>
                         <p className="leading-[1.25]">Gautam</p>
@@ -789,21 +748,23 @@ export default function Team() {
                         Designer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:213">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:213">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
+      <ProfileCardGhostOverlay src={imgRectangle57} />
 
-                    <div className="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px]" data-node-id="1:214">
+      <div className="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:214">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle57} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:215" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:216">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:215" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/bhaskar-shah-455478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:216">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:217">
                         <p className="leading-[1.25] mb-0">Bhaskar</p>
                         <p className="leading-[1.25]">Shah</p>
@@ -812,25 +773,23 @@ export default function Team() {
                         Designer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/BhaskarShah05" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:219">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:219">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle58} />
 
-                    <div className="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px]" data-node-id="1:220">
+      <div className="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:220">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle58} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:221" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:222">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:221" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/karnika-singh-465478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:222">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:223">
                         <p className="leading-[1.25]">Karnika</p>
                       </div>
@@ -838,25 +797,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/karnika-jaiswal-a2507a383" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:225">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:225">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle59} />
 
-                    <div className="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px]" data-node-id="1:226">
+      <div className="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:226">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle59} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:227" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:228">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:227" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aanya-gogia-585478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:228">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:229">
                         <p className="leading-[1.25] mb-0">Aanya</p>
                         <p className="leading-[1.25]">Gogia</p>
@@ -865,25 +822,24 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/aanya-gogia-732608385/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[869px] mt-0 place-items-start relative row-1" data-node-id="1:231">
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:232">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:232">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle60} />
 
-                      <div className="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px]" data-node-id="1:233">
+      <div className="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:233">
                         <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle60} />
                       </div>
-                      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:234" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                      <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:235">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:234" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sidhi-saxena-885478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:235">
                         <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:236">
                           <p className="leading-[1.25] mb-0">Sidhi</p>
                           <p className="leading-[1.25]">Saxena</p>
@@ -892,11 +848,7 @@ export default function Team() {
                           Programmer
                         </p>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/sidhi-saxena-672068377" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -904,15 +856,18 @@ export default function Team() {
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:238">
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:239">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:239">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle61} />
 
-                    <div className="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px]" data-node-id="1:240">
+      <div className="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:240">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle61} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:241" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:242">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:241" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishka-israni-685478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:242">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:243">
                         <p className="leading-[1.25] mb-0">Tanishka</p>
                         <p className="leading-[1.25]">Israni</p>
@@ -921,24 +876,23 @@ export default function Team() {
                         Developer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/tanishka-israni-852923380?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:245">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:245">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle62} />
 
-                    <div className="-translate-x-1/2 absolute h-[679px] left-[calc(50%-0.91px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-149.74px] w-[421px]" data-node-id="1:246">
+      <div className="-translate-x-1/2 absolute h-[679px] left-[calc(50%-0.91px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-149.74px] w-[421px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:246">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle62} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:247" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:248">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:247" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/saishree-saxena-785478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:248">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:249">
                         <p className="leading-[1.25] mb-0">Saishree</p>
                         <p className="leading-[1.25]">Saxena</p>
@@ -947,25 +901,23 @@ export default function Team() {
                         Developer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/saishree-saxena-605580372" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:251">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:251">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle63} />
 
-                    <div className="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px]" data-node-id="1:252">
+      <div className="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:252">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle63} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:253" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:254">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:253" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aryan-singh-885478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:254">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:255">
                         <p className="leading-[1.25] mb-0">Aryan</p>
                         <p className="leading-[1.25]">Singh</p>
@@ -974,25 +926,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/oxy8en" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:257">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:257">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle64} />
 
-                    <div className="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px]" data-node-id="1:258">
+      <div className="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:258">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle64} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:259" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:260">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:259" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:260">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:261">
                         <p className="leading-[1.25] mb-0 whitespace-pre">{`Sanskar `}</p>
                         <p className="leading-[1.25] whitespace-pre">Pal</p>
@@ -1001,24 +951,23 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/sanskarpal23/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:263">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:263">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
+      <ProfileCardGhostOverlay src={imgRectangle65} />
 
-                    <div className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px]" data-node-id="1:264">
+      <div className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:264">
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle65} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:265" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:266">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:265" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:266">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:267">
                         <p className="leading-[1.25] mb-0">Mohd</p>
                         <p className="leading-[1.25]">Fahad</p>
@@ -1027,26 +976,25 @@ export default function Team() {
                         Programmer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/fahadxiii/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:269">
                   
-<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:270">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:270">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
+      <ProfileCardGhostOverlay src={imgRectangle66} />
 
-                    <div className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px]" data-node-id="1:271">
+      <div className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:271">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle66} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:272" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:273">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:272" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishq-marwari-185478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:273">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:274">
                         <p className="leading-[1.25] mb-0">Tanishq</p>
                         <p className="leading-[1.25]">Marwari</p>
@@ -1055,24 +1003,23 @@ export default function Team() {
                         Technical
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/tanishq-marwari-109772390/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:276">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:276">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
+      <ProfileCardGhostOverlay src={imgRectangle67} />
 
-                    <div className="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px]" data-node-id="1:277">
+      <div className="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:277">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle67} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:278" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:279">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:278" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:279">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:280">
                         <p className="leading-[1.25] mb-0">Ansh</p>
                         <p className="leading-[1.25]">Mittal</p>
@@ -1081,25 +1028,23 @@ export default function Team() {
                         Technical
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/ansh-mittal-xr/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer [perspective:1000px]" data-node-id="1:282">
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+<div className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:282">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
+      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
+      <ProfileCardGhostOverlay src={imgRectangle68} />
 
-                    <div className="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px]" data-node-id="1:283">
+      <div className="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:283">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle68} />
                     </div>
-                    <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:284" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-                    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:285">
+      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:284" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/">
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:285">
                       <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:286">
                         <p className="leading-[1.25] mb-0">Anjneya</p>
                         <p className="leading-[1.25]">Singh</p>
@@ -1108,9 +1053,7 @@ export default function Team() {
                         Developer
                       </p>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      
+      </TeamCardBottomOverlay>
     </div>
   </div>
 </div>
