@@ -4,7 +4,8 @@ import tailwindcss from "@tailwindcss/vite"
 import path from "node:path"
 
 // Vite config — https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/ncs-website/" : "/",
   plugins: [
     react(),
     tailwindcss(),
@@ -14,4 +15,4 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
-})
+}))

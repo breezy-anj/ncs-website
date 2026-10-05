@@ -4,9 +4,10 @@ import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import SocialCards from "../components/ui/card-fan-carousel"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
 import { highlightImages } from "../data/highlightImages"
+import { publicAsset } from "../lib/publicAsset"
 
 
-const assetPathPrefix = "/assets"
+const assetPathPrefix = publicAsset("assets")
 const imgRectangle71 = `${assetPathPrefix}/58748.png`
 const imgRectangle114 = `${assetPathPrefix}/7c482.png`
 const imgRectangle60 = `${assetPathPrefix}/b9948.png`
@@ -135,7 +136,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <img
                 alt="NCS Hero Illustration"
                 className="block md:absolute inset-0 max-w-full md:max-w-none w-full h-auto md:size-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
-                src="/assets/hero1.svg"
+                src={publicAsset("assets/hero1.svg")}
               />
             </div>
 
