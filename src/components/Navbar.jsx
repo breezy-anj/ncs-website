@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
 import {
@@ -8,6 +8,8 @@ import {
   Info,
   UserPlus,
   Users,
+  Menu,
+  X,
 } from "lucide-react"
 import { cn } from "../lib/utils"
 
@@ -25,6 +27,7 @@ const navItems = [
 export default function Navbar() {
   const navigate = useNavigate()
   const location = useLocation()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const getPageFromPath = (path) => {
     if (path === "/") return "Home"
@@ -62,6 +65,7 @@ export default function Navbar() {
         navigate("/recruitment")
       }
     }
+    setIsMobileMenuOpen(false)
   }
   const handleConnectClick = () => {
     const connectEl =
@@ -75,12 +79,12 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="relative z-30 select-none shrink-0 flex items-center justify-center">
-      <div className="relative mx-auto h-[106px] w-[1539px] max-w-full rounded-[53px] bg-white shadow-xl px-[40px] flex items-center justify-between">
+    <nav className="relative z-30 select-none shrink-0 flex items-center justify-center w-full">
+      <div className="relative mx-auto h-[80px] md:h-[106px] w-full max-w-[1539px] rounded-full md:rounded-[53px] bg-white shadow-xl px-6 md:px-[40px] flex items-center justify-between">
         <button
           type="button"
           onClick={() => onNavigate?.("Home")}
-          className="relative h-[54.39px] w-[122.96px] shrink-0 cursor-pointer transition-transform hover:scale-105 focus:outline-none"
+          className="relative h-[40px] md:h-[54.39px] w-[90px] md:w-[122.96px] shrink-0 cursor-pointer transition-transform hover:scale-105 focus:outline-none"
           aria-label="Nibble Computer Society - Home"
         >
           <img
@@ -90,7 +94,8 @@ export default function Navbar() {
           />
         </button>
 
-        <div className="flex items-center h-[68px] px-3 rounded-[34px] bg-neutral-100/90 border border-black/5 shadow-inner gap-2 xl:gap-3">
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center h-[68px] px-3 rounded-[34px] bg-neutral-100/90 border border-black/5 shadow-inner gap-2 xl:gap-3">
           {navItems.map((item) => {
             const Icon = item.icon
             const isActive = activePage === item.page
@@ -147,12 +152,59 @@ export default function Navbar() {
         <button
           type="button"
           onClick={handleConnectClick}
-          className="flex h-[66px] px-[38px] shrink-0 cursor-pointer items-center justify-center rounded-[33px] bg-black text-center font-normal tracking-[0.11px] text-[#fffefe] transition-all hover:bg-neutral-800 focus:outline-none"
+          className="hidden md:flex h-[66px] px-[38px] shrink-0 cursor-pointer items-center justify-center rounded-[33px] bg-black text-center font-normal tracking-[0.11px] text-[#fffefe] transition-all hover:bg-neutral-800 focus:outline-none"
           style={{ fontFamily: "'Satoshi', Arial, sans-serif", fontSize: "29.1px" }}
         >
           <span style={{ lineHeight: 1 }}>Connect</span>
         </button>
+
+        {/* Mobile Nav Toggle */}
+        <button
+          type="button"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="flex lg:hidden items-center justify-center p-2 rounded-full hover:bg-neutral-100 text-black transition-colors"
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-[90px] left-4 right-4 bg-white shadow-2xl rounded-[32px] p-4 flex flex-col gap-2 lg:hidden border border-black/5">
+          {navItems.map((item) => {
+            const Icon = item.icon
+            const isActive = activePage === item.page
+            return (
+              <button
+                key={item.page}
+                type="button"
+                onClick={() => onNavigate?.(item.page)}
+                className={cn(
+                  "flex items-center gap-4 h-[56px] px-6 rounded-[28px] w-full transition-colors",
+                  isActive ? "bg-black text-white" : "text-neutral-700 hover:bg-neutral-100"
+                )}
+              >
+                <Icon size={24} className={isActive ? "text-white" : "text-neutral-800"} />
+                <span className="text-[20px] font-medium" style={{ fontFamily: "'Satoshi', Arial, sans-serif" }}>
+                  {item.label}
+                </span>
+              </button>
+            )
+          })}
+          <button
+            type="button"
+            onClick={() => {
+              handleConnectClick()
+              setIsMobileMenuOpen(false)
+            }}
+            className="flex items-center justify-center h-[56px] mt-2 rounded-[28px] bg-neutral-900 text-white font-medium text-[20px]"
+            style={{ fontFamily: "'Satoshi', Arial, sans-serif" }}
+          >
+            Connect
+          </button>
+        </div>
+      )}
     </nav>
   )
 }

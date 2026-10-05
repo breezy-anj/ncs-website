@@ -15,30 +15,30 @@ export interface HighlightsWheelProps extends React.HTMLAttributes<HTMLElement> 
 }
 
 export const DEFAULT_HIGHLIGHT_ITEMS: HighlightItem[] = [
-  { image: "/assets/highlights/web/IMG_2969.jpg", title: "InOut Grand Finale" },
-  { image: "/assets/highlights/web/DSC04982.JPG", title: "Hackathon Opening" },
-  { image: "/assets/highlights/web/DSC05186.JPG", title: "CodeCraft Workshop" },
-  { image: "/assets/highlights/web/DSC05537.JPG", title: "Community Meetup" },
-  { image: "/assets/highlights/web/IMG_1634.JPG", title: "Ideation & Brainstorming" },
-  { image: "/assets/highlights/web/IMG_1635.JPG", title: "Collaborative Building" },
-  { image: "/assets/highlights/web/IMG_1647.JPG", title: "Keynote & Tech Talk" },
-  { image: "/assets/highlights/web/IMG_1736.JPG", title: "Mentorship Session" },
-  { image: "/assets/highlights/web/IMG_1795.JPG", title: "Annual Fest Celebrations" },
-  { image: "/assets/highlights/web/IMG_1957_1.jpeg", title: "Team Synergy" },
-  { image: "/assets/highlights/web/IMG_2403.JPG", title: "Project Demos" },
-  { image: "/assets/highlights/web/IMG_2495.JPG", title: "Hackathon Pitching" },
-  { image: "/assets/highlights/web/IMG_2526.jpeg", title: "Audience Engagement" },
-  { image: "/assets/highlights/web/IMG_2554.jpeg", title: "Winners Felicitation" },
-  { image: "/assets/highlights/web/IMG_2952.jpg", title: "Stage Spotlight" },
-  { image: "/assets/highlights/web/IMG_2979.jpg", title: "Networking Moments" },
-  { image: "/assets/highlights/web/IMG_2984.jpg", title: "Inspiring Innovation" },
-  { image: "/assets/highlights/web/IMG_3002.jpg", title: "Award Ceremony" },
-  { image: "/assets/highlights/web/IMG_3010.jpg", title: "Closing Remarks" },
-  { image: "/assets/highlights/web/IMG_3012.jpg", title: "Campus Celebration" },
-  { image: "/assets/highlights/web/IMG_3016.jpg", title: "Society Milestones" },
-  { image: "/assets/highlights/web/IMG_4240.jpg", title: "Tech Enthusiasts" },
-  { image: "/assets/highlights/web/IMG_4252.jpg", title: "Nibble Family" },
-  { image: "/assets/highlights/web/IMG_4262.jpg", title: "Core Team Memories" },
+  { image: "/assets/highlights/web/IMG_2969.webp", title: "InOut Grand Finale" },
+  { image: "/assets/highlights/web/DSC04982.webp", title: "Hackathon Opening" },
+  { image: "/assets/highlights/web/DSC05186.webp", title: "CodeCraft Workshop" },
+  { image: "/assets/highlights/web/DSC05537.webp", title: "Community Meetup" },
+  { image: "/assets/highlights/web/IMG_1634.webp", title: "Ideation & Brainstorming" },
+  { image: "/assets/highlights/web/IMG_1635.webp", title: "Collaborative Building" },
+  { image: "/assets/highlights/web/IMG_1647.webp", title: "Keynote & Tech Talk" },
+  { image: "/assets/highlights/web/IMG_1736.webp", title: "Mentorship Session" },
+  { image: "/assets/highlights/web/IMG_1795.webp", title: "Annual Fest Celebrations" },
+  { image: "/assets/highlights/web/IMG_1957_1.webp", title: "Team Synergy" },
+  { image: "/assets/highlights/web/IMG_2403.webp", title: "Project Demos" },
+  { image: "/assets/highlights/web/IMG_2495.webp", title: "Hackathon Pitching" },
+  { image: "/assets/highlights/web/IMG_2526.webp", title: "Audience Engagement" },
+  { image: "/assets/highlights/web/IMG_2554.webp", title: "Winners Felicitation" },
+  { image: "/assets/highlights/web/IMG_2952.webp", title: "Stage Spotlight" },
+  { image: "/assets/highlights/web/IMG_2979.webp", title: "Networking Moments" },
+  { image: "/assets/highlights/web/IMG_2984.webp", title: "Inspiring Innovation" },
+  { image: "/assets/highlights/web/IMG_3002.webp", title: "Award Ceremony" },
+  { image: "/assets/highlights/web/IMG_3010.webp", title: "Closing Remarks" },
+  { image: "/assets/highlights/web/IMG_3012.webp", title: "Campus Celebration" },
+  { image: "/assets/highlights/web/IMG_3016.webp", title: "Society Milestones" },
+  { image: "/assets/highlights/web/IMG_4240.webp", title: "Tech Enthusiasts" },
+  { image: "/assets/highlights/web/IMG_4252.webp", title: "Nibble Family" },
+  { image: "/assets/highlights/web/IMG_4262.webp", title: "Core Team Memories" },
 ]
 
 // Wheel geometry & animation constants
@@ -148,6 +148,7 @@ export default function HighlightsWheel({
       animId = requestAnimationFrame(tick)
       const diff = targetPos.current - currentPos.current
       if (Math.abs(diff) < 0.0005) {
+        if (currentPos.current === targetPos.current) return
         currentPos.current = targetPos.current
       } else {
         currentPos.current += diff * (prefersReducedMotion ? 1 : LERP_FACTOR)

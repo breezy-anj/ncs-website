@@ -23,13 +23,14 @@ class Particle {
   update(mouseX, mouseY) {
     const dx = mouseX - this.x
     const dy = mouseY - this.y
-    const distance = Math.sqrt(dx * dx + dy * dy)
-    const interactionRadius = 140
+    const distanceSq = dx * dx + dy * dy
+    const interactionRadiusSq = 19600 // 140 * 140
 
-    if (distance < interactionRadius && mouseX !== -1000 && mouseY !== -1000) {
+    if (distanceSq < interactionRadiusSq && mouseX !== -1000 && mouseY !== -1000) {
+      const distance = Math.sqrt(distanceSq)
       const forceDirectionX = dx / distance
       const forceDirectionY = dy / distance
-      const force = (interactionRadius - distance) / interactionRadius
+      const force = (140 - distance) / 140
 
       const repulsionX = forceDirectionX * force * this.dispersion
       const repulsionY = forceDirectionY * force * this.dispersion
@@ -44,11 +45,9 @@ class Particle {
     this.vx *= 0.85
     this.vy *= 0.85
 
-    const distToOrigin = Math.sqrt(
-      Math.pow(this.x - this.originX, 2) + Math.pow(this.y - this.originY, 2),
-    )
+    const distToOriginSq = (this.x - this.originX) * (this.x - this.originX) + (this.y - this.originY) * (this.y - this.originY)
 
-    if (distToOrigin < 1 && Math.random() > 0.95) {
+    if (distToOriginSq < 1 && Math.random() > 0.95) {
       this.vx += (Math.random() - 0.5) * 0.2
       this.vy += (Math.random() - 0.5) * 0.2
     }

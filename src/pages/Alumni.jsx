@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+
 import Footer from "../components/Footer"
 
 const assetPathPrefix = "/assets"
@@ -82,7 +82,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
           className="content-stretch flex flex-col gap-[47px] items-center relative shrink-0 w-[1305.84px]"
           data-node-id="1:577"
         >
-          <Navbar activePage={activePage} onNavigate={onNavigate} />
+
           <div
             className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:588"
@@ -125,10 +125,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                   data-node-id="1:593"
                 >
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:594"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%+7.92px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[255.83px]"
                       data-node-id="1:595"
@@ -160,10 +163,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#e4dcd2] col-1 h-[600px] ml-[434.88px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:599"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-8.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[14px] w-[394px]"
                       data-node-id="1:600"
@@ -195,14 +205,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   <div
                     className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[217.44px] mt-[177.12px] place-items-start relative row-1"
                     data-node-id="1:604"
                   >
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:605"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[455px] left-[calc(50%-37.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[123.88px] w-[305px]"
                         data-node-id="1:606"
@@ -234,11 +251,18 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
-                  <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-[652.32px] mt-[177.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:610"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px]"
                       data-node-id="1:611"
@@ -270,10 +294,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[869.76px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:615"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]"
                       data-node-id="1:616"
@@ -305,10 +336,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-[1095.84px] mt-[179.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:620"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px]"
                       data-node-id="1:621"
@@ -340,15 +378,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                 </div>
                 <div
                   className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                   data-node-id="1:625"
                 >
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:626"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px]"
                       data-node-id="1:627"
@@ -380,10 +425,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:631"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+29px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]"
                       data-node-id="1:632"
@@ -416,10 +468,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:636"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px]"
                       data-node-id="1:637"
@@ -451,10 +510,20 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/utkarsh-shukla-b2442b329/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:641"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px]"
                       data-node-id="1:642"
@@ -486,10 +555,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:646"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+9.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-49.12px] w-[375px]"
                       data-node-id="1:647"
@@ -521,6 +597,10 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                 </div>
               </div>
               <p
@@ -542,10 +622,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
                     data-node-id="1:654"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:655"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-28.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[108px] w-[255.83px]"
                         data-node-id="1:656"
@@ -577,10 +660,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434.88px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:660"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[540px] left-[calc(50%+48.62px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[101px] w-[363px]"
                         data-node-id="1:661"
@@ -612,14 +702,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                     <div
                       className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[217.44px] mt-[177.12px] place-items-start relative row-1"
                       data-node-id="1:665"
                     >
-                      <div
-                        className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                      
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:666"
                       >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                         <div
                           className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+33.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.88px] w-[305px]"
                           data-node-id="1:667"
@@ -651,11 +748,18 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           </div>
                         </div>
                       </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[652.32px] mt-[177.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:671"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px]"
                         data-node-id="1:672"
@@ -687,10 +791,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[869.76px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:676"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+9.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-26px] w-[394px]"
                         data-node-id="1:677"
@@ -722,10 +833,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-[1095.84px] mt-[179.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:681"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px]"
                         data-node-id="1:682"
@@ -757,15 +875,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                   <div
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
                     data-node-id="1:686"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:687"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[473px] left-1/2 shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[3px] w-[318px]"
                         data-node-id="1:688"
@@ -799,10 +924,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434.88px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:692"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[629px] left-[calc(50%-11.38px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-45px] w-[423px]"
                         data-node-id="1:693"
@@ -834,14 +970,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                     <div
                       className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[217.44px] mt-[177.12px] place-items-start relative row-1"
                       data-node-id="1:697"
                     >
-                      <div
-                        className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                      
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:698"
                       >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                         <div
                           className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+11.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[88.88px] w-[305px]"
                           data-node-id="1:699"
@@ -873,11 +1016,18 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           </div>
                         </div>
                       </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[652.32px] mt-[177.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:703"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[41.88px] w-[341px]"
                         data-node-id="1:704"
@@ -909,10 +1059,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[869.76px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:708"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[522px] left-[calc(50%+17.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[56.88px] w-[350px]"
                         data-node-id="1:709"
@@ -944,15 +1101,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                   <div
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
                     data-node-id="1:713"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:714"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-0.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[295px]"
                         data-node-id="1:715"
@@ -984,10 +1148,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434.88px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:719"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-14.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[75px] w-[394px]"
                         data-node-id="1:720"
@@ -1019,14 +1190,24 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shivangi-trivedi031" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                     <div
                       className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[217.44px] mt-[177.12px] place-items-start relative row-1"
                       data-node-id="1:724"
                     >
-                      <div
-                        className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                      
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:725"
                       >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                         <div
                           className="-translate-x-1/2 absolute h-[455px] left-[calc(50%-51.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[123.88px] w-[305px]"
                           data-node-id="1:726"
@@ -1058,11 +1239,18 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           </div>
                         </div>
                       </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[652.32px] mt-[177.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:730"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[507px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px]"
                         data-node-id="1:731"
@@ -1094,10 +1282,20 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[869.76px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shreyansh-pandey-54949730b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:735"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]"
                         data-node-id="1:736"
@@ -1129,6 +1327,10 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                   <div
                     className="content-stretch flex gap-[17px] items-end relative shrink-0"
@@ -1138,10 +1340,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
                       data-node-id="1:741"
                     >
-                      <div
-                        className="bg-[#e4dcd2] col-1 h-[600px] ml-[217px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                      
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:742"
                       >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                         <div
                           className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-41px] w-[372px]"
                           data-node-id="1:743"
@@ -1173,10 +1378,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                      
+<div className="col-1 h-[600px] ml-0 mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                         data-node-id="1:747"
                       >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                         <div
                           className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]"
                           data-node-id="1:748"
@@ -1208,6 +1420,10 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           </div>
                         </div>
                       </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                     </div>
                     <div
                       className="bg-[#cbd5d4] h-[600px] overflow-clip relative rounded-[300px] group cursor-pointer member-card shrink-0 w-[200px]"
@@ -1266,10 +1482,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                     data-node-id="1:760"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:761"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13.88px] w-[394px]"
                         data-node-id="1:762"
@@ -1301,10 +1520,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:766"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-0.12px] w-[394px]"
                         data-node-id="1:767"
@@ -1335,10 +1561,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:771"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px]"
                         data-node-id="1:772"
@@ -1370,10 +1603,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:776"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[567px] left-[calc(50%+17.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-43.12px] w-[381px]"
                         data-node-id="1:777"
@@ -1405,10 +1645,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:781"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[407px] left-[calc(50%-36.42px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[68.88px] w-[273px]"
                         data-node-id="1:782"
@@ -1440,15 +1687,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                   <div
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                     data-node-id="1:786"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:787"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-39px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[14px] w-[394px]"
                         data-node-id="1:788"
@@ -1480,10 +1734,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:792"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[41px] w-[394px]"
                         data-node-id="1:793"
@@ -1515,10 +1776,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:797"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px]"
                         data-node-id="1:798"
@@ -1550,10 +1818,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/om-tripathi-67332b26a/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:802"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px]"
                         data-node-id="1:803"
@@ -1585,10 +1864,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:807"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[503px] left-[calc(50%+16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[26px] w-[338px]"
                         data-node-id="1:808"
@@ -1620,6 +1906,10 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                 </div>
               </div>
@@ -1637,10 +1927,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                   data-node-id="1:814"
                 >
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:815"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-28.58px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[80.88px] w-[255.83px]"
                       data-node-id="1:816"
@@ -1672,10 +1965,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#e4dcd2] col-1 h-[600px] ml-[434.88px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:820"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[467px] left-[calc(50%+23.62px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[65.88px] w-[314px]"
                       data-node-id="1:821"
@@ -1707,14 +2007,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   <div
                     className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[217.44px] mt-[177.12px] place-items-start relative row-1"
                     data-node-id="1:825"
                   >
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:826"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+16.56px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.76px] w-[305px]"
                         data-node-id="1:827"
@@ -1746,11 +2053,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      
+    </div>
+  </div>
+</div>
                   </div>
-                  <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-[652.32px] mt-[177.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:831"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[477px] left-[calc(50%+18.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[80.76px] w-[320px]"
                       data-node-id="1:832"
@@ -1782,10 +2100,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[869.76px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:836"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+18.74px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[56.88px] w-[326px]"
                       data-node-id="1:837"
@@ -1817,10 +2142,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-[1095.84px] mt-[179.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:841"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-21.34px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-14.24px] w-[400px]"
                       data-node-id="1:842"
@@ -1852,15 +2184,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                 </div>
                 <div
                   className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                   data-node-id="1:846"
                 >
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:847"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[416px] left-[calc(50%-27px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[73px] w-[280px]"
                       data-node-id="1:848"
@@ -1892,10 +2231,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#e4dcd2] col-1 h-[600px] ml-[434.88px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:852"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[423px] left-[calc(50%-53.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[48px] w-[284px]"
                       data-node-id="1:853"
@@ -1927,14 +2273,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   <div
                     className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[217.44px] mt-[177.12px] place-items-start relative row-1"
                     data-node-id="1:857"
                   >
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:858"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+0.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.88px] w-[305px]"
                         data-node-id="1:859"
@@ -1966,11 +2319,18 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
-                  <div
-                    className="bg-[#ffc931] col-1 h-[600px] ml-[652.32px] mt-[177.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                  
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:863"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[556px] left-[calc(50%+15.68px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[18.88px] w-[374px]"
                       data-node-id="1:864"
@@ -2002,10 +2362,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#feb9ce] col-1 h-[600px] ml-[869.76px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:868"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px]"
                       data-node-id="1:869"
@@ -2037,10 +2404,20 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="bg-[#cbd5d4] col-1 h-[600px] ml-[1095.84px] mt-[179.12px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shreyansh-pandey-54949730b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
+                  
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                     data-node-id="1:873"
                   >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                     <div
                       className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+50.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[20.88px] w-[341px]"
                       data-node-id="1:874"
@@ -2072,6 +2449,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       </div>
                     </div>
                   </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+  </div>
+</div>
                 </div>
               </div>
               <p
@@ -2093,10 +2477,13 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                     data-node-id="1:881"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:882"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[514px] left-[calc(50%-15.84px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[26.52px] w-[346px]"
                         data-node-id="1:883"
@@ -2128,10 +2515,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:887"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+22.16px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-0.48px] w-[394px]"
                         data-node-id="1:888"
@@ -2163,10 +2557,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:892"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[542px] left-[calc(50%+5.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-31.48px] w-[336px]"
                         data-node-id="1:893"
@@ -2198,10 +2599,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:897"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[509px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-12.48px] w-[342px]"
                         data-node-id="1:898"
@@ -2233,10 +2641,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:902"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[407px] left-[calc(50%+0.66px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[68.52px] w-[273px]"
                         data-node-id="1:903"
@@ -2269,15 +2684,22 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                   <div
                     className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
                     data-node-id="1:907"
                   >
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-0 mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+                    
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:908"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[462px] left-[calc(50%+17.66px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13.52px] w-[311px]"
                         data-node-id="1:909"
@@ -2309,10 +2731,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#cbd5d4] col-1 h-[600px] ml-[217px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:913"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+15.16px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[28.52px] w-[394px]"
                         data-node-id="1:914"
@@ -2344,10 +2773,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#e4dcd2] col-1 h-[600px] ml-[434px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:918"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[528px] left-[calc(50%+0.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[35.52px] w-[327px]"
                         data-node-id="1:919"
@@ -2379,10 +2815,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#feb9ce] col-1 h-[600px] ml-[868px] mt-0 overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:923"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[494px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-5.48px] w-[332px]"
                         data-node-id="1:924"
@@ -2414,10 +2857,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="bg-[#ffc931] col-1 h-[600px] ml-[651px] mt-[177px] overflow-clip relative rounded-[300px] group cursor-pointer member-card row-1 w-[200px]"
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
+                    
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
                       data-node-id="1:928"
                     >
+  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
+    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+
                       <div
                         className="-translate-x-1/2 absolute h-[503px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-14.48px] w-[338px]"
                         data-node-id="1:929"
@@ -2449,13 +2899,17 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </div>
                     </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+    </div>
+  </div>
+</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer hideParticleLogo />
       </div>
     </div>
   )

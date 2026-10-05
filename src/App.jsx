@@ -10,6 +10,7 @@ import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
 import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
+import Navbar from "./components/Navbar"
 
 export default function App() {
   const location = useLocation()
@@ -28,6 +29,7 @@ export default function App() {
 
   const [scale, setScale] = useState(1)
   const [contentHeight, setContentHeight] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const innerRef = useRef(null)
 
   useEffect(() => {
@@ -37,13 +39,31 @@ export default function App() {
   useEffect(() => {
     const updateDimensions = () => {
       const screenW = window.innerWidth
+      setIsMobile(screenW < 768)
       const baseW = 1668
+      
       if (screenW < baseW) {
         const padding = screenW < 768 ? 8 : screenW < 1280 ? 20 : 32
-        const newScale = Math.min(
-          1,
-          Math.max(0.45, (screenW - padding) / baseW),
-        )
+        
+        let newScale = 1
+        
+        if (screenW < 768) {
+          // On mobile, only Teams and Alumni get scaled (clamped to 0.55 for panning).
+          // Other pages (Home, About, Project, Recruitment) are natively responsive, so scale = 1.
+          if (page === "Team" || page === "Alumni") {
+            newScale = Math.max(0.55, (screenW - padding) / baseW)
+          } else {
+            newScale = 1
+          }
+        } else {
+          // On tablet/small-desktop, scale everything except Home
+          if (page === "Home") {
+            newScale = 1
+          } else {
+            newScale = Math.min(1, (screenW - padding) / baseW)
+          }
+        }
+        
         setScale(newScale)
       } else {
         setScale(1)
@@ -74,26 +94,52 @@ export default function App() {
     }
   }, [page])
 
+  const scrollRef = useRef(null)
+
+  // Determine if this is a grid page that needs horizontal scrolling on mobile
+  const isGridPage = (page === "Team" || page === "Alumni")
+  const needsHorizontalScroll = isGridPage && isMobile
+
+  useEffect(() => {
+    if (needsHorizontalScroll && scrollRef.current) {
+      // Center the horizontal scroll on load so the user sees the middle of the grid
+      const scrollableWidth = 1668 * scale
+      const screenWidth = window.innerWidth
+      if (scrollableWidth > screenWidth) {
+        scrollRef.current.scrollLeft = (scrollableWidth - screenWidth) / 2
+      }
+    }
+  }, [needsHorizontalScroll, scale, page])
+
   return (
     <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-hidden text-white relative">
       {/* 3D Ethereal Light Beams Background on Home/Team/Alumni, Special 3D Rotating Layers on Project */}
       {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
 
+      {/* Responsive Navbar */}
+      <div className="w-full relative z-50 flex justify-center pt-[27px]">
+        <div className="w-full max-w-[1668px] px-4 md:px-0">
+          <Navbar />
+        </div>
+      </div>
+
       {/* Responsive Scaled Page Content Layer */}
       <main
-        className="relative z-10 w-full flex justify-center"
+        ref={scrollRef}
+        className={`relative z-10 w-full flex ${needsHorizontalScroll ? 'justify-start overflow-x-auto scrollbar-hide' : 'justify-center'}`}
         style={{
           height:
             contentHeight && scale < 1 ? `${contentHeight * scale}px` : "auto",
           minHeight: "100vh",
-          overflow: "visible",
+          overflowY: "visible",
         }}
       >
         <div
           ref={innerRef}
-          className="w-[1668px] shrink-0 flex justify-center origin-top transition-transform duration-150 ease-out"
+          className="w-[1668px] shrink-0 flex justify-center transition-transform duration-150 ease-out"
           style={{
             transform: scale < 1 ? `scale(${scale})` : "none",
+            transformOrigin: needsHorizontalScroll ? "top left" : "top center",
           }}
         >
           <Routes>

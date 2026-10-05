@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Navbar from "../components/Navbar"
+
 import Footer from "../components/Footer"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -30,16 +30,15 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
 
   return (
     <div
-      className="bg-transparent relative w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0 select-none"
+      className="bg-transparent relative w-full max-w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0 select-none"
       data-node-id="recruitment-page"
       data-name="Recruitment"
     >
-      <div className="content-stretch flex flex-col gap-[60px] items-center w-[1518px]">
-        {/* Navbar */}
-        <Navbar activePage={activePage} onNavigate={onNavigate} />
+      <div className="content-stretch flex flex-col gap-[60px] items-center w-full max-w-[1518px] px-4 md:px-8">
+
 
         {/* Hero Section */}
-        <div className="w-full flex items-center justify-between px-10 lg:px-16 pt-8 pb-12 relative min-h-[580px]">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-10 lg:px-16 pt-8 pb-12 relative gap-10 md:gap-0 min-h-auto md:min-h-[580px]">
           {/* Subtle Ambient Glow Behind Hero */}
           <div className="absolute left-[5%] top-[10%] w-[380px] h-[380px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute right-[10%] top-[15%] w-[420px] h-[420px] bg-indigo-600/15 rounded-full blur-[140px] pointer-events-none" />
@@ -52,11 +51,11 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             className="flex flex-col items-start max-w-[680px] z-10"
           >
             {/* Main Heading */}
-            <div className="flex flex-col leading-none mb-8 tracking-tight">
-              <h1 className="font-['Inter',sans-serif] font-normal text-[95px] lg:text-[118px] text-white tracking-[-0.03em] leading-[0.95]">
+            <div className="flex flex-col leading-none mb-6 md:mb-8 tracking-tight text-center md:text-left">
+              <h1 className="font-['Inter',sans-serif] font-normal text-[60px] sm:text-[80px] lg:text-[118px] text-white tracking-[-0.03em] leading-[0.95]">
                 OOPS!
               </h1>
-              <h2 className="font-['Inter',sans-serif] font-normal text-[68px] lg:text-[84px] text-white tracking-[-0.03em] leading-[1.05] mt-2 whitespace-nowrap">
+              <h2 className="font-['Inter',sans-serif] font-normal text-[38px] sm:text-[52px] lg:text-[84px] text-white tracking-[-0.03em] leading-[1.05] mt-2 whitespace-nowrap">
                 <span className="bg-gradient-to-r from-[#2563eb] via-[#ec4899] to-[#3b82f6] bg-clip-text text-transparent font-normal">
                   NOT
                 </span>
@@ -67,7 +66,7 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             </div>
 
             {/* Explanatory Body Copy */}
-            <div className="flex flex-col gap-1.5 text-[22px] lg:text-[25px] font-['Inter',sans-serif] text-white leading-[1.4] tracking-[-0.01em]">
+            <div className="flex flex-col gap-1.5 text-[18px] sm:text-[22px] lg:text-[25px] font-['Inter',sans-serif] text-white leading-[1.4] tracking-[-0.01em] text-center md:text-left">
               <p className="font-normal text-white">
                 Good things takes time, just like great people.
               </p>
@@ -114,14 +113,14 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-            className="relative flex items-center justify-center max-w-[720px] shrink-0 z-10"
+            className="relative flex items-center justify-center max-w-[320px] sm:max-w-[480px] md:max-w-[720px] shrink-0 z-10"
           >
             {/* Floating Container */}
             <div className="animate-float-gentle relative flex items-center justify-center">
               <img
                 src={heroIllustration}
                 alt="Recruitment Portal Illustration"
-                className="w-[640px] lg:w-[700px] h-auto object-contain pointer-events-none drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                className="w-full max-w-[360px] sm:max-w-[500px] md:w-[640px] lg:w-[700px] h-auto object-contain pointer-events-none drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
               />
             </div>
           </motion.div>

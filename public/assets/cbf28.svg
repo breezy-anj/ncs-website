@@ -1,5 +1,5 @@
 <svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="111.782" height="128.7" viewBox="0 0 111.782 128.7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Vector" filter="url(#filter0_din_0_256)">
+<g id="Vector" filter="url(#filter0_din_0_63)">
 <path d="M22.5364 33.7865C20.6166 25.7128 19.047 7.56528 21.0931 0C29.4055 3.69154 37.1346 7.90595 43.9163 14.2691C51.4391 22.0738 56.7891 30.0005 59.3105 41.1722C59.8621 48.8311 60.4796 49.5362 59.5573 57.5756C59.0296 62.1777 55.5684 75.315 55.8549 78.5756L55.7567 78.9422C54.8237 83.6053 54.5578 87.5075 53.7956 91.7253L52.9055 91.9054C53.2941 79.6608 50.6992 74.2583 44.3085 64.2065L43.5686 63.4218C34.4852 55.9747 25.6574 45.8243 22.5364 33.7865Z" fill="#C757FC"/>
 <path d="M22.5364 33.7865C20.6166 25.7128 19.047 7.56528 21.0931 0C29.4055 3.69154 37.1346 7.90595 43.9163 14.2691C42.9872 21.884 42.3339 29.534 41.958 37.2026L40.9415 36.0315C35.9564 34.3823 27.7329 33.7187 22.5364 33.7865Z" fill="#0156FC"/>
 <path d="M21.0937 0C29.4061 3.69154 37.1352 7.90595 43.9169 14.2691C42.9878 21.884 42.3345 29.534 41.9586 37.2026L40.9421 36.0315C40.5173 30.3336 24.8179 5.83985 21.0937 0Z" fill="#0038AD"/>
@@ -15,34 +15,34 @@
 <path d="M53.7956 91.7253C53.6673 94.7033 53.5497 97.2355 53.2096 100.196C52.9394 102.547 51.9987 104.977 52.0587 106.992L51.5696 107.13C51.0693 106.024 51.2167 106.398 51.4873 104.928C51.7933 100.944 53.0283 95.3032 52.9055 91.9054L53.7956 91.7253Z" fill="#0038AD"/>
 </g>
 <defs>
-<filter id="filter0_din_0_256" x="0" y="0" width="111.782" height="128.7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_din_0_63" x="0" y="0" width="111.782" height="128.7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="1.92"/>
 <feGaussianBlur stdDeviation="0.96"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_256"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_63"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="1.92"/>
 <feGaussianBlur stdDeviation="0.96"/>
 <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="shape" result="effect2_innerShadow_0_256"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_0_63"/>
 <feTurbulence type="fractalNoise" baseFrequency="4.1666665077209473 4.1666665077209473" stitchTiles="stitch" numOctaves="3" result="noise" seed="4356" />
 <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
 <feComponentTransfer in="alphaNoise" result="coloredNoise1">
 <feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
 </feComponentTransfer>
-<feComposite operator="in" in2="effect2_innerShadow_0_256" in="coloredNoise1" result="noise1Clipped" />
+<feComposite operator="in" in2="effect2_innerShadow_0_63" in="coloredNoise1" result="noise1Clipped" />
 <feFlood flood-color="rgba(0, 0, 0, 0.25)" result="color1Flood" />
 <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
-<feMerge result="effect3_noise_0_256">
-<feMergeNode in="effect2_innerShadow_0_256" />
+<feMerge result="effect3_noise_0_63">
+<feMergeNode in="effect2_innerShadow_0_63" />
 <feMergeNode in="color1" />
 </feMerge>
-<feBlend mode="normal" in="effect3_noise_0_256" in2="effect1_dropShadow_0_256" result="effect3_noise_0_256"/>
+<feBlend mode="normal" in="effect3_noise_0_63" in2="effect1_dropShadow_0_63" result="effect3_noise_0_63"/>
 </filter>
 </defs>
 </svg>

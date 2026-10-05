@@ -1,6 +1,5 @@
 
-import SphereImageGrid from "./ui/img-sphere"
-import { ALL_38_TEAM_MEMBERS } from "../data/teamMembers"
+
 import React from "react"
 import { CursorDrivenParticleTypography } from "./CursorDrivenParticleTypography"
 
@@ -8,6 +7,22 @@ const assetPathPrefix = "/assets"
 
 const imgInstagram = `${assetPathPrefix}/42741.svg`
 const imgLinkedin = `${assetPathPrefix}/linkedin-icon.svg`
+const imgVectorLeaf = `${assetPathPrefix}/Vector.svg`
+
+const teamMembers = [
+  { name: "Ajeet Bharti", photo: `${assetPathPrefix}/d7780.png` },
+  { name: "Pranjyaditya Singh", photo: `${assetPathPrefix}/09399.png` },
+  { name: "Athrva Gupta", photo: `${assetPathPrefix}/7f2b2.png` },
+  { name: "Bhaskar Shah", photo: `${assetPathPrefix}/2dcb7.png` },
+  { name: "Darshita Jain", photo: `${assetPathPrefix}/eb3f6.png` },
+  { name: "Piyush Gautam", photo: `${assetPathPrefix}/37c1c.png` },
+  { name: "Kuldeep Singh", photo: `${assetPathPrefix}/8c5e3.png` },
+  { name: "Naziya Praveen", photo: `${assetPathPrefix}/5f41c.png` },
+  { name: "Shivam Goyal", photo: `${assetPathPrefix}/57606.png` },
+  { name: "Khushi Mishra", photo: `${assetPathPrefix}/78659.png` },
+  { name: "Vibha Gupta", photo: `${assetPathPrefix}/aafdb.png` },
+  { name: "Saishree Saxena", photo: `${assetPathPrefix}/a155c.png` },
+]
 
 const imgSphereLeafLeft = `${assetPathPrefix}/cbf28.svg`
 const imgSphereLeafRight = `${assetPathPrefix}/ac2ff.svg`
@@ -131,7 +146,7 @@ const GlassEffect = ({
   )
 }
 
-export default function Footer() {
+export default function Footer({ hideParticleLogo = false }) {
   return (
     <footer
       id="connect-section"
@@ -140,27 +155,29 @@ export default function Footer() {
       <GlassFilter />
 
       {/* 1. Top: Giant Interactive Particle Physics NIBBLE Heading */}
-      <div className="w-full flex flex-col items-center max-w-[1500px] px-4 mb-6 relative z-20">
-        <div className="flex justify-center items-center w-full h-[240px] sm:h-[280px] md:h-[320px]">
-          <CursorDrivenParticleTypography
-            text="NIBBLE"
-            fontSize={230}
-            fontFamily="'Inter', sans-serif"
-            particleSize={2.2}
-            particleDensity={4.5}
-            dispersionStrength={24}
-            returnSpeed={0.08}
-            color="#FFFFFF"
-            className="w-full h-full min-h-0"
-          />
+      {!hideParticleLogo && (
+        <div className="hidden md:flex w-full flex-col items-center max-w-[1500px] px-4 mb-6 relative z-20">
+          <div className="flex justify-center items-center w-full h-[240px] sm:h-[280px] md:h-[320px]">
+            <CursorDrivenParticleTypography
+              text="NIBBLE"
+              fontSize={230}
+              fontFamily="'Inter', sans-serif"
+              particleSize={2.2}
+              particleDensity={4.5}
+              dispersionStrength={24}
+              returnSpeed={0.08}
+              color="#FFFFFF"
+              className="w-full h-full min-h-0"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 2. Liquid Glass LET'S CONNECT Box */}
       <div className="w-full flex flex-col items-center max-w-[1500px] px-4 my-8">
         <GlassEffect className="rounded-[36px] p-8 sm:p-10 hover:rounded-[42px] max-w-[660px] w-full border border-white/20">
           <div className="flex flex-col items-center gap-3.5 text-center w-full">
-            <h2 className="font-['Inter'] font-semibold text-[36px] sm:text-[40px] leading-tight text-white tracking-[-1px] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <h2 className="font-['Inter'] font-semibold text-[28px] md:text-[40px] leading-tight text-white tracking-[-1px] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               LET&apos;S CONNECT
             </h2>
             <p className="font-['Inter'] font-normal text-[17px] sm:text-[18px] text-white/85 tracking-[-0.3px] -mt-1">
@@ -208,46 +225,77 @@ export default function Footer() {
         </GlassEffect>
       </div>
 
-      {/* 3. Interactive Team Image Sphere */}
-      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center">
-        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
-          <img
-            src={imgSphereLeafLeft}
-            alt=""
-            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
-          />
+      {/* 3. FOOTER STRIP: TEAM AVATARS + BOTANICAL LEAF ACCENTS */}
+      <div className="relative w-full max-w-[1500px] my-12 flex flex-col items-center z-30">
+        {/* Top-Left Botanical Leaf Accent */}
+        <img
+          alt=""
+          src={imgVectorLeaf}
+          className="absolute -top-[44px] left-0 md:left-[30px] w-[75px] h-[80px] md:w-[95px] md:h-[100px] pointer-events-none z-30 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
+        />
+
+        {/* Liquid Glass Blue Ribbon Bar with Team Members */}
+        <div
+          className="marquee-group relative w-full overflow-hidden py-3.5 border-y border-blue-400/40"
+          style={{
+            backgroundColor: "rgba(0, 42, 105, 0.85)",
+            backdropFilter: "blur(10px)",
+            boxShadow:
+              "inset 0 2px 3px rgba(255,255,255,0.35), inset 0 -2px 3px rgba(255,255,255,0.2), 0 0 40px rgba(0,42,105,0.6)",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%)",
+          }}
+        >
+          <div
+            className="flex items-center w-max animate-marquee-left"
+            style={{ ["--marquee-duration"]: "90s" }}
+          >
+            {/* Loop team member list twice for infinite continuous ribbon */}
+            {[...teamMembers, ...teamMembers, ...teamMembers].map((member, idx) => (
+              <div
+                key={`${member.name}-${idx}`}
+                className="flex items-center gap-3 shrink-0 px-4 group/avatar cursor-pointer"
+              >
+                <div
+                  className="size-[54px] sm:size-[62px] shrink-0 overflow-hidden bg-black/60 shadow-md transition-transform duration-300 group-hover/avatar:scale-110"
+                  style={{
+                    clipPath:
+                      "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)",
+                  }}
+                >
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover block"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="text-white text-[14px] sm:text-[15px] font-medium whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover/avatar:text-blue-200 transition-colors">
+                  {member.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="relative z-20 flex justify-center items-center py-4">
-          <SphereImageGrid
-            images={ALL_38_TEAM_MEMBERS}
-            containerSize={640}
-            sphereRadius={240}
-            dragSensitivity={0.8}
-            momentumDecay={0.96}
-            maxRotationSpeed={6}
-            baseImageScale={0.15}
-            hoverScale={1.3}
-            perspective={1000}
-            autoRotate={true}
-            autoRotateSpeed={0.25}
-          />
-        </div>
-        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
-          <img
-            src={imgSphereLeafRight}
-            alt=""
-            className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(236,72,153,0.6)]"
-          />
-        </div>
+
+        {/* Bottom-Right Botanical Leaf Accent */}
+        <img
+          alt=""
+          src={imgVectorLeaf}
+          className="absolute -bottom-[44px] right-0 md:right-[30px] w-[75px] h-[80px] md:w-[95px] md:h-[100px] pointer-events-none z-30 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]"
+          style={{ transform: "rotate(180deg) scaleX(-1)" }}
+        />
       </div>
 
       {/* 4. Bottom Content Container (Slogan & Attribution) */}
       <div className="w-full flex flex-col items-center gap-[15px] max-w-[1500px] px-4 mt-8">
         <div className="flex flex-col items-center text-center gap-2.5">
-          <h3 className="font-['Inter'] font-medium text-[30px] sm:text-[38px] md:text-[44px] leading-tight text-white tracking-[-1.5px]">
+          <h3 className="font-['Inter'] font-medium text-[22px] md:text-[38px] lg:text-[44px] leading-tight text-white tracking-[-1.5px]">
             Designing, Coding, And Tomorrow&apos;s Innovations Today.
           </h3>
-          <p className="font-['Inter'] font-normal text-[16px] sm:text-[20px] md:text-[22px] leading-normal text-white/80 tracking-[-0.5px]">
+          <p className="font-['Inter'] font-normal text-[14px] md:text-[20px] lg:text-[22px] leading-normal text-white/80 tracking-[-0.5px]">
             Designed and developed with ❤️ by Nibble Computer Society
           </p>
         </div>
