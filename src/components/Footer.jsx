@@ -161,7 +161,7 @@ export default function Footer({ hideParticleLogo = false }) {
             <CursorDrivenParticleTypography
               text="NIBBLE"
               fontSize={230}
-              fontFamily="'Inter', sans-serif"
+              fontFamily="'Satoshi', Arial, sans-serif"
               particleSize={2.2}
               particleDensity={4.5}
               dispersionStrength={24}
@@ -177,10 +177,10 @@ export default function Footer({ hideParticleLogo = false }) {
       <div className="w-full flex flex-col items-center max-w-[1500px] px-4 my-8">
         <GlassEffect className="rounded-[36px] p-8 sm:p-10 hover:rounded-[42px] max-w-[660px] w-full border border-white/20">
           <div className="flex flex-col items-center gap-3.5 text-center w-full">
-            <h2 className="font-['Inter'] font-semibold text-[28px] md:text-[40px] leading-tight text-white tracking-[-1px] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <h2 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[28px] md:text-[34px] lg:text-[38px] leading-tight text-white tracking-tight uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               LET&apos;S CONNECT
             </h2>
-            <p className="font-['Inter'] font-normal text-[17px] sm:text-[18px] text-white/85 tracking-[-0.3px] -mt-1">
+            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[20px] text-white/85 tracking-normal -mt-1">
               Follow NCS and stay in the loop.
             </p>
 
@@ -292,10 +292,10 @@ export default function Footer({ hideParticleLogo = false }) {
       {/* 4. Bottom Content Container (Slogan & Attribution) */}
       <div className="w-full flex flex-col items-center gap-[15px] max-w-[1500px] px-4 mt-8">
         <div className="flex flex-col items-center text-center gap-2.5">
-          <h3 className="font-['Inter'] font-medium text-[22px] md:text-[38px] lg:text-[44px] leading-tight text-white tracking-[-1.5px]">
+          <h3 className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[24px] md:text-[34px] leading-tight text-white tracking-tight">
             Designing, Coding, And Tomorrow&apos;s Innovations Today.
           </h3>
-          <p className="font-['Inter'] font-normal text-[14px] md:text-[20px] lg:text-[22px] leading-normal text-white/80 tracking-[-0.5px]">
+          <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[16px] md:text-[20px] leading-normal text-white/80 tracking-normal">
             Designed and developed with ❤️ by Nibble Computer Society
           </p>
         </div>

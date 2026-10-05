@@ -1,117 +1,35 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,600,500,400&display=swap');
 @import 'tailwindcss';
 
-/* Inter */
 @font-face {
-  font-family: 'Inter';
+  font-family: "SF Pro:Regular";
+  src: url("https://static.figma.com/font/SF-Pro_1") format("woff2");
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Inter-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: "Poppins:Regular";
+  src: url("https://static.figma.com/font/Poppins-Regular_6") format("woff2");
   font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 400;
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: "Poppins:SemiBold";
+  src: url("https://static.figma.com/font/Poppins-SemiBold_6") format("woff2");
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter:Bold";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/Inter-Bold.woff2') format('woff2');
 }
-
-/* Inter aliases used by design context (font-['Inter:Bold'] etc.) */
 @font-face {
-  font-family: 'Inter:Regular';
+  font-family: "Inter:Regular";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Inter-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter:Medium';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Inter-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter:Semi Bold';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter:Semi_Bold';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter:Bold';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/Inter-Bold.woff2') format('woff2');
-}
-
-/* Space Mono */
-@font-face {
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/SpaceMono-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Space Mono:Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/SpaceMono-Regular.woff2') format('woff2');
-}
-
-/* Poppins */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Poppins-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins:Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Poppins-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins:SemiBold';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
 }
 
 /* Helvetica Neue & SF Pro — system font fallbacks */
@@ -129,14 +47,6 @@
   font-display: swap;
   src: local('Helvetica Neue Medium'), local('HelveticaNeue-Medium'), local('Arial');
 }
-@font-face {
-  font-family: 'SF Pro:Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('SF Pro Text'), local('SFProText-Regular'), local('-apple-system'), local('BlinkMacSystemFont'), local('Helvetica Neue');
-}
-
 @font-face {
   font-family: 'Playfair Display:Italic';
   src: url('https://static.figma.com/font/PlayfairDisplay-Italic_wght__1') format('woff2');

@@ -51,11 +51,11 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             className="flex flex-col items-start max-w-[680px] z-10"
           >
             {/* Main Heading */}
-            <div className="flex flex-col leading-none mb-6 md:mb-8 tracking-tight text-center md:text-left">
-              <h1 className="font-['Inter',sans-serif] font-normal text-[60px] sm:text-[80px] lg:text-[118px] text-white tracking-[-0.03em] leading-[0.95]">
+            <div className="flex flex-col leading-none mb-6 md:mb-8 tracking-normal text-center md:text-left">
+              <h1 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[60px] sm:text-[100px] lg:text-[160px] text-white tracking-normal leading-[1.2]">
                 OOPS!
               </h1>
-              <h2 className="font-['Inter',sans-serif] font-normal text-[38px] sm:text-[52px] lg:text-[84px] text-white tracking-[-0.03em] leading-[1.05] mt-2 whitespace-nowrap">
+              <h2 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[38px] sm:text-[52px] lg:text-[80px] text-white tracking-normal leading-[1.2] mt-2 whitespace-nowrap">
                 <span className="bg-gradient-to-r from-[#2563eb] via-[#ec4899] to-[#3b82f6] bg-clip-text text-transparent font-normal">
                   NOT
                 </span>
@@ -66,7 +66,7 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             </div>
 
             {/* Explanatory Body Copy */}
-            <div className="flex flex-col gap-1.5 text-[18px] sm:text-[22px] lg:text-[25px] font-['Inter',sans-serif] text-white leading-[1.4] tracking-[-0.01em] text-center md:text-left">
+            <div className="flex flex-col gap-1.5 text-[18px] sm:text-[22px] lg:text-[36px] font-['Satoshi',Arial,sans-serif] text-white leading-[normal] tracking-normal text-center md:text-left">
               <p className="font-normal text-white">
                 Good things takes time, just like great people.
               </p>
@@ -169,8 +169,8 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="font-['Inter'] font-bold text-[26px] text-white">You're On The List!</h3>
-                  <p className="font-['Inter'] text-white/70 text-[16px] max-w-[340px]">
+                  <h3 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[26px] text-white">You're On The List!</h3>
+                  <p className="font-['Satoshi',Arial,sans-serif] text-white/70 text-[16px] max-w-[340px]">
                     We'll email you the moment NCS recruitment rounds go live. Stay sharp! 🚀
                   </p>
                 </div>
@@ -181,10 +181,10 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                     </svg>
                   </div>
-                  <h3 className="font-['Inter'] font-bold text-[28px] text-white tracking-tight mb-2">
+                  <h3 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[28px] text-white tracking-tight mb-2">
                     Get Recruitment Alerts
                   </h3>
-                  <p className="font-['Inter'] text-white/70 text-[16px] max-w-[360px] mb-6">
+                  <p className="font-['Satoshi',Arial,sans-serif] text-white/70 text-[16px] max-w-[360px] mb-6">
                     Enter your college or personal email. We will notify you right when registrations open!
                   </p>
 
@@ -195,11 +195,11 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
                       placeholder="name@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-5 py-3.5 rounded-2xl bg-white/5 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 transition-all text-[16px] font-['Inter']"
+                      className="w-full px-5 py-3.5 rounded-2xl bg-white/5 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 transition-all text-[16px] font-['Satoshi',Arial,sans-serif]"
                     />
                     <button
                       type="submit"
-                      className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 hover:from-blue-500 hover:via-indigo-500 hover:to-indigo-600 text-white font-semibold text-[17px] font-['Inter'] shadow-[0_0_25px_rgba(99,102,241,0.4)] hover:shadow-[0_0_35px_rgba(99,102,241,0.6)] transition-all cursor-pointer"
+                      className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 hover:from-blue-500 hover:via-indigo-500 hover:to-indigo-600 text-white font-semibold text-[17px] font-['Satoshi',Arial,sans-serif] font-medium shadow-[0_0_25px_rgba(99,102,241,0.4)] hover:shadow-[0_0_35px_rgba(99,102,241,0.6)] transition-all cursor-pointer"
                     >
                       Remind Me
                     </button>

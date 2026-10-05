@@ -69,7 +69,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
         >
           <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
             <h1
-              className="font-['Inter'] font-black text-[64px] sm:text-[100px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+              className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -78,7 +78,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
             >
               PROJECTS
             </h1>
-            <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[32px] lg:text-[40px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center tracking-tight">
               We build a tech-driven campus culture by hosting hands-on events and building tools for students and faculty. Our projects help the college community stay updated, sharpen their problem-solving skills, and stay connected.
             </p>
           </div>

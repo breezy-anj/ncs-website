@@ -128,7 +128,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
           >
             {/* Right illustration with smooth floating animation */}
             <div
-              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[480px] md:-mt-[35px] pointer-events-none select-none mb-10 md:mb-0"
+              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] md:mt-[29px] pointer-events-none select-none mb-10 md:mb-0"
               data-node-id="1:38"
               data-name="Hero Illustration"
             >
@@ -146,13 +146,13 @@ export default function Home({ activePage = "Home", onNavigate }) {
             >
               <div className="flex flex-col gap-4 md:gap-[14px] not-italic items-center md:items-start relative shrink-0 w-full">
                 <p
-                  className="font-['Space_Mono',monospace] leading-[normal] md:ml-[4px] text-[#b0b0b0] text-[14px] md:text-[18px] tracking-[1.5px] uppercase whitespace-pre text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] md:ml-[4px] text-[#b0b0b0] text-[14px] md:text-[16px] tracking-[3.5px] uppercase whitespace-pre text-center md:text-left"
                   data-node-id="1:43"
                 >
                   {`LEARN  •  BUILD  •  BELONG`}
                 </p>
                 <div
-                  className="bg-clip-text font-['Inter:Bold',sans-serif] font-extrabold text-[72px] sm:text-[96px] md:text-[145.2px] leading-[0.92] text-transparent tracking-[-2px] md:tracking-[-5.8px] w-full md:w-[820px] select-none hover:tracking-0 md:hover:tracking-[-4px] transition-all duration-500"
+                  className="bg-clip-text font-['Satoshi',Arial,sans-serif] font-black text-[72px] sm:text-[96px] md:text-[132px] leading-[1.05] text-transparent tracking-[-2px] md:tracking-[-3.5px] w-full md:w-[820px] select-none hover:tracking-0 md:hover:tracking-[-3.5px] transition-all duration-500"
                   data-node-id="1:42"
                   style={{
                     backgroundImage:
@@ -164,7 +164,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   <p className="mb-0">SOCIETY</p>
                 </div>
                 <p
-                  className="font-['Space_Mono',monospace] leading-[normal] md:ml-[4px] text-[#b0b0b0] text-[10px] sm:text-[12px] md:text-[18px] tracking-[1.5px] uppercase whitespace-pre text-center md:text-left max-w-full overflow-hidden text-ellipsis"
+                  className="font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] md:ml-[4px] text-[#b0b0b0] text-[10px] sm:text-[12px] md:text-[16px] tracking-[3.5px] uppercase whitespace-pre text-center md:text-left max-w-full overflow-hidden text-ellipsis"
                   data-node-id="1:41"
                 >
                   {`PEOPLE  •  TECHNOLOGY  •  IDEAS  •  TOGETHER`}
@@ -176,7 +176,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 label="Join the Community"
                 width={260}
                 height={56}
-                fontSize={20}
+                fontSize={18}
                 textColor="#ffffff"
                 icon={
                   <span className="text-white text-[20px] font-semibold leading-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
@@ -204,7 +204,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
           >
             <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
               <h2
-                className="font-['Inter'] font-black text-[64px] md:text-[120px] lg:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -213,7 +213,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               >
                 CLUBS
               </h2>
-              <p className="font-['Inter'] font-light text-[18px] md:text-[26px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[24px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center">
                 Explore our specialized clubs in Web Development, Programming, Design, and Technology. Discover new skills, unleash your creativity, and turn your ideas into reality. Join our vibrant community and build your future with us!
               </p>
             </div>
@@ -223,11 +223,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
             >
               {/* Row 1: PROGRAMMING + Yellow Card */}
               <div
-                className="group flex flex-col md:flex-row items-center justify-between w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] gap-6 md:gap-0"
+                className="group flex flex-col md:flex-row items-center justify-center w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] gap-6 md:gap-[80px]"
                 data-node-id="1:52"
               >
                 <p
-                  className="font-['Inter:Bold'] font-bold leading-none not-italic text-[60px] sm:text-[90px] md:text-[156.816px] text-white tracking-[-2px] md:tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:53"
                 >
                   PROGRAMMING
@@ -245,8 +245,8 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     src={imgProgrammingIcon}
                   />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
-                    <span className="opacity-60 text-[10px] font-['Space_Mono',monospace] uppercase tracking-[1px] mb-2">Programming</span>
-                    <p className="opacity-95 text-[12px] font-['Helvetica_Neue:Regular'] leading-[1.3]">
+                    <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Programming</span>
+                    <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       Where problem-solving meets pure creativity. We take tricky problems and turn them into clean, working code, taking abstract logic and turning it into tools that actually work.
                     </p>
                   </div>
@@ -271,14 +271,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     src={imgDevelopmentIcon}
                   />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
-                    <span className="opacity-70 text-[10px] font-['Space_Mono',monospace] uppercase tracking-[1px] mb-2">Development</span>
-                    <p className="opacity-100 text-[12px] font-['Helvetica_Neue:Regular'] leading-[1.3]">
+                    <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Development</span>
+                    <p className="opacity-100 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       From a rough idea to something you can actually use. We build, tweak, and polish, creating web and mobile apps that bring fresh concepts to life.
                     </p>
                   </div>
                 </div>
                 <p
-                  className="font-['Inter:Bold'] font-bold leading-none not-italic text-[60px] sm:text-[90px] md:text-[156.816px] text-white tracking-[-2px] md:tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:57"
                 >
                   DEVELOPMENT
@@ -291,7 +291,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:60"
               >
                 <p
-                  className="font-['Inter:Bold'] font-bold leading-none not-italic text-[60px] sm:text-[90px] md:text-[156.816px] text-white tracking-[-2px] md:tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:61"
                 >
                   DESIGNING
@@ -309,8 +309,8 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     src={imgVector1}
                   />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
-                    <span className="opacity-60 text-[10px] font-['Space_Mono',monospace] uppercase tracking-[1px] mb-2">Design</span>
-                    <p className="opacity-95 text-[12px] font-['Helvetica_Neue:Regular'] leading-[1.3]">
+                    <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Design</span>
+                    <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       Giving ideas a visual voice. We focus on clean visuals, good user experience, and smart UI, creating designs that look great and feel effortless to use.
                     </p>
                   </div>
@@ -335,14 +335,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     src={imgTechnicalIcon}
                   />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
-                    <span className="opacity-60 text-[10px] font-['Space_Mono',monospace] uppercase tracking-[1px] mb-2">Technical</span>
-                    <p className="opacity-95 text-[12px] font-['Helvetica_Neue:Regular'] leading-[1.3]">
+                    <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Technical</span>
+                    <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       Exploring what's coming next in tech. We dive hands-on into AI, open-source projects, and new tools, figuring out how the newest tech works under the hood.
                     </p>
                   </div>
                 </div>
                 <p
-                  className="font-['Inter:Bold'] font-bold leading-none not-italic text-[60px] sm:text-[90px] md:text-[156.816px] text-white tracking-[-2px] md:tracking-[-6.2726px] whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:65"
                 >
                   TECHNICAL
@@ -355,7 +355,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
           <section className="mx-auto w-full max-w-[1446px] text-center shrink-0">
             <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
               <h2
-                className="font-['Inter'] font-black text-[64px] md:text-[120px] lg:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -364,7 +364,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               >
                 HIGHLIGHTS
               </h2>
-              <p className="font-['Inter'] font-light text-[18px] md:text-[26px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[24px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center">
                 From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
               </p>
             </div>
@@ -398,7 +398,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
             data-node-id="1:151"
           >
             <h2
-              className="font-['Inter'] font-black text-[64px] md:text-[120px] lg:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase relative shrink-0 w-full"
+              className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase relative shrink-0 w-full"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -411,7 +411,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               className="content-stretch flex flex-col gap-[32px] items-center relative shrink-0 w-full"
               data-node-id="1:153"
             >
-              <div className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] text-[18px] md:text-[30px] text-center text-[#c2c2c2] tracking-normal leading-[1.6] max-w-[1200px] mt-4 mb-8 px-4">
+              <div className="font-['Satoshi',Arial,sans-serif] font-medium text-[18px] md:text-[30px] text-center text-[#c2c2c2] tracking-normal leading-[1.6] max-w-[1200px] mt-4 mb-8 px-4">
                 <p>
                   Ideas worth sharing. Experiences worth remembering. Join us for events that spark curiosity, inspire creativity, and bring our community together.
                 </p>

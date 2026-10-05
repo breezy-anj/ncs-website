@@ -112,7 +112,7 @@ export default function AboutSection() {
         {/* Main Heading */}
         <div className="flex flex-col items-center justify-center max-w-[1100px] z-10 mt-6 md:mt-2">
           <h1
-            className="font-['Inter'] font-black text-[56px] sm:text-[80px] md:text-[108px] lg:text-[124px] leading-[0.95] tracking-[-0.04em] text-white uppercase text-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]"
+            className="font-['Satoshi',Arial,sans-serif] font-black text-[56px] sm:text-[80px] md:text-[108px] lg:text-[117.8px] leading-[normal] tracking-normal text-white uppercase text-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]"
             style={{
               textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 0 60px rgba(255,255,255,0.15)",
             }}
@@ -124,7 +124,7 @@ export default function AboutSection() {
 
           {/* Subtitle / Intro Paragraph */}
           <div className="mt-8 md:mt-10 max-w-[820px] text-center px-4">
-            <p className="font-['Inter'] font-normal text-[16px] sm:text-[18px] md:text-[20px] leading-[1.65] text-[#C4C4C7] tracking-[-0.01em]">
+            <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] md:text-[21.5px] leading-[1.6] text-[#C4C4C7] tracking-normal">
               NCS is a community of programmers, developers, designers, and AI/ML enthusiasts driven by curiosity and creativity.
               <br className="hidden md:inline" />{" "}
               We come together to learn, build, experiment, and turn ideas into impactful tech, while growing our skills and exploring what&apos;s next in technology.
@@ -150,7 +150,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
             </div>
             <div className="p-4 pt-5 text-center flex-1 flex flex-col justify-start">
-              <p className="font-['Inter'] font-normal text-[14px] sm:text-[15px] leading-[1.6] text-[#B5B5BE]">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] lg:text-[24.166px] leading-[normal] text-[#B5B5BE]">
                 We conduct offline, live learning sessions where members can get their doubts resolved, learn new concepts, and gain practical knowledge through interactive sessions and peer-to-peer learning.
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
             </div>
             <div className="p-4 pt-5 text-center flex-1 flex flex-col justify-start">
-              <p className="font-['Inter'] font-normal text-[14px] sm:text-[15px] leading-[1.6] text-[#B5B5BE]">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] lg:text-[24.166px] leading-[normal] text-[#B5B5BE]">
                 We organize engaging tech events, workshops, and interactive sessions that bring students together to learn, connect, and explore. From hackathons like IN OUT to hands-on activities, we create experiences where ideas turn into action.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
             </div>
             <div className="p-4 pt-5 text-center flex-1 flex flex-col justify-start">
-              <p className="font-['Inter'] font-normal text-[14px] sm:text-[15px] leading-[1.6] text-[#B5B5BE]">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] lg:text-[24.166px] leading-[normal] text-[#B5B5BE]">
                 More than a tech society, we&apos;re a family that learns, supports, and grows together. We share ideas, celebrate every win, and help each other become better together.
               </p>
             </div>

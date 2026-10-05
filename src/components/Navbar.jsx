@@ -80,7 +80,7 @@ export default function Navbar() {
 
   return (
     <nav className="relative z-30 select-none shrink-0 flex items-center justify-center w-full">
-      <div className="relative mx-auto h-[56px] sm:h-[60px] md:h-[68px] w-full max-w-[1100px] rounded-full bg-white shadow-xl px-3 sm:px-4 md:px-6 lg:px-7 flex items-center justify-between">
+      <div className="relative mx-auto h-[56px] sm:h-[60px] md:h-[68px] w-full max-w-[1152px] rounded-full bg-white shadow-xl px-3 sm:px-4 md:px-6 lg:px-7 flex items-center justify-between">
         <button
           type="button"
           onClick={() => onNavigate?.("Home")}
@@ -135,7 +135,7 @@ export default function Navbar() {
                 />
                 <span
                   className={cn(
-                    "relative z-10 whitespace-nowrap text-[14px] xl:text-[15px] tracking-[0.1px] transition-colors duration-200 leading-none",
+                    "relative z-10 whitespace-nowrap text-[14px] lg:text-[16px] xl:text-[20px] tracking-[0.1px] transition-colors duration-200 leading-none",
                     isActive
                       ? "font-semibold text-white"
                       : "font-medium text-neutral-800",
@@ -152,7 +152,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={handleConnectClick}
-          className="hidden md:flex h-[40px] px-4 lg:px-5 xl:px-6 shrink-0 cursor-pointer items-center justify-center rounded-[20px] bg-black text-center font-normal tracking-[0.11px] text-[16px] text-[#fffefe] transition-all hover:bg-neutral-800 focus:outline-none"
+          className="hidden md:flex h-[40px] px-4 lg:px-5 xl:px-6 shrink-0 cursor-pointer items-center justify-center rounded-[20px] bg-black text-center font-normal tracking-[0.11px] text-[16px] xl:text-[20px] text-[#fffefe] transition-all hover:bg-neutral-800 focus:outline-none"
           style={{ fontFamily: "'Satoshi', Arial, sans-serif" }}
         >
           <span style={{ lineHeight: 1 }}>Connect</span>
