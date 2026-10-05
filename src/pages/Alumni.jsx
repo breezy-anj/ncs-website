@@ -89,7 +89,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
           >
             <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
               <h1
-                className="font-['Inter'] font-black text-[120px] sm:text-[145px] md:text-[165px] leading-none tracking-[-0.04em] text-transparent bg-clip-text select-none text-center uppercase"
+                className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -98,7 +98,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
               >
                 ALUMNI
               </h1>
-              <p className="font-['Inter'] font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[38px] leading-[1.42] text-[#E4E4E7] max-w-[1340px] text-center tracking-[-0.02em]">
+              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[30px] lg:text-[40px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center tracking-tight">
                 Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we&apos;ve spent over two decades shaping curious minds into visionaries and leaders.
               </p>
             </div>
@@ -107,7 +107,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
               data-node-id="1:590"
             >
               <p
-                className="font-['Inter:Bold',sans-serif] font-bold text-[60px] sm:text-[72px] md:text-[80px] leading-none min-w-full not-italic relative shrink-0 text-center tracking-[-0.03em] w-full text-transparent bg-clip-text my-2"
+                className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[40px] sm:text-[52px] md:text-[60px] leading-none min-w-full not-italic relative shrink-0 text-center tracking-[-2.4px] w-full text-transparent bg-clip-text my-2"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -155,7 +155,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:597"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:598"
                       >
                         <p className="leading-[1.25] mb-0">Insha</p>
@@ -197,7 +197,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:602"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:603"
                       >
                         <p className="leading-[1.25] mb-0">Parth</p>
@@ -243,7 +243,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:608"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:609"
                         >
                           <p className="leading-[1.25] mb-0">Krati</p>
@@ -286,7 +286,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:613"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:614"
                       >
                         <p className="leading-[1.25] mb-0">Mohit</p>
@@ -328,7 +328,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:618"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:619"
                       >
                         <p className="leading-[1.25] mb-0">Piyush</p>
@@ -370,7 +370,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:623"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:624"
                       >
                         <p className="leading-[1.25] mb-0">Rohit</p>
@@ -417,7 +417,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:629"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:630"
                       >
                         <p className="leading-[1.25] mb-0">Sankalp</p>
@@ -459,7 +459,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:634"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:635"
                       >
                         <p className="leading-[1.25] mb-0">Unnat</p>
@@ -502,7 +502,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:639"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:640"
                       >
                         <p className="leading-[1.25] mb-0">Utkarsh</p>
@@ -547,7 +547,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:644"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:645"
                       >
                         <p className="leading-[1.25] mb-0">Kushagra</p>
@@ -589,7 +589,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:649"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:650"
                       >
                         <p className="leading-[1.25] mb-0">Yash</p>
@@ -604,7 +604,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                 </div>
               </div>
               <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
+                className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-bold font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[52px] sm:text-[68px] md:text-[80px] text-center text-white tracking-tight w-[min-content]"
                 data-node-id="1:651"
               >
                 2025
@@ -652,7 +652,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:658"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:659"
                         >
                           <p className="leading-[1.25] mb-0">Aayush</p>
@@ -694,7 +694,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:663"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:664"
                         >
                           <p className="leading-[1.25] mb-0">Adarsh</p>
@@ -740,7 +740,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           data-node-id="1:669"
                         >
                           <div
-                            className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                            className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                             data-node-id="1:670"
                           >
                             <p className="leading-[1.25] mb-0">Abhishek</p>
@@ -783,7 +783,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:674"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:675"
                         >
                           <p className="leading-[1.25] mb-0">Aditi</p>
@@ -825,7 +825,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:679"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:680"
                         >
                           <p className="leading-[1.25] mb-0">Alok</p>
@@ -867,7 +867,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:684"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:685"
                         >
                           <p className="leading-[1.25] mb-0">Anubhav</p>
@@ -914,7 +914,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:690"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:691"
                         >
                           <p className="leading-[1.25] mb-0 whitespace-pre">{`Ayush `}</p>
@@ -962,7 +962,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:695"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:696"
                         >
                           <p className="leading-[1.25] mb-0">Harsh</p>
@@ -1051,7 +1051,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:706"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:707"
                         >
                           <p className="leading-[1.25] mb-0">Lalit</p>
@@ -1093,7 +1093,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:711"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:712"
                         >
                           <p className="leading-[1.25] mb-0">Neev</p>
@@ -1140,7 +1140,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:717"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:718"
                         >
                           <p className="leading-[1.25] mb-0">Raghvendra</p>
@@ -1182,7 +1182,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:722"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:723"
                         >
                           <p className="leading-[1.25] mb-0">Shivang</p>
@@ -1231,7 +1231,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           data-node-id="1:728"
                         >
                           <div
-                            className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                            className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                             data-node-id="1:729"
                           >
                             <p className="leading-[1.25] mb-0">Saumya</p>
@@ -1274,7 +1274,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:733"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:734"
                         >
                           <p className="leading-[1.25] mb-0">Shreyansh</p>
@@ -1319,7 +1319,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:738"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:739"
                         >
                           <p className="leading-[1.25] mb-0">Urvashi</p>
@@ -1370,7 +1370,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           data-node-id="1:745"
                         >
                           <div
-                            className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                            className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                             data-node-id="1:746"
                           >
                             <p className="leading-[1.25] mb-0">Yogita</p>
@@ -1412,7 +1412,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           data-node-id="1:750"
                         >
                           <div
-                            className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                            className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                             data-node-id="1:751"
                           >
                             <p className="leading-[1.25] mb-0">Utsav</p>
@@ -1452,7 +1452,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:755"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:756"
                         >
                           <p className="leading-[1.25] mb-0">Vivek</p>
@@ -1464,7 +1464,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                 </div>
               </div>
               <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
+                className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-bold font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[40px] sm:text-[52px] md:text-[60px] text-center text-white tracking-[-2.4px] w-[min-content]"
                 data-node-id="1:757"
               >
                 2024
@@ -1512,7 +1512,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:764"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:765"
                         >
                           <p className="leading-[1.25] mb-0">Aditi</p>
@@ -1554,7 +1554,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:769"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:770"
                         >
                           <p className="leading-[1.25]">Anadee</p>
@@ -1595,7 +1595,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:774"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:775"
                         >
                           <p className="leading-[1.25] mb-0">Anant</p>
@@ -1637,7 +1637,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:779"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:780"
                         >
                           <p className="leading-[1.25] mb-0">Hiteshwaram</p>
@@ -1679,7 +1679,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:784"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:785"
                         >
                           <p className="leading-[1.25] mb-0">Dev</p>
@@ -1726,7 +1726,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:790"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:791"
                         >
                           <p className="leading-[1.25] mb-0">Janvi</p>
@@ -1768,7 +1768,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:795"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:796"
                         >
                           <p className="leading-[1.25] mb-0">Jayati</p>
@@ -1810,7 +1810,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:800"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:801"
                         >
                           <p className="leading-[1.25] mb-0">Om</p>
@@ -1856,7 +1856,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:805"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:806"
                         >
                           <p className="leading-[1.25] mb-0">Pavitra</p>
@@ -1898,7 +1898,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:810"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:811"
                         >
                           <p className="leading-[1.25] mb-0">Parth</p>
@@ -1914,7 +1914,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                 </div>
               </div>
               <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
+                className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-bold font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[40px] sm:text-[52px] md:text-[60px] text-center text-white tracking-[-2.4px] w-[min-content]"
                 data-node-id="1:812"
               >
                 2023
@@ -1957,7 +1957,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:818"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:819"
                       >
                         <p className="leading-[1.25] mb-0">Kapil</p>
@@ -1999,7 +1999,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:823"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:824"
                       >
                         <p className="leading-[1.25] mb-0">Shruti</p>
@@ -2045,7 +2045,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:829"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:830"
                         >
                           <p className="leading-[1.25] mb-0">Ayush</p>
@@ -2092,7 +2092,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:834"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:835"
                       >
                         <p className="leading-[1.25] mb-0">Anurag</p>
@@ -2134,7 +2134,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:839"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:840"
                       >
                         <p className="leading-[1.25] mb-0">Ojuswi</p>
@@ -2176,7 +2176,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:844"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:845"
                       >
                         <p className="leading-[1.25] mb-0">Vaibhav</p>
@@ -2223,7 +2223,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:850"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:851"
                       >
                         <p className="leading-[1.25] mb-0">Aditee</p>
@@ -2265,7 +2265,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:855"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:856"
                       >
                         <p className="leading-[1.25] mb-0">Mihir</p>
@@ -2311,7 +2311,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:861"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:862"
                         >
                           <p className="leading-[1.25] mb-0">Naves</p>
@@ -2354,7 +2354,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:866"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:867"
                       >
                         <p className="leading-[1.25] mb-0">Paarth</p>
@@ -2396,7 +2396,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:871"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:872"
                       >
                         <p className="leading-[1.25] mb-0">Shrey</p>
@@ -2441,7 +2441,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:876"
                     >
                       <div
-                        className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                        className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                         data-node-id="1:877"
                       >
                         <p className="leading-[1.25] mb-0">Shivam</p>
@@ -2459,7 +2459,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                 </div>
               </div>
               <p
-                className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[100px] text-center text-white tracking-[-4px] w-[min-content]"
+                className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-bold font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[40px] sm:text-[52px] md:text-[60px] text-center text-white tracking-[-2.4px] w-[min-content]"
                 data-node-id="1:878"
               >
                 2022
@@ -2507,7 +2507,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:885"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:886"
                         >
                           <p className="leading-[1.25] mb-0">Devansh</p>
@@ -2549,7 +2549,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:890"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:891"
                         >
                           <p className="leading-[1.25] mb-0">Devansh</p>
@@ -2591,7 +2591,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:895"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:896"
                         >
                           <p className="leading-[1.25] mb-0">Mansi</p>
@@ -2633,7 +2633,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:900"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:901"
                         >
                           <p className="leading-[1.25] mb-0">Prajwal</p>
@@ -2675,7 +2675,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:905"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:906"
                         >
                           <p className="leading-[1.25] mb-0">Mohamed</p>
@@ -2723,7 +2723,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:911"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:912"
                         >
                           <p className="leading-[1.25] mb-0">Pranav</p>
@@ -2765,7 +2765,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:916"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:917"
                         >
                           <p className="leading-[1.25] mb-0">Rajat</p>
@@ -2807,7 +2807,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:921"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:922"
                         >
                           <p className="leading-[1.25] mb-0">Saksham</p>
@@ -2849,7 +2849,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:926"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:927"
                         >
                           <p className="leading-[1.25] mb-0">Viral</p>
@@ -2891,7 +2891,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         data-node-id="1:931"
                       >
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Poppins:SemiBold'] justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
                           data-node-id="1:932"
                         >
                           <p className="leading-[1.25] mb-0">Sharad</p>

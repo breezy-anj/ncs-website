@@ -315,7 +315,7 @@ export default function HighlightsWheel({
         ref={labelRef}
         className="pointer-events-none absolute inset-0 flex items-center justify-center text-center z-10 transition-opacity duration-300 px-4 select-none"
       >
-        <h2 className="relative inline-block font-['Satoshi:Black',Arial,sans-serif] text-[28px] sm:text-[38px] md:text-[48px] lg:text-[54px] font-black uppercase tracking-tight leading-none drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)] bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-white to-zinc-400 animate-shimmer">
+        <h2 className="relative inline-block font-['Satoshi',Arial,sans-serif] font-black text-[28px] sm:text-[38px] md:text-[48px] lg:text-[54px] font-black uppercase tracking-tight leading-none drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)] bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-white to-zinc-400 animate-shimmer">
           {label}
         </h2>
       </div>

@@ -62,7 +62,7 @@ export default function Team() {
                 <div className="h-[45.237px] relative shrink-0 w-[102.271px]" data-node-id="1:17" data-name="NCS Logo">
                   <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgNcsLogo} />
                 </div>
-                <div className="[word-break:break-word] content-stretch flex font-['Satoshi_Variable:Regular','Poppins:Regular',sans-serif] gap-[49.903px] h-[22.456px] items-center leading-[12.103px] not-italic relative shrink-0 text-[24.205px] text-black text-center tracking-[0.0946px] whitespace-nowrap" data-node-id="1:18">
+                <div className="[word-break:break-word] content-stretch flex font-['Satoshi',Arial,sans-serif] gap-[49.903px] h-[22.456px] items-center leading-[12.103px] not-italic relative shrink-0 text-[24.205px] text-black text-center tracking-[0.0946px] whitespace-nowrap" data-node-id="1:18">
                   <p className="relative shrink-0" data-node-id="1:19">
                     Home
                   </p>
@@ -83,7 +83,7 @@ export default function Team() {
                   </p>
                 </div>
                 <a href="#connect" className="bg-black content-stretch flex h-[46.797px] items-center justify-center p-[8.068px] relative rounded-[24.205px] shrink-0 w-[165.403px]" data-node-id="1:25">
-                  <p className="[word-break:break-word] font-['Satoshi_Variable:Medium','Poppins:SemiBold',sans-serif] leading-[12.103px] not-italic relative shrink-0 text-[#fffefe] text-[24.205px] text-center tracking-[0.0946px] whitespace-nowrap" data-node-id="1:26">
+                  <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[12.103px] not-italic relative shrink-0 text-[#fffefe] text-[24.205px] text-center tracking-[0.0946px] whitespace-nowrap" data-node-id="1:26">
                     Connect
                   </p>
                 </a>
@@ -93,14 +93,14 @@ export default function Team() {
           <div className="h-[7882px] relative shrink-0 w-full" data-node-id="1:27">
             <div className="absolute content-stretch flex flex-col gap-[100px] items-center left-0 top-0 w-[1302px]" data-node-id="1:28">
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[50px] h-[531px] items-center leading-[normal] not-italic relative shrink-0 text-center w-full" data-node-id="1:29">
-                <p className="bg-clip-text font-['Satoshi:Black','Poppins:SemiBold',sans-serif] relative shrink-0 text-[80px] text-[transparent] tracking-[-3.2px] whitespace-nowrap" data-node-id="1:30" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+                <p className="bg-clip-text font-['Satoshi',Arial,sans-serif] font-black relative shrink-0 text-[80px] text-[transparent] tracking-[-3.2px] whitespace-nowrap" data-node-id="1:30" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                   TEAMS
                 </p>
-                <p className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] relative shrink-0 text-[40px] text-white tracking-[-1.6px] w-[1260px]" data-node-id="1:31">
+                <p className="font-['Satoshi',Arial,sans-serif] font-medium relative shrink-0 text-[40px] text-white tracking-[-1.6px] w-[1260px]" data-node-id="1:31">
                   For over two decades, NCS has been the heart of technical culture on campus. Founded in 2000, we bring together students who live and breathe code, development, and design. Through hands-on projects, workshops, and real-world building, we turn curiosity into capability,creating an environment where bold ideas take root and thrive.
                 </p>
               </div>
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:32" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 288 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.4 0 0 5.4 144 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:32" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 288 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.4 0 0 5.4 144 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 4th Year
               </p>
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:33">
@@ -115,12 +115,12 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:37" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:38">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:39">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:39">
                         <p className="leading-[1.25] mb-0">Pranjyaditya</p>
                         <p className="leading-[1.25] mb-0">Singh</p>
                         <p className="leading-[1.25]">Chauhan</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:40">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:40">
                         HOC Design
                       </p>
                     </div>
@@ -142,11 +142,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:43" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:44">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:45">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:45">
                         <p className="leading-[1.25] mb-0">Om</p>
                         <p className="leading-[1.25]">Tripathi</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:46">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:46">
                         HOC Programming
                       </p>
                     </div>
@@ -169,11 +169,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:49" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:50">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:51">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:51">
                         <p className="leading-[1.25] mb-0">Ajeet</p>
                         <p className="leading-[1.25]">Bharti</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:52">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:52">
                         Creative Head
                       </p>
                     </div>
@@ -192,11 +192,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:55" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:56">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:57">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:57">
                         <p className="leading-[1.25] mb-0">Ajinkya</p>
                         <p className="leading-[1.25]">Mishra</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:58">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:58">
                         CTC
                       </p>
                     </div>
@@ -219,11 +219,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:61" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:62">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:63">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:63">
                         <p className="leading-[1.25] mb-0">Kuldeep</p>
                         <p className="leading-[1.25]">Chaudhary</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:64">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:64">
                         President
                       </p>
                     </div>
@@ -247,11 +247,11 @@ export default function Team() {
                       </div>
                       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:68" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                       <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:69">
-                        <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:70">
+                        <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:70">
                           <p className="leading-[1.25] mb-0">Pranjal</p>
                           <p className="leading-[1.25]">Gupta</p>
                         </div>
-                        <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:71">
+                        <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:71">
                           Finance Head
                         </p>
                       </div>
@@ -277,11 +277,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:75" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:76">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:77">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:77">
                         <p className="leading-[1.25] mb-0">Naziya</p>
                         <p className="leading-[1.25]">Praveen</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:78">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:78">
                         HOC Development
                       </p>
                     </div>
@@ -304,11 +304,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:81" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:82">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:83">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:83">
                         <p className="leading-[1.25] mb-0">Gaurang</p>
                         <p className="leading-[1.25]">Agarwal</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:84">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:84">
                         General Secretary
                       </p>
                     </div>
@@ -330,11 +330,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:87" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:88">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:89">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:89">
                         <p className="leading-[1.25] mb-0">Vibha</p>
                         <p className="leading-[1.25]">Gupta</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:90">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:90">
                         General Secretary
                       </p>
                     </div>
@@ -357,11 +357,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:93" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:94">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:95">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:95">
                         <p className="leading-[1.25] mb-0">Shivam</p>
                         <p className="leading-[1.25]">Goyal</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:96">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:96">
                         Management Head
                       </p>
                     </div>
@@ -383,11 +383,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:99" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:100">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:101">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:101">
                         <p className="leading-[1.25] mb-0">Khushi</p>
                         <p className="leading-[1.25]">Mishra</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:102">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:102">
                         Media Head
                       </p>
                     </div>
@@ -402,7 +402,7 @@ export default function Team() {
 </div>
                 </div>
               </div>
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:103" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 287 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.35 0 0 5.4 143.5 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:103" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 287 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.35 0 0 5.4 143.5 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 3rd Year
               </p>
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:104">
@@ -417,11 +417,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:108" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:109">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:110">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:110">
                         <p className="leading-[1.25] mb-0">Anshika</p>
                         <p className="leading-[1.25]">Saini</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:111">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:111">
                         Programmer
                       </p>
                     </div>
@@ -440,11 +440,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:114" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:115">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:116">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:116">
                         <p className="leading-[1.25] mb-0">Aryan</p>
                         <p className="leading-[1.25]">Singh</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:117">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:117">
                         Programmer
                       </p>
                     </div>
@@ -467,11 +467,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:120" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:121">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:122">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:122">
                         <p className="leading-[1.25] mb-0">Utkarsh</p>
                         <p className="leading-[1.25]">Shukla</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:123">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:123">
                         Programmer
                       </p>
                     </div>
@@ -493,11 +493,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:126" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:127">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:128">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:128">
                         <p className="leading-[1.25] mb-0">Shreyansh</p>
                         <p className="leading-[1.25]">Pandey</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:129">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:129">
                         Programmer
                       </p>
                     </div>
@@ -519,11 +519,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:132" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:133">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:134">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:134">
                         <p className="leading-[1.25] mb-0">Athrva</p>
                         <p className="leading-[1.25]">Gupta</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:135">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:135">
                         Designer
                       </p>
                     </div>
@@ -547,11 +547,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:139" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:140">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:141">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:141">
                         <p className="leading-[1.25] mb-0">Shivangi</p>
                         <p className="leading-[1.25]">Trivedi</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:142">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:142">
                         Developer
                       </p>
                     </div>
@@ -573,11 +573,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:145" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:146">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:147">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:147">
                         <p className="leading-[1.25] mb-0">Ayush</p>
                         <p className="leading-[1.25]">Vashisth</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:148">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:148">
                         Developer
                       </p>
                     </div>
@@ -614,11 +614,11 @@ export default function Team() {
                       </div>
                       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:157" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                       <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:158">
-                        <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:159">
+                        <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:159">
                           <p className="leading-[1.25] mb-0">Lakshya</p>
                           <p className="leading-[1.25]">Dubey</p>
                         </div>
-                        <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:160">
+                        <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:160">
                           Developer
                         </p>
                       </div>
@@ -638,12 +638,12 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:163" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:164">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:165">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:165">
                         <p className="leading-[1.25] mb-0">Shreyansh</p>
                         <p className="leading-[1.25] mb-0">Shekhar</p>
                         <p className="leading-[1.25]">Dwivedi</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:166">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:166">
                         Developer
                       </p>
                     </div>
@@ -679,11 +679,11 @@ export default function Team() {
                       </div>
                       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:175" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                       <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:176">
-                        <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:177">
+                        <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:177">
                           <p className="leading-[1.25] mb-0">Shreyansh</p>
                           <p className="leading-[1.25]">Shrivastava</p>
                         </div>
-                        <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:178">
+                        <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:178">
                           Developer
                         </p>
                       </div>
@@ -705,11 +705,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:182" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:183">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:184">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:184">
                         <p className="leading-[1.25] mb-0">Pragati</p>
                         <p className="leading-[1.25]">Rajput</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:185">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:185">
                         Technical
                       </p>
                     </div>
@@ -732,11 +732,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:188" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:189">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:190">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:190">
                         <p className="leading-[1.25] mb-0">Vishnu</p>
                         <p className="leading-[1.25]">Tiwari</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:191">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:191">
                         Technical
                       </p>
                     </div>
@@ -755,11 +755,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:194" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:195">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:196">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:196">
                         <p className="leading-[1.25] mb-0">Aditya</p>
                         <p className="leading-[1.25]">Kumar</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:197">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:197">
                         Developer
                       </p>
                     </div>
@@ -770,7 +770,7 @@ export default function Team() {
 </div>
                 </div>
               </div>
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:198" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 306 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(15.3 0 0 5.4 153 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:198" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 306 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(15.3 0 0 5.4 153 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 2nd Year
               </p>
               <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]" data-node-id="1:199">
@@ -785,11 +785,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:203" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:204">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:205">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:205">
                         <p className="leading-[1.25] mb-0">Darshita</p>
                         <p className="leading-[1.25]">Jain</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:206">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:206">
                         Designer
                       </p>
                     </div>
@@ -811,11 +811,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:209" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:210">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:211">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:211">
                         <p className="leading-[1.25] mb-0">Piyush</p>
                         <p className="leading-[1.25]">Gautam</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:212">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:212">
                         Designer
                       </p>
                     </div>
@@ -834,11 +834,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:215" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:216">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:217">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:217">
                         <p className="leading-[1.25] mb-0">Bhaskar</p>
                         <p className="leading-[1.25]">Shah</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:218">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:218">
                         Designer
                       </p>
                     </div>
@@ -861,10 +861,10 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:221" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:222">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:223">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:223">
                         <p className="leading-[1.25]">Karnika</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:224">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:224">
                         Programmer
                       </p>
                     </div>
@@ -887,11 +887,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:227" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:228">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:229">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:229">
                         <p className="leading-[1.25] mb-0">Aanya</p>
                         <p className="leading-[1.25]">Gogia</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:230">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:230">
                         Programmer
                       </p>
                     </div>
@@ -914,11 +914,11 @@ export default function Team() {
                       </div>
                       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:234" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                       <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:235">
-                        <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:236">
+                        <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:236">
                           <p className="leading-[1.25] mb-0">Sidhi</p>
                           <p className="leading-[1.25]">Saxena</p>
                         </div>
-                        <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:237">
+                        <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:237">
                           Programmer
                         </p>
                       </div>
@@ -943,11 +943,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:241" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:242">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:243">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:243">
                         <p className="leading-[1.25] mb-0">Tanishka</p>
                         <p className="leading-[1.25]">Israni</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:244">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:244">
                         Developer
                       </p>
                     </div>
@@ -969,11 +969,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:247" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:248">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:249">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:249">
                         <p className="leading-[1.25] mb-0">Saishree</p>
                         <p className="leading-[1.25]">Saxena</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:250">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:250">
                         Developer
                       </p>
                     </div>
@@ -996,11 +996,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:253" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:254">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:255">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:255">
                         <p className="leading-[1.25] mb-0">Aryan</p>
                         <p className="leading-[1.25]">Singh</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:256">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:256">
                         Programmer
                       </p>
                     </div>
@@ -1023,11 +1023,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:259" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:260">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:261">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:261">
                         <p className="leading-[1.25] mb-0 whitespace-pre">{`Sanskar `}</p>
                         <p className="leading-[1.25] whitespace-pre">Pal</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:262">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:262">
                         Programmer
                       </p>
                     </div>
@@ -1049,11 +1049,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:265" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:266">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:267">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:267">
                         <p className="leading-[1.25] mb-0">Mohd</p>
                         <p className="leading-[1.25]">Fahad</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:268">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:268">
                         Programmer
                       </p>
                     </div>
@@ -1077,11 +1077,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:272" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:273">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:274">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:274">
                         <p className="leading-[1.25] mb-0">Tanishq</p>
                         <p className="leading-[1.25]">Marwari</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:275">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:275">
                         Technical
                       </p>
                     </div>
@@ -1103,11 +1103,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:278" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:279">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:280">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:280">
                         <p className="leading-[1.25] mb-0">Ansh</p>
                         <p className="leading-[1.25]">Mittal</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:281">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:281">
                         Technical
                       </p>
                     </div>
@@ -1130,11 +1130,11 @@ export default function Team() {
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:284" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:285">
-                      <div className="flex flex-col font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:286">
+                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:286">
                         <p className="leading-[1.25] mb-0">Anjneya</p>
                         <p className="leading-[1.25]">Singh</p>
                       </div>
-                      <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:287">
+                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:287">
                         Developer
                       </p>
                     </div>
@@ -1153,15 +1153,15 @@ export default function Team() {
           <div className="absolute h-[431px] left-0 right-0 top-[807.98px]" data-node-id="1:289">
             <div className="absolute h-[604.983px] left-[22.21px] top-[-375.98px] w-[1116.589px]" data-node-id="1:290" />
             <div className="absolute content-stretch flex flex-col gap-[20px] items-center left-0 top-[-807.98px] w-[1161px]" data-node-id="1:291">
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi:Bold','Poppins:SemiBold',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[320px] text-[transparent] text-center tracking-[-12.8px] w-[min-content]" data-node-id="1:292" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1161 432' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(58.05 0 0 88.219 580.5 216)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[320px] text-[transparent] text-center tracking-[-12.8px] w-[min-content]" data-node-id="1:292" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1161 432' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(58.05 0 0 88.219 580.5 216)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 NIBBLE
               </p>
               <div id="connect" className="bg-[rgba(86,86,86,0.3)] h-[229px] overflow-clip relative rounded-[30px] shrink-0 w-[851px]" data-node-id="1:293">
                 <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[15px] items-center left-[calc(50%+0.5px)] top-[calc(50%+0.13px)] w-[390px]" data-node-id="1:294">
-                  <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] h-[51px] leading-[normal] min-w-full not-italic relative shrink-0 text-[48px] text-center text-white tracking-[1.92px] w-[min-content]" data-node-id="1:295">
+                  <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium h-[51px] leading-[normal] min-w-full not-italic relative shrink-0 text-[48px] text-center text-white tracking-[1.92px] w-[min-content]" data-node-id="1:295">
                     LET’S CONNECT
                   </p>
-                  <p className="[word-break:break-word] font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[24px] text-center text-white tracking-[-0.96px] w-[min-content]" data-node-id="1:296">
+                  <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[24px] text-center text-white tracking-[-0.96px] w-[min-content]" data-node-id="1:296">
                     Follow NCS and stay in the loop.
                   </p>
                   <div className="content-stretch flex gap-[19.8px] items-start relative shrink-0" data-node-id="1:297">
@@ -1193,7 +1193,7 @@ export default function Team() {
                             <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector3} width="67" />
                           </div>
                         </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:315">
+                        <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:315">
                           Ajeet Bharti
                         </p>
                       </div>
@@ -1203,7 +1203,7 @@ export default function Team() {
                             <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector4} width="67" />
                           </div>
                         </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:318">
+                        <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:318">
                           Pranjyaditya Singh Chauhan
                         </p>
                       </div>
@@ -1213,7 +1213,7 @@ export default function Team() {
                             <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector5} width="67" />
                           </div>
                         </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:321">
+                        <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:321">
                           Athrva Gupta
                         </p>
                       </div>
@@ -1223,7 +1223,7 @@ export default function Team() {
                             <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector6} width="67" />
                           </div>
                         </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:324">
+                        <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:324">
                           Bhaskar Shah
                         </p>
                       </div>
@@ -1233,7 +1233,7 @@ export default function Team() {
                             <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector7} width="67" />
                           </div>
                         </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:327">
+                        <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:327">
                           Darshita Jain
                         </p>
                       </div>
@@ -1243,7 +1243,7 @@ export default function Team() {
                             <img alt="" className="block max-w-none size-full" height="66.875" src={imgVector8} width="67" />
                           </div>
                         </div>
-                        <p className="[word-break:break-word] font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:330">
+                        <p className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[10px] text-center text-white tracking-[-0.4px] whitespace-nowrap" data-node-id="1:330">
                           Piyush Gautam
                         </p>
                       </div>
@@ -1269,8 +1269,8 @@ export default function Team() {
                   </div>
                 </div>
                 <div className="[word-break:break-word] font-['SF_Pro:Regular'] font-normal min-w-full not-italic relative shrink-0 text-[0px] text-center text-white tracking-[-1.92px] w-[min-content]" data-node-id="1:333" style={{ fontVariationSettings: '"wdth" 100' }}>
-                  <p className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] leading-[60px] mb-0 text-[48px]">Designing, Coding, And Tomorrow’s Innovations Today.</p>
-                  <p className="font-['Satoshi:Regular','Poppins:Regular',sans-serif] leading-[70px] text-[30px]">{`Designed and developed with ❤️ by Nibble Computer Society `}</p>
+                  <p className="font-['Satoshi',Arial,sans-serif] font-medium leading-[60px] mb-0 text-[48px]">Designing, Coding, And Tomorrow’s Innovations Today.</p>
+                  <p className="font-['Satoshi',Arial,sans-serif] leading-[70px] text-[30px]">{`Designed and developed with ❤️ by Nibble Computer Society `}</p>
                 </div>
               </div>
             </div>
