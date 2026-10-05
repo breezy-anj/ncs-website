@@ -7,8 +7,8 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
 
   return (
     <div className="relative flex w-full items-center overflow-hidden bg-transparent">
-      <div className="image-auto-slider-mask w-full py-6 md:py-8">
-        <div className="image-auto-slider-track flex w-max items-center gap-4 sm:gap-5 md:gap-6">
+      <div className="image-auto-slider-mask w-full py-8 md:py-10">
+        <div className="image-auto-slider-track flex w-max items-center gap-5 sm:gap-6 md:gap-8">
           {duplicatedImages.map((image, index) => (
             <img
               key={`${image.src}-${index}`}
@@ -17,7 +17,7 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
               aria-hidden={index >= images.length}
               width={image.width}
               height={image.height}
-              className="image-auto-slider-item h-36 w-auto max-w-none shrink-0 rounded-xl object-cover shadow-xl sm:h-40 md:h-48 lg:h-56"
+              className="image-auto-slider-item h-52 w-auto max-w-none shrink-0 rounded-2xl object-cover shadow-2xl sm:h-64 md:h-80 lg:h-96 xl:h-[420px]"
               loading="eager"
             />
           ))}
@@ -31,7 +31,7 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
         }
 
         .image-auto-slider-track {
-          animation: image-auto-slider-scroll 28s linear infinite;
+          animation: image-auto-slider-scroll 40s linear infinite;
         }
 
         .image-auto-slider-mask {
