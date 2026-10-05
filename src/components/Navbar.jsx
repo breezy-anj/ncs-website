@@ -63,11 +63,10 @@ export default function Navbar() {
   return (
     <nav className="relative z-50 select-none shrink-0 flex items-center justify-center w-full px-3 sm:px-4 pointer-events-auto">
       {/* Outer Metallic / Glass Rim */}
-      <motion.div
-        layout
-        className="w-full max-w-[1020px] p-[2.5px] transition-all duration-300"
+      <div
+        className="w-full max-w-[1020px] p-[2.5px] transition-[border-radius] duration-250 ease-out transform-gpu will-change-[border-radius]"
         style={{
-          borderRadius: isMobileOpen ? "32px" : "9999px",
+          borderRadius: isMobileOpen ? "28px" : "9999px",
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(200, 200, 200, 0.25) 12%, rgba(130, 130, 130, 0.15) 50%, rgba(80, 80, 80, 0.2) 85%, rgba(255, 255, 255, 0.45) 100%)",
           boxShadow:
@@ -76,13 +75,13 @@ export default function Navbar() {
       >
         {/* Inner Liquid Glass Core */}
         <div
-          className="relative w-full overflow-hidden transition-all duration-300"
+          className="relative w-full overflow-hidden transition-[border-radius] duration-250 ease-out transform-gpu will-change-[border-radius]"
           style={{
-            borderRadius: isMobileOpen ? "30px" : "9999px",
+            borderRadius: isMobileOpen ? "26px" : "9999px",
             background:
               "linear-gradient(150deg, rgba(25, 25, 30, 0.72) 0%, rgba(16, 16, 20, 0.85) 50%, rgba(24, 24, 28, 0.78) 100%)",
-            backdropFilter: "blur(28px) saturate(190%)",
-            WebkitBackdropFilter: "blur(28px) saturate(190%)",
+            backdropFilter: "blur(24px) saturate(180%)",
+            WebkitBackdropFilter: "blur(24px) saturate(180%)",
             boxShadow:
               "inset 0px 1px 1.5px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1.5px 0px rgba(0, 0, 0, 0.6)",
           }}
@@ -192,43 +191,42 @@ export default function Navbar() {
               </motion.button>
             </div>
 
-            {/* Mobile Animated Menu Hamburger / Close Toggle */}
+            {/* Mobile Animated Menu Hamburger (3 lines) / Close Toggle */}
             <button
               type="button"
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="flex lg:hidden relative size-9 sm:size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white transition-colors cursor-pointer focus:outline-none"
+              className="flex lg:hidden relative size-9 sm:size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 active:scale-95 border border-white/20 text-white transition-all cursor-pointer focus:outline-none"
               aria-label="Toggle mobile menu"
             >
-              <div className="relative size-4 flex flex-col justify-center items-center">
-                <motion.span
-                  animate={{
-                    rotate: isMobileOpen ? 45 : 0,
-                    y: isMobileOpen ? 0 : -3.5,
-                  }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute w-4 h-[1.8px] bg-white rounded-full"
+              <div className="relative w-4 h-3.5 flex flex-col justify-between items-center pointer-events-none">
+                <span
+                  className={`w-4 h-[1.8px] bg-white rounded-full transition-transform duration-100 ease-out origin-center ${
+                    isMobileOpen ? "rotate-45 translate-y-[5.8px]" : ""
+                  }`}
                 />
-                <motion.span
-                  animate={{
-                    rotate: isMobileOpen ? -45 : 0,
-                    y: isMobileOpen ? 0 : 3.5,
-                  }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute w-4 h-[1.8px] bg-white rounded-full"
+                <span
+                  className={`w-4 h-[1.8px] bg-white rounded-full transition-opacity duration-75 ease-out ${
+                    isMobileOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`w-4 h-[1.8px] bg-white rounded-full transition-transform duration-100 ease-out origin-center ${
+                    isMobileOpen ? "-rotate-45 -translate-y-[5.8px]" : ""
+                  }`}
                 />
               </div>
             </button>
           </div>
 
           {/* Mobile Accordion Drawer */}
-          <AnimatePresence>
+          <AnimatePresence initial={false}>
             {isMobileOpen && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="overflow-hidden border-t border-white/10 px-3 pb-4 pt-2 flex flex-col gap-1.5 lg:hidden"
+                transition={{ duration: 0.1, ease: "easeOut" }}
+                className="overflow-hidden border-t border-white/10 px-3 pb-4 pt-2 flex flex-col gap-1.5 lg:hidden transform-gpu will-change-[height,opacity]"
               >
                 {navItems.map((item) => {
                   const Icon = item.icon
@@ -265,7 +263,7 @@ export default function Navbar() {
             )}
           </AnimatePresence>
         </div>
-      </motion.div>
+      </div>
     </nav>
   )
 }

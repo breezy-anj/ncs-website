@@ -124,66 +124,67 @@ export default function Home({ activePage = "Home", onNavigate }) {
           data-node-id="1:36"
         >
           <div
-            className="flex flex-col-reverse md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:inline-grid place-items-center md:place-items-start relative shrink-0 w-full"
+            className="flex flex-col-reverse gap-10 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[100dvh] md:-mt-[50px]"
             data-node-id="1:37"
           >
             {/* Right illustration with smooth floating animation */}
             <div
-              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] md:mt-[29px] pointer-events-none select-none mt-20 sm:mt-14 md:mt-[29px] mb-14 md:mb-0 translate-y-8 md:translate-y-0"
+              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] pointer-events-none select-none md:translate-y-0 mx-auto flex justify-center items-center"
               data-node-id="1:38"
               data-name="Hero Illustration"
             >
               <img
                 alt="NCS Hero Illustration"
-                className="block md:absolute inset-0 max-w-full md:max-w-none w-full h-auto md:size-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+                className="block md:absolute inset-0 max-w-full md:max-w-none w-full h-auto md:size-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)] mx-auto"
                 src={publicAsset("assets/hero1.svg")}
               />
             </div>
 
             {/* Left Typography & CTA */}
             <div
-              className="flex flex-col gap-8 md:gap-[44px] items-center md:items-start text-center md:text-left relative z-10 w-full md:w-[820px] md:col-1 md:row-1 md:mt-[25px]"
+              className="flex flex-col gap-8 md:gap-[44px] items-center md:items-start text-center md:text-left relative z-10 w-full md:w-[820px] md:col-1 md:row-1 mx-auto md:mx-0"
               data-node-id="1:39"
             >
-              <div className="flex flex-col not-italic items-center md:items-start relative shrink-0 w-full">
+              <div className="flex flex-col not-italic items-center md:items-start relative shrink-0 w-full gap-4 md:gap-6">
                 <div
-                  className="bg-clip-text font-['Satoshi',Arial,sans-serif] font-black text-[46px] xs:text-[56px] sm:text-[96px] md:text-[132px] leading-[1.05] text-transparent tracking-[-2px] md:tracking-[-3.5px] w-full md:w-[820px] select-none hover:tracking-0 md:hover:tracking-[-3.5px] transition-all duration-500 break-words"
+                  className="bg-clip-text text-transparent font-['Satoshi',Arial,sans-serif] font-black text-[46px] xs:text-[56px] sm:text-[84px] md:text-[126px] leading-[1.05] tracking-[-0.04em] w-full md:w-[820px] select-none text-center md:text-left mx-auto md:mx-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
                   data-node-id="1:42"
                   style={{
-                    backgroundImage:
-                      "linear-gradient(180deg, #FFFFFF 0%, #B8B8B8 50%, #6E6E6E 100%)",
+                    backgroundImage: "radial-gradient(50% 50% at 50% 50%, #FFFFFF 33.17%, #999999 100%)",
                   }}
                 >
-                  <p className="mb-0">NIBBLE</p>
-                  <p className="mb-0">COMPUTER</p>
-                  <p className="mb-0">SOCIETY</p>
+                  <p className="mb-0 text-center md:text-left">NIBBLE</p>
+                  <p className="mb-0 text-center md:text-left">COMPUTER</p>
+                  <p className="mb-0 text-center md:text-left">SOCIETY</p>
                 </div>
               </div>
 
               {/* Join the Community Pill Button with Liquid Metal Shader */}
-              <LiquidMetalButton
-                label="Join the Community"
-                width={260}
-                height={56}
-                fontSize={18}
-                textColor="#ffffff"
-                icon={
-                  <span className="text-white text-[20px] font-semibold leading-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                    ↗
-                  </span>
-                }
-                onClick={() => {
-                  const connectEl = document.getElementById("connect-section")
-                  if (connectEl) {
-                    connectEl.scrollIntoView({ behavior: "smooth" })
-                  } else {
-                    window.scrollTo({
-                      top: document.body.scrollHeight,
-                      behavior: "smooth",
-                    })
+              <div className="w-full flex justify-center md:justify-start">
+                <LiquidMetalButton
+                  label="Join the Community"
+                  width={260}
+                  height={56}
+                  fontSize={18}
+                  textColor="#ffffff"
+                  icon={
+                    <span className="text-white text-[20px] font-semibold leading-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                      ↗
+                    </span>
                   }
-                }}
-              />
+                  onClick={() => {
+                    const connectEl = document.getElementById("connect-section")
+                    if (connectEl) {
+                      connectEl.scrollIntoView({ behavior: "smooth" })
+                    } else {
+                      window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: "smooth",
+                      })
+                    }
+                  }}
+                />
+              </div>
             </div>
           </div>
 
@@ -217,11 +218,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Programming"
-                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgProgrammingIcon}
-                  />
+                  <svg className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
+                  </svg>
                 </div>
                 <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
                   <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
@@ -238,11 +237,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Development"
-                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgDevelopmentIcon}
-                  />
+                  <svg className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
+                    <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
+                    <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
+                    <path d="M117.6 16.8H16.8C12.1674 16.8 8.40002 20.5716 8.40002 25.2V109.2C8.40002 113.833 12.1674 117.6 16.8 117.6H117.6C122.233 117.6 126 113.833 126 109.2V25.2C126 20.5716 122.233 16.8 117.6 16.8ZM117.6 25.2V42H16.8V25.2H117.6ZM16.8 109.2V50.4001H117.6V109.2H16.8Z" fill="black"/>
+                  </svg>
                 </div>
                 <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
                   <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
@@ -317,11 +317,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
                   }}
                 >
-                  <img
-                    alt="Programming"
-                    className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
-                    src={imgProgrammingIcon}
-                  />
+                  <svg className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
+                  </svg>
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
                     <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Programming</span>
                     <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
@@ -343,11 +341,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
                   }}
                 >
-                  <img
-                    alt="Development"
-                    className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
-                    src={imgDevelopmentIcon}
-                  />
+                  <svg className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
+                    <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
+                    <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
+                    <path d="M117.6 16.8H16.8C12.1674 16.8 8.40002 20.5716 8.40002 25.2V109.2C8.40002 113.833 12.1674 117.6 16.8 117.6H117.6C122.233 117.6 126 113.833 126 109.2V25.2C126 20.5716 122.233 16.8 117.6 16.8ZM117.6 25.2V42H16.8V25.2H117.6ZM16.8 109.2V50.4001H117.6V109.2H16.8Z" fill="black"/>
+                  </svg>
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
                     <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Development</span>
                     <p className="opacity-100 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
@@ -477,7 +476,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <SocialCards cards={eventFanCards} />
             </div>
           </div>
-          <Footer />
+          <div className="w-full -mt-12 md:-mt-[120px]">
+            <Footer />
+          </div>
         </div>
       </div>
     </div>
