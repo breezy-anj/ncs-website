@@ -128,7 +128,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
           >
             {/* Right illustration with smooth floating animation */}
             <div
-              className="relative z-0 animate-float w-full max-w-[400px] md:max-w-none md:w-[1038px] md:h-[840px] md:col-1 md:row-1 md:ml-[480px] md:-mt-[35px] pointer-events-none select-none mb-10 md:mb-0"
+              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[480px] md:-mt-[35px] pointer-events-none select-none mb-10 md:mb-0"
               data-node-id="1:38"
               data-name="Hero Illustration"
             >
