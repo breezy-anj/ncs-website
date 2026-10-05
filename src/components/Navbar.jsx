@@ -64,9 +64,8 @@ export default function Navbar() {
     <nav className="relative z-50 select-none shrink-0 flex items-center justify-center w-full px-3 sm:px-4 pointer-events-auto">
       {/* Outer Metallic / Glass Rim */}
       <div
-        className="w-full max-w-[1020px] p-[2.5px] transition-[border-radius] duration-250 ease-out transform-gpu will-change-[border-radius]"
+        className="w-full max-w-[1020px] p-[2.5px] rounded-[28px] lg:rounded-full"
         style={{
-          borderRadius: isMobileOpen ? "28px" : "9999px",
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(200, 200, 200, 0.25) 12%, rgba(130, 130, 130, 0.15) 50%, rgba(80, 80, 80, 0.2) 85%, rgba(255, 255, 255, 0.45) 100%)",
           boxShadow:
@@ -75,9 +74,8 @@ export default function Navbar() {
       >
         {/* Inner Liquid Glass Core */}
         <div
-          className="relative w-full overflow-hidden transition-[border-radius] duration-250 ease-out transform-gpu will-change-[border-radius]"
+          className="relative w-full overflow-hidden rounded-[26px] lg:rounded-full"
           style={{
-            borderRadius: isMobileOpen ? "26px" : "9999px",
             background:
               "linear-gradient(150deg, rgba(25, 25, 30, 0.72) 0%, rgba(16, 16, 20, 0.85) 50%, rgba(24, 24, 28, 0.78) 100%)",
             backdropFilter: "blur(24px) saturate(180%)",
@@ -219,15 +217,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Accordion Drawer */}
-          <AnimatePresence initial={false}>
-            {isMobileOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.1, ease: "easeOut" }}
-                className="overflow-hidden border-t border-white/10 px-3 pb-4 pt-2 flex flex-col gap-1.5 lg:hidden transform-gpu will-change-[height,opacity]"
-              >
+          <div
+            className={`grid transition-[grid-template-rows] duration-200 ease-out lg:hidden ${
+              isMobileOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="border-t border-white/10 px-3 pb-4 pt-2 flex flex-col gap-1.5">
                 {navItems.map((item) => {
                   const Icon = item.icon
                   const isActive = activePage === item.page
@@ -259,9 +255,9 @@ export default function Navbar() {
                 >
                   Connect
                 </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
