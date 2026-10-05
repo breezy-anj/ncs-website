@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Project from "./pages/Project"
@@ -125,16 +126,27 @@ export default function App() {
             transformOrigin: needsHorizontalScroll ? "top left" : "top center",
           }}
         >
-          <Routes>
-            <Route path="/" element={<Home activePage={page} />} />
-            <Route path="/about" element={<About activePage={page} />} />
-            <Route path="/project" element={<Project activePage={page} />} />
-            <Route path="/team" element={<Teams activePage={page} />} />
-            <Route path="/alumni" element={<Alumni activePage={page} />} />
-            <Route path="/recruitment" element={<Recruitment activePage={page} />} />
-            <Route path="/gallery" element={<CircularGalleryDemo />} />
-            <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, filter: "blur(8px)", y: 15 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              exit={{ opacity: 0, filter: "blur(8px)", y: -15 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="w-full flex justify-center"
+            >
+              <Routes location={location}>
+                <Route path="/" element={<Home activePage={page} />} />
+                <Route path="/about" element={<About activePage={page} />} />
+                <Route path="/project" element={<Project activePage={page} />} />
+                <Route path="/team" element={<Teams activePage={page} />} />
+                <Route path="/alumni" element={<Alumni activePage={page} />} />
+                <Route path="/recruitment" element={<Recruitment activePage={page} />} />
+                <Route path="/gallery" element={<CircularGalleryDemo />} />
+                <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
+              </Routes>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </main>
     </div>
