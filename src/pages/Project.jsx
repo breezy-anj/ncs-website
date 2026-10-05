@@ -16,7 +16,39 @@ const imgVector = `${assetPathPrefix}/79f69.svg`
 const imgVector1 = `${assetPathPrefix}/54ba9.svg`
 const imgLine1 = `${assetPathPrefix}/57d57.svg`
 
-const additionalProjects = [
+const allProjects = [
+  {
+    name: "JSS Infotech",
+    image: imgRectangle124,
+    description:
+      "A digital hub of knowledge, bringing you updates on notices, assignments, and placement opportunities.",
+    technologies: ["Django", "Python", "PostgreSQL"],
+    url: "https://github.com/ncs-jss",
+  },
+  {
+    name: "MCQ Module",
+    image: imgRectangle125,
+    description:
+      "Picture this: an online theater for teachers and societies, where multiple-choice questions take the stage and the results pop up like magic tricks!",
+    technologies: ["Php", "Laravel", "MySQL"],
+    url: "https://github.com/ncs-jss",
+  },
+  {
+    name: "Event Manager",
+    image: imgRectangle126,
+    description:
+      "A college event-tracking web app, keeping students informed about daily happenings on campus. Stay in the loop, never miss out!",
+    technologies: ["React", "Node", "MongoDB"],
+    url: "https://github.com/ncs-jss",
+  },
+  {
+    name: "T & P Portal",
+    image: imgRectangle127,
+    description:
+      "An online portal for managing & automating the recruitment procedure for T&P Centre.",
+    technologies: ["Python", "Html", "JavaScript"],
+    url: "https://github.com/ncs-jss",
+  },
   {
     name: "Know Your College",
     image: imgRectangle128,
@@ -51,6 +83,8 @@ const additionalProjects = [
   },
 ]
 
+const additionalProjects = allProjects.slice(4)
+
 export default function Project({ activePage = "Project", onNavigate }) {
   return (
     <div
@@ -82,8 +116,64 @@ export default function Project({ activePage = "Project", onNavigate }) {
               We build a tech-driven campus culture by hosting hands-on events and building tools for students and faculty. Our projects help the college community stay updated, sharpen their problem-solving skills, and stay connected.
             </p>
           </div>
+          {/* Mobile 2x4 Grid of Project Cards */}
+          <div className="grid grid-cols-2 gap-3.5 sm:gap-4 w-full max-w-[420px] mx-auto px-1 md:hidden select-none">
+            {allProjects.map((project) => (
+              <a
+                key={project.name}
+                href={project.url || "#"}
+                target={project.url ? "_blank" : "_self"}
+                rel="noreferrer"
+                className="group flex flex-col gap-2.5 items-center w-full cursor-pointer active:scale-95 transition-transform duration-200"
+              >
+                {/* Glass Card Container */}
+                <div className="bg-[rgba(255,255,255,0.15)] backdrop-blur-md h-[215px] sm:h-[235px] overflow-hidden relative rounded-[24px] w-full border border-white/20 transition-all duration-300 group-hover:border-white/40 shadow-lg p-2 flex items-center justify-center">
+                  {/* Frame Vector */}
+                  <div className="absolute inset-2 pointer-events-none">
+                    <img
+                      alt=""
+                      className="size-full object-contain"
+                      src={imgVector}
+                    />
+                  </div>
+                  {/* Inner Image Container */}
+                  <div className="relative w-[82%] h-[60%] border-2 border-white rounded-[6px] overflow-hidden shadow-inner bg-black/40">
+                    <img
+                      alt={project.name}
+                      className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      src={project.image}
+                    />
+                  </div>
+                </div>
+
+                {/* Title & Tech Badges */}
+                <div className="flex flex-col items-center gap-1 w-full px-1">
+                  <p className="font-['Helvetica_Neue:Regular'] font-bold text-[15px] sm:text-[17px] text-center text-white leading-tight tracking-tight line-clamp-1 group-hover:text-amber-200 transition-colors">
+                    {project.name}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-1">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-[rgba(255,255,255,0.2)] px-1.5 py-0.5 rounded-[12px] font-['Helvetica_Neue:Medium'] text-[8px] sm:text-[9px] text-center text-white whitespace-nowrap"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="font-['Helvetica_Neue:Regular'] text-[11px] sm:text-[12px] text-center text-white/70 leading-[1.35] line-clamp-3 px-0.5">
+                  {project.description}
+                </p>
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop View: Original Layout */}
           <div
-            className="content-stretch flex flex-wrap justify-center gap-x-[77px] gap-y-[100px] items-start relative shrink-0 w-full"
+            className="hidden md:flex content-stretch flex-wrap justify-center gap-x-[77px] gap-y-[100px] items-start relative shrink-0 w-full"
             data-node-id="1:203"
           >
             <div
