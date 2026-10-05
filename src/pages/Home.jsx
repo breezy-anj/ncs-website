@@ -3,6 +3,7 @@ import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTy
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import SocialCards from "../components/ui/card-fan-carousel"
 import { Component as ImageAutoSlider } from "../components/ui/image-auto-slider"
+import HighlightsWheel from "../components/ui/highlights-wheel"
 
 
 const assetPathPrefix = "/assets"
@@ -370,6 +371,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
             <div className="relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
               <ImageAutoSlider />
+            </div>
             {/* Desktop: 3D Highlights Wheel */}
             <div className="hidden md:block relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
               <HighlightsWheel label="NCS FAMILY" action="View" className="h-full w-full bg-transparent" />
@@ -378,12 +380,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
             {/* Mobile: Horizontally scrollable photo strip */}
             <div className="flex md:hidden w-full overflow-x-auto gap-4 py-4 mt-6 px-2 snap-x snap-mandatory scrollbar-hide">
               {[
-                "/assets/highlights/web/IMG_2969.webp",
-                "/assets/highlights/web/DSC04982.webp",
-                "/assets/highlights/web/DSC05186.webp",
-                "/assets/highlights/web/DSC05537.webp",
-                "/assets/highlights/web/IMG_1634.webp",
-                "/assets/highlights/web/IMG_2495.webp",
+                "/assets/highlights/web/IMG_2969.jpg",
+                "/assets/highlights/web/DSC04982.JPG",
+                "/assets/highlights/web/DSC05186.JPG",
+                "/assets/highlights/web/DSC05537.JPG",
+                "/assets/highlights/web/IMG_1634.JPG",
+                "/assets/highlights/web/IMG_2495.JPG",
               ].map((src, i) => (
                 <div key={i} className="shrink-0 snap-start w-[260px] h-[180px] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                   <img src={src} alt={`NCS Highlight ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
