@@ -17,7 +17,7 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
               aria-hidden={index >= images.length}
               width={image.width}
               height={image.height}
-              className="image-auto-slider-item h-52 w-auto max-w-none shrink-0 rounded-2xl object-cover shadow-2xl sm:h-64 md:h-80 lg:h-96 xl:h-[420px]"
+              className="image-auto-slider-item h-[168px] w-auto max-w-none shrink-0 rounded-2xl object-cover shadow-2xl sm:h-[205px] md:h-[256px] lg:h-[308px] xl:h-[336px]"
               loading="eager"
             />
           ))}
@@ -31,7 +31,7 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
         }
 
         .image-auto-slider-track {
-          animation: image-auto-slider-scroll 40s linear infinite;
+          animation: image-auto-slider-scroll 34s linear infinite;
         }
 
         .image-auto-slider-mask {

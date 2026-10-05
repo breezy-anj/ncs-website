@@ -132,10 +132,40 @@ const GlassEffect = ({
 }
 
 export default function Footer({ hideParticleLogo = false }) {
+  const [sphereSize, setSphereSize] = React.useState({
+    containerSize: 640,
+    sphereRadius: 240,
+  })
+
+  React.useEffect(() => {
+    const updateSize = () => {
+      if (typeof window === "undefined") return
+      const w = window.innerWidth
+      if (w < 480) {
+        const size = Math.max(260, Math.min(320, w - 40))
+        setSphereSize({
+          containerSize: size,
+          sphereRadius: Math.round(size * 0.38),
+        })
+      } else if (w < 768) {
+        const size = Math.min(420, w - 60)
+        setSphereSize({
+          containerSize: size,
+          sphereRadius: Math.round(size * 0.38),
+        })
+      } else {
+        setSphereSize({ containerSize: 640, sphereRadius: 240 })
+      }
+    }
+    updateSize()
+    window.addEventListener("resize", updateSize)
+    return () => window.removeEventListener("resize", updateSize)
+  }, [])
+
   return (
     <footer
       id="connect-section"
-      className="w-full flex flex-col items-center pt-[90px] pb-[70px] select-none relative z-20"
+      className="w-full flex flex-col items-center pt-[60px] md:pt-[90px] pb-[50px] md:pb-[70px] select-none relative z-20 overflow-hidden"
     >
       <GlassFilter />
 
@@ -159,24 +189,24 @@ export default function Footer({ hideParticleLogo = false }) {
       )}
 
       {/* 2. Liquid Glass LET'S CONNECT Box */}
-      <div className="w-full flex flex-col items-center max-w-[1500px] px-4 my-8">
-        <GlassEffect className="rounded-[36px] p-8 sm:p-10 hover:rounded-[42px] max-w-[660px] w-full border border-white/20">
-          <div className="flex flex-col items-center gap-3.5 text-center w-full">
-            <h2 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[28px] md:text-[34px] lg:text-[38px] leading-tight text-white tracking-tight uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+      <div className="w-full flex flex-col items-center max-w-[1500px] px-3 sm:px-4 my-6 sm:my-8">
+        <GlassEffect className="rounded-[24px] sm:rounded-[36px] p-5 sm:p-8 md:p-10 hover:rounded-[28px] sm:hover:rounded-[42px] max-w-[660px] w-full border border-white/20 box-border overflow-hidden">
+          <div className="flex flex-col items-center gap-2.5 sm:gap-3.5 text-center w-full">
+            <h2 className="font-['Satoshi',Arial,sans-serif] font-bold text-[22px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-tight text-white tracking-tight uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               LET&apos;S CONNECT
             </h2>
-            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[20px] text-white/85 tracking-normal -mt-1">
+            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[20px] text-white/70 tracking-normal -mt-0.5 sm:-mt-1 break-words px-2">
               Follow NCS and stay in the loop.
             </p>
 
             {/* Liquid Glass Social Icons Dock */}
-            <div className="flex items-center justify-center gap-4 sm:gap-6 mt-3">
+            <div className="flex items-center justify-center gap-3.5 sm:gap-6 mt-2 sm:mt-3">
               <a
                 href="https://instagram.com/hackncs"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="relative shrink-0 size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
+                className="relative shrink-0 size-[44px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
                 style={{
                   transitionTimingFunction:
                     "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
@@ -193,7 +223,7 @@ export default function Footer({ hideParticleLogo = false }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="relative shrink-0 size-[48px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
+                className="relative shrink-0 size-[44px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
                 style={{
                   transitionTimingFunction:
                     "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
@@ -211,19 +241,19 @@ export default function Footer({ hideParticleLogo = false }) {
       </div>
 
       {/* 3. Interactive Team Image Sphere */}
-      <div className="relative mt-[20px] w-full max-w-[1200px] flex items-center justify-center z-30">
-        <div className="absolute left-0 sm:left-4 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+      <div className="relative mt-[10px] sm:mt-[20px] w-full max-w-[1200px] flex items-center justify-center z-30 overflow-hidden">
+        <div className="hidden sm:block absolute left-2 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[70px] h-[70px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
           <img
             src={imgSphereLeafLeft}
             alt=""
             className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(59,130,246,0.6)]"
           />
         </div>
-        <div className="relative z-20 flex justify-center items-center py-4">
+        <div className="relative z-20 flex justify-center items-center py-2 sm:py-4 w-full max-w-full overflow-hidden">
           <SphereImageGrid
             images={SPHERE_TEAM_MEMBERS}
-            containerSize={640}
-            sphereRadius={240}
+            containerSize={sphereSize.containerSize}
+            sphereRadius={sphereSize.sphereRadius}
             dragSensitivity={0.8}
             momentumDecay={0.96}
             maxRotationSpeed={6}
@@ -234,7 +264,7 @@ export default function Footer({ hideParticleLogo = false }) {
             autoRotateSpeed={0.25}
           />
         </div>
-        <div className="absolute right-0 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
+        <div className="hidden sm:block absolute right-2 md:right-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none w-[70px] h-[70px] sm:w-[130px] sm:h-[130px] md:w-[170px] md:h-[170px]">
           <img
             src={imgSphereLeafRight}
             alt=""
@@ -244,12 +274,12 @@ export default function Footer({ hideParticleLogo = false }) {
       </div>
 
       {/* 4. Bottom Content Container (Slogan & Attribution) */}
-      <div className="w-full flex flex-col items-center gap-[15px] max-w-[1500px] px-4 mt-8">
-        <div className="flex flex-col items-center text-center gap-2.5">
-          <h3 className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[24px] md:text-[34px] leading-tight text-white tracking-tight">
+      <div className="w-full flex flex-col items-center gap-[12px] sm:gap-[15px] max-w-[1500px] px-4 mt-6 sm:mt-8">
+        <div className="flex flex-col items-center text-center gap-2 max-w-full">
+          <h3 className="font-['Satoshi',Arial,sans-serif] font-medium text-[16px] sm:text-[22px] md:text-[34px] leading-snug sm:leading-tight text-white tracking-tight break-words px-2 max-w-[95vw] md:max-w-none text-center">
             Designing, Coding, And Tomorrow&apos;s Innovations Today.
           </h3>
-          <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[16px] md:text-[20px] leading-normal text-white/80 tracking-normal">
+          <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[13px] sm:text-[16px] md:text-[20px] leading-normal text-white/60 md:text-white/75 tracking-normal break-words px-2 max-w-[95vw] md:max-w-none text-center">
             Designed and developed with ❤️ by Nibble Computer Society
           </p>
         </div>

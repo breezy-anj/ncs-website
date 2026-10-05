@@ -129,7 +129,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
           >
             {/* Right illustration with smooth floating animation */}
             <div
-              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] md:mt-[29px] pointer-events-none select-none mb-10 md:mb-0"
+              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] md:mt-[29px] pointer-events-none select-none mt-20 sm:mt-14 md:mt-[29px] mb-14 md:mb-0 translate-y-8 md:translate-y-0"
               data-node-id="1:38"
               data-name="Hero Illustration"
             >
@@ -145,15 +145,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
               className="flex flex-col gap-8 md:gap-[44px] items-center md:items-start text-center md:text-left relative z-10 w-full md:w-[820px] md:col-1 md:row-1 md:mt-[25px]"
               data-node-id="1:39"
             >
-              <div className="flex flex-col gap-4 md:gap-[14px] not-italic items-center md:items-start relative shrink-0 w-full">
-                <p
-                  className="font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] md:ml-[4px] text-[#b0b0b0] text-[14px] md:text-[16px] tracking-[3.5px] uppercase whitespace-pre text-center md:text-left"
-                  data-node-id="1:43"
-                >
-                  {`LEARN  •  BUILD  •  BELONG`}
-                </p>
+              <div className="flex flex-col not-italic items-center md:items-start relative shrink-0 w-full">
                 <div
-                  className="bg-clip-text font-['Satoshi',Arial,sans-serif] font-black text-[72px] sm:text-[96px] md:text-[132px] leading-[1.05] text-transparent tracking-[-2px] md:tracking-[-3.5px] w-full md:w-[820px] select-none hover:tracking-0 md:hover:tracking-[-3.5px] transition-all duration-500"
+                  className="bg-clip-text font-['Satoshi',Arial,sans-serif] font-black text-[46px] xs:text-[56px] sm:text-[96px] md:text-[132px] leading-[1.05] text-transparent tracking-[-2px] md:tracking-[-3.5px] w-full md:w-[820px] select-none hover:tracking-0 md:hover:tracking-[-3.5px] transition-all duration-500 break-words"
                   data-node-id="1:42"
                   style={{
                     backgroundImage:
@@ -164,12 +158,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   <p className="mb-0">COMPUTER</p>
                   <p className="mb-0">SOCIETY</p>
                 </div>
-                <p
-                  className="font-['Satoshi',Arial,sans-serif] font-medium leading-[normal] md:ml-[4px] text-[#b0b0b0] text-[10px] sm:text-[12px] md:text-[16px] tracking-[3.5px] uppercase whitespace-pre text-center md:text-left max-w-full overflow-hidden text-ellipsis"
-                  data-node-id="1:41"
-                >
-                  {`PEOPLE  •  TECHNOLOGY  •  IDEAS  •  TOGETHER`}
-                </p>
               </div>
 
               {/* Join the Community Pill Button with Liquid Metal Shader */}
@@ -203,9 +191,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
             className="flex flex-col gap-10 md:gap-[20px] items-center relative shrink-0 w-full max-w-[1400px]"
             data-node-id="1:48"
           >
-            <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
+            <div className="flex flex-col items-center text-center gap-4 sm:gap-6 w-full mb-6">
               <h2
-                className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
+                className="font-['Satoshi',Arial,sans-serif] font-black text-[36px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -214,12 +202,101 @@ export default function Home({ activePage = "Home", onNavigate }) {
               >
                 CLUBS
               </h2>
-              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[24px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center">
+              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[22px] lg:text-[24px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center break-words">
                 Explore our specialized clubs in Web Development, Programming, Design, and Technology. Discover new skills, unleash your creativity, and turn your ideas into reality. Join our vibrant community and build your future with us!
               </p>
             </div>
+
+            {/* Mobile 2x2 Grid of Club Cards */}
+            <div className="grid grid-cols-2 gap-3.5 w-full max-w-[420px] mx-auto px-2 md:hidden">
+              {/* Card 1: Programming */}
+              <div
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <img
+                    alt="Programming"
+                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgProgrammingIcon}
+                  />
+                </div>
+                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                    Programming
+                  </span>
+                </div>
+              </div>
+
+              {/* Card 2: Development */}
+              <div
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <img
+                    alt="Development"
+                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgDevelopmentIcon}
+                  />
+                </div>
+                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                    Development
+                  </span>
+                </div>
+              </div>
+
+              {/* Card 3: Designing */}
+              <div
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <img
+                    alt="Designing"
+                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgVector1}
+                  />
+                </div>
+                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                    Designing
+                  </span>
+                </div>
+              </div>
+
+              {/* Card 4: Technical */}
+              <div
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <img
+                    alt="Technical"
+                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgTechnicalIcon}
+                  />
+                </div>
+                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                    Technical
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Club Rows */}
             <div
-              className="flex flex-col gap-12 md:gap-[90px] items-stretch relative shrink-0 w-full"
+              className="hidden md:flex flex-col gap-12 md:gap-[90px] items-stretch relative shrink-0 w-full"
               data-node-id="1:50"
             >
               {/* Row 1: PROGRAMMING + Yellow Card */}
@@ -228,7 +305,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:52"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:53"
                 >
                   PROGRAMMING
@@ -279,7 +356,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:57"
                 >
                   DEVELOPMENT
@@ -292,7 +369,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:60"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:61"
                 >
                   DESIGNING
@@ -343,7 +420,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[40px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:65"
                 >
                   TECHNICAL
@@ -354,9 +431,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
           {/* HIGHLIGHTS */}
           <section className="mx-auto w-full max-w-[1446px] text-center shrink-0">
-            <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
+            <div className="flex flex-col items-center text-center gap-4 sm:gap-6 w-full mb-6">
               <h2
-                className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
+                className="font-['Satoshi',Arial,sans-serif] font-black text-[36px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -365,7 +442,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               >
                 HIGHLIGHTS
               </h2>
-              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[24px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center">
+              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[22px] lg:text-[24px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center break-words">
                 From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
               </p>
             </div>
@@ -375,11 +452,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
             </div>
           </section>
           <div
-            className="flex flex-col gap-[20px] items-center relative shrink-0 w-full max-w-[1446px]"
+            className="flex flex-col gap-[20px] items-center relative shrink-0 w-full max-w-[1446px] overflow-hidden"
             data-node-id="1:151"
           >
             <h2
-              className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase relative shrink-0 w-full"
+              className="font-['Satoshi',Arial,sans-serif] font-black text-[36px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase relative shrink-0 w-full"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -389,10 +466,10 @@ export default function Home({ activePage = "Home", onNavigate }) {
               EVENTS
             </h2>
             <div
-              className="content-stretch flex flex-col gap-[32px] items-center relative shrink-0 w-full"
+              className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-center relative shrink-0 w-full"
               data-node-id="1:153"
             >
-              <div className="font-['Satoshi',Arial,sans-serif] font-medium text-[18px] md:text-[30px] text-center text-[#c2c2c2] tracking-normal leading-[1.6] max-w-[1200px] mt-4 mb-8 px-4">
+              <div className="font-['Satoshi',Arial,sans-serif] font-medium text-[14px] sm:text-[18px] md:text-[24px] lg:text-[28px] text-center text-white/60 md:text-white/70 tracking-normal leading-[1.6] max-w-[1200px] w-full mt-2 mb-6 px-4 break-words">
                 <p>
                   Ideas worth sharing. Experiences worth remembering. Join us for events that spark curiosity, inspire creativity, and bring our community together.
                 </p>

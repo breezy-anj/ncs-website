@@ -78,7 +78,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
             >
               PROJECTS
             </h1>
-            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[32px] lg:text-[40px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center tracking-tight">
+            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words">
               We build a tech-driven campus culture by hosting hands-on events and building tools for students and faculty. Our projects help the college community stay updated, sharpen their problem-solving skills, and stay connected.
             </p>
           </div>

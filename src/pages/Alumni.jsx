@@ -1,6 +1,7 @@
 import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
 import AlumniCardBottomOverlay from "../components/AlumniCardBottomOverlay";
 import ProfileCardGhostOverlay from "../components/ProfileCardGhost"
+import ResponsiveWaveGrid from "../components/ui/ResponsiveWaveGrid";
 
 import Footer from "../components/Footer"
 
@@ -73,26 +74,26 @@ const imgLine1 = `${assetPathPrefix}/2d226.svg`
 export default function Alumni({ activePage = "Alumni", onNavigate }) {
   return (
     <div
-      className="bg-transparent relative w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0"
+      className="bg-transparent relative w-full max-w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] px-2 sm:px-4 md:px-0 shrink-0"
       data-node-id="1:575"
       data-name="Alumni"
     >
       <div
-        className="content-stretch flex flex-col gap-[102px] items-center w-[1667.976px]"
+        className="content-stretch flex flex-col gap-[60px] md:gap-[102px] items-center w-full max-w-[1668px]"
         data-node-id="1:576"
       >
         <div
-          className="content-stretch flex flex-col gap-[47px] items-center relative shrink-0 w-[1305.84px]"
+          className="content-stretch flex flex-col gap-[30px] md:gap-[47px] items-center relative shrink-0 w-full max-w-[1305.84px]"
           data-node-id="1:577"
         >
 
           <div
-            className="content-stretch flex flex-col gap-[85px] items-center relative shrink-0 w-full"
+            className="content-stretch flex flex-col gap-[40px] md:gap-[85px] items-center relative shrink-0 w-full"
             data-node-id="1:588"
           >
             <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
               <h1
-                className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
+                className="font-['Satoshi',Arial,sans-serif] font-black text-[44px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -101,16 +102,16 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
               >
                 ALUMNI
               </h1>
-              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[18px] sm:text-[22px] md:text-[30px] lg:text-[40px] leading-[1.45] text-[#E4E4E7] max-w-[1340px] text-center tracking-tight">
+              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words">
                 Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we&apos;ve spent over two decades shaping curious minds into visionaries and leaders.
               </p>
             </div>
             <div
-              className="content-stretch flex flex-col gap-[110px] items-start relative shrink-0 w-full"
+              className="content-stretch flex flex-col gap-[40px] md:gap-[110px] items-center md:items-start relative shrink-0 w-full"
               data-node-id="1:590"
             >
               <p
-                className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[40px] sm:text-[52px] md:text-[60px] leading-none min-w-full not-italic relative shrink-0 text-center tracking-[-2.4px] w-full text-transparent bg-clip-text my-2"
+                className="font-['Satoshi',Arial,sans-serif] font-bold text-[36px] sm:text-[52px] md:text-[60px] leading-none min-w-full not-italic relative shrink-0 text-center tracking-[-2.4px] w-full text-transparent bg-clip-text my-2"
                 style={{
                   backgroundImage:
                     "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
@@ -121,13 +122,14 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                 2026
               </p>
               <div
-                className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0"
+                className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-full max-w-[1305px]"
                 data-node-id="1:592"
               >
-                <div
-                  className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
-                  data-node-id="1:593"
-                >
+                <ResponsiveWaveGrid>
+                  <div
+                    className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                    data-node-id="1:593"
+                  >
                   
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:594"
@@ -623,7 +625,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
     </div>
   </div>
 </div>
-                </div>
+                  </div>
+                </ResponsiveWaveGrid>
               </div>
               <p
                 className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-bold font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[52px] sm:text-[68px] md:text-[80px] text-center text-white tracking-tight w-[min-content]"
@@ -640,10 +643,11 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   className="content-stretch flex flex-col gap-[17px] items-center relative shrink-0"
                   data-node-id="1:653"
                 >
-                  <div
-                    className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
-                    data-node-id="1:654"
-                  >
+                  <ResponsiveWaveGrid>
+                    <div
+                      className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
+                      data-node-id="1:654"
+                    >
                     
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:655"
@@ -1511,7 +1515,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         </div>
                       </AlumniCardBottomOverlay>
                     </div>
-                  </div>
+                    </div>
+                  </ResponsiveWaveGrid>
                 </div>
               </div>
               <p
@@ -1529,10 +1534,11 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   className="content-stretch flex flex-col gap-[17px] items-start leading-[0] relative shrink-0"
                   data-node-id="1:759"
                 >
-                  <div
-                    className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
-                    data-node-id="1:760"
-                  >
+                  <ResponsiveWaveGrid>
+                    <div
+                      className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                      data-node-id="1:760"
+                    >
                     
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:761"
@@ -1977,7 +1983,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
     </div>
   </div>
 </div>
-                  </div>
+                    </div>
+                  </ResponsiveWaveGrid>
                 </div>
               </div>
               <p
@@ -1990,10 +1997,11 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                 className="content-stretch flex flex-col gap-[17px] items-start leading-[0] relative shrink-0"
                 data-node-id="1:813"
               >
-                <div
-                  className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
-                  data-node-id="1:814"
-                >
+                <ResponsiveWaveGrid>
+                  <div
+                    className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                    data-node-id="1:814"
+                  >
                   
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:815"
@@ -2537,7 +2545,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
     </div>
   </div>
 </div>
-                </div>
+                  </div>
+                </ResponsiveWaveGrid>
               </div>
               <p
                 className="[word-break:break-word] font-['Satoshi',Arial,sans-serif] font-bold font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[40px] sm:text-[52px] md:text-[60px] text-center text-white tracking-[-2.4px] w-[min-content]"
@@ -2554,10 +2563,11 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   className="content-stretch flex flex-col gap-[17px] items-start leading-[0] relative shrink-0"
                   data-node-id="1:880"
                 >
-                  <div
-                    className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
-                    data-node-id="1:881"
-                  >
+                  <ResponsiveWaveGrid>
+                    <div
+                      className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0"
+                      data-node-id="1:881"
+                    >
                     
 <div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:882"
@@ -3005,13 +3015,14 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   </div>
-                </div>
+                </ResponsiveWaveGrid>
               </div>
             </div>
           </div>
         </div>
-        <Footer hideParticleLogo />
       </div>
+      <Footer hideParticleLogo />
     </div>
+  </div>
   )
 }

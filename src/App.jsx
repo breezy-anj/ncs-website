@@ -48,13 +48,8 @@ export default function App() {
         let newScale = 1
         
         if (screenW < 768) {
-          // On mobile, only Teams and Alumni get scaled (clamped to 0.55 for panning).
-          // Other pages (Home, About, Project, Recruitment) are natively responsive, so scale = 1.
-          if (page === "Team" || page === "Alumni") {
-            newScale = Math.max(0.55, (screenW - padding) / baseW)
-          } else {
-            newScale = 1
-          }
+          // On mobile, all pages (Home, About, Project, Recruitment, Team, Alumni) are natively responsive with mobile cards, so scale = 1.
+          newScale = 1
         } else {
           // On tablet/small-desktop, scale everything except Home
           if (page === "Home") {
@@ -96,37 +91,25 @@ export default function App() {
 
   const scrollRef = useRef(null)
 
-  // Determine if this is a grid page that needs horizontal scrolling on mobile
-  const isGridPage = (page === "Team" || page === "Alumni")
-  const needsHorizontalScroll = isGridPage && isMobile
-
-  useEffect(() => {
-    if (needsHorizontalScroll && scrollRef.current) {
-      // Center the horizontal scroll on load so the user sees the middle of the grid
-      const scrollableWidth = 1668 * scale
-      const screenWidth = window.innerWidth
-      if (scrollableWidth > screenWidth) {
-        scrollRef.current.scrollLeft = (scrollableWidth - screenWidth) / 2
-      }
-    }
-  }, [needsHorizontalScroll, scale, page])
+  // With mobile wave stacks, all pages scroll natively vertically
+  const needsHorizontalScroll = false
 
   return (
     <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-hidden text-white relative">
       {/* 3D Ethereal Light Beams Background on Home/Team/Alumni, Special 3D Rotating Layers on Project */}
       {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
 
-      {/* Responsive Navbar */}
-      <div className="w-full relative z-50 flex justify-center pt-[27px]">
-        <div className="w-full max-w-[1668px] px-4 md:px-0">
+      {/* Sticky/Fixed Navbar Always on Top */}
+      <header className="fixed top-0 inset-x-0 z-[100] flex justify-center pt-3 sm:pt-4 md:pt-6 pointer-events-none">
+        <div className="w-full max-w-[1668px] px-3 sm:px-4 md:px-0 flex justify-center pointer-events-auto">
           <Navbar />
         </div>
-      </div>
+      </header>
 
       {/* Responsive Scaled Page Content Layer */}
       <main
         ref={scrollRef}
-        className={`relative z-10 w-full flex ${needsHorizontalScroll ? 'justify-start overflow-x-auto scrollbar-hide' : 'justify-center'}`}
+        className={`relative z-10 w-full flex ${needsHorizontalScroll ? 'justify-start overflow-x-auto scrollbar-hide' : 'justify-center'} pt-[76px] sm:pt-[84px] md:pt-[96px]`}
         style={{
           height:
             contentHeight && scale < 1 ? `${contentHeight * scale}px` : "auto",
@@ -136,7 +119,7 @@ export default function App() {
       >
         <div
           ref={innerRef}
-          className="w-[1668px] shrink-0 flex justify-center transition-transform duration-150 ease-out"
+          className={`${scale < 1 ? "w-[1668px] shrink-0" : "w-full max-w-[1668px]"} flex justify-center transition-transform duration-150 ease-out`}
           style={{
             transform: scale < 1 ? `scale(${scale})` : "none",
             transformOrigin: needsHorizontalScroll ? "top left" : "top center",

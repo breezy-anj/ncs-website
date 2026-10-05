@@ -96,12 +96,12 @@ export default function AboutSection() {
       ========================================================= */}
       <div className="relative w-full flex flex-col items-center text-center px-4 mb-16">
         {/* Crescent Moon + Star Badge on the left */}
-        <div className="absolute left-[30px] md:left-[80px] lg:left-[120px] top-[-10px] md:top-[10px] animate-float-gentle z-10">
+        <div className="hidden sm:block absolute left-[30px] md:left-[80px] lg:left-[120px] top-[-10px] md:top-[10px] animate-float-gentle z-10">
           <MoonStarBadge />
         </div>
 
         {/* Decorative Multicolor Leaf on the right */}
-        <div className="absolute right-[30px] md:right-[80px] lg:right-[120px] top-[-25px] md:top-[-10px] animate-float z-10 pointer-events-none">
+        <div className="hidden sm:block absolute right-[30px] md:right-[80px] lg:right-[120px] top-[-25px] md:top-[-10px] animate-float z-10 pointer-events-none">
           <img
             src={imgVectorLeaf}
             alt=""
@@ -110,9 +110,9 @@ export default function AboutSection() {
         </div>
 
         {/* Main Heading */}
-        <div className="flex flex-col items-center justify-center max-w-[1100px] z-10 mt-6 md:mt-2">
+        <div className="flex flex-col items-center justify-center max-w-[1100px] z-10 mt-2 sm:mt-6 md:mt-2">
           <h1
-            className="font-['Satoshi',Arial,sans-serif] font-black text-[56px] sm:text-[80px] md:text-[108px] lg:text-[117.8px] leading-[normal] tracking-normal text-white uppercase text-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]"
+            className="font-['Satoshi',Arial,sans-serif] font-black text-[34px] xs:text-[44px] sm:text-[80px] md:text-[108px] lg:text-[117.8px] leading-[1.1] tracking-normal text-white uppercase text-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] break-words"
             style={{
               textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 0 60px rgba(255,255,255,0.15)",
             }}
@@ -123,8 +123,8 @@ export default function AboutSection() {
           </h1>
 
           {/* Subtitle / Intro Paragraph */}
-          <div className="mt-8 md:mt-10 max-w-[820px] text-center px-4">
-            <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] md:text-[21.5px] leading-[1.6] text-[#C4C4C7] tracking-normal">
+          <div className="mt-6 sm:mt-8 md:mt-10 max-w-[820px] text-center px-4 w-full">
+            <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[13px] sm:text-[16px] md:text-[20px] leading-[1.6] text-white/60 md:text-white/70 tracking-normal break-words">
               NCS is a community of programmers, developers, designers, and AI/ML enthusiasts driven by curiosity and creativity.
               <br className="hidden md:inline" />{" "}
               We come together to learn, build, experiment, and turn ideas into impactful tech, while growing our skills and exploring what&apos;s next in technology.
@@ -134,59 +134,59 @@ export default function AboutSection() {
       </div>
 
       {/* =========================================================
-          2. PHOTO GRID: 3 CARDS WITH IMAGES & DESCRIPTIONS
+          2. PHOTO GRID: 3 CARDS WITH IMAGES & DESCRIPTIONS (NO BOX/BACKGROUND)
       ========================================================= */}
-      <div className="w-full max-w-[1440px] px-6 my-10 md:my-14 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+      <div className="w-full max-w-[1440px] px-4 sm:px-6 my-8 md:my-14 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-stretch">
           {/* Card 1: Offline Learning Sessions */}
-          <div className="group flex flex-col items-center bg-[#07090E]/60 backdrop-blur-md rounded-[28px] p-5 border border-white/10 hover:border-white/25 transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
-            <div className="w-full h-[260px] sm:h-[280px] rounded-[20px] overflow-hidden bg-black/40 relative shadow-inner">
+          <div className="group flex flex-col items-center transition-all duration-400 hover:-translate-y-1">
+            <div className="w-full h-[220px] sm:h-[280px] rounded-[22px] overflow-hidden relative shadow-lg">
               <img
                 src={imgPhoto1}
                 alt="NCS Learning Session"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-106"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
             </div>
-            <div className="p-4 pt-5 text-center flex-1 flex flex-col justify-start">
-              <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] lg:text-[24.166px] leading-[normal] text-[#B5B5BE]">
+            <div className="pt-4 sm:pt-5 text-center flex-1 flex flex-col justify-start px-1">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[13px] sm:text-[16px] lg:text-[22px] leading-[1.5] text-white/60 md:text-white/70 break-words">
                 We conduct offline, live learning sessions where members can get their doubts resolved, learn new concepts, and gain practical knowledge through interactive sessions and peer-to-peer learning.
               </p>
             </div>
           </div>
 
           {/* Card 2: Engaging Tech Events & Workshops */}
-          <div className="group flex flex-col items-center bg-[#07090E]/60 backdrop-blur-md rounded-[28px] p-5 border border-white/10 hover:border-white/25 transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
-            <div className="w-full h-[260px] sm:h-[280px] rounded-[20px] overflow-hidden bg-black/40 relative shadow-inner">
+          <div className="group flex flex-col items-center transition-all duration-400 hover:-translate-y-1">
+            <div className="w-full h-[220px] sm:h-[280px] rounded-[22px] overflow-hidden relative shadow-lg">
               <img
                 src={imgPhoto2}
                 alt="NCS Tech Events and Community"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-106"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
             </div>
-            <div className="p-4 pt-5 text-center flex-1 flex flex-col justify-start">
-              <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] lg:text-[24.166px] leading-[normal] text-[#B5B5BE]">
+            <div className="pt-4 sm:pt-5 text-center flex-1 flex flex-col justify-start px-1">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[13px] sm:text-[16px] lg:text-[22px] leading-[1.5] text-white/60 md:text-white/70 break-words">
                 We organize engaging tech events, workshops, and interactive sessions that bring students together to learn, connect, and explore. From hackathons like IN OUT to hands-on activities, we create experiences where ideas turn into action.
               </p>
             </div>
           </div>
 
           {/* Card 3: Family & Growth Culture */}
-          <div className="group flex flex-col items-center bg-[#07090E]/60 backdrop-blur-md rounded-[28px] p-5 border border-white/10 hover:border-white/25 transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
-            <div className="w-full h-[260px] sm:h-[280px] rounded-[20px] overflow-hidden bg-black/40 relative shadow-inner">
+          <div className="group flex flex-col items-center transition-all duration-400 hover:-translate-y-1">
+            <div className="w-full h-[220px] sm:h-[280px] rounded-[22px] overflow-hidden relative shadow-lg">
               <img
                 src={imgPhoto3}
                 alt="NCS Family and Growth"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-106"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
             </div>
-            <div className="p-4 pt-5 text-center flex-1 flex flex-col justify-start">
-              <p className="font-['Satoshi',Arial,sans-serif] font-medium font-medium text-[16px] sm:text-[18px] lg:text-[24.166px] leading-[normal] text-[#B5B5BE]">
+            <div className="pt-4 sm:pt-5 text-center flex-1 flex flex-col justify-start px-1">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[13px] sm:text-[16px] lg:text-[22px] leading-[1.5] text-white/60 md:text-white/70 break-words">
                 More than a tech society, we&apos;re a family that learns, supports, and grows together. We share ideas, celebrate every win, and help each other become better together.
               </p>
             </div>
@@ -197,9 +197,9 @@ export default function AboutSection() {
       {/* =========================================================
           3. TAGLINE ACCENT: "Where Curious Minds Come Together..."
       ========================================================= */}
-      <div className="w-full flex justify-center text-center px-4 my-8 md:my-12 z-10">
+      <div className="w-full flex justify-center text-center px-4 my-6 sm:my-8 md:my-12 z-10">
         <p
-          className="font-['Playfair_Display',_Georgia,_serif] italic font-semibold text-[22px] sm:text-[28px] md:text-[34px] leading-relaxed text-[#FEB80A] tracking-[-0.01em] drop-shadow-[0_2px_15px_rgba(254,184,10,0.35)] max-w-[800px]"
+          className="font-['Playfair_Display',_Georgia,_serif] italic font-semibold text-[17px] sm:text-[24px] md:text-[34px] leading-relaxed text-[#FEB80A] tracking-[-0.01em] drop-shadow-[0_2px_15px_rgba(254,184,10,0.35)] max-w-[800px] break-words"
           style={{
             fontFamily: "'Playfair Display', 'Caveat', Georgia, serif",
           }}
@@ -211,7 +211,7 @@ export default function AboutSection() {
       {/* =========================================================
           4. HERO BOOK & PORTAL SVG ILLUSTRATION (WITH MOVING EFFECT)
       ========================================================= */}
-      <div className="relative w-full max-w-[1300px] flex justify-center items-center my-6 md:my-10 px-4 overflow-visible">
+      <div className="relative w-full max-w-[1300px] flex justify-center items-center mt-10 mb-6 md:my-10 px-4 overflow-visible">
         {/* Soft Background Radial Light Aura */}
         <div
           className="absolute w-[600px] md:w-[900px] h-[400px] md:h-[600px] rounded-full pointer-events-none -z-10 blur-[100px] opacity-40 transition-opacity duration-500"

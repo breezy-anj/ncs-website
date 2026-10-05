@@ -1,6 +1,7 @@
 import TeamCardBottomOverlay from "../components/TeamCardBottomOverlay";
 import ProfileCardGhostOverlay from "../components/ProfileCardGhost";
 import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
+import ResponsiveWaveGrid from "../components/ui/ResponsiveWaveGrid";
 import Footer from "../components/Footer";
 
 const assetPathPrefix = "/assets";
@@ -59,25 +60,26 @@ const imgVector9 = `${assetPathPrefix}/ac2ff.svg`;
 export default function Team() {
   return (
     <div className="flex flex-col items-center w-full">
-    <div id="team" className="bg-transparent relative w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0" data-node-id="1:11" data-name="Team">
-      <div className="content-stretch flex flex-col gap-[100px] items-center w-[1668px]" data-node-id="1:12">
-        <div className="content-stretch flex flex-col gap-[50px] items-center relative shrink-0 w-full" data-node-id="1:13">
+    <div id="team" className="bg-transparent relative w-full max-w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] px-2 sm:px-4 md:px-0 shrink-0" data-node-id="1:11" data-name="Team">
+      <div className="content-stretch flex flex-col gap-[60px] md:gap-[100px] items-center w-full max-w-[1668px]" data-node-id="1:12">
+        <div className="content-stretch flex flex-col gap-[30px] md:gap-[50px] items-center relative shrink-0 w-full" data-node-id="1:13">
 
           <div className="relative shrink-0 w-full" data-node-id="1:27">
-            <div className="content-stretch flex flex-col gap-[100px] items-center w-full" data-node-id="1:28">
-              <div className="[word-break:break-word] content-stretch flex flex-col gap-[50px] h-[531px] items-center leading-[normal] not-italic relative shrink-0 text-center w-full" data-node-id="1:29">
-                <p className="bg-clip-text font-['Satoshi:Black','Poppins:SemiBold',sans-serif] relative shrink-0 text-[80px] text-[transparent] tracking-[-3.2px] whitespace-nowrap" data-node-id="1:30" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+            <div className="content-stretch flex flex-col gap-[60px] md:gap-[100px] items-center w-full" data-node-id="1:28">
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-6 md:gap-[50px] min-h-[220px] md:h-[531px] items-center leading-[normal] not-italic relative shrink-0 text-center w-full" data-node-id="1:29">
+                <p className="bg-clip-text font-['Satoshi:Black','Poppins:SemiBold',sans-serif] relative shrink-0 text-[48px] sm:text-[64px] md:text-[80px] text-[transparent] tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap" data-node-id="1:30" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                   TEAMS
                 </p>
-                <p className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] relative shrink-0 text-[40px] text-white tracking-[-1.6px] w-[1260px]" data-node-id="1:31">
+                <p className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] relative shrink-0 text-[14px] sm:text-[20px] md:text-[32px] lg:text-[40px] leading-[1.5] text-white/60 md:text-white/70 tracking-tight max-w-[1260px] w-full px-4 text-center break-words" data-node-id="1:31">
                   For over two decades, NCS has been the heart of technical culture on campus. Founded in 2000, we bring together students who live and breathe code, development, and design. Through hands-on projects, workshops, and real-world building, we turn curiosity into capability,creating an environment where bold ideas take root and thrive.
                 </p>
               </div>
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:32" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 288 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.4 0 0 5.4 144 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[44px] sm:text-[60px] md:text-[80px] text-[transparent] text-center tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap" data-node-id="1:32" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 288 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.4 0 0 5.4 144 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 4th Year
               </p>
-              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:33">
-                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:34">
+              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-full max-w-[1285px]" data-node-id="1:33">
+                <ResponsiveWaveGrid>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:34">
                   
 <div className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:35">
   <div className="relative h-full w-full">
@@ -358,13 +360,15 @@ export default function Team() {
     </div>
   </div>
 </div>
-                </div>
+                  </div>
+                </ResponsiveWaveGrid>
               </div>
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:103" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 287 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.35 0 0 5.4 143.5 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[44px] sm:text-[60px] md:text-[80px] text-[transparent] text-center tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap" data-node-id="1:103" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 287 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.35 0 0 5.4 143.5 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 3rd Year
               </p>
-              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1285px]" data-node-id="1:104">
-                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:105">
+              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-full max-w-[1285px]" data-node-id="1:104">
+                <ResponsiveWaveGrid>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:105">
                   
 <div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:106">
   <div className="relative h-full w-full">
@@ -695,13 +699,15 @@ export default function Team() {
     </div>
   </div>
 </div>
-                </div>
+                  </div>
+                </ResponsiveWaveGrid>
               </div>
-              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[80px] text-[transparent] text-center tracking-[-3.2px] whitespace-nowrap" data-node-id="1:198" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 306 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(15.3 0 0 5.4 153 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
+              <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[44px] sm:text-[60px] md:text-[80px] text-[transparent] text-center tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap" data-node-id="1:198" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 306 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(15.3 0 0 5.4 153 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 2nd Year
               </p>
-              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-[1286px]" data-node-id="1:199">
-                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:200">
+              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-full max-w-[1286px]" data-node-id="1:199">
+                <ResponsiveWaveGrid>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:200">
                   
 <div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:201">
   <div className="relative h-full w-full">
@@ -1057,7 +1063,8 @@ export default function Team() {
     </div>
   </div>
 </div>
-                </div>
+                  </div>
+                </ResponsiveWaveGrid>
               </div>
             </div>
           </div>

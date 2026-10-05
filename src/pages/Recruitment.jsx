@@ -51,26 +51,26 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             className="flex flex-col items-start max-w-[680px] z-10"
           >
             {/* Main Heading */}
-            <div className="flex flex-col leading-none mb-6 md:mb-8 tracking-normal text-center md:text-left">
-              <h1 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[60px] sm:text-[100px] lg:text-[160px] text-white tracking-normal leading-[1.2]">
+            <div className="flex flex-col leading-none mb-6 md:mb-8 tracking-normal text-center md:text-left w-full">
+              <h1 className="font-['Satoshi',Arial,sans-serif] font-bold text-[48px] sm:text-[100px] lg:text-[160px] text-white tracking-normal leading-[1.1] break-words">
                 OOPS!
               </h1>
-              <h2 className="font-['Satoshi',Arial,sans-serif] font-bold font-bold text-[38px] sm:text-[52px] lg:text-[80px] text-white tracking-normal leading-[1.2] mt-2 whitespace-nowrap">
+              <h2 className="font-['Satoshi',Arial,sans-serif] font-bold text-[28px] xs:text-[34px] sm:text-[52px] lg:text-[80px] text-white tracking-normal leading-[1.2] mt-2 break-words">
                 <span className="bg-gradient-to-r from-[#2563eb] via-[#ec4899] to-[#3b82f6] bg-clip-text text-transparent font-normal">
                   NOT
                 </span>
-                <span className="text-white font-normal ml-3">
+                <span className="text-white font-normal ml-2 sm:ml-3">
                   STARTED YET.
                 </span>
               </h2>
             </div>
 
             {/* Explanatory Body Copy */}
-            <div className="flex flex-col gap-1.5 text-[18px] sm:text-[22px] lg:text-[36px] font-['Satoshi',Arial,sans-serif] text-white leading-[normal] tracking-normal text-center md:text-left">
-              <p className="font-normal text-white">
+            <div className="flex flex-col gap-1 sm:gap-1.5 text-[14px] sm:text-[18px] lg:text-[28px] font-['Satoshi',Arial,sans-serif] text-white/60 md:text-white/70 leading-[1.5] tracking-normal text-center md:text-left break-words w-full">
+              <p className="font-normal">
                 Good things takes time, just like great people.
               </p>
-              <p className="font-normal text-white">
+              <p className="font-normal">
                 Recruitment at NCS is{" "}
                 <span className="text-[#f59e0b] font-normal">
                   Coming Soon!
@@ -78,12 +78,12 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
               </p>
 
               {/* Minimal Line Divider */}
-              <div className="w-[68px] h-[1.5px] bg-white my-4" />
+              <div className="w-[48px] sm:w-[68px] h-[1.5px] bg-white/40 my-3 sm:my-4 mx-auto md:mx-0" />
 
-              <p className="font-normal text-white">
+              <p className="font-normal">
                 Stay connected to get updated.
               </p>
-              <p className="font-normal text-white">
+              <p className="font-normal">
                 You can be our next{" "}
                 <span className="text-[#3b82f6] font-normal">
                   NCS family member.
