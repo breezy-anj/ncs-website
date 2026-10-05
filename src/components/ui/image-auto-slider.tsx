@@ -48,12 +48,6 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
           filter: brightness(1.1);
         }
 
-        @media (hover: hover) {
-          .image-auto-slider-mask:hover .image-auto-slider-track {
-            animation-play-state: paused;
-          }
-        }
-
         @media (prefers-reduced-motion: reduce) {
           .image-auto-slider-track { animation: none; }
         }
