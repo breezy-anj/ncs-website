@@ -131,8 +131,11 @@ export default function App() {
               key={location.pathname}
               initial={{ opacity: 0, filter: "blur(8px)", y: 15 }}
               animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              exit={{ opacity: 0, filter: "blur(8px)", y: -15 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              exit={{ opacity: 0 }}
+              transition={{
+                default: { duration: 0.4, ease: "easeInOut" },
+                exit: { duration: 0 }
+              }}
               className="w-full flex justify-center"
             >
               <Routes location={location}>
