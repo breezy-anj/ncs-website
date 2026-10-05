@@ -1,3 +1,6 @@
+import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
+import AlumniCardBottomOverlay from "../components/AlumniCardBottomOverlay";
+import ProfileCardGhostOverlay from "../components/ProfileCardGhost"
 
 import Footer from "../components/Footer"
 
@@ -126,19 +129,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   data-node-id="1:593"
                 >
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:594"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%+7.92px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[255.83px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle31} />
+
+                    <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%+7.92px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[255.83px] profile-img-bottom-shadow"
                       data-node-id="1:595"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle31}
                       />
                     </div>
@@ -150,7 +155,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:597"
                     >
@@ -162,25 +168,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Naseem</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:599"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-8.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[14px] w-[394px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle32} />
+
+                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-8.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[14px] w-[394px] profile-img-bottom-shadow"
                       data-node-id="1:600"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle32}
                       />
                     </div>
@@ -192,7 +199,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:602"
                     >
@@ -204,8 +212,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Mishra</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -214,19 +221,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:604"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:605"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[455px] left-[calc(50%-37.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[123.88px] w-[305px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle33} />
+
+                      <div className="-translate-x-1/2 absolute h-[455px] left-[calc(50%-37.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[123.88px] w-[305px] profile-img-bottom-shadow"
                         data-node-id="1:606"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle33}
                         />
                       </div>
@@ -238,7 +247,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:608"
                       >
@@ -250,26 +260,27 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Bajpai</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   </div>
                   
-<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:610"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle34} />
+
+                    <div className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px] profile-img-bottom-shadow"
                       data-node-id="1:611"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle34}
                       />
                     </div>
@@ -281,7 +292,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:613"
                     >
@@ -293,25 +305,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Singh</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:615"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle35} />
+
+                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow"
                       data-node-id="1:616"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle35}
                       />
                     </div>
@@ -323,7 +336,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:618"
                     >
@@ -335,25 +349,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Yadav</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:620"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle36} />
+
+                    <div className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px] profile-img-bottom-shadow"
                       data-node-id="1:621"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle36}
                       />
                     </div>
@@ -365,7 +380,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:623"
                     >
@@ -377,8 +393,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Pandey</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -388,19 +403,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   data-node-id="1:625"
                 >
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:626"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle37} />
+
+                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px] profile-img-bottom-shadow"
                       data-node-id="1:627"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle37}
                       />
                     </div>
@@ -412,7 +429,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:629"
                     >
@@ -424,25 +442,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Saxena</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:631"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+29px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle38} />
+
+                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+29px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow"
                       data-node-id="1:632"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle38}
                       />
                     </div>
@@ -454,7 +473,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:634"
                     >
@@ -467,25 +487,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Agarwal</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:636"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle39} />
+
+                    <div className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px] profile-img-bottom-shadow"
                       data-node-id="1:637"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle39}
                       />
                     </div>
@@ -497,7 +518,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/utkarsh-shukla-b2442b329/">
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:639"
                     >
@@ -509,28 +531,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Gupta</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/utkarsh-shukla-b2442b329/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:641"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle40} />
+
+                    <div className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow"
                       data-node-id="1:642"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle40}
                       />
                     </div>
@@ -542,7 +562,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:644"
                     >
@@ -554,25 +575,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Singh</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:646"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+9.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-49.12px] w-[375px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle41} />
+
+                    <div className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+9.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-49.12px] w-[375px] profile-img-bottom-shadow"
                       data-node-id="1:647"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle41}
                       />
                     </div>
@@ -584,7 +606,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:649"
                     >
@@ -596,8 +619,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Jha</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -623,19 +645,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:654"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:655"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-28.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[108px] w-[255.83px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle42} />
+
+                      <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-28.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[108px] w-[255.83px] profile-img-bottom-shadow"
                         data-node-id="1:656"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle42}
                         />
                       </div>
@@ -647,7 +671,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:658"
                       >
@@ -659,25 +684,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Aryan</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:660"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[540px] left-[calc(50%+48.62px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[101px] w-[363px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle43} />
+
+                      <div className="-translate-x-1/2 absolute h-[540px] left-[calc(50%+48.62px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[101px] w-[363px] profile-img-bottom-shadow"
                         data-node-id="1:661"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle43}
                         />
                       </div>
@@ -689,7 +715,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:663"
                       >
@@ -701,8 +728,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Bajpai</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -711,19 +737,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:665"
                     >
                       
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                         data-node-id="1:666"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                        <div
-                          className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+33.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.88px] w-[305px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle44} />
+
+                        <div className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+33.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.88px] w-[305px] profile-img-bottom-shadow"
                           data-node-id="1:667"
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                             src={imgRectangle44}
                           />
                         </div>
@@ -735,7 +763,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                           }}
                         />
-                        <div
+                              <AlumniCardBottomOverlay>
+        <div
                           className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                           data-node-id="1:669"
                         >
@@ -747,26 +776,27 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             <p className="leading-[1.25]">Pandey</p>
                           </div>
                         </div>
-                      </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     </div>
                     
-<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:671"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle45} />
+
+                      <div className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px] profile-img-bottom-shadow"
                         data-node-id="1:672"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle45}
                         />
                       </div>
@@ -778,7 +808,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:674"
                       >
@@ -790,25 +821,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Pandey</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:676"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+9.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-26px] w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle46} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+9.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-26px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:677"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle46}
                         />
                       </div>
@@ -820,7 +852,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:679"
                       >
@@ -832,25 +865,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Ranjan</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:681"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle47} />
+
+                      <div className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px] profile-img-bottom-shadow"
                         data-node-id="1:682"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle47}
                         />
                       </div>
@@ -862,7 +896,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:684"
                       >
@@ -874,8 +909,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Baranwal</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -885,19 +919,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:686"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:687"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[473px] left-1/2 shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[3px] w-[318px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle48} />
+
+                      <div className="-translate-x-1/2 absolute h-[473px] left-1/2 shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[3px] w-[318px] profile-img-bottom-shadow"
                         data-node-id="1:688"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle48}
                         />
                       </div>
@@ -909,7 +945,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ayush-vashisth-4600a5338">
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:690"
                       >
@@ -923,29 +960,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           </p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:692"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[629px] left-[calc(50%-11.38px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-45px] w-[423px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle49} />
+
+                      <div className="-translate-x-1/2 absolute h-[629px] left-[calc(50%-11.38px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-45px] w-[423px] profile-img-bottom-shadow"
                         data-node-id="1:693"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle49}
                         />
                       </div>
@@ -957,7 +991,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:695"
                       >
@@ -969,8 +1004,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Mishra</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -979,19 +1013,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:697"
                     >
                       
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                         data-node-id="1:698"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                        <div
-                          className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+11.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[88.88px] w-[305px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle50} />
+
+                        <div className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+11.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[88.88px] w-[305px] profile-img-bottom-shadow"
                           data-node-id="1:699"
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                            className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                             src={imgRectangle50}
                           />
                         </div>
@@ -1003,7 +1039,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                           }}
                         />
-                        <div
+                              <AlumniCardBottomOverlay>
+        <div
                           className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                           data-node-id="1:701"
                         >
@@ -1015,26 +1052,27 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             <p className="leading-[1.25]">Karnwal</p>
                           </div>
                         </div>
-                      </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     </div>
                     
-<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:703"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[41.88px] w-[341px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle51} />
+
+                      <div className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+19.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[41.88px] w-[341px] profile-img-bottom-shadow"
                         data-node-id="1:704"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle51}
                         />
                       </div>
@@ -1046,7 +1084,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:706"
                       >
@@ -1058,25 +1097,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Verma</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:708"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[522px] left-[calc(50%+17.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[56.88px] w-[350px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle52} />
+
+                      <div className="-translate-x-1/2 absolute h-[522px] left-[calc(50%+17.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[56.88px] w-[350px] profile-img-bottom-shadow"
                         data-node-id="1:709"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle52}
                         />
                       </div>
@@ -1088,7 +1128,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:711"
                       >
@@ -1100,8 +1141,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Gaur</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -1111,19 +1151,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:713"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:714"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-0.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[295px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle53} />
+
+                      <div className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-0.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[295px] profile-img-bottom-shadow"
                         data-node-id="1:715"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle53}
                         />
                       </div>
@@ -1135,7 +1177,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:717"
                       >
@@ -1147,25 +1190,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Singh</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:719"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-14.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[75px] w-[394px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle54} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-14.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[75px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:720"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle54}
                         />
                       </div>
@@ -1177,7 +1221,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shivangi-trivedi031">
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:722"
                       >
@@ -1189,11 +1234,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Yadav</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shivangi-trivedi031" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -1202,19 +1243,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:724"
                     >
                       
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                         data-node-id="1:725"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                        <div
-                          className="-translate-x-1/2 absolute h-[455px] left-[calc(50%-51.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[123.88px] w-[305px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle55} />
+
+                        <div className="-translate-x-1/2 absolute h-[455px] left-[calc(50%-51.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[123.88px] w-[305px] profile-img-bottom-shadow"
                           data-node-id="1:726"
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                             src={imgRectangle55}
                           />
                         </div>
@@ -1226,7 +1269,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                           }}
                         />
-                        <div
+                              <AlumniCardBottomOverlay>
+        <div
                           className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                           data-node-id="1:728"
                         >
@@ -1238,26 +1282,27 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             <p className="leading-[1.25]">Gupta</p>
                           </div>
                         </div>
-                      </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     </div>
                     
-<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:730"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[507px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle56} />
+
+                      <div className="-translate-x-1/2 absolute h-[507px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[45.88px] w-[341px] profile-img-bottom-shadow"
                         data-node-id="1:731"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle56}
                         />
                       </div>
@@ -1269,7 +1314,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shreyansh-pandey-54949730b">
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:733"
                       >
@@ -1281,28 +1327,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Agarwal</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shreyansh-pandey-54949730b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:735"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle57} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:736"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle57}
                         />
                       </div>
@@ -1314,7 +1358,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:738"
                       >
@@ -1326,8 +1371,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Shukla</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -1341,19 +1385,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:741"
                     >
                       
-<div className="col-1 h-[600px] ml-[217px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                         data-node-id="1:742"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                        <div
-                          className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-41px] w-[372px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle58} />
+
+                        <div className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-41px] w-[372px] profile-img-bottom-shadow"
                           data-node-id="1:743"
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                             src={imgRectangle58}
                           />
                         </div>
@@ -1365,7 +1411,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                           }}
                         />
-                        <div
+                              <AlumniCardBottomOverlay>
+        <div
                           className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                           data-node-id="1:745"
                         >
@@ -1377,25 +1424,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             <p className="leading-[1.25]">Singh</p>
                           </div>
                         </div>
-                      </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                       
-<div className="col-1 h-[600px] ml-0 mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                         data-node-id="1:747"
                       >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                        <div
-                          className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle59} />
+
+                        <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow"
                           data-node-id="1:748"
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                             src={imgRectangle59}
                           />
                         </div>
@@ -1407,7 +1455,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                           }}
                         />
-                        <div
+                              <AlumniCardBottomOverlay>
+        <div
                           className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                           data-node-id="1:750"
                         >
@@ -1419,23 +1468,23 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             <p className="leading-[1.25]">Upadhayay</p>
                           </div>
                         </div>
-                      </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     </div>
                     <div
-                      className="bg-[#cbd5d4] h-[600px] overflow-clip relative rounded-[300px] group cursor-pointer member-card shrink-0 w-[200px]"
+                      className="bg-black border border-white/10 h-[600px] overflow-clip relative rounded-[300px] group cursor-pointer shrink-0 w-[200px]"
                       data-node-id="1:752"
                     >
-                      <div
-                        className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px]"
+                      <ProfileCardBackdrop color="#feb9ce" />
+                      <ProfileCardGhostOverlay src={imgRectangle60} />
+                      <div className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-20.84px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[22.88px] w-[400px] profile-img-bottom-shadow"
                         data-node-id="1:753"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle60}
                         />
                       </div>
@@ -1447,18 +1496,20 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
-                        className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
-                        data-node-id="1:755"
-                      >
+                      <AlumniCardBottomOverlay>
                         <div
-                          className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
-                          data-node-id="1:756"
+                          className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
+                          data-node-id="1:755"
                         >
-                          <p className="leading-[1.25] mb-0">Vivek</p>
-                          <p className="leading-[1.25]">Singh</p>
+                          <div
+                            className="[word-break:break-word] flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[28px] text-center text-white whitespace-nowrap"
+                            data-node-id="1:756"
+                          >
+                            <p className="leading-[1.25] mb-0">Vivek</p>
+                            <p className="leading-[1.25]">Singh</p>
+                          </div>
                         </div>
-                      </div>
+                      </AlumniCardBottomOverlay>
                     </div>
                   </div>
                 </div>
@@ -1483,19 +1534,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:760"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:761"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13.88px] w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle61} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13.88px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:762"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle61}
                         />
                       </div>
@@ -1507,7 +1560,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:764"
                       >
@@ -1519,25 +1573,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Sahu</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:766"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-0.12px] w-[394px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle62} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-0.12px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:767"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle62}
                         />
                       </div>
@@ -1549,7 +1604,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:769"
                       >
@@ -1560,25 +1616,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Anadee</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:771"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle63} />
+
+                      <div className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px] profile-img-bottom-shadow"
                         data-node-id="1:772"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle63}
                         />
                       </div>
@@ -1590,7 +1647,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:774"
                       >
@@ -1602,25 +1660,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Mishra</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:776"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[567px] left-[calc(50%+17.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-43.12px] w-[381px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle64} />
+
+                      <div className="-translate-x-1/2 absolute h-[567px] left-[calc(50%+17.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-43.12px] w-[381px] profile-img-bottom-shadow"
                         data-node-id="1:777"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle64}
                         />
                       </div>
@@ -1632,7 +1691,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:779"
                       >
@@ -1644,25 +1704,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Dubey</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:781"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[407px] left-[calc(50%-36.42px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[68.88px] w-[273px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle65} />
+
+                      <div className="-translate-x-1/2 absolute h-[407px] left-[calc(50%-36.42px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[68.88px] w-[273px] profile-img-bottom-shadow"
                         data-node-id="1:782"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle65}
                         />
                       </div>
@@ -1674,7 +1735,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:784"
                       >
@@ -1686,8 +1748,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Batra</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -1697,19 +1758,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:786"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:787"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-39px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[14px] w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle66} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-39px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[14px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:788"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle66}
                         />
                       </div>
@@ -1721,7 +1784,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:790"
                       >
@@ -1733,25 +1797,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Soni</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:792"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[41px] w-[394px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle67} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[41px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:793"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle67}
                         />
                       </div>
@@ -1763,7 +1828,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:795"
                       >
@@ -1775,25 +1841,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Dixit</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:797"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle68} />
+
+                      <div className="-translate-x-1/2 absolute h-[528px] left-[calc(50%-0.42px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-5.12px] w-[327px] profile-img-bottom-shadow"
                         data-node-id="1:798"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle68}
                         />
                       </div>
@@ -1805,7 +1872,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/om-tripathi-67332b26a/">
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:800"
                       >
@@ -1817,29 +1885,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Kumar</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/om-tripathi-67332b26a/" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:802"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle69} />
+
+                      <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow"
                         data-node-id="1:803"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle69}
                         />
                       </div>
@@ -1851,7 +1916,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:805"
                       >
@@ -1863,25 +1929,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Lalwani</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:807"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[503px] left-[calc(50%+16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[26px] w-[338px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle70} />
+
+                      <div className="-translate-x-1/2 absolute h-[503px] left-[calc(50%+16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[26px] w-[338px] profile-img-bottom-shadow"
                         data-node-id="1:808"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle70}
                         />
                       </div>
@@ -1893,7 +1960,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:810"
                       >
@@ -1905,8 +1973,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Agarwal</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -1928,19 +1995,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   data-node-id="1:814"
                 >
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:815"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-28.58px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[80.88px] w-[255.83px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle71} />
+
+                    <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-28.58px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[80.88px] w-[255.83px] profile-img-bottom-shadow"
                       data-node-id="1:816"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle71}
                       />
                     </div>
@@ -1952,7 +2021,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:818"
                     >
@@ -1964,25 +2034,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Arya</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:820"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[467px] left-[calc(50%+23.62px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[65.88px] w-[314px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle72} />
+
+                    <div className="-translate-x-1/2 absolute h-[467px] left-[calc(50%+23.62px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[65.88px] w-[314px] profile-img-bottom-shadow"
                       data-node-id="1:821"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle72}
                       />
                     </div>
@@ -1994,7 +2065,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:823"
                     >
@@ -2006,8 +2078,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Agarwal</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -2016,19 +2087,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:825"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:826"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+16.56px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.76px] w-[305px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle73} />
+
+                      <div className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+16.56px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.76px] w-[305px] profile-img-bottom-shadow"
                         data-node-id="1:827"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle73}
                         />
                       </div>
@@ -2040,7 +2113,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ayush-vashisth-4600a5338">
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:829"
                       >
@@ -2052,30 +2126,27 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Kumar</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/ayush-vashisth-4600a5338" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-      
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   </div>
                   
-<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:831"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[477px] left-[calc(50%+18.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[80.76px] w-[320px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle74} />
+
+                    <div className="-translate-x-1/2 absolute h-[477px] left-[calc(50%+18.18px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[80.76px] w-[320px] profile-img-bottom-shadow"
                       data-node-id="1:832"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle74}
                       />
                     </div>
@@ -2087,7 +2158,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:834"
                     >
@@ -2099,25 +2171,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Srivastava</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:836"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+18.74px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[56.88px] w-[326px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle75} />
+
+                    <div className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+18.74px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[56.88px] w-[326px] profile-img-bottom-shadow"
                       data-node-id="1:837"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle75}
                       />
                     </div>
@@ -2129,7 +2202,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:839"
                     >
@@ -2141,25 +2215,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Rastogi</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:841"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-21.34px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-14.24px] w-[400px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle76} />
+
+                    <div className="-translate-x-1/2 absolute h-[595px] left-[calc(50%-21.34px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-14.24px] w-[400px] profile-img-bottom-shadow"
                       data-node-id="1:842"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle76}
                       />
                     </div>
@@ -2171,7 +2246,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:844"
                     >
@@ -2183,8 +2259,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Shukla</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -2194,19 +2269,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   data-node-id="1:846"
                 >
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:847"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[416px] left-[calc(50%-27px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[73px] w-[280px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle77} />
+
+                    <div className="-translate-x-1/2 absolute h-[416px] left-[calc(50%-27px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[73px] w-[280px] profile-img-bottom-shadow"
                       data-node-id="1:848"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle77}
                       />
                     </div>
@@ -2218,7 +2295,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:850"
                     >
@@ -2230,25 +2308,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Singh</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:852"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[423px] left-[calc(50%-53.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[48px] w-[284px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle78} />
+
+                    <div className="-translate-x-1/2 absolute h-[423px] left-[calc(50%-53.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[48px] w-[284px] profile-img-bottom-shadow"
                       data-node-id="1:853"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle78}
                       />
                     </div>
@@ -2260,7 +2339,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:855"
                     >
@@ -2272,8 +2352,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Sahai</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -2282,19 +2361,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:857"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:858"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+0.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.88px] w-[305px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle79} />
+
+                      <div className="-translate-x-1/2 absolute h-[455px] left-[calc(50%+0.06px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33.88px] w-[305px] profile-img-bottom-shadow"
                         data-node-id="1:859"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle79}
                         />
                       </div>
@@ -2306,7 +2387,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:861"
                       >
@@ -2318,26 +2400,27 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Akhtar</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   </div>
                   
-<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:863"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[556px] left-[calc(50%+15.68px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[18.88px] w-[374px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle80} />
+
+                    <div className="-translate-x-1/2 absolute h-[556px] left-[calc(50%+15.68px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[18.88px] w-[374px] profile-img-bottom-shadow"
                       data-node-id="1:864"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle80}
                       />
                     </div>
@@ -2349,7 +2432,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay>
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:866"
                     >
@@ -2361,25 +2445,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Agarwal</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:868"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle81} />
+
+                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+0.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow"
                       data-node-id="1:869"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle81}
                       />
                     </div>
@@ -2391,7 +2476,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shreyansh-pandey-54949730b">
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:871"
                     >
@@ -2403,28 +2489,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Jain</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shreyansh-pandey-54949730b" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                   
-<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px]"
                     data-node-id="1:873"
                   >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                    <div
-                      className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+50.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[20.88px] w-[341px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle82} />
+
+                    <div className="-translate-x-1/2 absolute h-[507px] left-[calc(50%+50.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[20.88px] w-[341px] profile-img-bottom-shadow"
                       data-node-id="1:874"
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                         src={imgRectangle82}
                       />
                     </div>
@@ -2436,7 +2520,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                       }}
                     />
-                    <div
+                          <AlumniCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+        <div
                       className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                       data-node-id="1:876"
                     >
@@ -2448,11 +2533,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         <p className="leading-[1.25]">Singh</p>
                       </div>
                     </div>
-                  </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
-      <a href="https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors shadow-lg">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -2478,19 +2559,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:881"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:882"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[514px] left-[calc(50%-15.84px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[26.52px] w-[346px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle83} />
+
+                      <div className="-translate-x-1/2 absolute h-[514px] left-[calc(50%-15.84px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[26.52px] w-[346px] profile-img-bottom-shadow"
                         data-node-id="1:883"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle83}
                         />
                       </div>
@@ -2502,7 +2585,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:885"
                       >
@@ -2514,25 +2598,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Chaudhary</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:887"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+22.16px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-0.48px] w-[394px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle84} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+22.16px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-0.48px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:888"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle84}
                         />
                       </div>
@@ -2544,7 +2629,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:890"
                       >
@@ -2556,25 +2642,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Gera</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:892"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[542px] left-[calc(50%+5.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-31.48px] w-[336px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle85} />
+
+                      <div className="-translate-x-1/2 absolute h-[542px] left-[calc(50%+5.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-31.48px] w-[336px] profile-img-bottom-shadow"
                         data-node-id="1:893"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle85}
                         />
                       </div>
@@ -2586,7 +2673,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:895"
                       >
@@ -2598,25 +2686,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Gupta</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:897"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[509px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-12.48px] w-[342px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle86} />
+
+                      <div className="-translate-x-1/2 absolute h-[509px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-12.48px] w-[342px] profile-img-bottom-shadow"
                         data-node-id="1:898"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle86}
                         />
                       </div>
@@ -2628,7 +2717,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:900"
                       >
@@ -2640,25 +2730,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Shirur</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:902"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[407px] left-[calc(50%+0.66px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[68.52px] w-[273px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle87} />
+
+                      <div className="-translate-x-1/2 absolute h-[407px] left-[calc(50%+0.66px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[68.52px] w-[273px] profile-img-bottom-shadow"
                         data-node-id="1:903"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle87}
                         />
                       </div>
@@ -2670,7 +2761,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:905"
                       >
@@ -2683,8 +2775,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Ansari</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
@@ -2694,19 +2785,21 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:907"
                   >
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:908"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[462px] left-[calc(50%+17.66px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13.52px] w-[311px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle88} />
+
+                      <div className="-translate-x-1/2 absolute h-[462px] left-[calc(50%+17.66px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13.52px] w-[311px] profile-img-bottom-shadow"
                         data-node-id="1:909"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle88}
                         />
                       </div>
@@ -2718,7 +2811,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:911"
                       >
@@ -2730,25 +2824,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Kumar</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:913"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+15.16px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[28.52px] w-[394px]"
+                    <ProfileCardBackdrop color="#cbd5d4" />
+                    <ProfileCardGhostOverlay src={imgRectangle89} />
+
+                      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+15.16px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[28.52px] w-[394px] profile-img-bottom-shadow"
                         data-node-id="1:914"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle89}
                         />
                       </div>
@@ -2760,7 +2855,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:916"
                       >
@@ -2772,25 +2868,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Verma</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:918"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[528px] left-[calc(50%+0.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[35.52px] w-[327px]"
+                    <ProfileCardBackdrop color="#e4dcd2" />
+                    <ProfileCardGhostOverlay src={imgRectangle90} />
+
+                      <div className="-translate-x-1/2 absolute h-[528px] left-[calc(50%+0.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[35.52px] w-[327px] profile-img-bottom-shadow"
                         data-node-id="1:919"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle90}
                         />
                       </div>
@@ -2802,7 +2899,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:921"
                       >
@@ -2814,25 +2912,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Raghuvanshi</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:923"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#feb9ce] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[494px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-5.48px] w-[332px]"
+                    <ProfileCardBackdrop color="#feb9ce" />
+                    <ProfileCardGhostOverlay src={imgRectangle91} />
+
+                      <div className="-translate-x-1/2 absolute h-[494px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-5.48px] w-[332px] profile-img-bottom-shadow"
                         data-node-id="1:924"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle91}
                         />
                       </div>
@@ -2844,7 +2943,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:926"
                       >
@@ -2856,25 +2956,26 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Luke</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
                     
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer member-card row-1 w-[200px] [perspective:1000px]"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px]"
                       data-node-id="1:928"
                     >
-  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d]">
-    <div className="absolute inset-0 bg-[#ffc931] overflow-clip rounded-[300px] [backface-visibility:hidden]">
+  <div className="relative h-full w-full">
+    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
 
-                      <div
-                        className="-translate-x-1/2 absolute h-[503px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-14.48px] w-[338px]"
+                    <ProfileCardBackdrop color="#ffc931" />
+                    <ProfileCardGhostOverlay src={imgRectangle92} />
+
+                      <div className="-translate-x-1/2 absolute h-[503px] left-[calc(50%+0.16px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-14.48px] w-[338px] profile-img-bottom-shadow"
                         data-node-id="1:929"
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
                           src={imgRectangle92}
                         />
                       </div>
@@ -2886,7 +2987,8 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                             "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
                         }}
                       />
-                      <div
+                            <AlumniCardBottomOverlay>
+        <div
                         className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[427px]"
                         data-node-id="1:931"
                       >
@@ -2898,8 +3000,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                           <p className="leading-[1.25]">Mehrotra</p>
                         </div>
                       </div>
-                    </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 overflow-clip rounded-[300px] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-row items-center justify-center gap-4">
+      </AlumniCardBottomOverlay>
     </div>
   </div>
 </div>
