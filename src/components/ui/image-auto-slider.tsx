@@ -6,8 +6,8 @@ export const ImageAutoSlider = ({ images }: ImageAutoSliderProps) => {
   const duplicatedImages = [...images, ...images]
 
   return (
-    <div className="relative flex h-full w-full items-center overflow-hidden bg-transparent">
-      <div className="image-auto-slider-mask w-full py-8">
+    <div className="relative flex w-full items-center overflow-hidden bg-transparent">
+      <div className="image-auto-slider-mask w-full py-6 md:py-8">
         <div className="image-auto-slider-track flex w-max items-center gap-4 sm:gap-5 md:gap-6">
           {duplicatedImages.map((image, index) => (
             <img

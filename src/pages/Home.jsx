@@ -370,7 +370,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               </p>
             </div>
 
-            <div className="relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
+            <div className="relative mt-8 md:mt-12 w-full overflow-hidden bg-transparent">
               <ImageAutoSlider images={highlightImages} />
             </div>
           </section>
