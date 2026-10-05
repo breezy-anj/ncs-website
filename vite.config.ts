@@ -5,7 +5,7 @@ import path from "node:path"
 
 // Vite config — https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/ncs-website/" : "/",
+  base: process.env.VITE_BASE_PATH || "/",
   plugins: [
     react(),
     tailwindcss(),
