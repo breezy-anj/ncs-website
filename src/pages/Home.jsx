@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import SocialCards from "../components/ui/card-fan-carousel"
-import HighlightsWheel from "../components/ui/highlights-wheel"
+import { Component as ImageAutoSlider } from "../components/ui/image-auto-slider"
 
 
 const assetPathPrefix = "/assets"
@@ -432,7 +432,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               </p>
             </div>
             <div className="relative mt-12 md:mt-16 w-full h-[650px] sm:h-[750px] md:h-[840px] lg:h-[900px] rounded-[32px] overflow-hidden border border-white/10 bg-[#070707] shadow-2xl">
-              <HighlightsWheel label="NCS FAMILY" action="View" className="h-full w-full bg-transparent" />
+              <ImageAutoSlider />
             </div>
           </section>
           <div

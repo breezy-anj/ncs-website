@@ -1,4 +1,5 @@
 import SocialCards from "@/components/ui/card-fan-carousel"
+import { Component as ImageAutoSlider } from "@/components/ui/image-auto-slider"
 
 const DEMO_CARDS = [
   { imgUrl: "https://cdn.21st.dev/assets/mirror/a6/a61a357faccddd302e85600234a02350a27f21b4cc8b3531578991614c050151.jpg", alt: "Mountain landscape" },
@@ -20,3 +21,5 @@ export default function Demo() {
     </div>
   )
 }
+
+export const DemoOne = () => <ImageAutoSlider />
