@@ -1,6 +1,7 @@
 import { ImageData } from "../components/ui/img-sphere";
+import { publicAsset } from "../lib/publicAsset";
 
-export const ALL_38_TEAM_MEMBERS: ImageData[] = [
+const teamMembers: ImageData[] = [
   {
     id: "member-1171276385",
     src: "/assets/team_avatars/avatar_1171276385.png",
@@ -268,3 +269,8 @@ export const ALL_38_TEAM_MEMBERS: ImageData[] = [
     description: "Nibble Computer Society Team"
   }
 ];
+
+export const ALL_38_TEAM_MEMBERS = teamMembers.map((member) => ({
+  ...member,
+  src: publicAsset(member.src),
+}));

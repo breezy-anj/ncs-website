@@ -12,8 +12,9 @@ import {
   X,
 } from "lucide-react"
 import { cn } from "../lib/utils"
+import { publicAsset } from "../lib/publicAsset"
 
-const imgNcsLogo = "/assets/8f22e.svg"
+const imgNcsLogo = publicAsset("assets/8f22e.svg")
 
 const navItems = [
   { label: "Home", page: "Home", icon: HomeIcon },
@@ -208,4 +209,3 @@ export default function Navbar() {
     </nav>
   )
 }
-

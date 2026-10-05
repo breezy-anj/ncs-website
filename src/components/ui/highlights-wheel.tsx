@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
+import { publicAsset } from "@/lib/publicAsset"
 
 export interface HighlightItem {
   image: string
@@ -15,30 +16,30 @@ export interface HighlightsWheelProps extends React.HTMLAttributes<HTMLElement> 
 }
 
 export const DEFAULT_HIGHLIGHT_ITEMS: HighlightItem[] = [
-  { image: "/assets/highlights/web/IMG_2969.webp", title: "InOut Grand Finale" },
-  { image: "/assets/highlights/web/DSC04982.webp", title: "Hackathon Opening" },
-  { image: "/assets/highlights/web/DSC05186.webp", title: "CodeCraft Workshop" },
-  { image: "/assets/highlights/web/DSC05537.webp", title: "Community Meetup" },
-  { image: "/assets/highlights/web/IMG_1634.webp", title: "Ideation & Brainstorming" },
-  { image: "/assets/highlights/web/IMG_1635.webp", title: "Collaborative Building" },
-  { image: "/assets/highlights/web/IMG_1647.webp", title: "Keynote & Tech Talk" },
-  { image: "/assets/highlights/web/IMG_1736.webp", title: "Mentorship Session" },
-  { image: "/assets/highlights/web/IMG_1795.webp", title: "Annual Fest Celebrations" },
-  { image: "/assets/highlights/web/IMG_1957_1.webp", title: "Team Synergy" },
-  { image: "/assets/highlights/web/IMG_2403.webp", title: "Project Demos" },
-  { image: "/assets/highlights/web/IMG_2495.webp", title: "Hackathon Pitching" },
-  { image: "/assets/highlights/web/IMG_2526.webp", title: "Audience Engagement" },
-  { image: "/assets/highlights/web/IMG_2554.webp", title: "Winners Felicitation" },
-  { image: "/assets/highlights/web/IMG_2952.webp", title: "Stage Spotlight" },
-  { image: "/assets/highlights/web/IMG_2979.webp", title: "Networking Moments" },
-  { image: "/assets/highlights/web/IMG_2984.webp", title: "Inspiring Innovation" },
-  { image: "/assets/highlights/web/IMG_3002.webp", title: "Award Ceremony" },
-  { image: "/assets/highlights/web/IMG_3010.webp", title: "Closing Remarks" },
-  { image: "/assets/highlights/web/IMG_3012.webp", title: "Campus Celebration" },
-  { image: "/assets/highlights/web/IMG_3016.webp", title: "Society Milestones" },
-  { image: "/assets/highlights/web/IMG_4240.webp", title: "Tech Enthusiasts" },
-  { image: "/assets/highlights/web/IMG_4252.webp", title: "Nibble Family" },
-  { image: "/assets/highlights/web/IMG_4262.webp", title: "Core Team Memories" },
+  { image: publicAsset("assets/highlights/web/IMG_2969.webp"), title: "InOut Grand Finale" },
+  { image: publicAsset("assets/highlights/web/DSC04982.webp"), title: "Hackathon Opening" },
+  { image: publicAsset("assets/highlights/web/DSC05186.webp"), title: "CodeCraft Workshop" },
+  { image: publicAsset("assets/highlights/web/DSC05537.webp"), title: "Community Meetup" },
+  { image: publicAsset("assets/highlights/web/IMG_1634.webp"), title: "Ideation & Brainstorming" },
+  { image: publicAsset("assets/highlights/web/IMG_1635.webp"), title: "Collaborative Building" },
+  { image: publicAsset("assets/highlights/web/IMG_1647.webp"), title: "Keynote & Tech Talk" },
+  { image: publicAsset("assets/highlights/web/IMG_1736.webp"), title: "Mentorship Session" },
+  { image: publicAsset("assets/highlights/web/IMG_1795.webp"), title: "Annual Fest Celebrations" },
+  { image: publicAsset("assets/highlights/web/IMG_1957_1.webp"), title: "Team Synergy" },
+  { image: publicAsset("assets/highlights/web/IMG_2403.webp"), title: "Project Demos" },
+  { image: publicAsset("assets/highlights/web/IMG_2495.webp"), title: "Hackathon Pitching" },
+  { image: publicAsset("assets/highlights/web/IMG_2526.webp"), title: "Audience Engagement" },
+  { image: publicAsset("assets/highlights/web/IMG_2554.webp"), title: "Winners Felicitation" },
+  { image: publicAsset("assets/highlights/web/IMG_2952.webp"), title: "Stage Spotlight" },
+  { image: publicAsset("assets/highlights/web/IMG_2979.webp"), title: "Networking Moments" },
+  { image: publicAsset("assets/highlights/web/IMG_2984.webp"), title: "Inspiring Innovation" },
+  { image: publicAsset("assets/highlights/web/IMG_3002.webp"), title: "Award Ceremony" },
+  { image: publicAsset("assets/highlights/web/IMG_3010.webp"), title: "Closing Remarks" },
+  { image: publicAsset("assets/highlights/web/IMG_3012.webp"), title: "Campus Celebration" },
+  { image: publicAsset("assets/highlights/web/IMG_3016.webp"), title: "Society Milestones" },
+  { image: publicAsset("assets/highlights/web/IMG_4240.webp"), title: "Tech Enthusiasts" },
+  { image: publicAsset("assets/highlights/web/IMG_4252.webp"), title: "Nibble Family" },
+  { image: publicAsset("assets/highlights/web/IMG_4262.webp"), title: "Core Team Memories" },
 ]
 
 // Wheel geometry & animation constants
