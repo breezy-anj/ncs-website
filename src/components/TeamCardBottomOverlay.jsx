@@ -12,9 +12,10 @@ import React from "react"
  *   - Member name and designation stay visible at all times.
  *   - Social link icons (GitHub & LinkedIn) are displayed directly below the designation.
  */
-export default function TeamCardBottomOverlay({ children, linkedinUrl, githubUrl }) {
+export default function TeamCardBottomOverlay({ children, linkedinUrl, githubUrl, bio }) {
   const finalLinkedin = linkedinUrl || "https://linkedin.com"
   const finalGithub = githubUrl || "https://github.com"
+  const finalBio = bio || "Lorem ipsum dolor sit amet, consectetur elit diam."
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[300px] z-20">
@@ -34,12 +35,12 @@ export default function TeamCardBottomOverlay({ children, linkedinUrl, githubUrl
         {children}
       </div>
 
-      {/* Desktop Hover State: 50-character lorem ipsum + social links on desktop hover only */}
-      <div className="hidden md:flex absolute bottom-0 inset-x-0 h-[205px] flex-col items-center justify-between text-center px-4 pt-6 pb-6 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-400 ease-out z-30">
-        <p className="font-['Inter'] font-medium text-[13px] leading-[1.45] text-white/95 tracking-[-0.01em] max-w-[170px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-          Lorem ipsum dolor sit amet, consectetur elit diam.
+      {/* Desktop Hover State: custom bio / lorem ipsum + social links on desktop hover only */}
+      <div className="hidden md:flex absolute bottom-0 inset-x-0 h-[215px] flex-col items-center justify-end gap-5 text-center px-3 pb-6 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-400 ease-out z-30">
+        <p className="font-['Inter'] font-medium text-[11px] sm:text-[11.5px] leading-[1.35] text-white/95 tracking-[-0.01em] max-w-[174px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          {finalBio}
         </p>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 shrink-0">
           {/* GitHub link */}
           <a
             href={finalGithub}

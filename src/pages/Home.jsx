@@ -1,7 +1,7 @@
 import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
-import SocialCards from "../components/ui/card-fan-carousel"
+import CarouselStacked from "../components/ui/carousel-07"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
@@ -102,9 +102,17 @@ const eventGalleryItems = [
   },
 ]
 
-const eventFanCards = eventGalleryItems.map((item) => ({
-  imgUrl: item.photo.url,
-  alt: item.photo.text,
+const eventSlides = eventGalleryItems.map((item) => ({
+  image: item.photo.url,
+  title: item.common,
+  description: item.binomial,
+  badge: item.common.toLowerCase().includes("hack")
+    ? "Hackathon"
+    : item.common.toLowerCase().includes("workshop")
+    ? "Workshop"
+    : item.common.toLowerCase().includes("code")
+    ? "Competition"
+    : "Event",
   linkUrl: item.href,
 }))
 
@@ -120,11 +128,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
         data-node-id="1:25"
       >
         <div
-          className="content-stretch flex flex-col gap-24 md:gap-[200px] items-center relative shrink-0 w-full"
+          className="content-stretch flex flex-col gap-10 sm:gap-14 md:gap-[50px] lg:gap-[60px] items-center relative shrink-0 w-full"
           data-node-id="1:36"
         >
           <div
-            className="flex flex-col-reverse gap-10 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[100dvh] md:-mt-[50px]"
+            className="flex flex-col-reverse gap-6 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-auto md:min-h-[660px] pt-2 pb-6 md:py-4 md:-mt-[20px]"
             data-node-id="1:37"
           >
             {/* Right illustration with smooth floating animation */}
@@ -163,15 +171,6 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <div className="w-full flex justify-center md:justify-start">
                 <LiquidMetalButton
                   label="Join the Community"
-                  width={260}
-                  height={56}
-                  fontSize={18}
-                  textColor="#ffffff"
-                  icon={
-                    <span className="text-white text-[20px] font-semibold leading-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                      ↗
-                    </span>
-                  }
                   onClick={() => {
                     const connectEl = document.getElementById("connect-section")
                     if (connectEl) {
@@ -473,7 +472,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   Ideas worth sharing. Experiences worth remembering. Join us for events that spark curiosity, inspire creativity, and bring our community together.
                 </p>
               </div>
-              <SocialCards cards={eventFanCards} />
+              <CarouselStacked slides={eventSlides} />
             </div>
           </div>
           <div className="w-full -mt-12 md:-mt-[120px]">

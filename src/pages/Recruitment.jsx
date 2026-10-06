@@ -113,14 +113,14 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-            className="relative flex items-center justify-center max-w-[320px] sm:max-w-[480px] md:max-w-[720px] shrink-0 z-10"
+            className="relative flex items-center justify-center w-full md:w-auto max-w-[420px] sm:max-w-[580px] md:max-w-[800px] lg:max-w-[920px] xl:max-w-[980px] shrink-0 z-10"
           >
             {/* Floating Container */}
-            <div className="animate-float-gentle relative flex items-center justify-center">
+            <div className="animate-float-gentle relative flex items-center justify-center w-full">
               <img
                 src={heroIllustration}
                 alt="Recruitment Portal Illustration"
-                className="w-full max-w-[360px] sm:max-w-[500px] md:w-[640px] lg:w-[700px] h-auto object-contain pointer-events-none drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                className="w-full max-w-[420px] sm:max-w-[580px] md:w-[740px] lg:w-[860px] xl:w-[940px] h-auto object-contain pointer-events-none drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
               />
             </div>
           </motion.div>

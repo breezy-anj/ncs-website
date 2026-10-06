@@ -70,7 +70,7 @@ export default function Team() {
                 <p className="bg-clip-text font-['Satoshi:Black','Poppins:SemiBold',sans-serif] relative shrink-0 text-[48px] sm:text-[64px] md:text-[80px] text-[transparent] tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap" data-node-id="1:30" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                   TEAMS
                 </p>
-                <p className="font-['Satoshi:Medium','Poppins:SemiBold',sans-serif] relative shrink-0 text-[14px] sm:text-[20px] md:text-[32px] lg:text-[40px] leading-[1.5] text-white/60 md:text-white/70 tracking-tight max-w-[1260px] w-full px-4 text-center break-words" data-node-id="1:31">
+                <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1260px] w-full px-4 text-center tracking-tight break-words" data-node-id="1:31">
                   For over two decades, NCS has been the heart of technical culture on campus. Founded in 2000, we bring together students who live and breathe code, development, and design. Through hands-on projects, workshops, and real-world building, we turn curiosity into capability,creating an environment where bold ideas take root and thrive.
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle34} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:55" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" bio="Caught somewhere between “Proceed to code” and “Why is this working?”">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:56">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:57">
                         <p className="leading-[1.25] mb-0">Ajinkya</p>
@@ -608,7 +608,7 @@ export default function Team() {
         <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle49} />
       </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:175" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay>
+      <TeamCardBottomOverlay bio="A collection of oddly specific interests, endless rabbit holes, and whatever I’m obsessed with this week.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:176">
           <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:177">
             <p className="leading-[1.25] mb-0">Shreyansh</p>
@@ -635,7 +635,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle52} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:182" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/pragati-rajput-747667332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/pragati-rajput-747667332/" bio="Curious, ambitious, and a little unpredictable. I think deeply, dream big, and love making things happen.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:183">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:184">
                         <p className="leading-[1.25] mb-0">Pragati</p>
@@ -685,7 +685,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle54} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:194" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/" bio="Curious by nature, always building and experimenting. Love tech, good conversations, and late-night ideas. Here to learn, create, and enjoy the journey.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:195">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:196">
                         <p className="leading-[1.25] mb-0">Aditya</p>
@@ -719,7 +719,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle55} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:203" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/darshita-jain-56747b31a/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/darshita-jain-56747b31a/" bio="Designer by passion, creative by nature, fashion enthusiast by choice. I love experimenting with visuals, aesthetics, and style to create things that feel uniquely mine.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:204">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:205">
                         <p className="leading-[1.25] mb-0">Darshita</p>
@@ -794,7 +794,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle58} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:221" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/karnika-singh-465478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/karnika-singh-465478332/" bio="Quiet interface, organised setup. CP runner with a curious mind , passionate about tech and bringing good vibe.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:222">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:223">
                         <p className="leading-[1.25]">Karnika</p>
@@ -818,7 +818,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle59} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:227" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aanya-gogia-585478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aanya-gogia-585478332/" bio="A tech enthusiast who enjoys coding, competitive programming, and trying out new things. Always learning, building, and having fun along the way.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:228">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:229">
                         <p className="leading-[1.25] mb-0">Aanya</p>
@@ -844,7 +844,7 @@ export default function Team() {
                         <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle60} />
                       </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:234" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sidhi-saxena-885478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sidhi-saxena-885478332/" bio="A curious mind, a passionate programmer, and a dancer at heart. I love solving problems, exploring new ideas, and bringing positive energy wherever I go.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:235">
                         <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:236">
                           <p className="leading-[1.25] mb-0">Sidhi</p>
@@ -872,7 +872,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle61} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:241" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishka-israni-685478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishka-israni-685478332/" bio="A curious tech enthusiast who loves turning ideas into real projects. Always up for hackathons, learning something new, and trying things beyond my comfort zone. Creative and always looking for the next challenge.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:242">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:243">
                         <p className="leading-[1.25] mb-0">Tanishka</p>
@@ -897,7 +897,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle62} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:247" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/saishree-saxena-785478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/saishree-saxena-785478332/" bio="heyo peeps, sai here, i like building new stuff and get in awe with it, currently in 2nd year, I love leading a slow life, also i love music and groovin duhh.Also, imma barbie girl in the cs world~ haha">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:248">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:249">
                         <p className="leading-[1.25] mb-0">Saishree</p>
@@ -922,7 +922,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle63} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:253" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aryan-singh-885478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aryan-singh-885478332/" bio="My Codes have trust issues with the Time Limit">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:254">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:255">
                         <p className="leading-[1.25] mb-0">Aryan</p>
@@ -947,7 +947,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle64} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:259" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/" bio="I write code like I make jokes: recklessly, unnecessarily, and usually wrong.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:260">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:261">
                         <p className="leading-[1.25] mb-0 whitespace-pre">{`Sanskar `}</p>
@@ -972,7 +972,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle65} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:265" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/" bio="I enjoy writing code, but sometimes my code becomes my next problem. 🫠">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:266">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:267">
                         <p className="leading-[1.25] mb-0">Mohd</p>
@@ -999,7 +999,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle66} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:272" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishq-marwari-185478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishq-marwari-185478332/" bio="Professional overthinker Part time coder Full time learner">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:273">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:274">
                         <p className="leading-[1.25] mb-0">Tanishq</p>
@@ -1024,7 +1024,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle67} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:278" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/" bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:279">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:280">
                         <p className="leading-[1.25] mb-0">Ansh</p>
@@ -1049,7 +1049,7 @@ export default function Team() {
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle68} />
                     </div>
       <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:284" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/">
+      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/" bio="Everyone knows that development is the real coding.">
         <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:285">
                       <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:286">
                         <p className="leading-[1.25] mb-0">Anjneya</p>

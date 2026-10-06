@@ -1,6 +1,7 @@
 
 import Footer from "../components/Footer"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
+import { ExternalLink } from "lucide-react"
 
 const assetPathPrefix = "/assets"
 const imgRectangle124 = `${assetPathPrefix}/0e70d.png`
@@ -15,6 +16,23 @@ const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`
 const imgVector = `${assetPathPrefix}/79f69.svg`
 const imgVector1 = `${assetPathPrefix}/54ba9.svg`
 const imgLine1 = `${assetPathPrefix}/57d57.svg`
+
+function ViewProjectButton({ url, className = "" }) {
+  return (
+    <a
+      href={url || "https://github.com/ncs-jss"}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-[12px] bg-[#212124]/90 hover:bg-[#2d2d32] border border-white/25 hover:border-white/50 text-[#f4f4f5] hover:text-white transition-all duration-200 shadow-md backdrop-blur-md cursor-pointer select-none group/vp ${className}`}
+    >
+      <span className="font-['Satoshi',Arial,sans-serif] text-[15px] font-medium tracking-tight whitespace-nowrap">
+        View Project
+      </span>
+      <ExternalLink className="size-4 text-white/80 group-hover/vp:text-white transition-colors shrink-0" />
+    </a>
+  )
+}
 
 const allProjects = [
   {
@@ -102,16 +120,12 @@ export default function Project({ activePage = "Project", onNavigate }) {
           data-node-id="1:201"
         >
           <div className="flex flex-col items-center text-center gap-6 w-full mb-6">
-            <h1
-              className="font-['Satoshi',Arial,sans-serif] font-black text-[52px] sm:text-[68px] md:text-[80px] leading-none tracking-tight text-transparent bg-clip-text select-none text-center uppercase"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #52525B 100%)",
-                textShadow: "0 10px 40px rgba(0,0,0,0.9)",
-              }}
+            <p
+              className="bg-clip-text font-['Satoshi:Black','Poppins:SemiBold',sans-serif] relative shrink-0 text-[48px] sm:text-[64px] md:text-[80px] text-[transparent] tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap"
+              style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 263 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(13.15 0 0 22.055 131.5 54)'><stop stop-color='rgba(153,153,153,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>\")" }}
             >
               PROJECTS
-            </h1>
+            </p>
             <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words">
               We build a tech-driven campus culture by hosting hands-on events and building tools for students and faculty. Our projects help the college community stay updated, sharpen their problem-solving skills, and stay connected.
             </p>
@@ -143,6 +157,11 @@ export default function Project({ activePage = "Project", onNavigate }) {
                       className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                       src={project.image}
                     />
+                  </div>
+                  {/* Mobile View Project Button */}
+                  <div className="absolute bottom-2.5 right-2.5 z-20 flex items-center gap-1 px-2 py-0.5 rounded-[8px] bg-[#212124]/90 border border-white/20 text-white/90 text-[10px] font-medium backdrop-blur-md shadow-md">
+                    <span>View Project</span>
+                    <ExternalLink className="size-2.5 text-white/80" />
                   </div>
                 </div>
 
@@ -217,7 +236,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    
+                    <ViewProjectButton url={allProjects[0].url} />
                   </div>
                 </div>
               </div>
@@ -325,7 +344,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    
+                    <ViewProjectButton url={allProjects[1].url} />
                   </div>
                 </div>
               </div>
@@ -435,7 +454,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    
+                    <ViewProjectButton url={allProjects[2].url} />
                   </div>
                 </div>
               </div>
@@ -545,7 +564,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     </div>
                   </div>
                   <div className="absolute left-[141px] top-[344px] z-30">
-                    
+                    <ViewProjectButton url={allProjects[3].url} />
                   </div>
                 </div>
               </div>
@@ -632,6 +651,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                       </div>
                     </div>
                     <div className="absolute left-[141px] top-[344px] z-30">
+                      <ViewProjectButton url={project.url} />
                     </div>
                   </div>
                 </div>

@@ -9,6 +9,8 @@ const assetPathPrefix = "/assets"
 
 const imgInstagram = `${assetPathPrefix}/42741.svg`
 const imgLinkedin = `${assetPathPrefix}/linkedin-icon.svg`
+const imgGithub = `${assetPathPrefix}/github-icon.svg`
+const imgFacebook = `${assetPathPrefix}/facebook-icon.svg`
 const imgSphereLeafLeft = `${assetPathPrefix}/cbf28.svg`
 const imgSphereLeafRight = `${assetPathPrefix}/ac2ff.svg`
 
@@ -200,7 +202,41 @@ export default function Footer({ hideParticleLogo = false }) {
             </p>
 
             {/* Liquid Glass Social Icons Dock */}
-            <div className="flex items-center justify-center gap-3.5 sm:gap-6 mt-2 sm:mt-3">
+            <div className="flex items-center justify-center gap-3 sm:gap-5 mt-2 sm:mt-3 flex-wrap">
+              <a
+                href="https://github.com/ncs-jss"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="relative shrink-0 size-[44px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
+                style={{
+                  transitionTimingFunction:
+                    "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
+                }}
+              >
+                <img
+                  alt="GitHub"
+                  className="block size-full object-contain"
+                  src={imgGithub}
+                />
+              </a>
+              <a
+                href="https://linkedin.com/company/hackncs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="relative shrink-0 size-[44px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
+                style={{
+                  transitionTimingFunction:
+                    "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
+                }}
+              >
+                <img
+                  alt="LinkedIn"
+                  className="block size-full object-contain"
+                  src={imgLinkedin}
+                />
+              </a>
               <a
                 href="https://instagram.com/hackncs"
                 target="_blank"
@@ -219,10 +255,10 @@ export default function Footer({ hideParticleLogo = false }) {
                 />
               </a>
               <a
-                href="https://linkedin.com/company/hackncs"
+                href="https://www.facebook.com/nibblecomputersociety"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Facebook"
                 className="relative shrink-0 size-[44px] sm:size-[54px] p-2.5 rounded-2xl bg-white/10 border border-white/20 hover:scale-115 hover:bg-white/20 active:scale-95 transition-all duration-300 cursor-pointer shadow-lg"
                 style={{
                   transitionTimingFunction:
@@ -230,9 +266,9 @@ export default function Footer({ hideParticleLogo = false }) {
                 }}
               >
                 <img
-                  alt="LinkedIn"
+                  alt="Facebook"
                   className="block size-full object-contain"
-                  src={imgLinkedin}
+                  src={imgFacebook}
                 />
               </a>
             </div>

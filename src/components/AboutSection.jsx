@@ -15,38 +15,54 @@ const imgPhoto3 = `${assetPathPrefix}/about-community-family.webp` // Event team
  */
 function MoonStarBadge({ className = "" }) {
   return (
-    <div
-      className={`relative size-[84px] md:size-[98px] rounded-full overflow-hidden shrink-0 flex items-center justify-center shadow-[0_0_35px_rgba(0,33,92,0.6)] ${className}`}
-      style={{
-        background: "radial-gradient(circle at 35% 35%, #0a2558 0%, #001233 100%)",
-        border: "1px solid rgba(255, 255, 255, 0.15)",
-      }}
+    <svg
+      width="239"
+      height="228"
+      viewBox="0 0 239 228"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`w-[85px] h-auto md:w-[110px] lg:w-[125px] shrink-0 ${className}`}
     >
-      <svg
-        viewBox="0 0 100 100"
-        className="w-full h-full"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Outer subtle glow */}
-        <circle cx="50" cy="50" r="48" fill="#001844" />
-        
-        {/* Crescent Moon Shape in Cream / Off-White */}
-        <path
-          d="M66 12C50 16 38 32 38 50C38 68 50 84 66 88C78 84 86 74 88 64C72 74 54 66 52 50C50 34 68 22 88 36C86 26 78 16 66 12Z"
-          fill="#FBF1E0"
-        />
-
-        {/* 4-Pointed Golden Star Sparkle inside Crescent */}
-        <g transform="translate(42, 50)">
-          <path
-            d="M0 -14 C1 -5 5 -1 14 0 C5 1 1 5 0 14 C-1 5 -5 1 -14 0 C-5 -1 -1 -5 0 -14 Z"
-            fill="#FEB80A"
-          />
-          <circle cx="0" cy="0" r="2.5" fill="#FFFDF0" />
-        </g>
-      </svg>
-    </div>
+      <g filter="url(#filter0_din_694_34)">
+        <path d="M96.5149 6.75598C118.145 -2.64254 145.062 -1.88178 166.992 6.84698C222.35 28.8808 248.337 92.4317 227.78 147.598C208.512 199.277 145.047 234.705 92.0149 212.853C91.5199 212.651 91.0249 212.441 90.5374 212.222C76.6624 209.751 63.6198 205.657 51.6048 198.183C28.6098 183.578 12.3649 160.419 6.46239 133.817C0.312389 107.326 5.94489 76.353 20.4274 53.5272C34.6924 31.0427 57.5824 14.5654 83.6974 9.22648C87.9649 8.35274 92.2399 7.72109 96.5149 6.75598Z" fill="#001F56"/>
+        <path d="M96.5126 6.75598C118.143 -2.64254 145.06 -1.88178 166.99 6.84698C222.348 28.8808 248.335 92.4317 227.778 147.598C208.51 199.277 145.045 234.705 92.0126 212.853C91.5176 212.651 91.0227 212.441 90.5352 212.222C94.8777 211.625 102.468 211.918 108.063 211.29C126.138 209.121 143.118 201.502 156.76 189.443C211.105 141.643 204.43 44.7936 135.738 14.3399C122.088 8.28883 111.01 7.62154 96.5126 6.75598Z" fill="#FDEDCB"/>
+        <path d="M81.207 84.0859C85.167 105.314 86.352 109.606 107.637 115.309C86.532 120.056 85.662 125.634 81.207 146.061C79.1295 139.989 79.407 133.097 75.357 126.611C70.257 118.432 62.472 117.221 53.832 115.168C75.342 111.625 77.292 103.591 81.207 84.0859Z" fill="#FEB503"/>
+        <path d="M50.9501 55.3615C52.3826 54.8506 53.9652 55.555 54.5502 56.9624C55.1277 58.3697 54.5051 59.9856 53.1251 60.6353C52.1726 61.0846 51.0476 60.9729 50.2001 60.3442C49.3601 59.7155 48.9251 58.6713 49.0826 57.6293C49.2401 56.5865 49.9601 55.7156 50.9501 55.3615Z" fill="#F9F1E8"/>
+        <path d="M125.389 162.84C126.709 162.723 127.916 163.598 128.216 164.89C128.516 166.183 127.819 167.499 126.581 167.975C125.614 168.349 124.511 168.124 123.769 167.397C123.026 166.671 122.771 165.577 123.116 164.598C123.469 163.618 124.354 162.932 125.389 162.84Z" fill="#F9F1E8"/>
+        <path d="M133.944 51.5048C134.754 50.9819 135.789 50.9752 136.599 51.4876C137.409 52.0007 137.852 52.9384 137.724 53.8904C137.604 54.8424 136.929 55.6346 136.014 55.9189C134.844 56.2827 133.584 55.7253 133.059 54.6128C132.542 53.5003 132.917 52.174 133.944 51.5048Z" fill="#F9F1E8"/>
+      </g>
+      <defs>
+        <filter id="filter0_din_694_34" x="0" y="0" width="238.787" height="227.424" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_694_34"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend mode="normal" in2="shape" result="effect2_innerShadow_694_34"/>
+          <feTurbulence type="fractalNoise" baseFrequency="2 2" stitchTiles="stitch" numOctaves="3" result="noise" seed="3335" />
+          <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+          <feComponentTransfer in="alphaNoise" result="coloredNoise1">
+            <feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+          </feComponentTransfer>
+          <feComposite operator="in" in2="effect2_innerShadow_694_34" in="coloredNoise1" result="noise1Clipped" />
+          <feFlood floodColor="rgba(0, 0, 0, 0.25)" result="color1Flood" />
+          <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+          <feMerge result="effect3_noise_694_34">
+            <feMergeNode in="effect2_innerShadow_694_34" />
+            <feMergeNode in="color1" />
+          </feMerge>
+          <feBlend mode="normal" in="effect3_noise_694_34" in2="effect1_dropShadow_694_34" result="effect3_noise_694_34"/>
+        </filter>
+      </defs>
+    </svg>
   )
 }
 
@@ -112,9 +128,12 @@ export default function AboutSection() {
         {/* Main Heading */}
         <div className="flex flex-col items-center justify-center max-w-[1100px] z-10 mt-2 sm:mt-6 md:mt-2">
           <h1
-            className="font-['Satoshi',Arial,sans-serif] font-black text-[34px] xs:text-[44px] sm:text-[80px] md:text-[108px] lg:text-[117.8px] leading-[1.1] tracking-normal text-white uppercase text-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] break-words"
+            className="font-['Satoshi_Variable','Satoshi',Arial,sans-serif] font-black text-[34px] xs:text-[44px] sm:text-[80px] md:text-[108px] lg:text-[117.8px] leading-[1.35] tracking-normal uppercase text-center break-words"
             style={{
-              textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 0 60px rgba(255,255,255,0.15)",
+              background: "radial-gradient(50% 50% at 50% 50%, #FFFFFF 33%, #999999 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
             <span>WHERE IDEAS</span>
