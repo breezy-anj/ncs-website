@@ -2,9 +2,11 @@ import React, { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import {
+  Calendar,
   FolderGit2,
   GraduationCap,
   Home as HomeIcon,
+  Images,
   Info,
   UserPlus,
   Users,
@@ -16,6 +18,8 @@ const imgNcsLogo = publicAsset("assets/ncs-logo-white.svg")
 const navItems = [
   { label: "Home", page: "Home", icon: HomeIcon, path: "/" },
   { label: "About", page: "About", icon: Info, path: "/about" },
+  { label: "Events", page: "Events", icon: Calendar, path: "/events" },
+  { label: "Gallery", page: "Gallery", icon: Images, path: "/gallery" },
   { label: "Project", page: "Project", icon: FolderGit2, path: "/project" },
   { label: "Team", page: "Team", icon: Users, path: "/team" },
   { label: "Alumni", page: "Alumni", icon: GraduationCap, path: "/alumni" },
@@ -31,6 +35,8 @@ export default function Navbar() {
   const getPageFromPath = (path) => {
     if (path === "/") return "Home"
     if (path === "/about") return "About"
+    if (path === "/events") return "Events"
+    if (path === "/gallery") return "Gallery"
     if (path === "/project") return "Project"
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
@@ -64,7 +70,7 @@ export default function Navbar() {
     <nav className="relative z-50 select-none shrink-0 flex items-center justify-center w-full px-3 sm:px-4 pointer-events-auto">
       {/* Outer Metallic / Glass Rim */}
       <div
-        className="w-full max-w-[1020px] p-[2.5px] rounded-[28px] lg:rounded-full"
+        className="w-full max-w-[1160px] p-[2.5px] rounded-[28px] lg:rounded-full"
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(200, 200, 200, 0.25) 12%, rgba(130, 130, 130, 0.15) 50%, rgba(80, 80, 80, 0.2) 85%, rgba(255, 255, 255, 0.45) 100%)",
@@ -85,7 +91,7 @@ export default function Navbar() {
           }}
         >
           {/* Main Top Row (Header) */}
-          <div className="flex items-center justify-between px-3 sm:px-5 py-2 md:py-2.5 min-h-[56px] md:min-h-[62px]">
+          <div className="flex items-center justify-between px-3 sm:px-4 py-2 md:py-2.5 min-h-[56px] md:min-h-[62px]">
             {/* Brand Logo & Title */}
             <button
               type="button"
@@ -93,7 +99,7 @@ export default function Navbar() {
               className="flex items-center gap-2.5 sm:gap-3 cursor-pointer group focus:outline-none"
               aria-label="Nibble Computer Society - Home"
             >
-              <div className="relative h-[30px] sm:h-[34px] w-[68px] sm:w-[76px] shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative h-[28px] sm:h-[32px] w-[64px] sm:w-[72px] shrink-0 transition-transform duration-300 group-hover:scale-105">
                 <img
                   src={imgNcsLogo}
                   alt="NCS Logo"
@@ -103,7 +109,7 @@ export default function Navbar() {
             </button>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center gap-1 xl:gap-1.5 p-1 rounded-full bg-white/[0.04] border border-white/10 shadow-[inset_0px_1px_2px_rgba(0,0,0,0.5)]">
+            <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-full bg-white/[0.04] border border-white/10 shadow-[inset_0px_1px_2px_rgba(0,0,0,0.5)]">
               {navItems.map((item) => {
                 const Icon = item.icon
                 const isActive = activePage === item.page
@@ -113,7 +119,7 @@ export default function Navbar() {
                     key={item.page}
                     type="button"
                     onClick={() => onNavigate(item.path)}
-                    className={`relative flex items-center gap-1.5 h-[36px] px-3.5 xl:px-4 rounded-full cursor-pointer transition-colors duration-200 select-none text-[13px] xl:text-[14px] font-['Satoshi',Arial,sans-serif] ${
+                    className={`relative flex items-center gap-1.5 h-[34px] xl:h-[36px] px-2.5 xl:px-3.5 rounded-full cursor-pointer transition-colors duration-200 select-none text-[12px] xl:text-[13.5px] font-['Satoshi',Arial,sans-serif] ${
                       isActive
                         ? "text-white font-semibold"
                         : "text-white/65 hover:text-white font-medium hover:bg-white/[0.08]"

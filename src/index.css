@@ -261,4 +261,15 @@ html {
   z-index: 10;
 }
 
+/* Hide Spline 3D Watermark */
+spline-viewer #logo,
+spline-viewer a[href*="spline.design"],
+spline-viewer .spline-watermark {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+
 

@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import Events from "./pages/Events"
+import Gallery from "./pages/Gallery"
 import Project from "./pages/Project"
 import Teams from "./pages/Teams"
 import Alumni from "./pages/Alumni"
@@ -18,11 +20,12 @@ export default function App() {
   const getPageFromPath = (path) => {
     if (path === "/") return "Home"
     if (path === "/about") return "About"
+    if (path === "/events") return "Events"
+    if (path === "/gallery") return "Gallery"
     if (path === "/project") return "Project"
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
     if (path === "/recruitment") return "Recruitment"
-    if (path === "/gallery") return "Gallery"
     if (path === "/fan-carousel") return "Fan Carousel"
     return "Home"
   }
@@ -52,8 +55,8 @@ export default function App() {
           // On mobile, all pages (Home, About, Project, Recruitment, Team, Alumni) are natively responsive with mobile cards, so scale = 1.
           newScale = 1
         } else {
-          // On tablet/small-desktop, scale everything except Home
-          if (page === "Home") {
+          // On tablet/small-desktop, scale everything except natively responsive pages
+          if (page === "Home" || page === "Events" || page === "Gallery") {
             newScale = 1
           } else {
             newScale = Math.min(1, (screenW - padding) / baseW)
@@ -101,7 +104,7 @@ export default function App() {
       {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
 
       {/* Sticky/Fixed Navbar Always on Top */}
-      <header className="fixed top-0 inset-x-0 z-[100] flex justify-center pt-3 sm:pt-4 md:pt-6 pointer-events-none">
+      <header className="fixed top-0 inset-x-0 z-[100] flex justify-center pt-2 sm:pt-3 md:pt-4 pointer-events-none">
         <div className="w-full max-w-[1668px] px-3 sm:px-4 md:px-0 flex justify-center pointer-events-auto">
           <Navbar />
         </div>
@@ -110,7 +113,7 @@ export default function App() {
       {/* Responsive Scaled Page Content Layer */}
       <main
         ref={scrollRef}
-        className={`relative z-10 w-full flex ${needsHorizontalScroll ? 'justify-start overflow-x-auto scrollbar-hide' : 'justify-center'} pt-[76px] sm:pt-[84px] md:pt-[96px]`}
+        className={`relative z-10 w-full flex ${needsHorizontalScroll ? 'justify-start overflow-x-auto scrollbar-hide' : 'justify-center'} pt-[70px] sm:pt-[76px] md:pt-[84px]`}
         style={{
           height:
             contentHeight && scale < 1 ? `${contentHeight * scale}px` : "auto",
@@ -138,11 +141,12 @@ export default function App() {
               <Routes location={location}>
                 <Route path="/" element={<Home activePage={page} />} />
                 <Route path="/about" element={<About activePage={page} />} />
+                <Route path="/events" element={<Events activePage={page} />} />
+                <Route path="/gallery" element={<Gallery activePage={page} />} />
                 <Route path="/project" element={<Project activePage={page} />} />
                 <Route path="/team" element={<Teams activePage={page} />} />
                 <Route path="/alumni" element={<Alumni activePage={page} />} />
                 <Route path="/recruitment" element={<Recruitment activePage={page} />} />
-                <Route path="/gallery" element={<CircularGalleryDemo />} />
                 <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
               </Routes>
             </motion.div>

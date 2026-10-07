@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react"
 import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
@@ -117,6 +118,69 @@ const eventSlides = eventGalleryItems.map((item) => ({
 }))
 
 export default function Home({ activePage = "Home", onNavigate }) {
+  const splineRef = useRef(null)
+
+  useEffect(() => {
+    const hideSplineWatermark = () => {
+      const viewer = splineRef.current || document.querySelector("spline-viewer")
+      if (viewer?.shadowRoot) {
+        // Inject a stylesheet directly into shadow DOM to hide #logo
+        let style = viewer.shadowRoot.querySelector("#hide-spline-logo-style")
+        if (!style) {
+          style = document.createElement("style")
+          style.id = "hide-spline-logo-style"
+          style.textContent = `
+            #logo,
+            a[href*="spline.design"],
+            .spline-watermark,
+            [aria-label*="Spline"] {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+              width: 0 !important;
+              height: 0 !important;
+              position: absolute !important;
+              clip: rect(0, 0, 0, 0) !important;
+              clip-path: inset(50%) !important;
+            }
+          `
+          viewer.shadowRoot.appendChild(style)
+        }
+
+        const logo =
+          viewer.shadowRoot.querySelector("#logo") ||
+          viewer.shadowRoot.querySelector('a[href*="spline.design"]')
+        if (logo) {
+          logo.style.setProperty("display", "none", "important")
+          logo.style.setProperty("opacity", "0", "important")
+          logo.style.setProperty("visibility", "hidden", "important")
+          logo.style.setProperty("pointer-events", "none", "important")
+        }
+      }
+    }
+
+    hideSplineWatermark()
+
+    const viewer = splineRef.current || document.querySelector("spline-viewer")
+    if (viewer) {
+      viewer.addEventListener("load-complete", hideSplineWatermark)
+      viewer.addEventListener("loaded", hideSplineWatermark)
+    }
+
+    const interval = setInterval(hideSplineWatermark, 100)
+    const timeout = setTimeout(() => clearInterval(interval), 6000)
+
+    return () => {
+      clearInterval(interval)
+      clearTimeout(timeout)
+      if (viewer) {
+        viewer.removeEventListener("load-complete", hideSplineWatermark)
+        viewer.removeEventListener("loaded", hideSplineWatermark)
+      }
+    }
+  }, [])
+
   return (
     <div
       className="bg-transparent relative w-full max-w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0 overflow-hidden"
@@ -128,24 +192,25 @@ export default function Home({ activePage = "Home", onNavigate }) {
         data-node-id="1:25"
       >
         <div
-          className="content-stretch flex flex-col gap-10 sm:gap-14 md:gap-[50px] lg:gap-[60px] items-center relative shrink-0 w-full"
+          className="content-stretch flex flex-col gap-24 md:gap-[200px] items-center relative shrink-0 w-full"
           data-node-id="1:36"
         >
           <div
-            className="flex flex-col-reverse gap-6 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-auto md:min-h-[660px] pt-2 pb-6 md:py-4 md:-mt-[20px]"
+            className="flex flex-col-reverse gap-10 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[640px] lg:min-h-[700px] md:-mt-[40px]"
             data-node-id="1:37"
           >
-            {/* Right illustration with smooth floating animation */}
+            {/* Right illustration with Spline 3D Scene */}
             <div
-              className="relative z-0 animate-float w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] pointer-events-none select-none md:translate-y-0 mx-auto flex justify-center items-center"
+              className="relative z-0 w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] select-none md:translate-y-0 mx-auto flex justify-center items-center"
               data-node-id="1:38"
-              data-name="Hero Illustration"
+              data-name="Hero Spline 3D"
             >
-              <img
-                alt="NCS Hero Illustration"
-                className="block md:absolute inset-0 max-w-full md:max-w-none w-full h-auto md:size-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)] mx-auto"
-                src={publicAsset("assets/hero1.svg")}
-              />
+              <spline-viewer
+                ref={splineRef}
+                url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
+                className="w-full h-full block"
+                style={{ width: "100%", height: "100%" }}
+              ></spline-viewer>
             </div>
 
             {/* Left Typography & CTA */}
@@ -155,7 +220,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
             >
               <div className="flex flex-col not-italic items-center md:items-start relative shrink-0 w-full gap-4 md:gap-6">
                 <div
-                  className="bg-clip-text text-transparent font-['Satoshi',Arial,sans-serif] font-black text-[46px] xs:text-[56px] sm:text-[84px] md:text-[126px] leading-[1.05] tracking-[-0.04em] w-full md:w-[820px] select-none text-center md:text-left mx-auto md:mx-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                  className="bg-clip-text text-transparent font-['Satoshi',Arial,sans-serif] font-black text-[46px] xs:text-[56px] sm:text-[84px] md:text-[116px] lg:text-[126px] leading-[1.04] tracking-[-0.04em] w-full md:w-[820px] select-none text-center md:text-left mx-auto md:mx-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
                   data-node-id="1:42"
                   style={{
                     backgroundImage: "radial-gradient(50% 50% at 50% 50%, #FFFFFF 33.17%, #999999 100%)",
