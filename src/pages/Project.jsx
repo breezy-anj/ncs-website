@@ -4,14 +4,15 @@ import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import { ExternalLink } from "lucide-react"
 
 const assetPathPrefix = "/assets"
-const imgRectangle124 = `${assetPathPrefix}/0e70d.png`
-const imgRectangle125 = `${assetPathPrefix}/a201b.png`
-const imgRectangle126 = `${assetPathPrefix}/86c2d.png`
-const imgRectangle127 = `${assetPathPrefix}/12f0d.png`
-const imgRectangle128 = `${assetPathPrefix}/9fda2.png`
-const imgRectangle129 = `${assetPathPrefix}/92e35.png`
-const imgRectangle130 = `${assetPathPrefix}/ccb7c.png`
-const imgRectangle131 = `${assetPathPrefix}/5eeea.png`
+const projectAssetPrefix = "/projects"
+const imgJssInfotech = `${projectAssetPrefix}/jss-infotech.webp`
+const imgMcqModule = `${projectAssetPrefix}/Frame 2147239122.webp`
+const imgEventManager = `${projectAssetPrefix}/Frame 2147239123.webp`
+const imgTnPortal = `${projectAssetPrefix}/Frame 2147239128.webp`
+const imgKnowYourCollege = `${projectAssetPrefix}/Frame 2147239124.webp`
+const imgCodepad = `${projectAssetPrefix}/Frame 2147239125.webp`
+const imgRegistrationModule = `${projectAssetPrefix}/Frame 2147239127.webp`
+const imgPlexus = `${projectAssetPrefix}/Frame 2147239126.webp`
 const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`
 const imgVector = `${assetPathPrefix}/79f69.svg`
 const imgVector1 = `${assetPathPrefix}/54ba9.svg`
@@ -37,7 +38,7 @@ function ViewProjectButton({ url, className = "" }) {
 const allProjects = [
   {
     name: "JSS Infotech",
-    image: imgRectangle124,
+    image: imgJssInfotech,
     description:
       "A digital hub of knowledge, bringing you updates on notices, assignments, and placement opportunities.",
     technologies: ["Django", "Python", "PostgreSQL"],
@@ -45,7 +46,7 @@ const allProjects = [
   },
   {
     name: "MCQ Module",
-    image: imgRectangle125,
+    image: imgMcqModule,
     description:
       "Picture this: an online theater for teachers and societies, where multiple-choice questions take the stage and the results pop up like magic tricks!",
     technologies: ["Php", "Laravel", "MySQL"],
@@ -53,7 +54,7 @@ const allProjects = [
   },
   {
     name: "Event Manager",
-    image: imgRectangle126,
+    image: imgEventManager,
     description:
       "A college event-tracking web app, keeping students informed about daily happenings on campus. Stay in the loop, never miss out!",
     technologies: ["React", "Node", "MongoDB"],
@@ -61,7 +62,7 @@ const allProjects = [
   },
   {
     name: "T & P Portal",
-    image: imgRectangle127,
+    image: imgTnPortal,
     description:
       "An online portal for managing & automating the recruitment procedure for T&P Centre.",
     technologies: ["Python", "Html", "JavaScript"],
@@ -69,7 +70,7 @@ const allProjects = [
   },
   {
     name: "Know Your College",
-    image: imgRectangle128,
+    image: imgKnowYourCollege,
     description:
       "'Know Your College', is a nifty web application that's your virtual compass for navigating the expansive world of JSS. It's your go-to guide for unraveling the intriguing corners of the college and its lively neighborhood.",
     technologies: ["React", "Node", "MongoDB"],
@@ -77,7 +78,7 @@ const allProjects = [
   },
   {
     name: "Codepad",
-    image: imgRectangle129,
+    image: imgCodepad,
     description:
       "An online IDE (compiler) for running programs in C, C++, Python, Java with frequent questions to solve.",
     technologies: ["PHP", "Laravel", "MySQL"],
@@ -85,7 +86,7 @@ const allProjects = [
   },
   {
     name: "Registration Module",
-    image: imgRectangle130,
+    image: imgRegistrationModule,
     description:
       "A platform for registration of students with record of their Unique IDs for various events like Zealicon.",
     technologies: ["JavaScript"],
@@ -93,7 +94,7 @@ const allProjects = [
   },
   {
     name: "Plexus",
-    image: imgRectangle131,
+    image: imgPlexus,
     description:
       "It is an online platform to host all kinds of digital events like Quizes etc. without any friction or technical know-how.",
     technologies: ["PHP", "Laravel", "MySQL"],
@@ -154,6 +155,8 @@ export default function Project({ activePage = "Project", onNavigate }) {
                   <div className="relative w-[82%] h-[60%] border-2 border-white rounded-[6px] overflow-hidden shadow-inner bg-black/40">
                     <img
                       alt={project.name}
+                      loading="lazy"
+                      decoding="async"
                       className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                       src={project.image}
                     />
@@ -228,9 +231,11 @@ export default function Project({ activePage = "Project", onNavigate }) {
                     >
                       <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <img
-                          alt=""
-                          className="absolute h-[131.12%] left-[-22.03%] max-w-none top-[-15.28%] w-[144.06%] transition-transform duration-500 group-hover:scale-105"
-                          src={imgRectangle124}
+                          alt="JSS Infotech"
+                          loading="lazy"
+                          decoding="async"
+                          className="size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          src={imgJssInfotech}
                         />
                       </div>
                     </div>
@@ -337,8 +342,10 @@ export default function Project({ activePage = "Project", onNavigate }) {
                       <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <img
                           alt="MCQ Module"
-                          className="absolute h-[131.12%] left-[-22.03%] max-w-none top-[-15.28%] w-[144.06%] transition-transform duration-500 group-hover:scale-105"
-                          src={imgRectangle125}
+                          loading="lazy"
+                          decoding="async"
+                          className="size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          src={imgMcqModule}
                         />
                       </div>
                     </div>
@@ -447,8 +454,10 @@ export default function Project({ activePage = "Project", onNavigate }) {
                       <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <img
                           alt="Event Manager"
-                          className="absolute h-[131.12%] left-[-22.03%] max-w-none top-[-15.28%] w-[144.06%] transition-transform duration-500 group-hover:scale-105"
-                          src={imgRectangle126}
+                          loading="lazy"
+                          decoding="async"
+                          className="size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          src={imgEventManager}
                         />
                       </div>
                     </div>
@@ -557,8 +566,10 @@ export default function Project({ activePage = "Project", onNavigate }) {
                       <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <img
                           alt="T & P Portal"
-                          className="absolute h-[131.12%] left-[-21.89%] max-w-none top-[-7.63%] w-[144.06%] transition-transform duration-500 group-hover:scale-105"
-                          src={imgRectangle127}
+                          loading="lazy"
+                          decoding="async"
+                          className="size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          src={imgTnPortal}
                         />
                       </div>
                     </div>
@@ -644,7 +655,9 @@ export default function Project({ activePage = "Project", onNavigate }) {
                         <div className="absolute inset-0 overflow-hidden pointer-events-none">
                           <img
                             alt={project.name}
-                            className="absolute h-[131.12%] left-[-22.03%] max-w-none top-[-15.28%] w-[144.06%] transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                            decoding="async"
+                            className="size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                             src={project.image}
                           />
                         </div>

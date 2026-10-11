@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Calendar, Sparkles, Trophy, ExternalLink, Code2, Users, Rocket } from "lucide-react"
+import { Calendar, Trophy, ExternalLink, Code2, Users, Rocket } from "lucide-react"
 import CarouselStacked from "../components/ui/carousel-07"
 import Footer from "../components/Footer"
 import { publicAsset } from "../lib/publicAsset"
@@ -135,16 +135,6 @@ export default function Events({ activePage = "Events", onNavigate }) {
       <div className="content-stretch flex flex-col gap-10 sm:gap-14 md:gap-[50px] items-center w-full max-w-[1518px] px-4 md:px-8">
         {/* Hero Section */}
         <div className="flex flex-col items-center text-center gap-4 sm:gap-6 w-full max-w-[1280px] pt-4 sm:pt-6">
-          <motion.div
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-white/80 text-xs sm:text-sm font-['Satoshi',Arial,sans-serif] tracking-wider uppercase backdrop-blur-md"
-          >
-            <Sparkles size={14} className="text-yellow-400" />
-            <span>NCS Flagship Gatherings</span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}

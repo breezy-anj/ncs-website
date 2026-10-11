@@ -271,5 +271,14 @@ spline-viewer .spline-watermark {
   pointer-events: none !important;
 }
 
+/* Hide fixed Navbar when Photo Booth modal is open */
+body.photo-booth-open header {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-100%) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
 
 

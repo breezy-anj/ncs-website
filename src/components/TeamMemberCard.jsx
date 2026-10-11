@@ -233,6 +233,15 @@ export default function TeamMemberCard({
             <div className={cleanPhotoClasses || "-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow"}>
               <img alt={fullName} className={imgClasses} src={image} />
             </div>
+
+            {/* Bottom gradient vignette (increased opacity & richer contrast when hovered) */}
+            <div
+              className="-translate-x-1/2 absolute h-[290px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[310px] w-[200px] pointer-events-none"
+              style={{
+                backgroundImage:
+                  "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0.96) 45%, rgb(0, 0, 0) 70%, rgb(0, 0, 0) 100%)",
+              }}
+            />
           </div>
         </div>
       </div>
