@@ -278,7 +278,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <div
                 className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
@@ -319,7 +319,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
               <div
                 className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
@@ -363,22 +363,22 @@ export default function Home({ activePage = "Home", onNavigate }) {
               className="hidden md:flex flex-col gap-12 md:gap-[90px] items-stretch relative shrink-0 w-full"
               data-node-id="1:50"
             >
-              {/* Row 1: PROGRAMMING + Yellow Card */}
+              {/* Row 1: PROGRAMMING + Pink Card */}
               <div
                 className="group flex flex-col md:flex-row items-center justify-center w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] gap-6 md:gap-[80px]"
                 data-node-id="1:52"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:53"
                 >
                   PROGRAMMING
                 </p>
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
+                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
                   data-node-id="1:54"
                   style={{
-                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
                   }}
                 >
                   <svg className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -426,22 +426,22 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </p>
               </div>
 
-              {/* Row 3: DESIGNING + Pink Card */}
+              {/* Row 3: DESIGNING + Yellow Card */}
               <div
                 className="group flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[35px] w-full md:ml-[60px] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:60"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:61"
                 >
                   DESIGNING
                 </p>
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
+                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
                   data-node-id="1:62"
                   style={{
-                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
                   }}
                 >
                   <img

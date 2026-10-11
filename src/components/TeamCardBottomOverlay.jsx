@@ -37,7 +37,7 @@ export default function TeamCardBottomOverlay({ children, linkedinUrl, githubUrl
 
       {/* Desktop Hover State: custom bio / lorem ipsum + social links on desktop hover only */}
       <div className="hidden md:flex absolute bottom-0 inset-x-0 h-[215px] flex-col items-center justify-end gap-5 text-center px-3 pb-6 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-400 ease-out z-30">
-        <p className="font-['Inter'] font-medium text-[11px] sm:text-[11.5px] leading-[1.35] text-white/95 tracking-[-0.01em] max-w-[174px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+        <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[13px] sm:text-[13.5px] leading-[1.4] text-white/80 tracking-[-0.01em] max-w-[176px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
           {finalBio}
         </p>
         <div className="flex items-center justify-center gap-3 shrink-0">

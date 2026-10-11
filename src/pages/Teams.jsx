@@ -1,3 +1,4 @@
+import TeamMemberCard from "../components/TeamMemberCard";
 import TeamCardBottomOverlay from "../components/TeamCardBottomOverlay";
 import ProfileCardGhostOverlay from "../components/ProfileCardGhost";
 import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
@@ -81,285 +82,153 @@ export default function Team() {
                 <ResponsiveWaveGrid>
                   <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:34">
                   
-<div className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:35">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
-      <ProfileCardGhostOverlay src={imgRectangle31} />
-
-      <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:36">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle31} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:37" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:38">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:39">
-                        <p className="leading-[1.25] mb-0">Pranjyaditya</p>
-                        <p className="leading-[1.25] mb-0">Singh</p>
-                        <p className="leading-[1.25]">Chauhan</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:40">
-                        HOC Design
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:35"
+  image={imgRectangle31}
+  color="#ffc931"
+  word="DESIGN"
+  nameParts={["Pranjyaditya","Singh","Chauhan"]}
+  designation="HOC Design"
+  photoClasses="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.instagram.com/pranjyaditya/?hl=en","https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:41">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle32} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:42">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle32} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:43" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/om-tripathi-67332b26a/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:44">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:45">
-                        <p className="leading-[1.25] mb-0">Om</p>
-                        <p className="leading-[1.25]">Tripathi</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:46">
-                        HOC Programming
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:41"
+  image={imgRectangle32}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Om","Tripathi"]}
+  designation="HOC Programming"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/om-tripathi-67332b26a/","https://github.com/OmTripathi7095"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:47">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
-      <ProfileCardGhostOverlay src={imgRectangle33} />
-
-      <div className="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:48">
-                      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle33} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:49" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay>
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:50">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:51">
-                        <p className="leading-[1.25] mb-0">Ajeet</p>
-                        <p className="leading-[1.25]">Bharti</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:52">
-                        Creative Head
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:47"
+  image={imgRectangle33}
+  color="#ffc931"
+  word="DESIGN"
+  nameParts={["Ajeet","Bharti"]}
+  designation="Creative Head"
+  photoClasses="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+  socialLinks={["https://www.instagram.com/ajeet_3d/","https://www.linkedin.com/in/ajeet-bharti-191b94212"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:53">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle34} />
-
-      <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-12.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[106px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:54">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle34} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:55" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" bio="Caught somewhere between “Proceed to code” and “Why is this working?”">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:56">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:57">
-                        <p className="leading-[1.25] mb-0">Ajinkya</p>
-                        <p className="leading-[1.25]">Mishra</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:58">
-                        CTC
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:53"
+  image={imgRectangle34}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Ajinkya","Mishra"]}
+  designation="CTC"
+  photoClasses="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-12.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[106px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://github.com/AjinkyaMishra","https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"]}
+  bio="Caught somewhere between “Proceed to code” and “Why is this working?”"
+/>
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:59">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle35} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:60">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle35} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:61" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/kuldeepchaudhary108/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:62">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:63">
-                        <p className="leading-[1.25] mb-0">Kuldeep</p>
-                        <p className="leading-[1.25]">Chaudhary</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:64">
-                        President
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:59"
+  image={imgRectangle35}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Kuldeep","Chaudhary"]}
+  designation="President"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/kuldeepchaudhary108/","https://github.com/Kuldeepchaudhary108/"]}
+/>
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[651px] mt-[192px] place-items-start relative row-1" data-node-id="1:65">
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:66">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle36} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:67">
-                        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle36} />
-                      </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:68" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/pranjal-gupta-766898323">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:69">
-                        <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:70">
-                          <p className="leading-[1.25] mb-0">Pranjal</p>
-                          <p className="leading-[1.25]">Gupta</p>
-                        </div>
-                        <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:71">
-                          Finance Head
-                        </p>
-                      </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:66"
+  image={imgRectangle36}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Pranjal","Gupta"]}
+  designation="Finance Head"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/pranjal-gupta-766898323","https://github.com/PranjalGupta280","https://x.com/TechnoVerse007c"]}
+/>
                   </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:72">
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:73">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle37} />
-
-      <div className="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:74">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle37} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:75" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/naziya-parveen-769428303/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:76">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:77">
-                        <p className="leading-[1.25] mb-0">Naziya</p>
-                        <p className="leading-[1.25]">Praveen</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:78">
-                        HOC Development
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:73"
+  image={imgRectangle37}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Naziya","Praveen"]}
+  designation="HOC Development"
+  photoClasses="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/naziya-parveen-769428303/"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:79">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle38} />
-
-      <div className="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:80">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle38} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:81" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/gaurang-agarwal-a83688277/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:82">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:83">
-                        <p className="leading-[1.25] mb-0">Gaurang</p>
-                        <p className="leading-[1.25]">Agarwal</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:84">
-                        General Secretary
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:79"
+  image={imgRectangle38}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Gaurang","Agarwal"]}
+  designation="General Secretary"
+  photoClasses="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/gaurangagarwal12","https://x.com/Gaurangagar"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[651px] mt-[186px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:85">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle39} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:86">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle39} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:87" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/vibha-gupta-841961280/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:88">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:89">
-                        <p className="leading-[1.25] mb-0">Vibha</p>
-                        <p className="leading-[1.25]">Gupta</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:90">
-                        General Secretary
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[651px] mt-[186px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:85"
+  image={imgRectangle39}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Vibha","Gupta"]}
+  designation="General Secretary"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/vibha-gupta-257952296/","https://github.com/vibha32145"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:91">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle40} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:92">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle40} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:93" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shivam-goyal-a973a5281/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:94">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:95">
-                        <p className="leading-[1.25] mb-0">Shivam</p>
-                        <p className="leading-[1.25]">Goyal</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:96">
-                        Management Head
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:91"
+  image={imgRectangle40}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Shivam","Goyal"]}
+  designation="Management Head"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.instagram.com/shivushivam_?igsh=MThuM2Z3dmduaDdieg==","https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[189px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:97">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle41} />
-
-      <div className="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:98">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle41} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:99" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/khushi-mishra-a110a1281/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:100">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:101">
-                        <p className="leading-[1.25] mb-0">Khushi</p>
-                        <p className="leading-[1.25]">Mishra</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:102">
-                        Media Head
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-[189px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:97"
+  image={imgRectangle41}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Khushi","Mishra"]}
+  designation="Media Head"
+  photoClasses="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/khushi-mishra-86502a26a","https://github.com/khushi8511"]}
+/>
                   </div>
                 </ResponsiveWaveGrid>
               </div>
@@ -370,335 +239,181 @@ export default function Team() {
                 <ResponsiveWaveGrid>
                   <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:105">
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:106">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle42} />
-
-      <div className="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[110px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:107">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle42} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:108" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/anshika-saini-4876b528b">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:109">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:110">
-                        <p className="leading-[1.25] mb-0">Anshika</p>
-                        <p className="leading-[1.25]">Saini</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:111">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:106"
+  image={imgRectangle42}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Anshika","Saini"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[110px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/anshika-saini-581885350"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:112">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle43} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:113">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle43} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:114" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aryan-singh-665b16260">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:115">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:116">
-                        <p className="leading-[1.25] mb-0">Aryan</p>
-                        <p className="leading-[1.25]">Singh</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:117">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:112"
+  image={imgRectangle43}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Aryan","Singh"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/aryan-singh-661819286/","https://github.com/Coder-Aryan09"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[650.89px] mt-[178.26px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:118">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle44} />
-
-      <div className="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:119">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle44} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:120" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/utkarsh-shukla-310340277">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:121">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:122">
-                        <p className="leading-[1.25] mb-0">Utkarsh</p>
-                        <p className="leading-[1.25]">Shukla</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:123">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[650.89px] mt-[178.26px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:118"
+  image={imgRectangle44}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Utkarsh","Shukla"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://x.com/Utkarsh00018232","https://www.linkedin.com/in/utkarsh-shukla-b2442b329/"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:124">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle45} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:125">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle45} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:126" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shreyansh-pandey-88b90b290">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:127">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:128">
-                        <p className="leading-[1.25] mb-0">Shreyansh</p>
-                        <p className="leading-[1.25]">Pandey</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:129">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:124"
+  image={imgRectangle45}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Shreyansh","Pandey"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  socialLinks={["https://x.com/shrey_007","https://www.linkedin.com/in/shreyansh-pandey-54949730b"]}
+/>
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:130">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
-      <ProfileCardGhostOverlay src={imgRectangle46} />
-
-      <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:131">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle46} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:132" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/athrva-gupta-6126b428b">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:133">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:134">
-                        <p className="leading-[1.25] mb-0">Athrva</p>
-                        <p className="leading-[1.25]">Gupta</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:135">
-                        Designer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:130"
+  image={imgRectangle46}
+  color="#ffc931"
+  word="DESIGN"
+  nameParts={["Athrva","Gupta"]}
+  designation="Designer"
+  photoClasses="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/athrva-gupta-93936736a"]}
+/>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:136">
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:137">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle47} />
-
-      <div className="-translate-x-1/2 absolute h-[548px] left-[calc(50%+13px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[368px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:138">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle47} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:139" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shivangi-trivedi-02758128b">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:140">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:141">
-                        <p className="leading-[1.25] mb-0">Shivangi</p>
-                        <p className="leading-[1.25]">Trivedi</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:142">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:137"
+  image={imgRectangle47}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Shivangi","Trivedi"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[548px] left-[calc(50%+13px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[368px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/shivangi-trivedi031"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:143">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle48} />
-
-      <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:144">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle48} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:145" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ayush-vashisth-4600a5338">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:146">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:147">
-                        <p className="leading-[1.25] mb-0">Ayush</p>
-                        <p className="leading-[1.25]">Vashisth</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:148">
-                        Developer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:143"
+  image={imgRectangle48}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Ayush","Vashisth"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://x.com/ayushv005","https://www.linkedin.com/in/ayush-vashisth-4600a5338","https://github.com/vasayu"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[650.89px] mt-[160px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:149">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle50} />
-
-      <div className="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:156">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle50} />
-      </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:157" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay>
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:158">
-          <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:159">
-            <p className="leading-[1.25] mb-0">Lakshya</p>
-            <p className="leading-[1.25]">Dubey</p>
-          </div>
-          <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:160">
-            Developer
-          </p>
-        </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[650.89px] mt-[160px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:149"
+  image={imgRectangle50}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Lakshya","Dubey"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  socialLinks={["https://x.com/Lakshya92116503","https://www.linkedin.com/in/lakshya-dubey01/","https://github.com/lakshya-byte"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[867.89px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:161">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle51} />
-
-      <div className="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:162">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle51} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:163" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:164">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:165">
-                        <p className="leading-[1.25] mb-0">Shreyansh</p>
-                        <p className="leading-[1.25] mb-0">Shekhar</p>
-                        <p className="leading-[1.25]">Dwivedi</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:166">
-                        Developer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[867.89px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:161"
+  image={imgRectangle51}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Shreyansh","Shekhar","Dwivedi"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://x.com/ShreyanshD44145","https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320"]}
+/>
                   
-<div className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:167">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle49} />
-
-      <div className="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:174">
-        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle49} />
-      </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:175" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay bio="A collection of oddly specific interests, endless rabbit holes, and whatever I’m obsessed with this week.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:176">
-          <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:177">
-            <p className="leading-[1.25] mb-0">Shreyansh</p>
-            <p className="leading-[1.25]">Shrivastava</p>
-          </div>
-          <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:178">
-            Programmer
-          </p>
-        </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:167"
+  image={imgRectangle49}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Shreyansh","Shrivastava"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/shreyansh-shrivastva-416956300/"]}
+  bio="A collection of oddly specific interests, endless rabbit holes, and whatever I’m obsessed with this week."
+/>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:179">
                   
-<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:180">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
-      <ProfileCardGhostOverlay src={imgRectangle52} />
-
-      <div className="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:181">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle52} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:182" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/pragati-rajput-747667332/" bio="Curious, ambitious, and a little unpredictable. I think deeply, dream big, and love making things happen.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:183">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:184">
-                        <p className="leading-[1.25] mb-0">Pragati</p>
-                        <p className="leading-[1.25]">Rajput</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:185">
-                        Technical
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:180"
+  image={imgRectangle52}
+  color="#b3fd44"
+  word="TECHNICAL"
+  nameParts={["Pragati","Rajput"]}
+  designation="Technical"
+  photoClasses="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/pragati-rajput-96100432b","https://github.com/Pragati132005","https://x.com/PragatiRaj1794?t=JJJVoQNak437wk0uUept5w&s=09"]}
+  bio="Curious, ambitious, and a little unpredictable. I think deeply, dream big, and love making things happen."
+/>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:186">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
-      <ProfileCardGhostOverlay src={imgRectangle53} />
-
-      <div className="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:187">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle53} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:188" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/vishnu-tiwari-930267332/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:189">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:190">
-                        <p className="leading-[1.25] mb-0">Vishnu</p>
-                        <p className="leading-[1.25]">Tiwari</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:191">
-                        Technical
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:186"
+  image={imgRectangle53}
+  color="#b3fd44"
+  word="TECHNICAL"
+  nameParts={["Vishnu","Tiwari"]}
+  designation="Technical"
+  photoClasses="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/vishnu-tiwari-930267332/"
+/>
                   
-<div className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:192">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle54} />
-
-      <div className="-translate-x-1/2 absolute h-[472px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[25px] w-[305px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:193">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle54} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:194" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/" bio="Curious by nature, always building and experimenting. Love tech, good conversations, and late-night ideas. Here to learn, create, and enjoy the journey.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:195">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:196">
-                        <p className="leading-[1.25] mb-0">Aditya</p>
-                        <p className="leading-[1.25]">Kumar</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:197">
-                        Developer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:192"
+  image={imgRectangle54}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Aditya","Kumar"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[472px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[25px] w-[305px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/"
+  bio="Curious by nature, always building and experimenting. Love tech, good conversations, and late-night ideas. Here to learn, create, and enjoy the journey."
+/>
                   </div>
                 </ResponsiveWaveGrid>
               </div>
@@ -709,360 +424,205 @@ export default function Team() {
                 <ResponsiveWaveGrid>
                   <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:200">
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:201">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
-      <ProfileCardGhostOverlay src={imgRectangle55} />
-
-      <div className="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:202">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle55} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:203" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/darshita-jain-56747b31a/" bio="Designer by passion, creative by nature, fashion enthusiast by choice. I love experimenting with visuals, aesthetics, and style to create things that feel uniquely mine.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:204">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:205">
-                        <p className="leading-[1.25] mb-0">Darshita</p>
-                        <p className="leading-[1.25]">Jain</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:206">
-                        Designer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:201"
+  image={imgRectangle55}
+  color="#ffc931"
+  word="DESIGN"
+  nameParts={["Darshita","Jain"]}
+  designation="Designer"
+  photoClasses="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/darshita-jain-56747b31a/"
+  bio="Designer by passion, creative by nature, fashion enthusiast by choice. I love experimenting with visuals, aesthetics, and style to create things that feel uniquely mine."
+/>
                   
-<div className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:207">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
-      <ProfileCardGhostOverlay src={imgRectangle56} />
-
-      <div className="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:208">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle56} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:209" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/piyush-gautam-625478332/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:210">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:211">
-                        <p className="leading-[1.25] mb-0">Piyush</p>
-                        <p className="leading-[1.25]">Gautam</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:212">
-                        Designer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:207"
+  image={imgRectangle56}
+  color="#ffc931"
+  word="DESIGN"
+  nameParts={["Piyush","Gautam"]}
+  designation="Designer"
+  photoClasses="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/piyush-gautam-625478332/"
+/>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:213">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#ffc931" word="DESIGN" />
-      <ProfileCardGhostOverlay src={imgRectangle57} />
-
-      <div className="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:214">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle57} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:215" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/bhaskar-shah-455478332/">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:216">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:217">
-                        <p className="leading-[1.25] mb-0">Bhaskar</p>
-                        <p className="leading-[1.25]">Shah</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:218">
-                        Designer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:213"
+  image={imgRectangle57}
+  color="#ffc931"
+  word="DESIGN"
+  nameParts={["Bhaskar","Shah"]}
+  designation="Designer"
+  photoClasses="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/bhaskar-shah-455478332/"
+/>
                   
-<div className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:219">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle58} />
-
-      <div className="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:220">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle58} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:221" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/karnika-singh-465478332/" bio="Quiet interface, organised setup. CP runner with a curious mind , passionate about tech and bringing good vibe.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:222">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:223">
-                        <p className="leading-[1.25]">Karnika</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:224">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:219"
+  image={imgRectangle58}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Karnika"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/karnika-singh-465478332/"
+  bio="Quiet interface, organised setup. CP runner with a curious mind , passionate about tech and bringing good vibe."
+/>
                   
-<div className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:225">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle59} />
-
-      <div className="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:226">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle59} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:227" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aanya-gogia-585478332/" bio="A tech enthusiast who enjoys coding, competitive programming, and trying out new things. Always learning, building, and having fun along the way.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:228">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:229">
-                        <p className="leading-[1.25] mb-0">Aanya</p>
-                        <p className="leading-[1.25]">Gogia</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:230">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:225"
+  image={imgRectangle59}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Aanya","Gogia"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/aanya-gogia-585478332/"
+  bio="A tech enthusiast who enjoys coding, competitive programming, and trying out new things. Always learning, building, and having fun along the way."
+/>
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[869px] mt-0 place-items-start relative row-1" data-node-id="1:231">
                     
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:232">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle60} />
-
-      <div className="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:233">
-                        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle60} />
-                      </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:234" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sidhi-saxena-885478332/" bio="A curious mind, a passionate programmer, and a dancer at heart. I love solving problems, exploring new ideas, and bringing positive energy wherever I go.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:235">
-                        <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:236">
-                          <p className="leading-[1.25] mb-0">Sidhi</p>
-                          <p className="leading-[1.25]">Saxena</p>
-                        </div>
-                        <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:237">
-                          Programmer
-                        </p>
-                      </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:232"
+  image={imgRectangle60}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Sidhi","Saxena"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/sidhi-saxena-885478332/"
+  bio="A curious mind, a passionate programmer, and a dancer at heart. I love solving problems, exploring new ideas, and bringing positive energy wherever I go."
+/>
                   </div>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:238">
                   
-<div className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:239">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle61} />
-
-      <div className="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:240">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle61} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:241" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishka-israni-685478332/" bio="A curious tech enthusiast who loves turning ideas into real projects. Always up for hackathons, learning something new, and trying things beyond my comfort zone. Creative and always looking for the next challenge.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:242">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:243">
-                        <p className="leading-[1.25] mb-0">Tanishka</p>
-                        <p className="leading-[1.25]">Israni</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:244">
-                        Developer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:239"
+  image={imgRectangle61}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Tanishka","Israni"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/tanishka-israni-685478332/"
+  bio="A curious tech enthusiast who loves turning ideas into real projects. Always up for hackathons, learning something new, and trying things beyond my comfort zone. Creative and always looking for the next challenge."
+/>
                   
-<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:245">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle62} />
-
-      <div className="-translate-x-1/2 absolute h-[679px] left-[calc(50%-0.91px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-149.74px] w-[421px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:246">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle62} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:247" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/saishree-saxena-785478332/" bio="heyo peeps, sai here, i like building new stuff and get in awe with it, currently in 2nd year, I love leading a slow life, also i love music and groovin duhh.Also, imma barbie girl in the cs world~ haha">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:248">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:249">
-                        <p className="leading-[1.25] mb-0">Saishree</p>
-                        <p className="leading-[1.25]">Saxena</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:250">
-                        Developer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[651px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:245"
+  image={imgRectangle62}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Saishree","Saxena"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[679px] left-[calc(50%-0.91px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-149.74px] w-[421px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/saishree-saxena-785478332/"
+  bio="heyo peeps, sai here, i like building new stuff and get in awe with it, currently in 2nd year, I love leading a slow life, also i love music and groovin duhh.Also, imma barbie girl in the cs world~ haha"
+/>
                   
-<div className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:251">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle63} />
-
-      <div className="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:252">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle63} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:253" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/aryan-singh-885478332/" bio="My Codes have trust issues with the Time Limit">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:254">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:255">
-                        <p className="leading-[1.25] mb-0">Aryan</p>
-                        <p className="leading-[1.25]">Singh</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:256">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:251"
+  image={imgRectangle63}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Aryan","Singh"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  socialLinks={["https://www.linkedin.com/in/aryan-singh-661819286/","https://github.com/Coder-Aryan09"]}
+  bio="My Codes have trust issues with the Time Limit"
+/>
                   
-<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:257">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle64} />
-
-      <div className="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:258">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle64} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:259" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/" bio="I write code like I make jokes: recklessly, unnecessarily, and usually wrong.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:260">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:261">
-                        <p className="leading-[1.25] mb-0 whitespace-pre">{`Sanskar `}</p>
-                        <p className="leading-[1.25] whitespace-pre">Pal</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:262">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:257"
+  image={imgRectangle64}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Sanskar","Pal"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/"
+  bio="I write code like I make jokes: recklessly, unnecessarily, and usually wrong."
+/>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:263">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#feb9ce" word="PROGRAM" />
-      <ProfileCardGhostOverlay src={imgRectangle65} />
-
-      <div className="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:264">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle65} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:265" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/" bio="I enjoy writing code, but sometimes my code becomes my next problem. 🫠">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:266">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:267">
-                        <p className="leading-[1.25] mb-0">Mohd</p>
-                        <p className="leading-[1.25]">Fahad</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:268">
-                        Programmer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:263"
+  image={imgRectangle65}
+  color="#feb9ce"
+  word="PROGRAM"
+  nameParts={["Mohd","Fahad"]}
+  designation="Programmer"
+  photoClasses="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/"
+  bio="I enjoy writing code, but sometimes my code becomes my next problem. 🫠"
+/>
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:269">
                   
-<div className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer" data-node-id="1:270">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
-      <ProfileCardGhostOverlay src={imgRectangle66} />
-
-      <div className="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:271">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle66} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:272" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/tanishq-marwari-185478332/" bio="Professional overthinker Part time coder Full time learner">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:273">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:274">
-                        <p className="leading-[1.25] mb-0">Tanishq</p>
-                        <p className="leading-[1.25]">Marwari</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:275">
-                        Technical
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:270"
+  image={imgRectangle66}
+  color="#b3fd44"
+  word="TECHNICAL"
+  nameParts={["Tanishq","Marwari"]}
+  designation="Technical"
+  photoClasses="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/tanishq-marwari-185478332/"
+  bio="Professional overthinker Part time coder Full time learner"
+/>
                   
-<div className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:276">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#e4dcd2" word="TECHNICAL" />
-      <ProfileCardGhostOverlay src={imgRectangle67} />
-
-      <div className="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:277">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle67} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:278" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/" bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:279">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:280">
-                        <p className="leading-[1.25] mb-0">Ansh</p>
-                        <p className="leading-[1.25]">Mittal</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:281">
-                        Technical
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:276"
+  image={imgRectangle67}
+  color="#b3fd44"
+  word="TECHNICAL"
+  nameParts={["Ansh","Mittal"]}
+  designation="Technical"
+  photoClasses="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/"
+  bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶."
+/>
                   
-<div className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer" data-node-id="1:282">
-  <div className="relative h-full w-full">
-    <div className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px]">
-      <ProfileCardBackdrop color="#cbd5d4" word="DEVELOP" />
-      <ProfileCardGhostOverlay src={imgRectangle68} />
-
-      <div className="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]" data-node-id="1:283">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle68} />
-                    </div>
-      <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none" data-node-id="1:284" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
-      <TeamCardBottomOverlay linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/" bio="Everyone knows that development is the real coding.">
-        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:285">
-                      <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white" data-node-id="1:286">
-                        <p className="leading-[1.25] mb-0">Anjneya</p>
-                        <p className="leading-[1.25]">Singh</p>
-                      </div>
-                      <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]" data-node-id="1:287">
-                        Developer
-                      </p>
-                    </div>
-      </TeamCardBottomOverlay>
-    </div>
-  </div>
-</div>
+<TeamMemberCard
+  className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+  dataNodeId="1:282"
+  image={imgRectangle68}
+  color="#6663ff"
+  word="DEVELOP"
+  nameParts={["Anjneya","Singh"]}
+  designation="Developer"
+  photoClasses="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/"
+  bio="Everyone knows that development is the real coding."
+/>
                   </div>
                 </ResponsiveWaveGrid>
               </div>
