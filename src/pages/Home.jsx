@@ -20,6 +20,7 @@ const imgRectangle48 = `${assetPathPrefix}/bb76c.png`
 const imgRectangle50 = `${assetPathPrefix}/78cf7.png`
 const imgNcsLogo = `${assetPathPrefix}/8f22e.svg`
 const imgNcsLogoWhite = publicAsset("assets/ncs-logo-white.svg")
+const imgRobotStatic = publicAsset("assets/robot-static.webp")
 const imgVector = `${assetPathPrefix}/69fdb.svg`
 const imgVector1 = `${assetPathPrefix}/67b5d.svg`
 const imgGroup1000002935 = `${assetPathPrefix}/84ab0.svg`
@@ -127,6 +128,16 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
   useEffect(() => {
     setIsMounted(true)
+
+    // On mobile screens, the static image is displayed instantly, so no 3D loading overlay needed
+    const isMobileScreen = typeof window !== "undefined" && window.innerWidth < 768
+    if (isMobileScreen) {
+      setIsSplineLoaded(true)
+      document.body.style.overflow = ""
+      document.body.classList.remove("spline-loading")
+      return
+    }
+
     document.body.style.overflow = "hidden"
     document.body.classList.add("spline-loading")
 
@@ -290,23 +301,57 @@ export default function Home({ activePage = "Home", onNavigate }) {
           data-node-id="1:36"
         >
           <div
-            className="flex flex-col-reverse gap-4 sm:gap-6 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[640px] lg:min-h-[700px] md:-mt-[40px]"
+            className="flex flex-col-reverse gap-6 sm:gap-8 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[640px] lg:min-h-[700px] md:-mt-[40px]"
             data-node-id="1:37"
           >
-            {/* Right illustration with Spline 3D Scene (Smaller, uncropped, static & non-interactive on mobile, interactive on desktop) */}
+            {/* Mobile View: Static Robot Image with Infinite Multi-axis Floating Effect */}
             <div
-              className="relative z-0 w-full max-w-[240px] xs:max-w-[270px] sm:max-w-[300px] h-[210px] xs:h-[235px] sm:h-[265px] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] select-none md:translate-y-0 mx-auto flex justify-center items-center pointer-events-none md:pointer-events-auto touch-pan-y my-1 sm:my-2 md:my-0"
+              className="relative z-0 block md:hidden w-full max-w-[210px] xs:max-w-[230px] sm:max-w-[260px] h-[190px] xs:h-[210px] sm:h-[240px] mx-auto mt-12 xs:mt-16 sm:mt-20 mb-8 select-none pointer-events-none flex flex-col items-center justify-center"
+              data-node-id="1:38-mobile"
+              data-name="Hero Static Robot"
+            >
+              <motion.img
+                animate={{
+                  y: [0, -14, 2, -10, 0],
+                  x: [0, 4, -3, 3, 0],
+                  rotate: [0, 2.5, -2, 1.5, 0],
+                }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                src={imgRobotStatic}
+                alt="Nibble Robot"
+                className="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)]"
+              />
+              {/* Dynamic floating shadow beneath */}
+              <motion.div
+                animate={{
+                  scaleX: [1, 0.82, 1.05, 0.88, 1],
+                  opacity: [0.4, 0.22, 0.45, 0.28, 0.4],
+                }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="w-28 h-2.5 rounded-full bg-black/60 blur-[6px] -mt-1 pointer-events-none"
+              />
+            </div>
+
+            {/* Desktop View: Full Interactive 3D Spline Scene */}
+            <div
+              className="relative z-0 hidden md:flex md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] select-none md:translate-y-0 mx-auto justify-center items-center pointer-events-auto"
               data-node-id="1:38"
               data-name="Hero Spline 3D"
             >
-              <div className="w-[520px] h-[460px] scale-[0.42] xs:scale-[0.46] sm:scale-[0.52] md:w-full md:h-full md:scale-100 flex items-center justify-center shrink-0 origin-center pointer-events-none md:pointer-events-auto">
-                <spline-viewer
-                  ref={splineRef}
-                  url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
-                  className="w-full h-full block pointer-events-none md:pointer-events-auto"
-                  style={{ width: "100%", height: "100%" }}
-                ></spline-viewer>
-              </div>
+              <spline-viewer
+                ref={splineRef}
+                url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
+                className="w-full h-full block"
+                style={{ width: "100%", height: "100%" }}
+              ></spline-viewer>
             </div>
 
             {/* Left Typography & CTA */}
