@@ -41,6 +41,7 @@ export default function Navbar() {
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
     if (path === "/recruitment") return "Recruitment"
+    if (path === "/contact") return "Contact"
     return "Home"
   }
   const activePage = getPageFromPath(location.pathname)
@@ -54,16 +55,8 @@ export default function Navbar() {
     setIsMobileOpen(false)
   }
 
-  const handleConnectClick = () => {
-    const connectEl =
-      document.getElementById("connect-section") ||
-      document.getElementById("social-section")
-    if (connectEl) {
-      connectEl.scrollIntoView({ behavior: "smooth" })
-    } else {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })
-    }
-    setIsMobileOpen(false)
+  const handleContactClick = () => {
+    onNavigate("/contact")
   }
 
   return (
@@ -157,7 +150,7 @@ export default function Navbar() {
               })}
             </div>
 
-            {/* Right: Liquid Glass CTA Button ("Connect") */}
+            {/* Right: Liquid Glass CTA Button ("Contact Us") */}
             <div className="hidden sm:flex items-center">
               <motion.button
                 type="button"
@@ -165,14 +158,20 @@ export default function Navbar() {
                 whileTap={{ scale: 0.97 }}
                 onMouseEnter={() => setIsCtaHovered(true)}
                 onMouseLeave={() => setIsCtaHovered(false)}
-                onClick={handleConnectClick}
-                className="relative overflow-hidden cursor-pointer flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full text-[13px] sm:text-[14px] font-['Satoshi',Arial,sans-serif] font-semibold text-white tracking-[0.3px] transition-all focus:outline-none"
+                onClick={handleContactClick}
+                className={`relative overflow-hidden cursor-pointer flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full text-[13px] sm:text-[14px] font-['Satoshi',Arial,sans-serif] font-semibold text-white tracking-[0.3px] transition-all focus:outline-none ${
+                  activePage === "Contact"
+                    ? "ring-2 ring-white/50 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    : ""
+                }`}
                 style={{
                   background:
-                    "linear-gradient(180deg, rgb(38, 38, 44) 0%, rgb(10, 10, 14) 100%)",
+                    activePage === "Contact"
+                      ? "linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.12) 100%)"
+                      : "linear-gradient(180deg, rgb(38, 38, 44) 0%, rgb(10, 10, 14) 100%)",
                   boxShadow:
                     "inset 0px 1px 0px 0px rgba(255, 255, 255, 0.35), inset 0px -1px 1px 0px rgba(0, 0, 0, 0.6), 0px 6px 16px -4px rgba(0, 0, 0, 0.6)",
-                  border: "1px solid rgba(255, 255, 255, 0.18)",
+                  border: activePage === "Contact" ? "1px solid rgba(255, 255, 255, 0.45)" : "1px solid rgba(255, 255, 255, 0.18)",
                 }}
               >
                 {/* Diagonal Hover Light Shine Beam */}
@@ -190,7 +189,7 @@ export default function Navbar() {
                   }}
                 />
                 <span className="relative z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-                  Connect
+                  Contact Us
                 </span>
               </motion.button>
             </div>
@@ -253,13 +252,13 @@ export default function Navbar() {
                   )
                 })}
 
-                {/* Mobile Connect Button */}
+                {/* Mobile Contact Us Button */}
                 <button
                   type="button"
-                  onClick={handleConnectClick}
+                  onClick={handleContactClick}
                   className="flex sm:hidden items-center justify-center h-[46px] mt-2 rounded-2xl bg-white text-black font-semibold text-[15px] font-['Satoshi',Arial,sans-serif] shadow-lg active:scale-98 transition-transform cursor-pointer"
                 >
-                  Connect
+                  Contact Us
                 </button>
               </div>
             </div>

@@ -262,13 +262,23 @@ html {
 }
 
 /* Hide Spline 3D Watermark */
+spline-viewer::part(logo),
 spline-viewer #logo,
+spline-viewer #logo *,
 spline-viewer a[href*="spline.design"],
-spline-viewer .spline-watermark {
+spline-viewer a[href*="spline.design"] *,
+spline-viewer .spline-watermark,
+spline-viewer [aria-label*="Spline"] {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  top: -99999px !important;
+  left: -99999px !important;
+  transform: scale(0) !important;
 }
 
 /* Hide fixed Navbar when Photo Booth modal is open */
@@ -278,6 +288,23 @@ body.photo-booth-open header {
   pointer-events: none !important;
   transform: translateY(-100%) !important;
   transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Make Spline 3D robot static and non-interactive on mobile for fluid scrolling */
+@media (max-width: 767px) {
+  spline-viewer {
+    pointer-events: none !important;
+    touch-action: pan-y !important;
+  }
+}
+
+/* Hide navbar while Spline 3D preloader is active */
+body.spline-loading header {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-100%) !important;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 

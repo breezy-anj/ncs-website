@@ -9,6 +9,7 @@ import Project from "./pages/Project"
 import Teams from "./pages/Teams"
 import Alumni from "./pages/Alumni"
 import Recruitment from "./pages/Recruitment"
+import Contact from "./pages/Contact"
 import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
 import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
@@ -26,6 +27,7 @@ export default function App() {
     if (path === "/team") return "Team"
     if (path === "/alumni") return "Alumni"
     if (path === "/recruitment") return "Recruitment"
+    if (path === "/contact") return "Contact"
     if (path === "/fan-carousel") return "Fan Carousel"
     return "Home"
   }
@@ -56,7 +58,7 @@ export default function App() {
           newScale = 1
         } else {
           // On tablet/small-desktop, scale everything except natively responsive pages
-          if (page === "Home" || page === "Events" || page === "Gallery") {
+          if (page === "Home" || page === "Events" || page === "Gallery" || page === "Contact") {
             newScale = 1
           } else {
             newScale = Math.min(1, (screenW - padding) / baseW)
@@ -147,6 +149,7 @@ export default function App() {
                 <Route path="/team" element={<Teams activePage={page} />} />
                 <Route path="/alumni" element={<Alumni activePage={page} />} />
                 <Route path="/recruitment" element={<Recruitment activePage={page} />} />
+                <Route path="/contact" element={<Contact activePage={page} />} />
                 <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
               </Routes>
             </motion.div>

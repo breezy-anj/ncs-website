@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import { createPortal } from "react-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import Footer from "../components/Footer"
 import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
@@ -17,6 +19,7 @@ const imgRectangle45 = `${assetPathPrefix}/35193.png`
 const imgRectangle48 = `${assetPathPrefix}/bb76c.png`
 const imgRectangle50 = `${assetPathPrefix}/78cf7.png`
 const imgNcsLogo = `${assetPathPrefix}/8f22e.svg`
+const imgNcsLogoWhite = publicAsset("assets/ncs-logo-white.svg")
 const imgVector = `${assetPathPrefix}/69fdb.svg`
 const imgVector1 = `${assetPathPrefix}/67b5d.svg`
 const imgGroup1000002935 = `${assetPathPrefix}/84ab0.svg`
@@ -119,19 +122,44 @@ const eventSlides = eventGalleryItems.map((item) => ({
 
 export default function Home({ activePage = "Home", onNavigate }) {
   const splineRef = useRef(null)
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+    document.body.style.overflow = "hidden"
+    document.body.classList.add("spline-loading")
+
+    let isFinished = false
+    const finishLoading = () => {
+      if (isFinished) return
+      isFinished = true
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            setIsSplineLoaded(true)
+            document.body.style.overflow = ""
+            document.body.classList.remove("spline-loading")
+          }, 350)
+        })
+      })
+    }
+
+    let observer = null
+
     const hideSplineWatermark = () => {
       const viewer = splineRef.current || document.querySelector("spline-viewer")
       if (viewer?.shadowRoot) {
-        // Inject a stylesheet directly into shadow DOM to hide #logo
+        // Inject an aggressive stylesheet directly into shadow DOM to hide #logo
         let style = viewer.shadowRoot.querySelector("#hide-spline-logo-style")
         if (!style) {
           style = document.createElement("style")
           style.id = "hide-spline-logo-style"
           style.textContent = `
             #logo,
+            #logo *,
             a[href*="spline.design"],
+            a[href*="spline.design"] *,
             .spline-watermark,
             [aria-label*="Spline"] {
               display: none !important;
@@ -140,43 +168,109 @@ export default function Home({ activePage = "Home", onNavigate }) {
               pointer-events: none !important;
               width: 0 !important;
               height: 0 !important;
+              max-width: 0 !important;
+              max-height: 0 !important;
               position: absolute !important;
+              top: -99999px !important;
+              left: -99999px !important;
               clip: rect(0, 0, 0, 0) !important;
-              clip-path: inset(50%) !important;
+              clip-path: inset(100%) !important;
+              transform: scale(0) !important;
+              overflow: hidden !important;
+            }
+            @media (max-width: 767px) {
+              canvas {
+                pointer-events: none !important;
+                touch-action: pan-y !important;
+              }
             }
           `
           viewer.shadowRoot.appendChild(style)
         }
 
+        // Permanently remove logo element from DOM
         const logo =
           viewer.shadowRoot.querySelector("#logo") ||
           viewer.shadowRoot.querySelector('a[href*="spline.design"]')
         if (logo) {
-          logo.style.setProperty("display", "none", "important")
-          logo.style.setProperty("opacity", "0", "important")
-          logo.style.setProperty("visibility", "hidden", "important")
-          logo.style.setProperty("pointer-events", "none", "important")
+          try {
+            logo.remove()
+          } catch (e) {
+            logo.style.setProperty("display", "none", "important")
+            logo.style.setProperty("opacity", "0", "important")
+            logo.style.setProperty("visibility", "hidden", "important")
+          }
+        }
+
+        if (viewer._logo) {
+          try {
+            viewer._logo.remove()
+          } catch (e) {
+            viewer._logo.style.display = "none"
+          }
+        }
+
+        if (viewer._spline?.data?.scene?.publish?.settings?.web) {
+          viewer._spline.data.scene.publish.settings.web.logo = false
+        }
+
+        // Attach observer to catch any delayed re-injection by Spline
+        if (!observer && typeof MutationObserver !== "undefined") {
+          observer = new MutationObserver(() => {
+            const el =
+              viewer.shadowRoot.querySelector("#logo") ||
+              viewer.shadowRoot.querySelector('a[href*="spline.design"]')
+            if (el) {
+              try {
+                el.remove()
+              } catch (e) {
+                el.style.setProperty("display", "none", "important")
+              }
+            }
+          })
+          observer.observe(viewer.shadowRoot, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+          })
         }
       }
     }
 
     hideSplineWatermark()
 
+    const handleSplineReady = () => {
+      hideSplineWatermark()
+      finishLoading()
+    }
+
     const viewer = splineRef.current || document.querySelector("spline-viewer")
     if (viewer) {
-      viewer.addEventListener("load-complete", hideSplineWatermark)
-      viewer.addEventListener("loaded", hideSplineWatermark)
+      viewer.addEventListener("load-complete", handleSplineReady)
+      viewer.addEventListener("loaded", handleSplineReady)
+      // Only complete immediately if Spline has already finished loading previously
+      if (viewer._loaded === true) {
+        handleSplineReady()
+      }
     }
 
     const interval = setInterval(hideSplineWatermark, 100)
-    const timeout = setTimeout(() => clearInterval(interval), 6000)
+    // Generous fallback safety timeout (18s) in case network is disconnected
+    const timeout = setTimeout(() => {
+      finishLoading()
+    }, 18000)
 
     return () => {
       clearInterval(interval)
       clearTimeout(timeout)
+      if (observer) {
+        observer.disconnect()
+      }
+      document.body.style.overflow = ""
+      document.body.classList.remove("spline-loading")
       if (viewer) {
-        viewer.removeEventListener("load-complete", hideSplineWatermark)
-        viewer.removeEventListener("loaded", hideSplineWatermark)
+        viewer.removeEventListener("load-complete", handleSplineReady)
+        viewer.removeEventListener("loaded", handleSplineReady)
       }
     }
   }, [])
@@ -196,21 +290,23 @@ export default function Home({ activePage = "Home", onNavigate }) {
           data-node-id="1:36"
         >
           <div
-            className="flex flex-col-reverse gap-10 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[640px] lg:min-h-[700px] md:-mt-[40px]"
+            className="flex flex-col-reverse gap-4 sm:gap-6 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[640px] lg:min-h-[700px] md:-mt-[40px]"
             data-node-id="1:37"
           >
-            {/* Right illustration with Spline 3D Scene */}
+            {/* Right illustration with Spline 3D Scene (Smaller, uncropped, static & non-interactive on mobile, interactive on desktop) */}
             <div
-              className="relative z-0 w-full max-w-[min(96vw,400px)] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] select-none md:translate-y-0 mx-auto flex justify-center items-center"
+              className="relative z-0 w-full max-w-[240px] xs:max-w-[270px] sm:max-w-[300px] h-[210px] xs:h-[235px] sm:h-[265px] md:max-w-none md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] select-none md:translate-y-0 mx-auto flex justify-center items-center pointer-events-none md:pointer-events-auto touch-pan-y my-1 sm:my-2 md:my-0"
               data-node-id="1:38"
               data-name="Hero Spline 3D"
             >
-              <spline-viewer
-                ref={splineRef}
-                url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
-                className="w-full h-full block"
-                style={{ width: "100%", height: "100%" }}
-              ></spline-viewer>
+              <div className="w-[520px] h-[460px] scale-[0.42] xs:scale-[0.46] sm:scale-[0.52] md:w-full md:h-full md:scale-100 flex items-center justify-center shrink-0 origin-center pointer-events-none md:pointer-events-auto">
+                <spline-viewer
+                  ref={splineRef}
+                  url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
+                  className="w-full h-full block pointer-events-none md:pointer-events-auto"
+                  style={{ width: "100%", height: "100%" }}
+                ></spline-viewer>
+              </div>
             </div>
 
             {/* Left Typography & CTA */}
@@ -545,6 +641,35 @@ export default function Home({ activePage = "Home", onNavigate }) {
           </div>
         </div>
       </div>
+
+      {/* Full-Screen Loading Screen: Black background with NCS Logo in the middle */}
+      {isMounted &&
+        createPortal(
+          <AnimatePresence>
+            {!isSplineLoaded && (
+              <motion.div
+                className="fixed inset-0 z-[999999] w-screen h-screen bg-black flex items-center justify-center p-6 select-none overflow-hidden"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <motion.div
+                  initial={{ opacity: 0.85, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="w-[140px] xs:w-[160px] sm:w-[190px] md:w-[220px] flex items-center justify-center pointer-events-none select-none"
+                >
+                  <img
+                    src={imgNcsLogoWhite}
+                    alt="Nibble Computer Society"
+                    className="w-full h-auto object-contain filter drop-shadow-[0_2px_16px_rgba(255,255,255,0.2)]"
+                  />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body
+        )}
     </div>
   )
 }
