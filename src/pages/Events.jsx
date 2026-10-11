@@ -159,11 +159,6 @@ export default function Events({ activePage = "Events", onNavigate }) {
           </motion.p>
         </div>
 
-        {/* Interactive 3D Stacked Carousel */}
-        <div className="w-full flex flex-col items-center relative">
-          <CarouselStacked slides={eventSlides} />
-        </div>
-
         {/* Filter Pills */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full pt-4">
           {categories.map((cat) => {
@@ -268,6 +263,11 @@ export default function Events({ activePage = "Events", onNavigate }) {
               </motion.div>
             ))}
           </AnimatePresence>
+        </div>
+
+        {/* Interactive 3D Stacked Carousel */}
+        <div className="w-full flex flex-col items-center relative pt-8 sm:pt-14">
+          <CarouselStacked slides={eventSlides} />
         </div>
 
         {/* Footer */}
