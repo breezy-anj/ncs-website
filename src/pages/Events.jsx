@@ -10,15 +10,27 @@ const imgRectangle45 = `${assetPathPrefix}/35193.png`
 const imgRectangle48 = `${assetPathPrefix}/bb76c.png`
 const img581563659182268897793053042502331000629764086N1 = `${assetPathPrefix}/ba642.png`
 const img639494071182369026933053048550229231404010493N1 = `${assetPathPrefix}/2a0cf.png`
-const imgInOutHacks = encodeURI(`${assetPathPrefix}/events/final poster print.png`)
-const imgBlindCode = encodeURI(`${assetPathPrefix}/events/Frame 2147239119.png`)
-const imgCraffiti = encodeURI(`${assetPathPrefix}/events/Frame 2147239120.png`)
+const imgInOutHacks = `${assetPathPrefix}/events/inout-hacks.webp`
+const imgBlindCode = `${assetPathPrefix}/events/blind-code.webp`
+const imgCraffiti = `${assetPathPrefix}/events/craffiti.webp`
 
 const allEvents = [
   {
+    id: "annual-recruitment",
+    title: "Annual Recruitments",
+    subtitle: "Hiring Drive · Nibble Computer Society",
+    category: "Recruitment",
+    date: "Annual Induction",
+    description:
+      "Discovering the next generation of builders across Programming, Development, Designing, and Technical domains with task-based creative challenges.",
+    photo: img639494071182369026933053048550229231404010493N1,
+    tags: ["Hiring Drive", "Induction", "Team", "Domains"],
+    badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+  },
+  {
     id: "inout-hacks",
-    title: "INOUT Hacks",
-    subtitle: "Flagship Hackathon by Nibble Computer Society",
+    title: "InOut Hacks",
+    subtitle: "Hackathon · Flagship Hackathon by NCS",
     category: "Hackathon",
     date: "Annual Hackathon",
     description:
@@ -29,21 +41,21 @@ const allEvents = [
     badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/30",
   },
   {
-    id: "blind-code",
-    title: "Blind Code",
-    subtitle: "Zealicon 2025 · Competitive Programming",
-    category: "Competition",
-    date: "Zealicon 2025",
+    id: "atoms-design",
+    title: "Atoms",
+    subtitle: "Nibble Month Workshop · Design Series",
+    category: "Workshop",
+    date: "Design Series",
     description:
-      "Turn off the monitor and trust your algorithms! Blind Code tests developers' pure syntax mastery, mental models, and algorithmic precision under high pressure.",
-    photo: imgBlindCode,
-    tags: ["Competitive Programming", "Algorithms", "Precision"],
-    badgeColor: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
+      "Exploring design systems, modern typography, Figma micro-interactions, and visual storytelling to build interfaces that feel premium, fluid, and intuitive.",
+    photo: img581563659182268897793053042502331000629764086N1,
+    tags: ["UI/UX", "Figma", "Design Systems", "Prototyping"],
+    badgeColor: "bg-pink-500/20 text-pink-300 border-pink-500/30",
   },
   {
-    id: "nibble-month",
-    title: "Nibble Month Workshop",
-    subtitle: "Learn, Build, and Create Together",
+    id: "weber",
+    title: "Weber",
+    subtitle: "Nibble Month Workshop · Web Development",
     category: "Workshop",
     date: "Month-long Tech Series",
     description:
@@ -54,21 +66,21 @@ const allEvents = [
     badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
   },
   {
-    id: "atoms-design",
-    title: "ATOMS Design Workshop",
-    subtitle: "Workshop Series · Week 2",
-    category: "Workshop",
-    date: "Design Series",
+    id: "blind-code",
+    title: "Blind Code",
+    subtitle: "Zealicon Event · Competitive Programming",
+    category: "Competition",
+    date: "Zealicon 2025",
     description:
-      "Exploring design systems, modern typography, Figma micro-interactions, and visual storytelling to build interfaces that feel premium, fluid, and intuitive.",
-    photo: img581563659182268897793053042502331000629764086N1,
-    tags: ["UI/UX", "Figma", "Design Systems", "Prototyping"],
-    badgeColor: "bg-pink-500/20 text-pink-300 border-pink-500/30",
+      "Turn off the monitor and trust your algorithms! Blind Code tests developers' pure syntax mastery, mental models, and algorithmic precision under high pressure.",
+    photo: imgBlindCode,
+    tags: ["Competitive Programming", "Algorithms", "Precision"],
+    badgeColor: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
   },
   {
     id: "craffiti",
     title: "Craffiti",
-    subtitle: "Zealicon 2025 · Creative Workshop",
+    subtitle: "Zealicon Event · Creative Workshop",
     category: "Workshop",
     date: "Zealicon 2025",
     description:
@@ -90,18 +102,6 @@ const allEvents = [
     tags: ["Community", "Welcome", "Tech Showcase"],
     badgeColor: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   },
-  {
-    id: "annual-recruitment",
-    title: "Annual Recruitment Drive",
-    subtitle: "Nibble Computer Society · 2026",
-    category: "Recruitment",
-    date: "Annual Induction",
-    description:
-      "Discovering the next generation of builders across Programming, Development, Designing, and Technical domains with task-based creative challenges.",
-    photo: img639494071182369026933053048550229231404010493N1,
-    tags: ["Induction", "Team", "Domains"],
-    badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
-  },
 ]
 
 const eventSlides = allEvents.map((item) => ({
@@ -112,7 +112,7 @@ const eventSlides = allEvents.map((item) => ({
   linkUrl: item.href,
 }))
 
-const categories = ["All", "Hackathon", "Workshop", "Competition", "Orientation"]
+const categories = ["All", "Recruitment", "Hackathon", "Workshop", "Competition", "Orientation"]
 
 export default function Events({ activePage = "Events", onNavigate }) {
   const [selectedCategory, setSelectedCategory] = useState("All")

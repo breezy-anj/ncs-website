@@ -15,6 +15,7 @@ import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
 import Navbar from "./components/Navbar"
+import LiquidGlassCursor from "./components/ui/LiquidGlassCursor"
 
 export default function App() {
   const location = useLocation()
@@ -102,6 +103,9 @@ export default function App() {
 
   return (
     <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-hidden text-white relative">
+      {/* Custom Liquid Glass Prismatic Cursor */}
+      <LiquidGlassCursor />
+
       {/* 3D Ethereal Light Beams Background on Home/Team/Alumni, Special 3D Rotating Layers on Project */}
       {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
 

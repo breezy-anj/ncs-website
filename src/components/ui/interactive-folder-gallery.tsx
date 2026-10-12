@@ -11,18 +11,7 @@ export interface GalleryPhoto {
   caption?: string;
 }
 
-const defaultPhotos: GalleryPhoto[] = [
-  { id: 1, image: "https://cdn.21st.dev/assets/mirror/6c/6cb3aeada3fd347bf4641131fdb05a482044f0233b1b6da0ffb5e83593001e3f.jpg", title: "Keynote Kickoff" },
-  { id: 2, image: "https://cdn.21st.dev/assets/mirror/e7/e7138a367854517395ba458c0c7c6481cf28afdc227b7d0045973e03e5b1d1c0.jpg", title: "Midnight Coding" },
-  { id: 3, image: "https://cdn.21st.dev/assets/mirror/96/9626c87f656eaa15e08486db4e7ecc217c0243440a21d301a3af6c8092b22a9b.jpg", title: "Mentor Review" },
-  { id: 4, image: "https://cdn.21st.dev/assets/mirror/da/dacbcb481226af6c6e6bf6426da535ce260db87270fb641953617ffe4a1145bf.jpg", title: "Prototype Demo" },
-  { id: 5, image: "https://cdn.21st.dev/assets/mirror/6e/6e5ed03abf45ab11ad4c94b60bb3cb60326807a1777b2a6e8888d3179f237cd9.jpg", title: "Award Ceremony" },
-  { id: 6, image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80", title: "Design Sprint" },
-  { id: 7, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80", title: "Team Collaboration" },
-  { id: 8, image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80", title: "Architecture Session" },
-  { id: 9, image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80", title: "Live Pitches" },
-  { id: 10, image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80", title: "Hackathon Stage" },
-];
+const defaultPhotos: GalleryPhoto[] = [];
 
 export interface InteractiveFolderGalleryProps {
   photos?: GalleryPhoto[];
@@ -36,6 +25,7 @@ export function InteractiveFolderGallery({
   className,
 }: InteractiveFolderGalleryProps) {
   const [isPhotoBoothOpen, setIsPhotoBoothOpen] = useState(false);
+  const [hasBeenOpened, setHasBeenOpened] = useState(false);
   const [hoverFolder, setHoverFolder] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [flashTrigger, setFlashTrigger] = useState(false);
@@ -48,21 +38,30 @@ export function InteractiveFolderGallery({
     setMounted(true);
   }, []);
 
+  const openFolder = useCallback(() => {
+    setSelectedIndex(0);
+    setHasBeenOpened(true);
+    setIsPhotoBoothOpen(true);
+  }, []);
+
   // Take top 4 preview photos for the 3D folded stack preview
   const previewPhotos = photos.slice(0, 4);
 
   // Trigger camera shutter flash effect
   const changePhoto = useCallback((newIndex: number) => {
+    if (photos.length === 0) return;
     setSelectedIndex(newIndex);
     setFlashTrigger(true);
     setTimeout(() => setFlashTrigger(false), 140);
-  }, []);
+  }, [photos.length]);
 
   const handleNext = useCallback(() => {
+    if (photos.length === 0) return;
     changePhoto((selectedIndex + 1) % photos.length);
   }, [selectedIndex, photos.length, changePhoto]);
 
   const handlePrev = useCallback(() => {
+    if (photos.length === 0) return;
     changePhoto((selectedIndex - 1 + photos.length) % photos.length);
   }, [selectedIndex, photos.length, changePhoto]);
 
@@ -106,13 +105,21 @@ export function InteractiveFolderGallery({
     };
   }, [isPhotoBoothOpen, handleNext, handlePrev]);
 
-  const activePhoto = photos[selectedIndex] || photos[0];
+  const activePhoto = photos.length > 0 ? (photos[selectedIndex] || photos[0]) : null;
+
+  // Placeholder list for empty folders so 3D effect remains tactile
+  const stackItems = previewPhotos.length > 0 
+    ? previewPhotos 
+    : [{ id: "blank-1" }, { id: "blank-2" }];
 
   return (
     <div className={`w-full relative flex flex-col items-center ${className || ""}`}>
-      {/* Reduced Height 3D Folder Container */}
-      <div className="relative w-full max-w-[270px] h-[250px] sm:h-[265px] flex flex-col items-center justify-center">
-        <div className="relative w-full h-[250px] sm:h-[265px] flex justify-center pointer-events-none z-0">
+      {/* 3D Folder Container */}
+      <div 
+        className="relative w-full max-w-[270px] h-[230px] sm:h-[245px] flex flex-col items-center justify-center cursor-pointer select-none"
+        onClick={openFolder}
+      >
+        <div className="relative w-full h-[230px] sm:h-[245px] flex justify-center pointer-events-none z-0">
           
           {/* Back of the Folder */}
           <motion.div
@@ -125,18 +132,20 @@ export function InteractiveFolderGallery({
             <div className="absolute top-7 left-1.5 right-1.5 bottom-1.5 bg-black rounded-lg shadow-inner pointer-events-none" />
           </motion.div>
 
-          {/* Fanned Preview Cards (Only top 4 items for crisp performance) */}
+          {/* Fanned Preview Thumbnails */}
           <div className="absolute bottom-6 z-10 flex justify-center">
-            {previewPhotos.map((photo, i) => {
-              const offset = i - 1.5;
+            {stackItems.map((item, i) => {
+              const offset = i - (stackItems.length - 1) / 2;
               const stackY = hoverFolder ? offset * -8 - 28 : offset * -3;
               const stackX = hoverFolder ? offset * 22 : offset * 3;
               const stackRotate = hoverFolder ? offset * 7 : offset * 2.5;
               const stackScale = 1 - Math.abs(offset) * 0.04;
 
+              const isPhoto = "image" in item && Boolean((item as GalleryPhoto).image);
+
               return (
                 <motion.div
-                  key={photo.id}
+                  key={item.id}
                   className="absolute bottom-0 w-28 sm:w-32 h-38 sm:h-42 rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.7)] overflow-hidden border border-white/20 origin-bottom pointer-events-none"
                   animate={{
                     y: stackY,
@@ -147,13 +156,22 @@ export function InteractiveFolderGallery({
                   }}
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 >
-                  <img
-                    src={photo.image}
-                    alt="Preview"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover pointer-events-none"
-                  />
+                  {isPhoto ? (
+                    <img
+                      src={(item as GalleryPhoto).image}
+                      alt="Preview"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover pointer-events-none"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-b from-[#252528] via-[#1a1a1d] to-[#0d0d0f] flex flex-col items-center justify-center border border-white/10 p-2">
+                      <div className="size-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1">
+                        <Camera size={14} className="text-white/40" />
+                      </div>
+                      <span className="text-[10px] font-mono text-white/30">Photo</span>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                 </motion.div>
               );
@@ -171,9 +189,9 @@ export function InteractiveFolderGallery({
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             onMouseEnter={() => setHoverFolder(true)}
             onMouseLeave={() => setHoverFolder(false)}
-            onClick={() => {
-              setSelectedIndex(0);
-              setIsPhotoBoothOpen(true);
+            onClick={(e) => {
+              e.stopPropagation();
+              openFolder();
             }}
           >
             <div className="w-full h-full bg-gradient-to-b from-[#2a2a2a] via-[#1f1f21] to-[#111113] rounded-xl border border-white/25 shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)] relative overflow-hidden flex items-end justify-center pb-5 sm:pb-6 group-hover:border-white/40 transition-colors">
@@ -191,22 +209,9 @@ export function InteractiveFolderGallery({
             </div>
           </motion.div>
         </div>
-
-        {/* Compact Click Hint */}
-        <button
-          type="button"
-          onClick={() => {
-            setSelectedIndex(0);
-            setIsPhotoBoothOpen(true);
-          }}
-          className="mt-2 px-3 py-1 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 backdrop-blur-md text-white/60 hover:text-white text-[10px] font-medium uppercase tracking-wider flex items-center gap-1 transition-all cursor-pointer"
-        >
-          <Camera size={10} className="text-amber-400" />
-          <span>Open Booth</span>
-        </button>
       </div>
 
-      {/* Full-Screen macOS Photo Booth Modal (Rendered via createPortal to cover 100% of viewport) */}
+      {/* Full-Screen macOS Photo Booth Modal */}
       {mounted &&
         createPortal(
           <AnimatePresence>
@@ -258,9 +263,11 @@ export function InteractiveFolderGallery({
 
                   {/* Counter & Close Action */}
                   <div className="flex items-center gap-3">
-                    <div className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white font-mono text-xs">
-                      {String(selectedIndex + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
-                    </div>
+                    {photos.length > 0 && (
+                      <div className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white font-mono text-xs">
+                        {String(selectedIndex + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
+                      </div>
+                    )}
                     <button
                       type="button"
                       onClick={() => setIsPhotoBoothOpen(false)}
@@ -287,93 +294,115 @@ export function InteractiveFolderGallery({
                     )}
                   </AnimatePresence>
 
-                  {/* Photo Title Overlay */}
-                  {activePhoto.title && (
-                    <div className="absolute top-4 left-6 z-20 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium tracking-wide pointer-events-none">
-                      {activePhoto.title}
+                  {activePhoto ? (
+                    <>
+                      {/* Photo Title Overlay */}
+                      {activePhoto.title && (
+                        <div className="absolute top-4 left-6 z-20 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium tracking-wide pointer-events-none">
+                          {activePhoto.title}
+                        </div>
+                      )}
+
+                      {/* Active High-Res Photo */}
+                      <div className="relative size-full flex items-center justify-center">
+                        <AnimatePresence mode="wait">
+                          <motion.img
+                            key={activePhoto.id}
+                            src={activePhoto.image}
+                            alt={activePhoto.title || `Photo ${selectedIndex + 1}`}
+                            className="max-h-full max-w-full object-contain rounded-xl sm:rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.95)] border border-white/10"
+                            initial={{ opacity: 0, scale: 0.98 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.98 }}
+                            transition={{ duration: 0.18 }}
+                            decoding="async"
+                          />
+                        </AnimatePresence>
+                      </div>
+
+                      {/* Left Navigation Chevron */}
+                      {photos.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={handlePrev}
+                          className="absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 size-11 sm:size-14 rounded-full bg-black/65 hover:bg-black/90 border border-white/20 hover:border-white/50 text-white flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer z-20"
+                          aria-label="Previous photo"
+                        >
+                          <ChevronLeft size={26} />
+                        </button>
+                      )}
+
+                      {/* Right Navigation Chevron */}
+                      {photos.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={handleNext}
+                          className="absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 size-11 sm:size-14 rounded-full bg-black/65 hover:bg-black/90 border border-white/20 hover:border-white/50 text-white flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer z-20"
+                          aria-label="Next photo"
+                        >
+                          <ChevronRight size={26} />
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center gap-3 p-8 text-center">
+                      <div className="size-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                        <Camera size={28} className="text-white/40" />
+                      </div>
+                      <h4 className="text-lg font-bold text-white font-['Satoshi',Arial,sans-serif]">
+                        No Photos Yet
+                      </h4>
+                      <p className="text-sm text-white/50 max-w-sm">
+                        Photos for this event folder will be added soon. Check back shortly!
+                      </p>
                     </div>
                   )}
-
-                  {/* Active High-Res Photo */}
-                  <div className="relative size-full flex items-center justify-center">
-                    <AnimatePresence mode="wait">
-                      <motion.img
-                        key={activePhoto.id}
-                        src={activePhoto.image}
-                        alt={activePhoto.title || `Photo ${selectedIndex + 1}`}
-                        className="max-h-full max-w-full object-contain rounded-xl sm:rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.95)] border border-white/10"
-                        initial={{ opacity: 0, scale: 0.98 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.98 }}
-                        transition={{ duration: 0.18 }}
-                        decoding="async"
-                      />
-                    </AnimatePresence>
-                  </div>
-
-                  {/* Left Navigation Chevron */}
-                  <button
-                    type="button"
-                    onClick={handlePrev}
-                    className="absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 size-11 sm:size-14 rounded-full bg-black/65 hover:bg-black/90 border border-white/20 hover:border-white/50 text-white flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer z-20"
-                    aria-label="Previous photo"
-                  >
-                    <ChevronLeft size={26} />
-                  </button>
-
-                  {/* Right Navigation Chevron */}
-                  <button
-                    type="button"
-                    onClick={handleNext}
-                    className="absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 size-11 sm:size-14 rounded-full bg-black/65 hover:bg-black/90 border border-white/20 hover:border-white/50 text-white flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer z-20"
-                    aria-label="Next photo"
-                  >
-                    <ChevronRight size={26} />
-                  </button>
                 </div>
 
-                {/* Bottom Filmstrip Reel Dock */}
-                <div className="bg-[#141416] border-t border-white/10 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 shrink-0 flex flex-col gap-1">
-                  <div className="flex items-center justify-between text-[11px] text-white/50 font-medium">
-                    <span>FILMSTRIP ({photos.length} MOMENTS)</span>
-                    <span className="hidden sm:inline">USE ARROW KEYS ← → TO NAVIGATE · ESC TO EXIT</span>
-                  </div>
+                {/* Bottom Filmstrip Reel Dock (White scroll removed, smooth scrolling preserved) */}
+                {photos.length > 0 && (
+                  <div className="bg-[#141416] border-t border-white/10 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 shrink-0 flex flex-col gap-1">
+                    <div className="flex items-center justify-between text-[11px] text-white/50 font-medium">
+                      <span>FILMSTRIP ({photos.length} MOMENTS)</span>
+                      <span className="hidden sm:inline">USE ARROW KEYS ← → TO NAVIGATE · ESC TO EXIT</span>
+                    </div>
 
-                  <div
-                    ref={filmstripRef}
-                    className="flex items-center gap-2.5 overflow-x-auto py-1 scrollbar-thin scroll-smooth"
-                    style={{ scrollbarWidth: "thin" }}
-                  >
-                    {photos.map((photo, idx) => {
-                      const isActive = idx === selectedIndex;
-                      return (
-                        <button
-                          key={photo.id}
-                          type="button"
-                          ref={isActive ? activeThumbnailRef : null}
-                          onClick={() => changePhoto(idx)}
-                          className={`relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden border-2 cursor-pointer transition-all duration-200 ${
-                            isActive
-                              ? "border-blue-500 ring-2 ring-blue-500/80 shadow-[0_0_15px_rgba(59,130,246,0.65)] scale-105 z-10"
-                              : "border-white/15 opacity-60 hover:opacity-100 hover:border-white/40 hover:scale-105"
-                          }`}
-                          aria-label={`Select photo ${idx + 1}`}
-                        >
-                          <img
-                            src={photo.image}
-                            alt={photo.title || `Thumbnail ${idx + 1}`}
-                            loading="lazy"
-                            decoding="async"
-                            className="size-full object-cover pointer-events-none"
-                          />
-                          <span className="absolute bottom-1 right-1 px-1 py-0.2 rounded bg-black/80 text-[9px] font-mono text-white/90 pointer-events-none">
-                            {idx + 1}
-                          </span>
-                        </button>
-                      );
-                    })}
+                    <div
+                      ref={filmstripRef}
+                      className="flex items-center gap-2.5 overflow-x-auto py-1 scrollbar-hide scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
+                      {photos.map((photo, idx) => {
+                        const isActive = idx === selectedIndex;
+                        return (
+                          <button
+                            key={photo.id}
+                            type="button"
+                            ref={isActive ? activeThumbnailRef : null}
+                            onClick={() => changePhoto(idx)}
+                            className={`relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden border-2 cursor-pointer transition-all duration-200 ${
+                              isActive
+                                ? "border-blue-500 ring-2 ring-blue-500/80 shadow-[0_0_15px_rgba(59,130,246,0.65)] scale-105 z-10"
+                                : "border-white/15 opacity-60 hover:opacity-100 hover:border-white/40 hover:scale-105"
+                            }`}
+                            aria-label={`Select photo ${idx + 1}`}
+                          >
+                            <img
+                              src={photo.image}
+                              alt={photo.title || `Thumbnail ${idx + 1}`}
+                              loading="lazy"
+                              decoding="async"
+                              className="size-full object-cover pointer-events-none"
+                            />
+                            <span className="absolute bottom-1 right-1 px-1 py-0.2 rounded bg-black/80 text-[9px] font-mono text-white/90 pointer-events-none">
+                              {idx + 1}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>,

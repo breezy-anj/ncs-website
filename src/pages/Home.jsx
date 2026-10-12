@@ -121,40 +121,16 @@ const eventSlides = eventGalleryItems.map((item) => ({
   linkUrl: item.href,
 }))
 
+let hasHomeLoadedOnce =
+  typeof window !== "undefined" && Boolean(sessionStorage.getItem("ncs_home_loaded"))
+
 export default function Home({ activePage = "Home", onNavigate }) {
   const splineRef = useRef(null)
-  const [isSplineLoaded, setIsSplineLoaded] = useState(false)
+  const [isSplineLoaded, setIsSplineLoaded] = useState(() => hasHomeLoadedOnce)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
-
-    // On mobile screens, the static image is displayed instantly, so no 3D loading overlay needed
-    const isMobileScreen = typeof window !== "undefined" && window.innerWidth < 768
-    if (isMobileScreen) {
-      setIsSplineLoaded(true)
-      document.body.style.overflow = ""
-      document.body.classList.remove("spline-loading")
-      return
-    }
-
-    document.body.style.overflow = "hidden"
-    document.body.classList.add("spline-loading")
-
-    let isFinished = false
-    const finishLoading = () => {
-      if (isFinished) return
-      isFinished = true
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            setIsSplineLoaded(true)
-            document.body.style.overflow = ""
-            document.body.classList.remove("spline-loading")
-          }, 350)
-        })
-      })
-    }
 
     let observer = null
 
@@ -246,6 +222,51 @@ export default function Home({ activePage = "Home", onNavigate }) {
           })
         }
       }
+    }
+
+    // On mobile screens or subsequent visits, no 3D loading overlay needed
+    const isMobileScreen = typeof window !== "undefined" && window.innerWidth < 768
+    if (isMobileScreen || hasHomeLoadedOnce) {
+      hasHomeLoadedOnce = true
+      try {
+        sessionStorage.setItem("ncs_home_loaded", "true")
+      } catch (e) {}
+      setIsSplineLoaded(true)
+      document.body.style.overflow = ""
+      document.body.classList.remove("spline-loading")
+
+      hideSplineWatermark()
+      const interval = setInterval(hideSplineWatermark, 100)
+      return () => {
+        clearInterval(interval)
+        if (observer) {
+          observer.disconnect()
+        }
+        document.body.style.overflow = ""
+        document.body.classList.remove("spline-loading")
+      }
+    }
+
+    document.body.style.overflow = "hidden"
+    document.body.classList.add("spline-loading")
+
+    let isFinished = false
+    const finishLoading = () => {
+      if (isFinished) return
+      isFinished = true
+      hasHomeLoadedOnce = true
+      try {
+        sessionStorage.setItem("ncs_home_loaded", "true")
+      } catch (e) {}
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            setIsSplineLoaded(true)
+            document.body.style.overflow = ""
+            document.body.classList.remove("spline-loading")
+          }, 350)
+        })
+      })
     }
 
     hideSplineWatermark()

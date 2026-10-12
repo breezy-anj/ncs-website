@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { motion } from "framer-motion"
 import { InteractiveFolderGallery } from "../components/ui/interactive-folder-gallery"
+import { inoutHacks30Photos } from "../data/galleryPhotos"
 import Footer from "../components/Footer"
 
 export default function Gallery({ activePage = "Gallery", onNavigate }) {
@@ -47,10 +48,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
           {/* Folder 1: INOUT Hacks */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">
-                Hackathon
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-white mt-1.5 font-['Satoshi',Arial,sans-serif] tracking-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
                 INOUT Hacks 2025
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
@@ -59,6 +57,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
             </div>
             <InteractiveFolderGallery
               folderName="INOUT Hacks '25"
+              photos={inoutHacks30Photos}
               className="py-2"
             />
           </div>
@@ -66,10 +65,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
           {/* Folder 2: Nibble Month */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20">
-                Workshop Series
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-white mt-1.5 font-['Satoshi',Arial,sans-serif] tracking-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
                 Nibble Month
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
@@ -85,10 +81,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
           {/* Folder 3: Blind Code */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-yellow-400 bg-yellow-500/10 px-2.5 py-0.5 rounded-full border border-yellow-500/20">
-                Competitive Coding
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-white mt-1.5 font-['Satoshi',Arial,sans-serif] tracking-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
                 Blind Code
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
@@ -104,10 +97,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
           {/* Folder 4: Orientation Programme */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">
-                Orientation
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-white mt-1.5 font-['Satoshi',Arial,sans-serif] tracking-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
                 Orientation '26
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">

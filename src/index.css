@@ -307,5 +307,20 @@ body.spline-loading header {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Custom Liquid Glass Cursor - hide native cursor only on mouse/desktop devices */
+@media (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  .cursor-pointer,
+  [class*="cursor-"] {
+    cursor: none !important;
+  }
+}
+
 
 
