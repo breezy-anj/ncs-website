@@ -604,8 +604,8 @@ export default function Team() {
   word="TECHNICAL"
   nameParts={["Ansh","Mittal"]}
   designation="Technical"
-  photoClasses="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  photoClasses="-translate-x-1/2 absolute h-[485px] left-1/2 top-0 w-[200px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  imgClasses="w-full h-full object-contain pointer-events-none"
   linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/"
   bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶."
 />

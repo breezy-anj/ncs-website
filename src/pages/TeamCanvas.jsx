@@ -1098,8 +1098,8 @@ export default function Team() {
   <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
     <div className="absolute inset-0 bg-[#e4dcd2] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
-                    <div className="-translate-x-1/2 absolute h-[599px] left-[calc(50%+13.58px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[-21.12px] w-[347px]" data-node-id="1:277">
-                      <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle67} />
+                    <div className="-translate-x-1/2 absolute h-[485px] left-1/2 top-0 w-[200px]" data-node-id="1:277">
+                      <img alt="Ansh Mittal" className="w-full h-full object-contain pointer-events-none" src={imgRectangle67} />
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:278" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:279">

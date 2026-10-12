@@ -6,13 +6,16 @@ import Footer from "../components/Footer"
 import { publicAsset } from "../lib/publicAsset"
 
 const assetPathPrefix = publicAsset("assets")
-const imgRectangle45 = `${assetPathPrefix}/35193.png`
-const imgRectangle48 = `${assetPathPrefix}/bb76c.png`
-const img581563659182268897793053042502331000629764086N1 = `${assetPathPrefix}/ba642.png`
-const img639494071182369026933053048550229231404010493N1 = `${assetPathPrefix}/2a0cf.png`
+const imgAtoms = `${assetPathPrefix}/events/atoms.webp`
+const imgAnnualRecruitment = `${assetPathPrefix}/events/annual-recruitment.webp`
 const imgInOutHacks = `${assetPathPrefix}/events/inout-hacks.webp`
+const imgHowToHackathon = `${assetPathPrefix}/events/how-to-hackathon.webp`
+const imgWeber = `${assetPathPrefix}/events/weber.webp`
+const imgCodex = `${assetPathPrefix}/events/codex.webp`
 const imgBlindCode = `${assetPathPrefix}/events/blind-code.webp`
-const imgCraffiti = `${assetPathPrefix}/events/craffiti.webp`
+const imgVRExpo = `${assetPathPrefix}/events/vr-expo.webp`
+const imgLoot = `${assetPathPrefix}/events/loot.webp`
+const imgSherlocked = `${assetPathPrefix}/events/sherlocked.webp`
 
 const allEvents = [
   {
@@ -20,10 +23,12 @@ const allEvents = [
     title: "Annual Recruitments",
     subtitle: "Hiring Drive · Nibble Computer Society",
     category: "Recruitment",
-    date: "Annual Induction",
+    date: "23rd – 25th Feb",
     description:
       "Discovering the next generation of builders across Programming, Development, Designing, and Technical domains with task-based creative challenges.",
-    photo: img639494071182369026933053048550229231404010493N1,
+    href: "https://recruitments.hackncs.in",
+    buttonText: "Register Now",
+    photo: imgAnnualRecruitment,
     tags: ["Hiring Drive", "Induction", "Team", "Domains"],
     badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
   },
@@ -41,14 +46,26 @@ const allEvents = [
     badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/30",
   },
   {
-    id: "atoms-design",
+    id: "how-to-hackathon",
+    title: "How To Hackathon",
+    subtitle: "Guidance Seminar · Roadmap & Mentoring",
+    category: "Seminar",
+    date: "29th September",
+    description:
+      "Comprehensive roadmap session guiding first-time hackers through ideation, team building, tech stack selection, prototype pitching, and winning strategies.",
+    photo: imgHowToHackathon,
+    tags: ["Roadmap", "Mentoring", "Hackathon", "Build Projects"],
+    badgeColor: "bg-red-500/20 text-red-300 border-red-500/30",
+  },
+  {
+    id: "atoms",
     title: "Atoms",
     subtitle: "Nibble Month Workshop · Design Series",
     category: "Workshop",
-    date: "Design Series",
+    date: "17–19th Nov",
     description:
       "Exploring design systems, modern typography, Figma micro-interactions, and visual storytelling to build interfaces that feel premium, fluid, and intuitive.",
-    photo: img581563659182268897793053042502331000629764086N1,
+    photo: imgAtoms,
     tags: ["UI/UX", "Figma", "Design Systems", "Prototyping"],
     badgeColor: "bg-pink-500/20 text-pink-300 border-pink-500/30",
   },
@@ -57,13 +74,25 @@ const allEvents = [
     title: "Weber",
     subtitle: "Nibble Month Workshop · Web Development",
     category: "Workshop",
-    date: "Month-long Tech Series",
+    date: "24-26th November",
     description:
       "An intensive series of hands-on bootcamps covering modern full-stack development, Git workflows, UI/UX design fundamentals, and cloud deployment pipelines.",
     href: "https://www.instagram.com/p/DQzn6p7EvXs/?stkn=MzRlODBiNWFlZA==",
-    photo: imgRectangle48,
+    photo: imgWeber,
     tags: ["Web Dev", "Full-Stack", "Hands-on", "Mentorship"],
     badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+  },
+  {
+    id: "codex",
+    title: "Codex",
+    subtitle: "Nibble Month Workshop · Programming Workshop",
+    category: "Workshop",
+    date: "10-12th November",
+    description:
+      "Foundational programming bootcamp covering data structures, algorithmic thinking, efficient problem-solving patterns, and core computing concepts.",
+    photo: imgCodex,
+    tags: ["Programming", "Algorithms", "Data Structures", "Bootcamp"],
+    badgeColor: "bg-violet-500/20 text-violet-300 border-violet-500/30",
   },
   {
     id: "blind-code",
@@ -78,41 +107,92 @@ const allEvents = [
     badgeColor: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
   },
   {
-    id: "craffiti",
-    title: "Craffiti",
-    subtitle: "Zealicon Event · Creative Workshop",
-    category: "Workshop",
-    date: "Zealicon 2025",
+    id: "vr-expo",
+    title: "VR Expo",
+    subtitle: "Zealicon Event · Virtual Reality Showcase",
+    category: "Expo",
+    date: "14th May · Zealicon",
     description:
-      "A creative design workshop exploring visual aesthetics, branding, digital art, and interactive experiences that inspire modern creators.",
-    photo: imgCraffiti,
-    tags: ["Creative", "Art", "Branding"],
-    badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+      "Immersive hands-on virtual reality exhibition showcasing interactive 3D simulations, spatial computing environments, and emerging metaverse technologies.",
+    photo: imgVRExpo,
+    tags: ["Virtual Reality", "Spatial Computing", "Metaverse", "Showcase"],
+    badgeColor: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   },
   {
-    id: "orientation-programme",
-    title: "Orientation Programme",
-    subtitle: "Welcome to Nibble Computer Society",
-    category: "Orientation",
-    date: "Fall Intake",
+    id: "loot",
+    title: "Loot",
+    subtitle: "Zealicon Event · Loot Hits the Jackpot",
+    category: "Competition",
+    date: "May 20–22 · Online",
     description:
-      "Welcoming incoming tech enthusiasts to NCS with project showcases, alumni stories, live coding interactive games, and domain explorations.",
-    href: "https://www.instagram.com/p/DNxMB5Z0g6w/?stkn=MzRlODBiNWFlZA==",
-    photo: imgRectangle45,
-    tags: ["Community", "Welcome", "Tech Showcase"],
-    badgeColor: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+      "The premier technical treasure hunt and digital adventure where participants decipher cryptic clues, solve riddles, and race against the clock to claim the jackpot.",
+    photo: imgLoot,
+    tags: ["Treasure Hunt", "Cryptic Clues", "Zealicon", "Adventure"],
+    badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  },
+  {
+    id: "sherlocked",
+    title: "Sherlocked",
+    subtitle: "Zealicon Event · Las Adventures",
+    category: "Competition",
+    date: "Zealicon 2025",
+    description:
+      "A mystery investigation contest testing deductive reasoning, cyber sleuthing, pattern recognition, and problem-solving through narrative-driven challenges.",
+    photo: imgSherlocked,
+    tags: ["Deduction", "Mystery", "Cyber Sleuthing", "Investigation"],
+    badgeColor: "bg-orange-500/20 text-orange-300 border-orange-500/30",
   },
 ]
 
-const eventSlides = allEvents.map((item) => ({
-  image: item.photo,
-  title: item.title,
-  description: item.subtitle,
-  badge: item.category,
-  linkUrl: item.href,
-}))
+const eventSlides = [
+  {
+    image: `${assetPathPrefix}/2a0cf.png`,
+    title: "Annual Recruitments",
+    description: "Hiring Drive · Nibble Computer Society",
+    badge: "Recruitment",
+  },
+  {
+    image: `${assetPathPrefix}/events/inout-hacks.webp`,
+    title: "InOut Hacks",
+    description: "Hackathon · Flagship Hackathon by NCS",
+    badge: "Hackathon",
+    linkUrl: "https://www.instagram.com/reel/DXtnr23iQ6Y/?stkn=MzRlODBiNWFlZA==",
+  },
+  {
+    image: `${assetPathPrefix}/ba642.png`,
+    title: "Atoms",
+    description: "Nibble Month Workshop · Design Series",
+    badge: "Workshop",
+  },
+  {
+    image: `${assetPathPrefix}/bb76c.png`,
+    title: "Weber",
+    description: "Nibble Month Workshop · Web Development",
+    badge: "Workshop",
+    linkUrl: "https://www.instagram.com/p/DQzn6p7EvXs/?stkn=MzRlODBiNWFlZA==",
+  },
+  {
+    image: `${assetPathPrefix}/events/blind-code.webp`,
+    title: "Blind Code",
+    description: "Zealicon Event · Competitive Programming",
+    badge: "Competition",
+  },
+  {
+    image: `${assetPathPrefix}/events/craffiti.webp`,
+    title: "Craffiti",
+    description: "Zealicon Event · Creative Workshop",
+    badge: "Workshop",
+  },
+  {
+    image: `${assetPathPrefix}/35193.png`,
+    title: "Orientation Programme",
+    description: "Welcome to Nibble Computer Society",
+    badge: "Orientation",
+    linkUrl: "https://www.instagram.com/p/DNxMB5Z0g6w/?stkn=MzRlODBiNWFlZA==",
+  },
+]
 
-const categories = ["All", "Recruitment", "Hackathon", "Workshop", "Competition", "Orientation"]
+const categories = ["All", "Recruitment", "Hackathon", "Seminar", "Workshop", "Competition", "Expo"]
 
 export default function Events({ activePage = "Events", onNavigate }) {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -250,7 +330,7 @@ export default function Events({ activePage = "Events", onNavigate }) {
                         rel="noreferrer"
                         className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white text-white hover:text-black font-semibold text-xs sm:text-sm transition-all duration-200 cursor-pointer"
                       >
-                        <span>View Reel / Post</span>
+                        <span>{event.buttonText || "View Reel / Post"}</span>
                         <ExternalLink size={14} />
                       </a>
                     ) : (
