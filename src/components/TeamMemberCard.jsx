@@ -182,8 +182,10 @@ export default function TeamMemberCard({
         ======================================================== */}
         <div
           className={`hidden md:flex absolute top-0 ${
-            expandDir === "left" ? "right-0 flex-row" : "left-0 flex-row-reverse"
-          } w-[560px] h-[600px] rounded-[32px] bg-[#121214]/95 backdrop-blur-2xl border border-white/15 shadow-[0_28px_70px_rgba(0,0,0,0.95)] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50`}
+            expandDir === "left"
+              ? "right-0 flex-row rounded-l-[32px] rounded-r-[100px]"
+              : "left-0 flex-row-reverse rounded-l-[100px] rounded-r-[32px]"
+          } w-[560px] h-[600px] bg-[#121214]/95 backdrop-blur-2xl border border-white/15 shadow-[0_28px_70px_rgba(0,0,0,0.95)] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50`}
         >
           {/* Content Column (360px wide) */}
           <div className="w-[360px] h-full flex flex-col justify-between py-8 px-8 shrink-0 text-left">

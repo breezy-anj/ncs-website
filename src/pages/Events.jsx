@@ -8,11 +8,11 @@ import { publicAsset } from "../lib/publicAsset"
 const assetPathPrefix = publicAsset("assets")
 const imgRectangle45 = `${assetPathPrefix}/35193.png`
 const imgRectangle48 = `${assetPathPrefix}/bb76c.png`
-const imgRectangle50 = `${assetPathPrefix}/78cf7.png`
 const img581563659182268897793053042502331000629764086N1 = `${assetPathPrefix}/ba642.png`
-const img623285865179398910581122732442702553504556033N1 = `${assetPathPrefix}/46a8e.png`
-const img625070985180983354599209501403270473272173120N1 = `${assetPathPrefix}/f43fa.png`
 const img639494071182369026933053048550229231404010493N1 = `${assetPathPrefix}/2a0cf.png`
+const imgInOutHacks = encodeURI(`${assetPathPrefix}/events/final poster print.png`)
+const imgBlindCode = encodeURI(`${assetPathPrefix}/events/Frame 2147239119.png`)
+const imgCraffiti = encodeURI(`${assetPathPrefix}/events/Frame 2147239120.png`)
 
 const allEvents = [
   {
@@ -24,7 +24,7 @@ const allEvents = [
     description:
       "A fast-paced overnight hackathon bringing together the brightest minds to architect, design, and deploy impactful tech solutions across web, AI, and systems.",
     href: "https://www.instagram.com/reel/DXtnr23iQ6Y/?stkn=MzRlODBiNWFlZA==",
-    photo: imgRectangle50,
+    photo: imgInOutHacks,
     tags: ["Hackathon", "Coding", "Innovation", "Overnight"],
     badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/30",
   },
@@ -36,7 +36,7 @@ const allEvents = [
     date: "Zealicon 2025",
     description:
       "Turn off the monitor and trust your algorithms! Blind Code tests developers' pure syntax mastery, mental models, and algorithmic precision under high pressure.",
-    photo: img623285865179398910581122732442702553504556033N1,
+    photo: imgBlindCode,
     tags: ["Competitive Programming", "Algorithms", "Precision"],
     badgeColor: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
   },
@@ -66,14 +66,14 @@ const allEvents = [
     badgeColor: "bg-pink-500/20 text-pink-300 border-pink-500/30",
   },
   {
-    id: "craftli",
-    title: "Craftli",
+    id: "craffiti",
+    title: "Craffiti",
     subtitle: "Zealicon 2025 · Creative Workshop",
     category: "Workshop",
     date: "Zealicon 2025",
     description:
       "A creative design workshop exploring visual aesthetics, branding, digital art, and interactive experiences that inspire modern creators.",
-    photo: img625070985180983354599209501403270473272173120N1,
+    photo: imgCraffiti,
     tags: ["Creative", "Art", "Branding"],
     badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
   },
