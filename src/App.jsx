@@ -59,7 +59,7 @@ export default function App() {
           newScale = 1
         } else {
           // On tablet/small-desktop, scale everything except natively responsive pages
-          if (page === "Home" || page === "Events" || page === "Gallery" || page === "Contact") {
+          if (page === "Home" || page === "About" || page === "Events" || page === "Gallery" || page === "Contact") {
             newScale = 1
           } else {
             newScale = Math.min(1, (screenW - padding) / baseW)

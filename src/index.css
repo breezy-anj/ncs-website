@@ -61,6 +61,14 @@
   font-family: 'Satoshi', 'SF Pro:Regular', Inter, Arial, sans-serif;
 }
 
+.font-satoshi {
+  font-family: 'Satoshi', 'SF Pro:Regular', Inter, Arial, sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
 /* Animations */
 @keyframes float {
   0%, 100% {

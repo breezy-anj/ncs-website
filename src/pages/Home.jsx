@@ -314,7 +314,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
       data-name="Home"
     >
       <div
-        className="content-stretch flex flex-col gap-[50px] items-center w-full max-w-[1518px] px-4 md:px-8"
+        className="content-stretch flex flex-col gap-[50px] items-center w-full max-w-[1460px] px-6 sm:px-12 md:px-20 lg:px-28 xl:px-36"
         data-node-id="1:25"
       >
         <div
