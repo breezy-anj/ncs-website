@@ -56,9 +56,17 @@
 }
 
 :root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted-foreground: #a1a1aa;
+  --border: rgba(255, 255, 255, 0.12);
   color: white;
   background: black;
   font-family: 'Satoshi', 'SF Pro:Regular', Inter, Arial, sans-serif;
+}
+
+html, body {
+  overflow-x: clip;
 }
 
 .font-satoshi {
@@ -131,9 +139,7 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* Scroll interpolation handled smoothly by Lenis */
 
 
 /* Infinite Marquee Animations */
@@ -229,13 +235,44 @@ html {
   animation: shimmer 4s linear infinite;
 }
 
+/* Custom Low-Opacity Muted Grey Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox support */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+
 /* Hide scrollbars for snap-scroll strips on mobile */
 .scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 
 /* YouTube-style Ghost / Skeleton sweep animation */

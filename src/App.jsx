@@ -16,6 +16,8 @@ import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
 import Navbar from "./components/Navbar"
 import LiquidGlassCursor from "./components/ui/LiquidGlassCursor"
+import Lenis from "lenis"
+import "lenis/dist/lenis.css"
 
 export default function App() {
   const location = useLocation()
@@ -39,9 +41,52 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(false)
   const innerRef = useRef(null)
 
+  // Initialize Lenis smooth momentum scrolling
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" })
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      smoothWheel: true,
+      touchMultiplier: 1.5,
+    })
+
+    window.lenis = lenis
+
+    let animationFrameId
+    function raf(time) {
+      lenis.raf(time)
+      animationFrameId = requestAnimationFrame(raf)
+    }
+
+    animationFrameId = requestAnimationFrame(raf)
+
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+      lenis.destroy()
+      window.lenis = null
+    }
+  }, [])
+
+  // Instantly scroll to top on page navigation without lag
+  useEffect(() => {
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo({ top: 0, behavior: "instant" })
+    }
   }, [page])
+
+  // Recalculate Lenis scroll dimensions when page scale or content height updates
+  useEffect(() => {
+    if (window.lenis) {
+      window.lenis.resize()
+      requestAnimationFrame(() => {
+        window.lenis?.resize()
+      })
+    }
+  }, [contentHeight, scale, page])
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -58,8 +103,8 @@ export default function App() {
           // On mobile, all pages (Home, About, Project, Recruitment, Team, Alumni) are natively responsive with mobile cards, so scale = 1.
           newScale = 1
         } else {
-          // On tablet/small-desktop, scale everything except natively responsive pages
-          if (page === "Home" || page === "About" || page === "Events" || page === "Gallery" || page === "Contact") {
+          // On tablet/desktop, keep scale = 1 for all responsive pages
+          if (page === "Home" || page === "About" || page === "Events" || page === "Gallery" || page === "Contact" || page === "Team" || page === "Alumni" || page === "Recruitment" || page === "Project") {
             newScale = 1
           } else {
             newScale = Math.min(1, (screenW - padding) / baseW)
@@ -102,7 +147,7 @@ export default function App() {
   const needsHorizontalScroll = false
 
   return (
-    <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-hidden text-white relative">
+    <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-clip text-white relative">
       {/* Custom Liquid Glass Prismatic Cursor */}
       <LiquidGlassCursor />
 

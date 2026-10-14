@@ -296,7 +296,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-full max-w-[1360px] mx-auto flex flex-col justify-center min-h-[100vh] -mt-[70px] sm:-mt-[76px] md:-mt-[84px] py-4 px-4 sm:px-8 select-none z-20"
+      className="relative w-full max-w-[1440px] mx-auto flex flex-col justify-center min-h-[100vh] -mt-[70px] sm:-mt-[76px] md:-mt-[84px] py-4 px-2 sm:px-4 md:px-6 select-none z-20"
     >
       {/* 
         Grid is vertically centered with respect to the vertical window height (ignoring navbar).

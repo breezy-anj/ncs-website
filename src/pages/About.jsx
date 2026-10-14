@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import AboutSection from "../components/AboutSection"
+import TimelineBlock01 from "../components/TimelineBlock01"
 
 export default function About({ activePage = "About", onNavigate }) {
   useEffect(() => {
@@ -12,9 +13,12 @@ export default function About({ activePage = "About", onNavigate }) {
       data-node-id="about-page"
       data-name="About"
     >
-      <div className="content-stretch flex flex-col items-center w-full max-w-[1460px] px-6 sm:px-12 md:px-20 lg:px-28 xl:px-36">
+      <div className="content-stretch flex flex-col items-center w-full max-w-[1480px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="w-full flex flex-col items-center">
           <AboutSection />
+        </div>
+        <div className="w-full mt-10 md:mt-16">
+          <TimelineBlock01 />
         </div>
       </div>
     </div>

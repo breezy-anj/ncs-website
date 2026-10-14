@@ -314,7 +314,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
       data-name="Home"
     >
       <div
-        className="content-stretch flex flex-col gap-[50px] items-center w-full max-w-[1460px] px-6 sm:px-12 md:px-20 lg:px-28 xl:px-36"
+        className="content-stretch flex flex-col gap-[50px] items-center w-full max-w-[1480px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
         data-node-id="1:25"
       >
         <div
@@ -400,7 +400,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   label="Join the Community"
                   onClick={() => {
                     const connectEl = document.getElementById("connect-section")
-                    if (connectEl) {
+                    if (window.lenis) {
+                      window.lenis.scrollTo(connectEl || document.body.scrollHeight)
+                    } else if (connectEl) {
                       connectEl.scrollIntoView({ behavior: "smooth" })
                     } else {
                       window.scrollTo({

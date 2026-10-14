@@ -181,7 +181,7 @@ export default function RadialOrbitalTimeline({
           </div>
 
           {/* Orbit Guide Circle matching radius 200 exactly */}
-          <div className="absolute w-[400px] h-[400px] rounded-full border border-white/10"></div>
+          <div className="absolute w-[400px] h-[400px] rounded-full border border-white/10 pointer-events-none"></div>
 
           {timelineData.map((item, index) => {
             const position = calculateNodePosition(index, timelineData.length);
@@ -207,66 +207,62 @@ export default function RadialOrbitalTimeline({
                   toggleItem(item.id);
                 }}
               >
+                {/* Glow aura */}
                 <div
                   className={`absolute rounded-full -inset-1 ${
                     isPulsing ? "animate-pulse duration-1000" : ""
                   }`}
                   style={{
                     background: `radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)`,
-                    width: `${item.energy * 0.5 + 40}px`,
-                    height: `${item.energy * 0.5 + 40}px`,
-                    left: `-${(item.energy * 0.5 + 40 - 40) / 2}px`,
-                    top: `-${(item.energy * 0.5 + 40 - 40) / 2}px`,
+                    width: `${item.energy * 0.4 + 60}px`,
+                    height: `${item.energy * 0.4 + 60}px`,
+                    left: `-${(item.energy * 0.4) / 2}px`,
+                    top: `-${(item.energy * 0.4) / 2}px`,
                   }}
                 ></div>
 
-                {/* Reverted to original proportional node size w-10 h-10 */}
+                {/* Enlarged Circle (w-15 / 60px) maintaining perfect revolution position */}
                 <div
                   className={`
-                  w-10 h-10 rounded-full flex items-center justify-center p-2
+                  w-[58px] h-[58px] sm:w-[62px] sm:h-[62px] rounded-full flex items-center justify-center p-2.5 sm:p-3
                   ${
                     isExpanded
-                      ? "bg-white text-black"
+                      ? "bg-white text-black shadow-lg shadow-white/30"
                       : isRelated
-                      ? "bg-white/50 text-black"
-                      : "bg-black text-white"
+                      ? "bg-white/50 text-black border-white animate-pulse"
+                      : "bg-black text-white border-white/40 hover:border-white hover:text-white"
                   }
-                  border-2 
-                  ${
-                    isExpanded
-                      ? "border-white shadow-lg shadow-white/30"
-                      : isRelated
-                      ? "border-white animate-pulse"
-                      : "border-white/40"
-                  }
+                  border-2 backdrop-blur-sm
                   transition-all duration-300 transform
-                  ${isExpanded ? "scale-150" : ""}
+                  ${isExpanded ? "scale-140 ring-4 ring-white/20" : "hover:scale-110"}
                 `}
                 >
                   {typeof Icon === "string" ? (
                     <img
                       src={Icon}
                       alt={item.title}
-                      className="w-5 h-5 object-contain filter invert"
+                      className="w-7 h-7 sm:w-8 sm:h-8 object-contain filter invert"
                     />
                   ) : (
-                    <Icon className="w-5 h-5 object-contain" />
+                    <Icon className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
                   )}
                 </div>
 
+                {/* Title Badge centered directly under the circle */}
                 <div
                   className={`
-                  absolute top-12 whitespace-nowrap
-                  text-xs font-semibold tracking-wider
-                  transition-all duration-300
+                  absolute top-16 sm:top-[68px] left-1/2 -translate-x-1/2 whitespace-nowrap
+                  text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-center
+                  transition-all duration-300 select-none
                   ${isExpanded ? "text-white scale-125" : "text-white/70"}
                 `}
                 >
                   {item.title}
                 </div>
 
+                {/* Expanded Card Detail */}
                 {isExpanded && (
-                  <Card className="absolute top-20 left-1/2 -translate-x-1/2 w-64 bg-black/90 backdrop-blur-lg border-white/30 shadow-xl shadow-white/10 overflow-visible">
+                  <Card className="absolute top-24 left-1/2 -translate-x-1/2 w-64 bg-black/90 backdrop-blur-lg border-white/30 shadow-xl shadow-white/10 overflow-visible z-50">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-white/50"></div>
                     <CardHeader className="pb-2">
                       <div className="flex justify-between items-center">
