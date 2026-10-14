@@ -41,52 +41,37 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(false)
   const innerRef = useRef(null)
 
-  // Initialize Lenis smooth momentum scrolling
+  // Initialize Lenis smooth momentum scrolling with optimized linear damping
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
+      autoRaf: true,
+      lerp: 0.09,
       smoothWheel: true,
-      touchMultiplier: 1.5,
+      syncTouch: false,
+      wheelMultiplier: 1,
+      touchMultiplier: 1,
     })
 
     window.lenis = lenis
 
-    let animationFrameId
-    function raf(time) {
-      lenis.raf(time)
-      animationFrameId = requestAnimationFrame(raf)
-    }
-
-    animationFrameId = requestAnimationFrame(raf)
-
     return () => {
-      cancelAnimationFrame(animationFrameId)
       lenis.destroy()
       window.lenis = null
     }
   }, [])
 
-  // Instantly scroll to top on page navigation without lag
+  // Instantly scroll to top on page navigation and sync dimensions once layout settles
   useEffect(() => {
     if (window.lenis) {
       window.lenis.scrollTo(0, { immediate: true })
+      const timer = setTimeout(() => {
+        window.lenis?.resize()
+      }, 120)
+      return () => clearTimeout(timer)
     } else {
       window.scrollTo({ top: 0, behavior: "instant" })
     }
   }, [page])
-
-  // Recalculate Lenis scroll dimensions when page scale or content height updates
-  useEffect(() => {
-    if (window.lenis) {
-      window.lenis.resize()
-      requestAnimationFrame(() => {
-        window.lenis?.resize()
-      })
-    }
-  }, [contentHeight, scale, page])
 
   useEffect(() => {
     const updateDimensions = () => {

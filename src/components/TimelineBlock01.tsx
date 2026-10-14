@@ -5,50 +5,61 @@ import { Badge } from "@/components/ui/badge";
 
 const timelineData = [
   {
-    title: "Agency Founded",
+    title: "Curiosity Into Creation",
     description:
-      "Started with a mission to create meaningful digital experiences through strategy and thoughtful design.",
-    date: "2022",
-    image:
-      "https://cdn.21st.dev/assets/localized/0ea25e6c9f3a254d713265295d48f2f515a3ce40d9cf2adcfd9454a3a96df996.webp",
+      "Every great journey begins with a question. At NCS, students explore technology, discover their interests, and find the confidence to turn curiosity into creation.",
+    date: "01",
   },
   {
-    title: "First Major Clients",
+    title: "Professional Mindset",
     description:
-      "Partnered with ambitious businesses looking to transform their online presence and customer engagement.",
-    date: "2024",
-    image:
-      "https://cdn.21st.dev/assets/localized/8fcabd896d283359f9f601b92bce74fc06aa48f368e56afbd21dca69a9742809.webp",
+      "Deadlines, responsibilities, teamwork, and accountability become part of the journey. We help students develop the mindset that the professional world expects.",
+    date: "02",
   },
   {
-    title: "Global Reach",
+    title: "Hands-On Experience",
     description:
-      "Working with clients worldwide while continuing to deliver impactful and measurable digital experiences.",
-    date: "2026",
-    image:
-      "https://cdn.21st.dev/assets/localized/f8596260a4e342a4a2d85e821ff477a8e71182f373aea763dfd4f13fe657f5fa.webp",
+      "From writing the first line of code to designing an interface or developing a complete project, we turn learning into hands-on experience and ideas into something real.",
+    date: "03",
+  },
+  {
+    title: "Growing Together",
+    description:
+      "Behind every project, hackathon, and breakthrough are people who challenge, support, and inspire each other. At NCS, we grow together and celebrate every win together.",
+    date: "04",
+  },
+  {
+    title: "Voice & Communication",
+    description:
+      "Great minds need more than great ideas. Through discussions, presentations, and shared experiences, students learn to communicate confidently and make their ideas heard.",
+    date: "05",
+  },
+  {
+    title: "Who We Become",
+    description:
+      "We come together as students with potential and grow into programmers, developers, designers, and professionals ready to take on new challenges. Because NCS isn't just about what we build — it's about who we become.",
+    date: "06",
   },
 ];
 
 const TimelineBlock01 = () => {
   return (
-    <section className="overflow-hidden w-full py-12 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+    <section className="overflow-hidden w-full py-12 md:py-20 font-satoshi">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 font-satoshi">
         <div className="border-x border-b border-white/10 px-6 py-10 md:px-10 md:py-16 lg:px-16 lg:py-20 rounded-t-3xl bg-white/[0.02] backdrop-blur-sm">
-          <div className="max-w-2xl space-y-4">
+          <div className="max-w-2xl space-y-4 font-satoshi">
             <Badge
               variant="outline"
-              className="rounded-full px-3.5 py-1 text-xs font-normal border-white/20 text-white/80 bg-white/5"
+              className="rounded-full px-3.5 py-1 text-xs font-normal border-white/20 text-white/80 bg-white/5 font-satoshi"
             >
-              Timeline
+              What We Do
             </Badge>
             <div className="space-y-3">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white font-satoshi">
-                A Story Of Growth
+                What we do at NCS?
               </h2>
               <p className="md:text-lg text-base text-white/60 leading-relaxed font-satoshi">
-                Our journey reflects years of collaboration, creativity, and
-                dedication to helping brands stand out online.
+                From exploring new technologies to building impactful real-world projects, here is how we learn, grow, and build together.
               </p>
             </div>
           </div>

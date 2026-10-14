@@ -41,8 +41,8 @@ const TimelineItem = ({
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col gap-3"
         >
-          <div className="space-y-2">
-            <p className="text-lg md:text-xl text-white/50 font-normal">
+          <div className="space-y-2 font-satoshi">
+            <p className="text-lg md:text-xl text-white/50 font-normal font-satoshi">
               ({date})
             </p>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-white font-satoshi">
@@ -61,7 +61,7 @@ const TimelineItem = ({
           isEven ? "md:order-2" : ""
         )}
       >
-        {image && (
+        {image ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -74,6 +74,26 @@ const TimelineItem = ({
               alt={title}
               className="absolute inset-0 h-full w-full object-cover object-top"
             />
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="w-full max-w-[420px] aspect-16/9 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-transparent p-6 flex flex-col justify-between backdrop-blur-sm shadow-xl font-satoshi"
+          >
+            <div className="flex items-center justify-between">
+              <span className="text-xs uppercase tracking-widest text-white/40 font-satoshi">
+                Milestone
+              </span>
+              <span className="text-sm font-semibold text-white/60 font-satoshi">
+                {date || `0${index + 1}`}
+              </span>
+            </div>
+            <p className="text-lg font-medium text-white/90 font-satoshi">
+              {title}
+            </p>
           </motion.div>
         )}
       </div>
@@ -89,20 +109,14 @@ export const Timeline = ({ items, className }: TimelineProps) => {
     offset: ["start center", "end center"],
   });
 
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  const dotTop = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
+  const dotTop = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div ref={containerRef} className={cn("relative md:px-0", className)}>
+    <div ref={containerRef} className={cn("relative md:px-0 font-satoshi", className)}>
       <div className="absolute md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2 bg-white/10" />
       <div className="absolute md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2">
         <motion.div
-          style={{ scaleY: smoothProgress, originY: 0 }}
+          style={{ scaleY: scrollYProgress, originY: 0 }}
           className="absolute inset-0 bg-white w-full"
         />
         <motion.div
