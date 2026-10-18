@@ -9,6 +9,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 const imgNcsLogo = publicAsset("assets/ncs-logo-white.svg")
 const imgWorkshopSession = publicAsset("assets/about-learning-session.webp")
+const imgLabCoding = publicAsset("assets/highlights/web/IMG_1634.webp")
+const imgHackathonOrganizers = publicAsset("assets/highlights/web/IMG_3012.webp")
+const imgCommunityFamily = publicAsset("assets/about-community-family.webp")
 
 /**
  * ============================================================================
@@ -535,6 +538,13 @@ export default function GsapHorizontalShowcase() {
     // SLIDE 1: The Discipline — Electric Lightning Glitch & Surge (Neon Green)
     // =========================================================================
     if (slideIndex === 1) {
+      // Fade & float in background photo card 2
+      gsap.fromTo(
+        ".anim-point2-img",
+        { opacity: 0.45, scale: 0.94, y: -20 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.85, ease: "power2.out" }
+      )
+
       // Intense lightning flash on lightning doodle
       gsap.fromTo(
         ".anim-lightning",
@@ -589,6 +599,13 @@ export default function GsapHorizontalShowcase() {
     // SLIDE 2: The Craft — 3D Isometric Code-Block Flip & Drop (Sky Cyan)
     // =========================================================================
     if (slideIndex === 2) {
+      // Fade & float in background photo card 3
+      gsap.fromTo(
+        ".anim-point3-img",
+        { opacity: 0.45, scale: 0.94, y: 22 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.85, ease: "power2.out" }
+      )
+
       // Tumble isometric code cube doodle
       gsap.fromTo(
         ".anim-cube",
@@ -652,6 +669,13 @@ export default function GsapHorizontalShowcase() {
     // SLIDE 3: The Destination — Organic Bloom, Float & Swell (Emerald / Pink)
     // =========================================================================
     if (slideIndex === 3) {
+      // Fade & float in background photo card 4
+      gsap.fromTo(
+        ".anim-point4-img",
+        { opacity: 0.45, scale: 0.94, y: -22 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.85, ease: "power2.out" }
+      )
+
       // Spin propeller flower doodle
       gsap.fromTo(
         ".anim-flower",
@@ -876,6 +900,33 @@ export default function GsapHorizontalShowcase() {
         yoyo: true,
         ease: "sine.inOut",
       })
+
+      gsap.to(".anim-point2-img", {
+        y: 6,
+        rotate: 1.2,
+        duration: 4.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      })
+
+      gsap.to(".anim-point3-img", {
+        y: -6,
+        rotate: -1.4,
+        duration: 3.9,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      })
+
+      gsap.to(".anim-point4-img", {
+        y: 7,
+        rotate: 1.1,
+        duration: 4.4,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      })
     }, outerRef)
 
     syncHorizontalPosition()
@@ -1040,6 +1091,21 @@ export default function GsapHorizontalShowcase() {
                     mindset that the professional world expects.
                   </span>
                 </h2>
+
+                {/* Background Editorial Photo 2: Placed upper-left behind the pills & start of text */}
+                <div
+                  className="anim-point2-img absolute -top-14 sm:-top-18 md:-top-24 -left-3 sm:-left-6 md:-left-10 w-[260px] sm:w-[320px] md:w-[380px] lg:w-[430px] h-[165px] sm:h-[205px] md:h-[245px] lg:h-[270px] z-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.85)] pointer-events-none select-none rotate-1"
+                >
+                  <img
+                    src={imgLabCoding}
+                    alt="NCS students coding session"
+                    className="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.82]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0c]/40 via-black/50 to-[#0a0a0c]/90 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0a0a0c]/80 z-10" />
+                </div>
               </div>
             </div>
 
@@ -1091,6 +1157,21 @@ export default function GsapHorizontalShowcase() {
                     hands-on experience and ideas into something real.
                   </span>
                 </h2>
+
+                {/* Background Editorial Photo 3: Placed lower-right behind the final sentence */}
+                <div
+                  className="anim-point3-img absolute right-0 sm:right-4 md:right-8 -bottom-22 sm:-bottom-26 md:-bottom-34 lg:-bottom-38 w-[270px] sm:w-[340px] md:w-[410px] lg:w-[460px] h-[170px] sm:h-[210px] md:h-[250px] lg:h-[280px] z-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.85)] pointer-events-none select-none -rotate-1.5"
+                >
+                  <img
+                    src={imgHackathonOrganizers}
+                    alt="NCS hackathon organizers"
+                    className="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.82]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-black/45 to-transparent z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0c]/85 via-transparent to-black/30 z-10" />
+                </div>
               </div>
             </div>
 
@@ -1148,6 +1229,21 @@ export default function GsapHorizontalShowcase() {
                     it&apos;s about who we become.
                   </span>
                 </h2>
+
+                {/* Background Editorial Photo 4: Placed upper-right behind the end of statement */}
+                <div
+                  className="anim-point4-img absolute -top-16 sm:-top-22 md:-top-30 right-0 sm:-right-4 md:-right-8 w-[270px] sm:w-[340px] md:w-[410px] lg:w-[470px] h-[175px] sm:h-[215px] md:h-[255px] lg:h-[285px] z-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.85)] pointer-events-none select-none rotate-2"
+                >
+                  <img
+                    src={imgCommunityFamily}
+                    alt="NCS student community"
+                    className="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.82]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0c]/40 via-black/50 to-[#0a0a0c]/90 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0a0a0c]/85 z-10" />
+                </div>
               </div>
             </div>
 
