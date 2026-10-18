@@ -161,6 +161,38 @@ html, body {
   animation-play-state: paused;
 }
 
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-100% - var(--gap, 1rem)), 0, 0);
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, calc(-100% - var(--gap, 1rem)), 0);
+  }
+}
+
+.animate-marquee {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
 .liquid-metal-button-subtle canvas {
   opacity: 0.58 !important;
 }
