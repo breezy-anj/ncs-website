@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ArrowRight } from "lucide-react"
 
 import { publicAsset } from "../../lib/publicAsset"
 
@@ -1252,20 +1251,11 @@ export default function GsapHorizontalShowcase() {
 
         {/* Bottom Progress Bar Track */}
         <div className="w-full max-w-[1650px] mx-auto px-6 sm:px-12 pb-2 sm:pb-4 z-20">
-          <div className="flex flex-col space-y-2">
-            <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
-              <div
-                ref={progressBarRef}
-                className="w-full h-full bg-[#0ae448] origin-left scale-x-0 shadow-[0_0_12px_#0ae448]"
-              />
-            </div>
-            <div className="flex items-center justify-between text-[11px] font-mono text-white/40">
-              <span>Scroll down to advance journey</span>
-              <div className="flex items-center gap-1 text-[#0ae448]">
-                <span>Scroll</span>
-                <ArrowRight size={12} />
-              </div>
-            </div>
+          <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
+            <div
+              ref={progressBarRef}
+              className="w-full h-full bg-[#0ae448] origin-left scale-x-0 shadow-[0_0_12px_#0ae448]"
+            />
           </div>
         </div>
       </div>

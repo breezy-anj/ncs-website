@@ -1,23 +1,26 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, lazy, Suspense } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Events from "./pages/Events"
-import Gallery from "./pages/Gallery"
-import Project from "./pages/Project"
-import Teams from "./pages/Teams"
-import Alumni from "./pages/Alumni"
-import Recruitment from "./pages/Recruitment"
-import Contact from "./pages/Contact"
-import CircularGalleryDemo from "./components/ui/circular-gallery-demo"
-import CardFanCarouselDemo from "./components/ui/card-fan-carousel-demo"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
 import Navbar from "./components/Navbar"
 import LiquidGlassCursor from "./components/ui/LiquidGlassCursor"
 import Lenis from "lenis"
 import "lenis/dist/lenis.css"
+
+// Code-split pages with React.lazy so page loads are non-blocking and the navbar never lags
+const Home = lazy(() => import("./pages/Home"))
+const About = lazy(() => import("./pages/About"))
+const Events = lazy(() => import("./pages/Events"))
+const Gallery = lazy(() => import("./pages/Gallery"))
+const Project = lazy(() => import("./pages/Project"))
+const Teams = lazy(() => import("./pages/Teams"))
+const Alumni = lazy(() => import("./pages/Alumni"))
+const Recruitment = lazy(() => import("./pages/Recruitment"))
+const Contact = lazy(() => import("./pages/Contact"))
+const CardFanCarouselDemo = lazy(() => import("./components/ui/card-fan-carousel-demo"))
+
+import { preloadRoute } from "./lib/preloadRoute"
 
 export default function App() {
   const location = useLocation()
@@ -73,6 +76,17 @@ export default function App() {
     }
   }, [page])
 
+  // Preload common pages in idle time so transitions are instantaneous
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      preloadRoute("/about")
+      preloadRoute("/events")
+      preloadRoute("/team")
+      preloadRoute("/gallery")
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
   useEffect(() => {
     const updateDimensions = () => {
       const screenW = window.innerWidth
@@ -101,7 +115,8 @@ export default function App() {
         setScale(1)
       }
 
-      if (innerRef.current) {
+      // Avoid forced synchronous reflow during page transitions unless scaling is active
+      if (scale < 1 && innerRef.current) {
         setContentHeight(innerRef.current.offsetHeight)
       }
     }
@@ -109,7 +124,7 @@ export default function App() {
     updateDimensions()
 
     const ro = new ResizeObserver(() => {
-      if (innerRef.current) {
+      if (scale < 1 && innerRef.current) {
         setContentHeight(innerRef.current.offsetHeight)
       }
     })
@@ -124,7 +139,7 @@ export default function App() {
       ro.disconnect()
       window.removeEventListener("resize", updateDimensions)
     }
-  }, [page])
+  }, [page, scale])
 
   const scrollRef = useRef(null)
 
@@ -165,27 +180,29 @@ export default function App() {
             transformOrigin: needsHorizontalScroll ? "top left" : "top center",
           }}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="sync">
             <motion.div
               key={location.pathname}
-              initial={{ opacity: 0, filter: "blur(8px)", y: 15 }}
+              initial={{ opacity: 0, filter: "blur(6px)", y: 10 }}
               animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
               exit={{ opacity: 0, transition: { duration: 0 } }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
               className="w-full flex justify-center"
             >
-              <Routes location={location}>
-                <Route path="/" element={<Home activePage={page} />} />
-                <Route path="/about" element={<About activePage={page} />} />
-                <Route path="/events" element={<Events activePage={page} />} />
-                <Route path="/gallery" element={<Gallery activePage={page} />} />
-                <Route path="/project" element={<Project activePage={page} />} />
-                <Route path="/team" element={<Teams activePage={page} />} />
-                <Route path="/alumni" element={<Alumni activePage={page} />} />
-                <Route path="/recruitment" element={<Recruitment activePage={page} />} />
-                <Route path="/contact" element={<Contact activePage={page} />} />
-                <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
-              </Routes>
+              <Suspense fallback={<div className="w-full min-h-[50vh]" />}>
+                <Routes location={location}>
+                  <Route path="/" element={<Home activePage={page} />} />
+                  <Route path="/about" element={<About activePage={page} />} />
+                  <Route path="/events" element={<Events activePage={page} />} />
+                  <Route path="/gallery" element={<Gallery activePage={page} />} />
+                  <Route path="/project" element={<Project activePage={page} />} />
+                  <Route path="/team" element={<Teams activePage={page} />} />
+                  <Route path="/alumni" element={<Alumni activePage={page} />} />
+                  <Route path="/recruitment" element={<Recruitment activePage={page} />} />
+                  <Route path="/contact" element={<Contact activePage={page} />} />
+                  <Route path="/fan-carousel" element={<CardFanCarouselDemo />} />
+                </Routes>
+              </Suspense>
             </motion.div>
           </AnimatePresence>
         </div>

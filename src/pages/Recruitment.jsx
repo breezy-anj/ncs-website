@@ -137,7 +137,7 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-4"
+            className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/75 backdrop-blur-md p-4"
             onClick={() => setIsModalOpen(false)}
           >
             <motion.div
@@ -145,7 +145,7 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-[500px] bg-[#0c1022]/95 border border-indigo-500/40 rounded-[32px] p-8 shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_50px_rgba(99,102,241,0.25)] text-center overflow-hidden"
+              className="relative w-full max-w-[500px] max-h-[min(90vh,600px)] overflow-y-auto bg-[#0c1022]/95 border border-indigo-500/40 rounded-[32px] p-8 shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_50px_rgba(99,102,241,0.25)] text-center"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Top Accent Gradient */}

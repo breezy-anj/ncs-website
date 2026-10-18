@@ -523,20 +523,22 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
 
     return (
       <div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md cursor-default"
+        className="fixed inset-0 z-[1000] flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md cursor-default"
         onClick={() => setSelectedImage(null)}
         style={{
           animation: 'fadeIn 0.25s ease-out'
         }}
       >
         <div
-          className="bg-[#121214] border border-white/20 text-white rounded-3xl max-w-sm sm:max-w-md w-full overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.95)] relative flex flex-col items-center"
+          className="bg-[#121214] border border-white/20 text-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.95)] relative flex flex-col items-center shrink-0 transition-all duration-200"
           onClick={(e) => e.stopPropagation()}
           style={{
+            width: 'min(88vw, calc(70vh - 60px), 420px)',
+            maxHeight: 'min(84vh, 540px)',
             animation: 'scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
           }}
         >
-          <div className="relative w-full aspect-square bg-black overflow-hidden flex items-center justify-center">
+          <div className="relative w-full aspect-square bg-black overflow-hidden flex items-center justify-center shrink min-h-0">
             {/* Instant thumbnail preview already present in browser cache */}
             <img
               src={selectedImage.src}
@@ -571,7 +573,7 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
 
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-3 right-3 size-9 bg-black/75 hover:bg-black/95 border border-white/25 rounded-full text-white flex items-center justify-center transition-all cursor-pointer z-10 shadow-lg hover:scale-110 active:scale-95"
+              className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 size-8 sm:size-9 bg-black/80 hover:bg-black border border-white/30 rounded-full text-white flex items-center justify-center transition-all cursor-pointer z-20 shadow-xl hover:scale-110 active:scale-95"
               aria-label="Close"
             >
               <X size={18} />
@@ -579,14 +581,14 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
           </div>
 
           {(selectedImage.title || selectedImage.description) && (
-            <div className="p-5 w-full text-center bg-[#121214] border-t border-white/10">
+            <div className="p-3 sm:p-4 w-full text-center bg-[#121214] border-t border-white/10 shrink-0">
               {selectedImage.title && (
-                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-wide font-['Inter','Satoshi',sans-serif]">
+                <h3 className="text-base sm:text-xl font-bold text-white tracking-wide font-['Inter','Satoshi',sans-serif]">
                   {selectedImage.title}
                 </h3>
               )}
               {selectedImage.description && (
-                <p className="mt-1 text-gray-400 text-sm font-normal">
+                <p className="mt-0.5 sm:mt-1 text-gray-400 text-xs sm:text-sm font-normal">
                   {selectedImage.description}
                 </p>
               )}

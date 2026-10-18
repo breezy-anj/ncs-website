@@ -146,6 +146,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   socialLinks={["https://www.linkedin.com/in/kuldeepchaudhary108/","https://github.com/Kuldeepchaudhary108/"]}
+  bio="~wanted die with memories not with dreams"
 />
                   <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[651px] mt-[192px] place-items-start relative row-1" data-node-id="1:65">
                     
@@ -250,6 +251,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-17.08px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[110px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   socialLinks={["https://www.linkedin.com/in/anshika-saini-581885350"]}
+  bio="Building my skills, chasing my goals, and writing my own story. Currently under construction."
 />
                   
 <TeamMemberCard
@@ -263,6 +265,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   socialLinks={["https://www.linkedin.com/in/aryan-singh-661819286/","https://github.com/Coder-Aryan09"]}
+  bio="Ambitious builder turning chaotic logic into flawless strikes, slaying every bug that comes in the way."
 />
                   
 <TeamMemberCard
@@ -276,6 +279,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   socialLinks={["https://x.com/Utkarsh00018232","https://www.linkedin.com/in/utkarsh-shukla-b2442b329/"]}
+  bio="Programmer by day, Larper by night."
 />
                   
 <TeamMemberCard
@@ -289,6 +293,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
   socialLinks={["https://x.com/shrey_007","https://www.linkedin.com/in/shreyansh-pandey-54949730b"]}
+  bio="Minding your own business is a quality only a mature mind possesses."
 />
                   
 <TeamMemberCard
@@ -330,6 +335,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   socialLinks={["https://x.com/ayushv005","https://www.linkedin.com/in/ayush-vashisth-4600a5338","https://github.com/vasayu"]}
+  bio="Just having fun with creating unconventional things and coming up with unique solutions to simple problem."
 />
                   
 <TeamMemberCard
@@ -343,6 +349,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
   socialLinks={["https://x.com/Lakshya92116503","https://www.linkedin.com/in/lakshya-dubey01/","https://github.com/lakshya-byte"]}
+  bio="Part-time overthinker, full-time curious human. I love building random things, exploring AI, meeting cool people, and starting projects at 2 AM because apparently sleep can wait. Always down for a good conversation, a crazy idea, or figuring out something I probably didn't need to know 😂"
 />
                   
 <TeamMemberCard
@@ -356,6 +363,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   socialLinks={["https://x.com/ShreyanshD44145","https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320"]}
+  bio="Talk is cheap. Show me the code."
 />
                   
 <TeamMemberCard
@@ -399,6 +407,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   linkedinUrl="https://www.linkedin.com/in/vishnu-tiwari-930267332/"
+  bio="An ambitious mind with a curious soul. Into AI, tech, and building something meaningful. Quietly competitive, always evolving, and letting actions speak louder than words. 🚀"
 />
                   
 <TeamMemberCard
@@ -449,6 +458,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
   linkedinUrl="https://www.linkedin.com/in/piyush-gautam-625478332/"
+  bio="A creative mind with too many tabs open."
 />
                   
 <TeamMemberCard
@@ -577,7 +587,7 @@ export default function Team() {
   photoClasses="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
   linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/"
-  bio="I enjoy writing code, but sometimes my code becomes my next problem. 🫠"
+  bio="My peace isn't inner peace; it's “All test cases passed”"
 />
                 </div>
                 <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:269">

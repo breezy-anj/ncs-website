@@ -322,7 +322,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
           data-node-id="1:36"
         >
           <div
-            className="flex flex-col-reverse gap-6 sm:gap-8 md:gap-0 items-center justify-center md:grid md:grid-cols-[max-content] md:grid-rows-[max-content] md:justify-center md:items-center md:mx-auto relative shrink-0 w-full min-h-[calc(100vh-103px)] md:min-h-[640px] lg:min-h-[700px] md:-mt-[40px]"
+            className="relative w-full flex flex-col-reverse md:flex-row items-center justify-between min-h-[calc(100vh-103px)] md:min-h-[560px] lg:min-h-[660px] xl:min-h-[720px] md:-mt-[40px] overflow-visible"
             data-node-id="1:37"
           >
             {/* Mobile View: Static Robot Image with Infinite Multi-axis Floating Effect */}
@@ -363,7 +363,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
             {/* Desktop View: Full Interactive 3D Spline Scene */}
             <div
-              className="relative z-0 hidden md:flex md:w-[min(816px,58vw)] md:h-[min(725px,51.55vw)] md:col-1 md:row-1 md:ml-[568px] select-none md:translate-y-0 mx-auto justify-center items-center pointer-events-auto"
+              className="relative z-0 hidden md:flex md:absolute md:right-[-24px] lg:right-[-12px] xl:right-[15px] md:top-1/2 md:-translate-y-1/2 w-[clamp(340px,46vw,816px)] h-[clamp(340px,43vw,725px)] select-none justify-center items-center pointer-events-auto"
               data-node-id="1:38"
               data-name="Hero Spline 3D"
             >
@@ -377,12 +377,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
             {/* Left Typography & CTA */}
             <div
-              className="flex flex-col gap-8 md:gap-[44px] items-center md:items-start text-center md:text-left relative z-10 w-full md:w-[820px] md:col-1 md:row-1 mx-auto md:mx-0"
+              className="flex flex-col gap-6 sm:gap-8 md:gap-[32px] lg:gap-[40px] items-center md:items-start text-center md:text-left relative z-10 w-full md:w-auto md:max-w-[58%] lg:max-w-[55%] xl:max-w-[820px] shrink-0"
               data-node-id="1:39"
             >
               <div className="flex flex-col not-italic items-center md:items-start relative shrink-0 w-full gap-4 md:gap-6">
                 <div
-                  className="bg-clip-text text-transparent font-['Satoshi',Arial,sans-serif] font-black text-[46px] xs:text-[56px] sm:text-[84px] md:text-[116px] lg:text-[126px] leading-[1.04] tracking-[-0.04em] w-full md:w-[820px] select-none text-center md:text-left mx-auto md:mx-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                  className="bg-clip-text text-transparent font-['Satoshi',Arial,sans-serif] font-black text-[44px] xs:text-[54px] sm:text-[76px] md:text-[clamp(50px,5.8vw,90px)] lg:text-[clamp(78px,6.8vw,114px)] xl:text-[126px] leading-[1.02] tracking-[-0.04em] w-full select-none text-center md:text-left drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
                   data-node-id="1:42"
                   style={{
                     backgroundImage: "radial-gradient(50% 50% at 50% 50%, #FFFFFF 33.17%, #999999 100%)",
@@ -529,23 +529,23 @@ export default function Home({ activePage = "Home", onNavigate }) {
             >
               {/* Row 1: PROGRAMMING + Pink Card */}
               <div
-                className="group flex flex-col md:flex-row items-center justify-center w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] gap-6 md:gap-[80px]"
+                className="group flex flex-col md:flex-row items-center justify-center w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] gap-6 md:gap-[clamp(20px,4vw,80px)]"
                 data-node-id="1:52"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:53"
                 >
                   PROGRAMMING
                 </p>
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
+                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
                   data-node-id="1:54"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
                   }}
                 >
-                  <svg className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
                   </svg>
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
@@ -559,17 +559,17 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 2: Purple Card + DEVELOPMENT */}
               <div
-                className="group flex flex-col-reverse md:flex-row items-center justify-start gap-6 md:gap-[35px] w-full cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex flex-col-reverse md:flex-row items-center justify-start gap-6 md:gap-[clamp(16px,2.5vw,35px)] w-full cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:56"
               >
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
+                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
                   data-node-id="1:58"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
                   }}
                 >
-                  <svg className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
                     <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
                     <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
@@ -583,7 +583,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:57"
                 >
                   DEVELOPMENT
@@ -592,17 +592,17 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 3: DESIGNING + Yellow Card */}
               <div
-                className="group flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[35px] w-full md:ml-[60px] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[clamp(16px,2.5vw,35px)] w-full md:ml-[clamp(10px,3vw,60px)] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:60"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:61"
                 >
                   DESIGNING
                 </p>
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
+                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
                   data-node-id="1:62"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
@@ -610,7 +610,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   <img
                     alt="Designing"
-                    className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
                     src={imgVector1}
                   />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
@@ -624,11 +624,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 4: Green Card + TECHNICAL */}
               <div
-                className="group flex flex-col-reverse md:flex-row items-center justify-start gap-6 md:gap-[35px] w-full md:ml-[70px] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
+                className="group flex flex-col-reverse md:flex-row items-center justify-start gap-6 md:gap-[clamp(16px,2.5vw,35px)] w-full md:ml-[clamp(10px,3.5vw,70px)] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:64"
               >
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[229px] overflow-clip relative rounded-[34px] w-[198px] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(179,253,68,0.4)]"
+                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(179,253,68,0.4)]"
                   data-node-id="1:66"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
@@ -636,7 +636,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   <img
                     alt="Technical"
-                    className="absolute w-[124px] h-[124px] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
                     src={imgTechnicalIcon}
                   />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
@@ -647,7 +647,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[72px] md:text-[100px] lg:text-[125px] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
+                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
                   data-node-id="1:65"
                 >
                   TECHNICAL

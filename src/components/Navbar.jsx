@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useTransition } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import {
@@ -12,6 +12,7 @@ import {
   Users,
 } from "lucide-react"
 import { publicAsset } from "../lib/publicAsset"
+import { preloadRoute } from "../lib/preloadRoute"
 
 const imgNcsLogo = publicAsset("assets/ncs-logo-white.svg")
 
@@ -29,8 +30,15 @@ const navItems = [
 export default function Navbar() {
   const navigate = useNavigate()
   const location = useLocation()
+  const [, startTransition] = useTransition()
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isCtaHovered, setIsCtaHovered] = useState(false)
+  const [optimisticPath, setOptimisticPath] = useState(location.pathname)
+
+  // Keep optimistic state in sync when navigated via history/back/forward
+  useEffect(() => {
+    setOptimisticPath(location.pathname)
+  }, [location.pathname])
 
   const getPageFromPath = (path) => {
     if (path === "/") return "Home"
@@ -44,19 +52,32 @@ export default function Navbar() {
     if (path === "/contact") return "Contact"
     return "Home"
   }
-  const activePage = getPageFromPath(location.pathname)
+
+  // Determine active tab instantly from optimisticPath so animation triggers with zero lag
+  const activePage = getPageFromPath(optimisticPath || location.pathname)
 
   const onNavigate = (path) => {
-    if (location.pathname === path) {
+    if (location.pathname === path && optimisticPath === path) {
       if (window.lenis) {
         window.lenis.scrollTo(0)
       } else {
         window.scrollTo({ top: 0, behavior: "smooth" })
       }
-    } else {
-      navigate(path)
+      setIsMobileOpen(false)
+      return
     }
+
+    // 1. Immediately fire the navbar pill animation on the exact click frame
+    setOptimisticPath(path)
     setIsMobileOpen(false)
+
+    // 2. Schedule page navigation inside startTransition and requestAnimationFrame
+    // so the browser paints the navbar active pill gliding first without being blocked by page loading
+    requestAnimationFrame(() => {
+      startTransition(() => {
+        navigate(path)
+      })
+    })
   }
 
   const handleContactClick = () => {
@@ -93,6 +114,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => onNavigate("/")}
+              onMouseEnter={() => preloadRoute("/")}
               className="flex items-center gap-2.5 sm:gap-3 cursor-pointer group focus:outline-none"
               aria-label="Nibble Computer Society - Home"
             >
@@ -116,6 +138,7 @@ export default function Navbar() {
                     key={item.page}
                     type="button"
                     onClick={() => onNavigate(item.path)}
+                    onMouseEnter={() => preloadRoute(item.path)}
                     className={`relative flex items-center gap-1.5 h-[34px] xl:h-[36px] px-2.5 xl:px-3.5 rounded-full cursor-pointer transition-colors duration-200 select-none text-[12px] xl:text-[13.5px] font-['Satoshi',Arial,sans-serif] ${
                       isActive
                         ? "text-white font-semibold"
@@ -135,8 +158,9 @@ export default function Navbar() {
                         }}
                         transition={{
                           type: "spring",
-                          stiffness: 400,
+                          stiffness: 460,
                           damping: 32,
+                          mass: 0.6,
                         }}
                       />
                     )}
@@ -160,7 +184,10 @@ export default function Navbar() {
                 type="button"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                onMouseEnter={() => setIsCtaHovered(true)}
+                onMouseEnter={() => {
+                  setIsCtaHovered(true)
+                  preloadRoute("/contact")
+                }}
                 onMouseLeave={() => setIsCtaHovered(false)}
                 onClick={handleContactClick}
                 className={`relative overflow-hidden cursor-pointer flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full text-[13px] sm:text-[14px] font-['Satoshi',Arial,sans-serif] font-semibold text-white tracking-[0.3px] transition-all focus:outline-none ${
@@ -241,6 +268,7 @@ export default function Navbar() {
                       key={item.page}
                       type="button"
                       onClick={() => onNavigate(item.path)}
+                      onMouseEnter={() => preloadRoute(item.path)}
                       className={`flex items-center gap-3 h-[46px] px-4 rounded-2xl w-full text-left font-['Satoshi',Arial,sans-serif] text-[15px] transition-all cursor-pointer ${
                         isActive
                           ? "bg-white/20 text-white font-semibold shadow-[inset_0px_1px_0px_rgba(255,255,255,0.4)]"
@@ -260,6 +288,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={handleContactClick}
+                  onMouseEnter={() => preloadRoute("/contact")}
                   className="flex sm:hidden items-center justify-center h-[46px] mt-2 rounded-2xl bg-white text-black font-semibold text-[15px] font-['Satoshi',Arial,sans-serif] shadow-lg active:scale-98 transition-transform cursor-pointer"
                 >
                   Contact Us
