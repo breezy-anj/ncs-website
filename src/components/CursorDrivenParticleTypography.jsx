@@ -7,34 +7,36 @@ function cn(...classes) {
 }
 
 class Particle {
-  constructor(x, y, size, dispersion, returnSpd) {
-    this.x = x
-    this.y = y
+  constructor(x, y, size, color, dispersion, returnSpd) {
+    this.x = x + (Math.random() - 0.5) * 10
+    this.y = y + (Math.random() - 0.5) * 10
     this.originX = x
     this.originY = y
-    this.vx = 0
-    this.vy = 0
+    this.vx = (Math.random() - 0.5) * 5
+    this.vy = (Math.random() - 0.5) * 5
     this.size = size
+    this.color = color
     this.dispersion = dispersion
     this.returnSpd = returnSpd
   }
 
   update(mouseX, mouseY) {
-    if (mouseX !== -1000 && mouseY !== -1000) {
-      const dx = mouseX - this.x
-      const dy = mouseY - this.y
-      const distanceSq = dx * dx + dy * dy
-      const interactionRadiusSq = 19600 // 140 * 140
+    const dx = mouseX - this.x
+    const dy = mouseY - this.y
+    const distanceSq = dx * dx + dy * dy
+    const interactionRadiusSq = 19600 // 140 * 140
 
-      if (distanceSq < interactionRadiusSq && distanceSq > 0) {
-        const distance = Math.sqrt(distanceSq)
-        const force = (140 - distance) / 140
-        const forceDirectionX = dx / distance
-        const forceDirectionY = dy / distance
+    if (distanceSq < interactionRadiusSq && mouseX !== -1000 && mouseY !== -1000) {
+      const distance = Math.sqrt(distanceSq)
+      const forceDirectionX = dx / distance
+      const forceDirectionY = dy / distance
+      const force = (140 - distance) / 140
 
-        this.vx -= forceDirectionX * force * this.dispersion
-        this.vy -= forceDirectionY * force * this.dispersion
-      }
+      const repulsionX = forceDirectionX * force * this.dispersion
+      const repulsionY = forceDirectionY * force * this.dispersion
+
+      this.vx -= repulsionX
+      this.vy -= repulsionY
     }
 
     this.vx += (this.originX - this.x) * this.returnSpd
@@ -43,8 +45,22 @@ class Particle {
     this.vx *= 0.85
     this.vy *= 0.85
 
+    const distToOriginSq = (this.x - this.originX) * (this.x - this.originX) + (this.y - this.originY) * (this.y - this.originY)
+
+    if (distToOriginSq < 1 && Math.random() > 0.95) {
+      this.vx += (Math.random() - 0.5) * 0.2
+      this.vy += (Math.random() - 0.5) * 0.2
+    }
+
     this.x += this.vx
     this.y += this.vy
+  }
+
+  draw(ctx) {
+    ctx.fillStyle = this.color
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+    ctx.fill()
   }
 }
 
@@ -72,7 +88,7 @@ export function CursorDrivenParticleTypography({
 
     let animationFrameId = null
     let particles = []
-    let isVisible = true
+    let isVisible = false
     let isRunning = false
 
     let mouseX = -1000
@@ -80,7 +96,6 @@ export function CursorDrivenParticleTypography({
 
     let containerWidth = 0
     let containerHeight = 0
-    let textColor = color || "#ffffff"
 
     const init = () => {
       if (!container) return
@@ -88,7 +103,7 @@ export function CursorDrivenParticleTypography({
       containerWidth = container.clientWidth || 1200
       containerHeight = container.clientHeight || 280
 
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = window.devicePixelRatio || 1
       canvas.width = containerWidth * dpr
       canvas.height = containerHeight * dpr
       canvas.style.width = `${containerWidth}px`
@@ -98,7 +113,7 @@ export function CursorDrivenParticleTypography({
       ctx.scale(dpr, dpr)
 
       const computedStyle = window.getComputedStyle(container)
-      textColor = color || computedStyle.color || "#ffffff"
+      const textColor = color || computedStyle.color || "#ffffff"
 
       ctx.clearRect(0, 0, containerWidth, containerHeight)
 
@@ -121,8 +136,9 @@ export function CursorDrivenParticleTypography({
         canvas.height,
       )
 
-      const sampled = []
-      const step = Math.max(3, Math.floor(particleDensity * dpr))
+      particles = []
+
+      const step = Math.max(1, Math.floor(particleDensity * dpr))
 
       for (let y = 0; y < textCoordinates.height; y += step) {
         for (let x = 0; x < textCoordinates.width; x += step) {
@@ -130,11 +146,12 @@ export function CursorDrivenParticleTypography({
           const alpha = textCoordinates.data[index + 3] || 0
 
           if (alpha > 128) {
-            sampled.push(
+            particles.push(
               new Particle(
                 x / dpr,
                 y / dpr,
                 particleSize,
+                textColor,
                 dispersionStrength,
                 returnSpeed,
               ),
@@ -143,24 +160,10 @@ export function CursorDrivenParticleTypography({
         }
       }
 
-      // Limit particle count to ~850 max to guarantee 60-120fps on any device
-      if (sampled.length > 900) {
-        const factor = Math.ceil(sampled.length / 850)
-        particles = sampled.filter((_, idx) => idx % factor === 0)
-      } else {
-        particles = sampled
-      }
-
-      // Single initial draw call
       ctx.clearRect(0, 0, containerWidth, containerHeight)
-      ctx.fillStyle = textColor
-      ctx.beginPath()
       for (let i = 0; i < particles.length; i++) {
-        const p = particles[i]
-        ctx.moveTo(p.x + p.size, p.y)
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+        particles[i].draw(ctx)
       }
-      ctx.fill()
     }
 
     const startLoop = () => {
@@ -171,31 +174,23 @@ export function CursorDrivenParticleTypography({
       const animate = () => {
         if (!isVisible) {
           isRunning = false
-          animationFrameId = null
           return
         }
 
         ctx.clearRect(0, 0, containerWidth, containerHeight)
-        ctx.fillStyle = textColor
-        ctx.beginPath()
 
         let maxMovement = 0
         for (let i = 0; i < particles.length; i++) {
-          const p = particles[i]
-          p.update(mouseX, mouseY)
-          ctx.moveTo(p.x + p.size, p.y)
-          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+          particles[i].update(mouseX, mouseY)
+          particles[i].draw(ctx)
 
-          const move = Math.abs(p.vx) + Math.abs(p.vy)
+          const move = Math.abs(particles[i].vx) + Math.abs(particles[i].vy)
           if (move > maxMovement) maxMovement = move
         }
 
-        ctx.fill()
-
-        // If mouse is away and particles have settled, stop animating to save 100% CPU
-        if (mouseX === -1000 && maxMovement < 0.04) {
+        if (mouseX === -1000 && maxMovement < 0.05) {
           idleFrames++
-          if (idleFrames > 12) {
+          if (idleFrames > 40) {
             isRunning = false
             animationFrameId = null
             return
