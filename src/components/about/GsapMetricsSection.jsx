@@ -65,10 +65,6 @@ export default function GsapMetricsSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Connect to Lenis if available
-      if (window.lenis) {
-        window.lenis.on("scroll", ScrollTrigger.update)
-      }
 
       // 1. Entrance animation for the container header
       gsap.fromTo(

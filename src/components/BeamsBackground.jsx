@@ -194,7 +194,7 @@ export default function BeamsBackground({
       alpha: false,
       powerPreference: "low-power",
     })
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5))
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.2))
     renderer.setSize(w, h)
     renderer.domElement.style.width = "100%"
     renderer.domElement.style.height = "100%"
@@ -300,19 +300,14 @@ export default function BeamsBackground({
     group.add(mesh)
     scene.add(group)
 
-    // Frame rate throttled render loop (30 FPS for silky battery-friendly animation)
-    const TARGET_INTERVAL = 1000 / 30 // ~33ms
-
+    // VSync synchronized render loop for smooth compositing during scrolling
     const animate = (now) => {
       if (isDestroyed || isPaused) return
 
-      const delta = now - lastFrameTime
-      if (delta >= TARGET_INTERVAL) {
-        lastFrameTime = now - (delta % TARGET_INTERVAL)
-        const dt = Math.min(delta * 0.001, 0.1)
-        uniforms.time.value += 0.1 * dt
-        renderer.render(scene, camera)
-      }
+      const dt = Math.min((now - lastFrameTime) * 0.001, 0.05)
+      lastFrameTime = now
+      uniforms.time.value += 0.1 * dt
+      renderer.render(scene, camera)
 
       rafId = requestAnimationFrame(animate)
     }

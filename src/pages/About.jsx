@@ -5,11 +5,7 @@ import TeamMembersMarquee from "../components/about/TeamMembersMarquee"
 
 export default function About({ activePage = "About" }) {
   useEffect(() => {
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { immediate: true })
-    } else {
-      window.scrollTo({ top: 0, behavior: "instant" })
-    }
+    window.scrollTo({ top: 0, behavior: "instant" })
   }, [])
 
   return (

@@ -69,10 +69,6 @@ export default function GsapHorizontalTextScroll() {
       const track = trackRef.current
       if (!container || !track) return
 
-      // Connect Lenis smooth scroll if available
-      if (window.lenis) {
-        window.lenis.on("scroll", ScrollTrigger.update)
-      }
 
       // Calculate total horizontal scroll distance
       const getScrollAmount = () => {

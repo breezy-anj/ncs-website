@@ -7,6 +7,11 @@ import Footer from "../components/Footer"
 export default function Gallery({ activePage = "Gallery", onNavigate }) {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" })
+    const prevTitle = document.title
+    document.title = "PHOTO BOOTH - NCS"
+    return () => {
+      document.title = prevTitle
+    }
   }, [])
 
   return (
@@ -30,7 +35,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
               textShadow: "0 10px 40px rgba(0,0,0,0.9)",
             }}
           >
-            SOCIETY GALLERY
+            PHOTO BOOTH
           </motion.h1>
 
           <motion.p

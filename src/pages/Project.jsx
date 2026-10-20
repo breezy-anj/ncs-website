@@ -2,21 +2,20 @@
 import Footer from "../components/Footer"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import { ExternalLink } from "lucide-react"
+import { publicAsset } from "../lib/publicAsset"
 
-const assetPathPrefix = "/assets"
-const projectAssetPrefix = "/projects"
-const imgJssInfotech = `${projectAssetPrefix}/jss-infotech.webp`
-const imgMcqModule = `${projectAssetPrefix}/Frame 2147239122.webp`
-const imgEventManager = `${projectAssetPrefix}/Frame 2147239123.webp`
-const imgTnPortal = `${projectAssetPrefix}/Frame 2147239128.webp`
-const imgKnowYourCollege = `${projectAssetPrefix}/Frame 2147239124.webp`
-const imgCodepad = `${projectAssetPrefix}/Frame 2147239125.webp`
-const imgRegistrationModule = `${projectAssetPrefix}/Frame 2147239127.webp`
-const imgPlexus = `${projectAssetPrefix}/Frame 2147239126.webp`
-const imgNcsLogo = `${assetPathPrefix}/d3aad.svg`
-const imgVector = `${assetPathPrefix}/79f69.svg`
-const imgVector1 = `${assetPathPrefix}/54ba9.svg`
-const imgLine1 = `${assetPathPrefix}/57d57.svg`
+const imgJssInfotech = publicAsset("projects/jss-infotech.webp?v=2")
+const imgMcqModule = publicAsset("projects/mcq-module.webp?v=2")
+const imgEventManager = publicAsset("projects/event-manager.webp?v=2")
+const imgTnPortal = publicAsset("projects/tnp-portal.webp?v=2")
+const imgKnowYourCollege = publicAsset("projects/know-your-college.webp?v=2")
+const imgCodepad = publicAsset("projects/codepad.webp?v=2")
+const imgRegistrationModule = publicAsset("projects/registration-module.webp?v=2")
+const imgPlexus = publicAsset("projects/plexus.webp?v=2")
+const imgNcsLogo = publicAsset("assets/d3aad.svg")
+const imgVector = publicAsset("assets/79f69.svg")
+const imgVector1 = publicAsset("assets/54ba9.svg")
+const imgLine1 = publicAsset("assets/57d57.svg")
 
 function ViewProjectButton({ url, className = "" }) {
   return (

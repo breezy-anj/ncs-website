@@ -184,10 +184,6 @@ export default function GsapDisciplinesSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Connect to Lenis if available
-      if (window.lenis) {
-        window.lenis.on("scroll", ScrollTrigger.update)
-      }
 
       gsap.fromTo(
         ".gsap-disc-header",

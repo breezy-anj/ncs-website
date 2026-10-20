@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Marquee } from "@/demos/ui/marquee"
+import { publicAsset } from "../../lib/publicAsset"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -75,51 +76,43 @@ function AchievementCrownDoodle({ className = "w-16 h-16 sm:w-20 sm:h-20", onCli
 
 const teamMembers = [
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/f4/f43137dada970ee6a29a0497d1f699d54b92e5381350eaa66dc827e3ffb11645.jpg",
-    name: "Ajinkya Sir",
+    image: publicAsset("assets/achievments/Ajinkya Mishra.webp"),
+    name: "Ajinkya Mishra",
     role: "Cleared the ICPC World Finals",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/d5/d549c11c16ad2335895c39339d1a4307b648b24a6baae68662246cf9bd37ac13.jpg",
-    name: "Om Sir",
+    image: publicAsset("assets/achievments/Om Tripathi.webp"),
+    name: "Om Tripathi",
     role: "Cleared the ICPC World Finals",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/e0/e058437411e954b747056a494f26349751828f12c2137a883e5aebbd1fcf5eef.jpg",
-    name: "Atharva Sir",
+    image: publicAsset("assets/achievments/Athrva Gupta.webp"),
+    name: "Atharva Gupta",
     role: "Smart India Hackathon (SIH) 2025 Winner",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/45/45ba21cbafae178989cd3652799f42123a80e0ac44065ac00cbb265ea948bc41.jpg",
-    name: "Lakshya Sir",
+    image: publicAsset("assets/achievments/Lakshay Dubey.webp"),
+    name: "Lakshya Dubey",
     role: "Smart India Hackathon (SIH) 2025 Winner",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/90/904d97602d25b1b5ef0f4058abad6d8185d8cebd0750771404a934a44dd537fb.jpg",
-    name: "Ayush Sir",
+    image: publicAsset("assets/achievments/Ayush Vashisth.webp"),
+    name: "Ayush Vashisth",
     role: "Smart India Hackathon (SIH) 2025 Winner",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/3b/3b6a929c98b85177bcc2eb4606a71b7487011128756dbf0adda24e803ca70ed7.jpg",
-    name: "Kuldeep Sir",
+    image: publicAsset("assets/achievments/Kuldeep Chaudhary.webp"),
+    name: "Kuldeep Chaudhary",
     role: "4-Time Hackathon Winner",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/21/2150915ffd93601725345aee4ec87bcdb0f992a8b016d0afba59be5a9b497b5b.jpg",
-    name: "Mohit Sir",
+    image: publicAsset("assets/achievments/Mohit Singh.webp"),
+    name: "Mohit Singh",
     role: "Android Developer at Blinkit",
   },
   {
-    image:
-      "https://cdn.21st.dev/assets/mirror/f4/f43137dada970ee6a29a0497d1f699d54b92e5381350eaa66dc827e3ffb11645.jpg",
-    name: "Sankalp Sir",
+    image: publicAsset("assets/achievments/Sankalp Saxena.webp"),
+    name: "Sankalp Saxena",
     role: "Android Developer at Groww",
   },
 ]

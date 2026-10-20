@@ -4,6 +4,13 @@ import ProfileCardGhostOverlay from "../components/ProfileCardGhost";
 import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
 import ResponsiveWaveGrid from "../components/ui/ResponsiveWaveGrid";
 import Footer from "../components/Footer";
+import { publicAsset } from "../lib/publicAsset";
+
+const imgAjinkya = publicAsset("change_people/ajinkya.png");
+const imgPranjal = publicAsset("change_people/pranjal.png");
+const imgSanskar = publicAsset("change_people/sanskar.png");
+const imgShreyansh = publicAsset("change_people/shreyansh pandey.png");
+const imgVishnu = publicAsset("change_people/vishnu.png");
 
 const assetPathPrefix = "/assets";
 const imgRectangle31 = `${assetPathPrefix}/13843.png`;
@@ -124,13 +131,13 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:53"
-  image={imgRectangle34}
+  image={imgAjinkya}
   color="#feb9ce"
   word="PROGRAM"
   nameParts={["Ajinkya","Mishra"]}
   designation="CTC"
-  photoClasses="-translate-x-1/2 absolute h-[380.7px] left-[calc(50%-12.88px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[106px] w-[255.83px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[75px] profile-img-bottom-shadow"
+  imgClasses="w-full h-auto object-top pointer-events-none"
   socialLinks={["https://github.com/AjinkyaMishra","https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"]}
   bio="Caught somewhere between “Proceed to code” and “Why is this working?”"
 />
@@ -153,13 +160,13 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:66"
-  image={imgRectangle36}
+  image={imgPranjal}
   color="#feb9ce"
   word="PROGRAM"
   nameParts={["Pranjal","Gupta"]}
   designation="Finance Head"
-  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-40px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[95px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[68px] profile-img-bottom-shadow"
+  imgClasses="w-full h-auto object-top pointer-events-none"
   socialLinks={["https://www.linkedin.com/in/pranjal-gupta-766898323","https://github.com/PranjalGupta280","https://x.com/TechnoVerse007c"]}
 />
                   </div>
@@ -285,13 +292,13 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:124"
-  image={imgRectangle45}
+  image={imgShreyansh}
   color="#feb9ce"
   word="PROGRAM"
   nameParts={["Shreyansh","Pandey"]}
   designation="Programmer"
-  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-48.76px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[41px] profile-img-bottom-shadow"
+  imgClasses="w-full h-auto object-top pointer-events-none"
   socialLinks={["https://x.com/shrey_007","https://www.linkedin.com/in/shreyansh-pandey-54949730b"]}
   bio="Minding your own business is a quality only a mature mind possesses."
 />
@@ -399,13 +406,13 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:186"
-  image={imgRectangle53}
+  image={imgVishnu}
   color="#b3fd44"
   word="TECHNICAL"
   nameParts={["Vishnu","Tiwari"]}
   designation="Technical"
-  photoClasses="-translate-x-1/2 absolute h-[573px] left-[calc(50%-3px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[27px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[40px] profile-img-bottom-shadow"
+  imgClasses="w-full h-auto object-top pointer-events-none"
   linkedinUrl="https://www.linkedin.com/in/vishnu-tiwari-930267332/"
   bio="An ambitious mind with a curious soul. Into AI, tech, and building something meaningful. Quietly competitive, always evolving, and letting actions speak louder than words. 🚀"
 />
@@ -565,13 +572,13 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:257"
-  image={imgRectangle64}
+  image={imgSanskar}
   color="#feb9ce"
   word="PROGRAM"
   nameParts={["Sanskar","Pal"]}
   designation="Programmer"
-  photoClasses="-translate-x-1/2 absolute h-[410px] left-[calc(50%+13.24px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[66px] w-[276px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-0 profile-img-bottom-shadow"
+  imgClasses="w-full h-auto object-top pointer-events-none"
   linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/"
   bio="I write code like I make jokes: recklessly, unnecessarily, and usually wrong."
 />

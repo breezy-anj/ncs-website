@@ -13,10 +13,6 @@ export default function GsapCtaSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Connect to Lenis if available
-      if (window.lenis) {
-        window.lenis.on("scroll", ScrollTrigger.update)
-      }
 
       gsap.fromTo(
         ".gsap-cta-box",
@@ -39,11 +35,7 @@ export default function GsapCtaSection() {
   }, [])
 
   const handleNavigate = (path) => {
-    if (window.lenis) {
-      window.lenis.scrollTo(0)
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" })
-    }
+    window.scrollTo({ top: 0, behavior: "instant" })
     navigate(path)
   }
 

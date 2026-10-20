@@ -735,215 +735,132 @@ export default function GsapHorizontalShowcase() {
     }
   }, [])
 
-  // Direct vertical-to-horizontal position synchronizer
-  const syncHorizontalPosition = useCallback(() => {
+  const dimsRef = useRef({ totalScrollableDistance: 0, maxHorizontalTranslate: 0, outerTop: 0 })
+  const slideCentersRef = useRef([0, 0, 0, 0])
+  const targetXRef = useRef(0)
+  const currentXRef = useRef(0)
+  const isLoopRunningRef = useRef(false)
+  const rafIdRef = useRef(null)
+
+  const updateDims = useCallback(() => {
     if (!outerRef.current || !trackRef.current) return
-    const rect = outerRef.current.getBoundingClientRect()
     const stickyHeight = stickyRef.current ? stickyRef.current.offsetHeight : window.innerHeight
-    const totalScrollableDistance = outerRef.current.offsetHeight - stickyHeight
-
-    if (totalScrollableDistance <= 0) return
-
-    const currentScrollOffset = -rect.top
-    const rawProgress = Math.max(0, Math.min(1, currentScrollOffset / totalScrollableDistance))
-
+    const totalDist = outerRef.current.offsetHeight - stickyHeight
     const trackWidth = trackRef.current.scrollWidth
     const viewportWidth = window.innerWidth
-    const maxHorizontalTranslate = Math.max(0, trackWidth - viewportWidth + 120)
+    const maxTranslate = Math.max(0, trackWidth - viewportWidth + 120)
 
-    const targetX = -rawProgress * maxHorizontalTranslate
+    const rect = outerRef.current.getBoundingClientRect()
+    const outerTop = window.scrollY + rect.top
 
-    gsap.to(trackRef.current, {
-      x: targetX,
-      duration: 0.15,
-      ease: "power1.out",
-      overwrite: "auto",
+    // Precalculate slide centers inside the track so we don't query DOM during scroll
+    slideCentersRef.current = slideRefs.current.map((el) => {
+      if (!el) return 0
+      return el.offsetLeft + el.offsetWidth / 2
     })
 
-    if (progressBarRef.current) {
-      progressBarRef.current.style.transform = `scaleX(${rawProgress})`
-    }
+    dimsRef.current = { totalScrollableDistance: totalDist, maxHorizontalTranslate: maxTranslate, outerTop }
+  }, [])
 
-    // Only trigger slide jumps if the horizontal showcase section is visible vertically in the viewport
-    const isSectionVisible = rect.top <= window.innerHeight * 0.65 && rect.bottom >= window.innerHeight * 0.25
+  const startLerpLoop = useCallback(() => {
+    if (isLoopRunningRef.current) return
+    isLoopRunningRef.current = true
 
-    if (!isSectionVisible) {
-      // If user scrolls back up above the horizontal section, reset all slides
-      if (rect.top > window.innerHeight * 0.65) {
+    const tick = () => {
+      const targetX = targetXRef.current
+      const diff = targetX - currentXRef.current
+
+      if (Math.abs(diff) > 0.25) {
+        currentXRef.current += diff * 0.16
+      } else {
+        currentXRef.current = targetX
+      }
+
+      const curX = currentXRef.current
+      if (trackRef.current) {
+        trackRef.current.style.transform = `translate3d(${curX}px, 0, 0)`
+      }
+
+      const maxTrans = dimsRef.current.maxHorizontalTranslate
+      if (progressBarRef.current && maxTrans > 0) {
+        const p = Math.max(0, Math.min(1, -curX / maxTrans))
+        progressBarRef.current.style.transform = `scaleX(${p})`
+      }
+
+      // Check slide activations using cached offsets without DOM layout recalculations
+      const viewportCenter = window.innerWidth / 2
+      const progress = maxTrans > 0 ? -curX / maxTrans : 0
+      const inRange = progress > -0.05 && progress < 1.05
+
+      if (inRange) {
+        slideCentersRef.current.forEach((centerInTrack, idx) => {
+          const slideScreenX = centerInTrack + curX
+          const dist = Math.abs(slideScreenX - viewportCenter)
+          if (dist < window.innerWidth * 0.38) {
+            if (!hasAnimatedRef.current[idx]) {
+              hasAnimatedRef.current[idx] = true
+              triggerSlideAnimation(idx)
+            }
+          } else if (dist > window.innerWidth * 0.62) {
+            hasAnimatedRef.current[idx] = false
+          }
+        })
+      } else if (progress < 0.05) {
         hasAnimatedRef.current = [false, false, false, false]
       }
-      return
+
+      if (Math.abs(diff) > 0.25) {
+        rafIdRef.current = requestAnimationFrame(tick)
+      } else {
+        isLoopRunningRef.current = false
+      }
     }
 
-    // Check each slide's horizontal center relative to the viewport
-    const viewportCenter = window.innerWidth / 2
-
-    slideRefs.current.forEach((slideEl, idx) => {
-      if (!slideEl) return
-      const sRect = slideEl.getBoundingClientRect()
-      const slideCenter = sRect.left + sRect.width / 2
-      const distFromCenter = Math.abs(slideCenter - viewportCenter)
-
-      // When slide is prominently in the center of the reader's view
-      if (distFromCenter < window.innerWidth * 0.38) {
-        if (!hasAnimatedRef.current[idx]) {
-          hasAnimatedRef.current[idx] = true
-          triggerSlideAnimation(idx)
-        }
-      } else if (distFromCenter > window.innerWidth * 0.62) {
-        // Reset when user scrolls sufficiently far away from this slide
-        hasAnimatedRef.current[idx] = false
-      }
-    })
+    rafIdRef.current = requestAnimationFrame(tick)
   }, [triggerSlideAnimation])
 
-  useEffect(() => {
-    window.addEventListener("scroll", syncHorizontalPosition, { passive: true })
-    window.addEventListener("resize", syncHorizontalPosition)
+  // Direct vertical-to-horizontal position synchronizer with hardware accelerated transform
+  const syncHorizontalPosition = useCallback(() => {
+    if (!outerRef.current || !trackRef.current) return
+    const { totalScrollableDistance, maxHorizontalTranslate, outerTop } = dimsRef.current
+    if (totalScrollableDistance <= 0) return
 
-    let cleanupLenis = null
-    if (window.lenis) {
-      cleanupLenis = () => {
-        window.lenis.off("scroll", syncHorizontalPosition)
-        window.lenis.off("scroll", ScrollTrigger.update)
-      }
-      window.lenis.on("scroll", syncHorizontalPosition)
-      window.lenis.on("scroll", ScrollTrigger.update)
-      window.lenis.resize()
+    const currentScrollOffset = window.scrollY - outerTop
+    const rawProgress = Math.max(0, Math.min(1, currentScrollOffset / totalScrollableDistance))
+    targetXRef.current = -rawProgress * maxHorizontalTranslate
+    startLerpLoop()
+  }, [startLerpLoop])
+
+  useEffect(() => {
+    updateDims()
+
+    const onScroll = () => {
+      syncHorizontalPosition()
     }
 
-    const ctx = gsap.context(() => {
-      // Idle physics for the unique doodles
-      gsap.to(".anim-starburst", {
-        rotation: 360,
-        duration: 22,
-        repeat: -1,
-        ease: "none",
-      })
+    const onResize = () => {
+      updateDims()
+      syncHorizontalPosition()
+    }
 
-      gsap.to(".anim-diamond", {
-        y: -4,
-        rotate: 15,
-        duration: 1.5,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-lightning", {
-        y: -5,
-        rotate: 4,
-        duration: 1.2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-hourglass", {
-        y: -8,
-        rotate: -12,
-        duration: 2.2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-spring", {
-        y: 8,
-        scaleY: 1.12,
-        duration: 1.8,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-cube", {
-        y: -6,
-        rotate: 8,
-        duration: 2.0,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-cursor", {
-        x: 4,
-        y: -4,
-        duration: 1.4,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-flower", {
-        rotation: "+=360",
-        duration: 14,
-        repeat: -1,
-        ease: "none",
-      })
-
-      gsap.to(".anim-star", {
-        y: -5,
-        scale: 1.25,
-        duration: 1.3,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-point1-img", {
-        y: -6,
-        rotate: -0.75,
-        duration: 3.8,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-point2-img", {
-        y: 6,
-        rotate: 1.2,
-        duration: 4.2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-point3-img", {
-        y: -6,
-        rotate: -1.4,
-        duration: 3.9,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-
-      gsap.to(".anim-point4-img", {
-        y: 7,
-        rotate: 1.1,
-        duration: 4.4,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      })
-    }, outerRef)
+    window.addEventListener("resize", onResize, { passive: true })
+    window.addEventListener("scroll", onScroll, { passive: true })
 
     syncHorizontalPosition()
 
     const initialTimer = setTimeout(() => {
+      updateDims()
       syncHorizontalPosition()
-      if (window.lenis) window.lenis.resize()
       ScrollTrigger.refresh()
     }, 280)
 
     return () => {
-      window.removeEventListener("scroll", syncHorizontalPosition)
-      window.removeEventListener("resize", syncHorizontalPosition)
-      if (cleanupLenis) cleanupLenis()
+      if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current)
+      window.removeEventListener("scroll", onScroll)
+      window.removeEventListener("resize", onResize)
       clearTimeout(initialTimer)
-      ctx.revert()
     }
-  }, [syncHorizontalPosition, triggerSlideAnimation])
+  }, [syncHorizontalPosition, updateDims])
 
   // Interactive bounce triggers
   const triggerBounce = (e) => {

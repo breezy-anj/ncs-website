@@ -4,9 +4,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import BeamsBackground from "./components/BeamsBackground"
 import ProjectBackground from "./components/ProjectBackground"
 import Navbar from "./components/Navbar"
-import LiquidGlassCursor from "./components/ui/LiquidGlassCursor"
-import Lenis from "lenis"
-import "lenis/dist/lenis.css"
 
 // Code-split pages with React.lazy so page loads are non-blocking and the navbar never lags
 const Home = lazy(() => import("./pages/Home"))
@@ -44,36 +41,9 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(false)
   const innerRef = useRef(null)
 
-  // Initialize Lenis smooth momentum scrolling with optimized linear damping
+  // Instantly scroll to top on page navigation
   useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-      lerp: 0.09,
-      smoothWheel: true,
-      syncTouch: false,
-      wheelMultiplier: 1,
-      touchMultiplier: 1,
-    })
-
-    window.lenis = lenis
-
-    return () => {
-      lenis.destroy()
-      window.lenis = null
-    }
-  }, [])
-
-  // Instantly scroll to top on page navigation and sync dimensions once layout settles
-  useEffect(() => {
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { immediate: true })
-      const timer = setTimeout(() => {
-        window.lenis?.resize()
-      }, 120)
-      return () => clearTimeout(timer)
-    } else {
-      window.scrollTo({ top: 0, behavior: "instant" })
-    }
+    window.scrollTo({ top: 0, behavior: "instant" })
   }, [page])
 
   // Preload common pages in idle time so transitions are instantaneous
@@ -123,20 +93,20 @@ export default function App() {
 
     updateDimensions()
 
-    const ro = new ResizeObserver(() => {
-      if (scale < 1 && innerRef.current) {
-        setContentHeight(innerRef.current.offsetHeight)
-      }
-    })
-
-    if (innerRef.current) {
+    let ro = null
+    if (scale < 1 && innerRef.current) {
+      ro = new ResizeObserver(() => {
+        if (innerRef.current) {
+          setContentHeight(innerRef.current.offsetHeight)
+        }
+      })
       ro.observe(innerRef.current)
     }
 
     window.addEventListener("resize", updateDimensions)
 
     return () => {
-      ro.disconnect()
+      if (ro) ro.disconnect()
       window.removeEventListener("resize", updateDimensions)
     }
   }, [page, scale])
@@ -148,11 +118,8 @@ export default function App() {
 
   return (
     <div className="bg-transparent min-h-screen w-full flex flex-col items-center overflow-x-clip text-white relative">
-      {/* Custom Liquid Glass Prismatic Cursor */}
-      <LiquidGlassCursor />
-
       {/* 3D Ethereal Light Beams Background on Home/Team/Alumni, Special 3D Rotating Layers on Project */}
-      {page === "Gallery" || page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
+      {page === "Fan Carousel" ? null : page === "Project" ? <ProjectBackground /> : <BeamsBackground />}
 
       {/* Sticky/Fixed Navbar Always on Top */}
       <header className="fixed top-0 inset-x-0 z-[100] flex justify-center pt-2 sm:pt-3 md:pt-4 pointer-events-none">
@@ -174,7 +141,7 @@ export default function App() {
       >
         <div
           ref={innerRef}
-          className={`${scale < 1 ? "w-[1668px] shrink-0" : "w-full max-w-[1668px]"} flex justify-center transition-transform duration-150 ease-out`}
+          className={`${scale < 1 ? "w-[1668px] shrink-0 transition-transform duration-150 ease-out" : "w-full max-w-[1668px]"} flex justify-center`}
           style={{
             transform: scale < 1 ? `scale(${scale})` : "none",
             transformOrigin: needsHorizontalScroll ? "top left" : "top center",

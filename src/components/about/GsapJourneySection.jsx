@@ -75,10 +75,6 @@ export default function GsapJourneySection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Connect to Lenis if available
-      if (window.lenis) {
-        window.lenis.on("scroll", ScrollTrigger.update)
-      }
 
       // 1. Header entrance
       gsap.fromTo(

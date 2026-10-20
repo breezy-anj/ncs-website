@@ -400,9 +400,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   label="Join the Community"
                   onClick={() => {
                     const connectEl = document.getElementById("connect-section")
-                    if (window.lenis) {
-                      window.lenis.scrollTo(connectEl || document.body.scrollHeight)
-                    } else if (connectEl) {
+                    if (connectEl) {
                       connectEl.scrollIntoView({ behavior: "smooth" })
                     } else {
                       window.scrollTo({

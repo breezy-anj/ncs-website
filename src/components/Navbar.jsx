@@ -58,11 +58,7 @@ export default function Navbar() {
 
   const onNavigate = (path) => {
     if (location.pathname === path && optimisticPath === path) {
-      if (window.lenis) {
-        window.lenis.scrollTo(0)
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" })
-      }
+      window.scrollTo({ top: 0, behavior: "instant" })
       setIsMobileOpen(false)
       return
     }

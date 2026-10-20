@@ -65,8 +65,8 @@
   font-family: 'Satoshi', 'SF Pro:Regular', Inter, Arial, sans-serif;
 }
 
-html, body {
-  overflow-x: clip;
+html {
+  scroll-behavior: auto;
 }
 
 .font-satoshi {
@@ -139,7 +139,6 @@ html, body {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
-/* Scroll interpolation handled smoothly by Lenis */
 
 
 /* Infinite Marquee Animations */
@@ -384,20 +383,6 @@ body.spline-loading header {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Custom Liquid Glass Cursor - hide native cursor only on mouse/desktop devices */
-@media (pointer: fine) {
-  body,
-  a,
-  button,
-  [role="button"],
-  input,
-  select,
-  textarea,
-  .cursor-pointer,
-  [class*="cursor-"] {
-    cursor: none !important;
-  }
-}
 
 
 
