@@ -5,11 +5,11 @@ import { ExternalLink } from "lucide-react"
 import { publicAsset } from "../lib/publicAsset"
 import { ProjectCard } from "../components/ProjectCard"
 
-const imgJssInfotech = publicAsset("projects/jss-infotech.webp?v=2")
+const imgJssInfotech = publicAsset("projects/jss-infotech.jpg")
 const imgMcqModule = publicAsset("projects/mcq-module.jpg")
 const imgEventManager = publicAsset("projects/event-manager.jpg")
 const imgTnPortal = publicAsset("projects/tnp-portal.webp?v=2")
-const imgKnowYourCollege = publicAsset("projects/know-your-college.jpg")
+const imgKnowYourCollege = publicAsset("projects/know-your-college.webp?v=2")
 const imgCodepad = publicAsset("projects/codepad.jpg")
 const imgRegistrationModule = publicAsset("projects/registration-module.webp?v=2")
 const imgPlexus = publicAsset("projects/plexus.jpg")
