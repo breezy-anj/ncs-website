@@ -135,32 +135,32 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
   return (
     <div
-      className="bg-transparent relative w-full max-w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-[27px] pb-[40px] shrink-0 overflow-hidden"
+      className="bg-transparent relative w-full max-w-[1668px] min-h-screen mx-auto flex flex-col items-center pt-0 pb-[40px] shrink-0 overflow-hidden"
       data-node-id="1:24"
       data-name="Home"
     >
       <div
-        className="content-stretch flex flex-col gap-[50px] items-center w-full max-w-[1480px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+        className="content-stretch flex flex-col gap-10 md:gap-14 items-center w-full max-w-[1480px] px-3 sm:px-6 md:px-10 lg:px-14 xl:px-20"
         data-node-id="1:25"
       >
         <div
-          className="content-stretch flex flex-col gap-16 sm:gap-20 md:gap-28 items-center relative shrink-0 w-full"
+          className="content-stretch flex flex-col gap-12 sm:gap-16 md:gap-20 items-center relative shrink-0 w-full"
           data-node-id="1:36"
         >
           {/* Hero Section */}
           <div
-            className="relative w-full flex flex-col items-center justify-start pt-4 sm:pt-8 md:pt-12 pb-2 overflow-visible"
+            className="relative w-full min-h-[calc(100vh-84px)] lg:h-[calc(100vh-84px)] lg:max-h-[820px] flex flex-col justify-between items-center pt-1 sm:pt-2 md:pt-4 pb-2 sm:pb-4 overflow-visible select-none"
             data-node-id="1:37"
           >
             {/* Center Typography & CTA */}
-            <div className="flex flex-col items-center text-center w-full max-w-[1200px] gap-3 sm:gap-4 md:gap-5 z-10 select-none">
+            <div className="flex flex-col items-center text-center w-full max-w-[1200px] gap-2.5 sm:gap-3.5 md:gap-4 z-10 select-none">
               {/* 1. Tracked Subheading */}
               <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.25em] text-white/70 uppercase">
                 NIBBLE COMPUTER SOCIETY
               </p>
 
               {/* 2. Main Title: WHERE CURIOSITY BUILDS THE FUTURE */}
-              <h1 className="font-['Satoshi',Arial,sans-serif] font-black text-[34px] xs:text-[42px] sm:text-[56px] md:text-[68px] lg:text-[80px] xl:text-[90px] leading-[0.98] tracking-[-0.035em] uppercase text-center flex flex-col items-center">
+              <h1 className="font-['Satoshi',Arial,sans-serif] font-black text-[32px] xs:text-[40px] sm:text-[54px] md:text-[66px] lg:text-[76px] xl:text-[84px] leading-[0.96] tracking-[-0.035em] uppercase text-center flex flex-col items-center">
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]">
                   WHERE CURIOSITY
                 </span>
@@ -170,13 +170,13 @@ export default function Home({ activePage = "Home", onNavigate }) {
               </h1>
 
               {/* 3. Subtitle description */}
-              <div className="font-['Satoshi',Arial,sans-serif] font-normal text-[13px] xs:text-[14px] sm:text-[16px] md:text-[17px] leading-[1.45] text-white/60 max-w-[620px] px-4 text-center">
+              <div className="font-['Satoshi',Arial,sans-serif] font-normal text-[12px] xs:text-[13px] sm:text-[15px] md:text-[16px] leading-[1.45] text-white/60 max-w-[580px] px-4 text-center">
                 <p className="mb-0">A community of builders, designers, developers and problem solvers</p>
                 <p className="mb-0">turning bold ideas into technology</p>
               </div>
 
               {/* 4. Explore NCS Button */}
-              <div className="pt-1 sm:pt-2">
+              <div className="pt-1">
                 <button
                   type="button"
                   onClick={() => {
@@ -194,22 +194,25 @@ export default function Home({ activePage = "Home", onNavigate }) {
             </div>
 
             {/* 5. Five-Element Row: 4 Club Cards + Center Robot */}
-            <div className="relative w-full max-w-[1240px] mx-auto mt-8 sm:mt-12 md:mt-14 flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
+            <div className="relative w-full max-w-[1240px] mx-auto mt-auto flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
               {/* Card 1: Technical (Green) */}
               <div
                 onClick={() => {
                   const target = document.querySelector('[data-node-id="1:64"]') || document.getElementById("clubs-section")
                   target?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="group relative w-[75px] xs:w-[100px] sm:w-[135px] md:w-[170px] lg:w-[195px] xl:w-[215px] h-[110px] xs:h-[145px] sm:h-[195px] md:h-[250px] lg:h-[285px] xl:h-[310px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
                   <img
                     alt="Technical"
-                    className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
                     src={imgTechnicalIcon}
                   />
                 </div>
@@ -226,18 +229,20 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   const target = document.querySelector('[data-node-id="1:56"]') || document.getElementById("clubs-section")
                   target?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="group relative w-[70px] xs:w-[92px] sm:w-[125px] md:w-[155px] lg:w-[180px] xl:w-[195px] h-[90px] xs:h-[120px] sm:h-[160px] md:h-[210px] lg:h-[240px] xl:h-[260px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
-                  <svg className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
-                    <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
-                    <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
-                    <path d="M117.6 16.8H16.8C12.1674 16.8 8.40002 20.5716 8.40002 25.2V109.2C8.40002 113.833 12.1674 117.6 16.8 117.6H117.6C122.233 117.6 126 113.833 126 109.2V25.2C126 20.5716 122.233 16.8 117.6 16.8ZM117.6 25.2V42H16.8V25.2H117.6ZM16.8 109.2V50.4001H117.6V109.2H16.8Z" fill="black"/>
-                  </svg>
+                  <img
+                    alt="Development"
+                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgDevelopmentIcon}
+                  />
                 </div>
                 <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
                   <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
@@ -249,15 +254,15 @@ export default function Home({ activePage = "Home", onNavigate }) {
               {/* Center Robot */}
               <motion.div
                 animate={{
-                  y: [0, -10, 2, -8, 0],
-                  rotate: [0, 1.5, -1, 1, 0],
+                  y: [0, -8, 2, -6, 0],
+                  rotate: [0, 1.2, -0.8, 0.8, 0],
                 }}
                 transition={{
-                  duration: 5.5,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative z-10 w-[95px] xs:w-[125px] sm:w-[175px] md:w-[225px] lg:w-[260px] xl:w-[290px] h-[125px] xs:h-[165px] sm:h-[225px] md:h-[295px] lg:h-[340px] xl:h-[370px] flex flex-col items-center justify-end shrink-0 select-none pointer-events-none"
+                className="relative z-10 w-[85px] xs:w-[110px] sm:w-[145px] md:w-[180px] lg:w-[210px] xl:w-[230px] h-[105px] xs:h-[135px] sm:h-[180px] md:h-[215px] lg:h-[240px] xl:h-[260px] flex flex-col items-center justify-end shrink-0 select-none pointer-events-none"
               >
                 <img
                   src={imgRobotStatic}
@@ -272,15 +277,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   const target = document.querySelector('[data-node-id="1:60"]') || document.getElementById("clubs-section")
                   target?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="group relative w-[70px] xs:w-[92px] sm:w-[125px] md:w-[155px] lg:w-[180px] xl:w-[195px] h-[90px] xs:h-[120px] sm:h-[160px] md:h-[210px] lg:h-[240px] xl:h-[260px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
                   <img
                     alt="Design"
-                    className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
                     src={imgVector1}
                   />
                 </div>
@@ -297,14 +305,41 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   const target = document.querySelector('[data-node-id="1:52"]') || document.getElementById("clubs-section")
                   target?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="group relative w-[75px] xs:w-[100px] sm:w-[135px] md:w-[170px] lg:w-[195px] xl:w-[215px] h-[110px] xs:h-[145px] sm:h-[195px] md:h-[250px] lg:h-[285px] xl:h-[310px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
-                  <svg className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
+                  <svg
+                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    viewBox="0 0 100 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30 24L12 40L30 56"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M59 15L41 65"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M70 24L88 40L70 56"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
@@ -341,14 +376,41 @@ export default function Home({ activePage = "Home", onNavigate }) {
             <div className="grid grid-cols-2 gap-3.5 w-full max-w-[420px] mx-auto px-2 md:hidden">
               {/* Card 1: Programming */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
-                  <svg className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
+                  <svg
+                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    viewBox="0 0 100 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30 24L12 40L30 56"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M59 15L41 65"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M70 24L88 40L70 56"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
@@ -360,18 +422,20 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Card 2: Development */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
-                  <svg className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
-                    <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
-                    <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
-                    <path d="M117.6 16.8H16.8C12.1674 16.8 8.40002 20.5716 8.40002 25.2V109.2C8.40002 113.833 12.1674 117.6 16.8 117.6H117.6C122.233 117.6 126 113.833 126 109.2V25.2C126 20.5716 122.233 16.8 117.6 16.8ZM117.6 25.2V42H16.8V25.2H117.6ZM16.8 109.2V50.4001H117.6V109.2H16.8Z" fill="black"/>
-                  </svg>
+                  <img
+                    alt="Development"
+                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgDevelopmentIcon}
+                  />
                 </div>
                 <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
                   <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
@@ -382,9 +446,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Card 3: Designing */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
@@ -403,9 +470,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Card 4: Technical */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95 bg-size-[1024px_1024px,auto_auto] bg-top-left"
+                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
                 style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                  backgroundSize: "cover, 100% 100%",
+                  backgroundPosition: "center, center",
+                  backgroundRepeat: "no-repeat, no-repeat",
                 }}
               >
                 <div className="flex-1 flex items-center justify-center w-full">
@@ -440,14 +510,41 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   PROGRAMMING
                 </p>
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
+                  className="h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
                   data-node-id="1:54"
                   style={{
-                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                    backgroundSize: "cover, 100% 100%",
+                    backgroundPosition: "center, center",
+                    backgroundRepeat: "no-repeat, no-repeat",
                   }}
                 >
-                  <svg className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
+                  <svg
+                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    viewBox="0 0 100 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30 24L12 40L30 56"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M59 15L41 65"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M70 24L88 40L70 56"
+                      stroke="black"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
                     <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Programming</span>
@@ -464,18 +561,20 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 data-node-id="1:56"
               >
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
+                  className="h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
                   data-node-id="1:58"
                   style={{
-                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                    backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                    backgroundSize: "cover, 100% 100%",
+                    backgroundPosition: "center, center",
+                    backgroundRepeat: "no-repeat, no-repeat",
                   }}
                 >
-                  <svg className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
-                    <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
-                    <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
-                    <path d="M117.6 16.8H16.8C12.1674 16.8 8.40002 20.5716 8.40002 25.2V109.2C8.40002 113.833 12.1674 117.6 16.8 117.6H117.6C122.233 117.6 126 113.833 126 109.2V25.2C126 20.5716 122.233 16.8 117.6 16.8ZM117.6 25.2V42H16.8V25.2H117.6ZM16.8 109.2V50.4001H117.6V109.2H16.8Z" fill="black"/>
-                  </svg>
+                  <img
+                    alt="Development"
+                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    src={imgDevelopmentIcon}
+                  />
                   <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
                     <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Development</span>
                     <p className="opacity-100 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
