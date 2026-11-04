@@ -5,6 +5,7 @@ import Footer from "../components/Footer"
 import CarouselStacked from "../components/ui/carousel-07"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
 import SplineRobot from "../components/ui/SplineRobot"
+import { preloadCardFlipSound, playCardFlipSound } from "../lib/sound"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
 
@@ -126,13 +127,59 @@ let hasHomeLoadedOnce =
 export default function Home({ activePage = "Home", onNavigate }) {
   const [isSplineLoaded, setIsSplineLoaded] = useState(true)
   const [isMounted, setIsMounted] = useState(false)
+  const [flippedCards, setFlippedCards] = useState({
+    technical: false,
+    development: false,
+    design: false,
+    programming: false,
+  })
 
   useEffect(() => {
     setIsMounted(true)
     setIsSplineLoaded(true)
     document.body.style.overflow = ""
     document.body.classList.remove("spline-loading")
+    preloadCardFlipSound()
+
+    // Flip cards back to normal upon scrolling
+    const handleScroll = () => {
+      setFlippedCards((prev) => {
+        if (prev.technical || prev.development || prev.design || prev.programming) {
+          return {
+            technical: false,
+            development: false,
+            design: false,
+            programming: false,
+          }
+        }
+        return prev
+      })
+    }
+
+    const handleWheel = (e) => {
+      if (Math.abs(e.deltaY) > 3) {
+        handleScroll()
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener("wheel", handleWheel, { passive: true })
+    window.addEventListener("touchmove", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("wheel", handleWheel)
+      window.removeEventListener("touchmove", handleScroll)
+    }
   }, [])
+
+  const handleCardClick = (cardKey) => {
+    playCardFlipSound()
+    setFlippedCards((prev) => ({
+      ...prev,
+      [cardKey]: !prev[cardKey],
+    }))
+  }
 
   return (
     <div
@@ -198,57 +245,117 @@ export default function Home({ activePage = "Home", onNavigate }) {
             <div className="relative w-full max-w-[1240px] mx-auto mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
               {/* Card 1: Technical (Green) */}
               <div
-                onClick={() => {
-                  const target = document.querySelector('[data-node-id="1:64"]') || document.getElementById("clubs-section")
-                  target?.scrollIntoView({ behavior: "smooth" })
-                }}
-                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleCardClick("technical")}
+                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Technical"
-                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgTechnicalIcon}
-                  />
-                </div>
-                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
-                    Technical
-                  </span>
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: flippedCards.technical ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <img
+                        alt="Technical"
+                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        src={imgTechnicalIcon}
+                      />
+                    </div>
+                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                        Technical
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="font-['Satoshi',Arial,sans-serif] font-black text-[11px] xs:text-[13px] sm:text-[16px] md:text-[19px] lg:text-[22px] xl:text-[24px] text-black tracking-tight leading-[1.2]">
+                      we go even beyond!
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* Card 2: Development (Blue) */}
               <div
-                onClick={() => {
-                  const target = document.querySelector('[data-node-id="1:56"]') || document.getElementById("clubs-section")
-                  target?.scrollIntoView({ behavior: "smooth" })
-                }}
-                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleCardClick("development")}
+                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Development"
-                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgDevelopmentIcon}
-                  />
-                </div>
-                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
-                    Development
-                  </span>
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: flippedCards.development ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <img
+                        alt="Development"
+                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        src={imgDevelopmentIcon}
+                      />
+                    </div>
+                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                        Development
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] xs:text-[15px] sm:text-[18px] md:text-[22px] lg:text-[25px] xl:text-[27px] text-black tracking-tight leading-[1.2]">
+                      we build!
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -259,79 +366,139 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Card 3: Design (Yellow) */}
               <div
-                onClick={() => {
-                  const target = document.querySelector('[data-node-id="1:60"]') || document.getElementById("clubs-section")
-                  target?.scrollIntoView({ behavior: "smooth" })
-                }}
-                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleCardClick("design")}
+                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Design"
-                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgVector1}
-                  />
-                </div>
-                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
-                    Design
-                  </span>
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: flippedCards.design ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <img
+                        alt="Design"
+                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        src={imgVector1}
+                      />
+                    </div>
+                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                        Design
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] xs:text-[15px] sm:text-[18px] md:text-[22px] lg:text-[25px] xl:text-[27px] text-black tracking-tight leading-[1.2]">
+                      we design!
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* Card 4: Programming (Pink) */}
               <div
-                onClick={() => {
-                  const target = document.querySelector('[data-node-id="1:52"]') || document.getElementById("clubs-section")
-                  target?.scrollIntoView({ behavior: "smooth" })
-                }}
-                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 shrink-0"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleCardClick("programming")}
+                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <svg
-                    className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    viewBox="0 0 100 80"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: flippedCards.programming ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
                   >
-                    <path
-                      d="M30 24L12 40L30 56"
-                      stroke="black"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M59 15L41 65"
-                      stroke="black"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M70 24L88 40L70 56"
-                      stroke="black"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
-                    Programming
-                  </span>
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <svg
+                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        viewBox="0 0 100 80"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M30 24L12 40L30 56"
+                          stroke="black"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M59 15L41 65"
+                          stroke="black"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M70 24L88 40L70 56"
+                          stroke="black"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                        Programming
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="font-['Satoshi',Arial,sans-serif] font-black text-[11px] xs:text-[13px] sm:text-[16px] md:text-[19px] lg:text-[22px] xl:text-[24px] text-black tracking-tight leading-[1.2]">
+                      we solve problems!
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -9,6 +9,10 @@ let scrollAudioBuffer: AudioBuffer | null = null
 let isFetchingScroll = false
 let lastScrollPlayTime = 0
 
+let cardFlipAudioBuffer: AudioBuffer | null = null
+let isFetchingCardFlip = false
+let lastCardFlipPlayTime = 0
+
 // Get or initialize AudioContext
 function getAudioContext(): AudioContext | null {
   if (typeof window === "undefined") return null
@@ -60,6 +64,27 @@ export async function preloadScrollSound(): Promise<void> {
     // Silently handle if audio loading fails
   } finally {
     isFetchingScroll = false
+  }
+}
+
+// Preload the card flip sound buffer in background
+export async function preloadCardFlipSound(): Promise<void> {
+  if (typeof window === "undefined" || cardFlipAudioBuffer || isFetchingCardFlip) return
+
+  const ctx = getAudioContext()
+  if (!ctx) return
+
+  isFetchingCardFlip = true
+  try {
+    const soundUrl = publicAsset("sounds/card-flip.mp3")
+    const response = await fetch(soundUrl)
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const arrayBuffer = await response.arrayBuffer()
+    cardFlipAudioBuffer = await ctx.decodeAudioData(arrayBuffer)
+  } catch (err) {
+    // Silently handle if audio loading fails
+  } finally {
+    isFetchingCardFlip = false
   }
 }
 
@@ -167,6 +192,50 @@ export function playClickSound(volume = 0.7): void {
   // Attempt to preload buffer for subsequent clicks if not loaded
   if (!audioBuffer && !isFetching) {
     preloadClickSound()
+  }
+}
+
+// Play card flip sound with zero latency
+export function playCardFlipSound(volume = 0.85): void {
+  if (typeof window === "undefined") return
+
+  const now = performance.now()
+  if (now - lastCardFlipPlayTime < 25) return
+  lastCardFlipPlayTime = now
+
+  const ctx = getAudioContext()
+
+  if (ctx) {
+    try {
+      if (ctx.state === "suspended") {
+        ctx.resume().catch(() => {})
+      }
+
+      if (cardFlipAudioBuffer) {
+        const source = ctx.createBufferSource()
+        const gainNode = ctx.createGain()
+        gainNode.gain.value = Math.max(0, Math.min(1, volume))
+
+        source.buffer = cardFlipAudioBuffer
+        source.connect(gainNode)
+        gainNode.connect(ctx.destination)
+        source.start(0)
+        return
+      }
+    } catch {
+      // Fallback below
+    }
+  }
+
+  // HTML5 Audio fallback
+  try {
+    const audio = new Audio(publicAsset("sounds/card-flip.mp3"))
+    audio.volume = Math.max(0, Math.min(1, volume))
+    audio.play().catch(() => {})
+  } catch {}
+
+  if (!cardFlipAudioBuffer && !isFetchingCardFlip) {
+    preloadCardFlipSound()
   }
 }
 
