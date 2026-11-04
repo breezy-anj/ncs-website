@@ -126,6 +126,35 @@ export default function TeamMemberCard({
 
   const [expandDir, setExpandDir] = React.useState(staticDir);
   const [isHovered, setIsHovered] = React.useState(false);
+  const [isFocused, setIsFocused] = React.useState(false);
+
+  const isActive = isHovered || isFocused;
+
+  // Clear focus when clicking outside the card or pressing Escape
+  React.useEffect(() => {
+    if (!isFocused) return;
+    const handleClickOutside = (e) => {
+      if (cardRef.current && !cardRef.current.contains(e.target)) {
+        setIsFocused(false);
+      }
+    };
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isFocused]);
+
+  const handleCardClick = (e) => {
+    if (e.target.closest("a, button")) return;
+    setIsFocused((prev) => !prev);
+  };
 
   // Dynamic viewport-aware collision detection:
   // Ensures cards never overflow the browser viewport horizontally regardless of screen size or zoom.
@@ -164,7 +193,19 @@ export default function TeamMemberCard({
   return (
     <div
       ref={cardRef}
-      className={`col-1 h-[600px] relative row-1 w-[200px] ${isHovered ? "z-[100]" : "z-10"} ${className}`}
+      tabIndex={0}
+      onClick={handleCardClick}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          if (!e.target.closest("a, button")) {
+            e.preventDefault();
+            setIsFocused((prev) => !prev);
+          }
+        }
+      }}
+      className={`col-1 h-[600px] relative row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center ${
+        isActive ? "scale-[1.06] z-[100]" : "scale-100 z-10"
+      } ${className}`}
       data-node-id={dataNodeId}
     >
       <div className="relative h-full w-full">
@@ -201,10 +242,10 @@ export default function TeamMemberCard({
             }}
           />
 
-          {/* Member Name & Designation (Desktop: fades out on card hover; Mobile: always visible) */}
+          {/* Member Name & Designation (Desktop: fades out on card hover/active; Mobile: always visible) */}
           <div
             className={`absolute inset-0 transition-all duration-300 ease-out -translate-y-8 md:translate-y-0 pointer-events-none ${
-              isHovered ? "md:opacity-0 md:scale-95" : "md:opacity-100 md:scale-100"
+              isActive ? "md:opacity-0 md:scale-95" : "md:opacity-100 md:scale-100"
             }`}
           >
             <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap">
@@ -224,7 +265,7 @@ export default function TeamMemberCard({
           {/* Desktop Hover Links: Appear right where the name was in the non-expanded card */}
           <div
             className={`hidden md:flex -translate-x-1/2 absolute left-1/2 top-[440px] items-center justify-center gap-3 z-40 transition-all duration-300 ease-out ${
-              isHovered ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"
+              isActive ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"
             }`}
           >
             {parsedSocials.map((item, idx) => (
@@ -234,6 +275,7 @@ export default function TeamMemberCard({
                 target="_blank"
                 rel="noreferrer"
                 aria-label={item.label}
+                onClick={(e) => e.stopPropagation()}
                 className="size-11 p-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-black active:scale-90 transition-all flex items-center justify-center border border-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.9)] backdrop-blur-md hover:scale-115"
               >
                 <SocialIcon type={item.type} />
@@ -250,6 +292,7 @@ export default function TeamMemberCard({
                 target="_blank"
                 rel="noreferrer"
                 aria-label={item.label}
+                onClick={(e) => e.stopPropagation()}
                 className="size-10 p-2 rounded-full bg-white/15 hover:bg-white/30 active:scale-90 transition-all flex items-center justify-center border border-white/25 text-white cursor-pointer pointer-events-auto shadow-md"
               >
                 <SocialIcon type={item.type} />
@@ -273,8 +316,8 @@ export default function TeamMemberCard({
               ? "right-0 flex-row rounded-l-[32px] rounded-r-[100px]"
               : "left-0 flex-row-reverse rounded-l-[100px] rounded-r-[32px]"
           } w-[560px] h-[600px] bg-[#121214]/95 backdrop-blur-2xl border border-white/15 shadow-[0_28px_70px_rgba(0,0,0,0.95)] ${
-            isHovered ? "opacity-100" : "opacity-0"
-          } pointer-events-none transition-all duration-300 ease-out z-20`}
+            isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          } transition-all duration-300 ease-out z-20`}
         >
           {/* Content Column (360px wide) */}
           <div className="w-[360px] h-full flex flex-col justify-between py-10 px-8 shrink-0 text-left">
