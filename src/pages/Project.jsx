@@ -7,7 +7,7 @@ import { ProjectCard } from "../components/ProjectCard"
 
 const imgJssInfotech = publicAsset("projects/jss-infotech.webp?v=2")
 const imgMcqModule = publicAsset("projects/mcq-module.jpg")
-const imgEventManager = publicAsset("projects/event-manager.webp?v=2")
+const imgEventManager = publicAsset("projects/event-manager.jpg")
 const imgTnPortal = publicAsset("projects/tnp-portal.webp?v=2")
 const imgKnowYourCollege = publicAsset("projects/know-your-college.jpg")
 const imgCodepad = publicAsset("projects/codepad.jpg")
@@ -71,7 +71,7 @@ const allProjects = [
       "A college event-tracking web app, keeping students informed about daily happenings on campus. Stay in the loop, never miss out!",
     technologies: ["React", "Node", "MongoDB"],
     url: "https://github.com/ncs-jss",
-    glowColor: "blue",
+    glowColor: "purple",
   },
   {
     name: "T & P Portal",
