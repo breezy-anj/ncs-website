@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
+import { ShimmerText } from "../ui/shimmer-text"
 
 export default function GsapBigTextHero() {
   const containerRef = useRef(null)
@@ -35,24 +36,6 @@ export default function GsapBigTextHero() {
     return () => ctx.revert()
   }, [])
 
-  const handleCharHover = (e) => {
-    gsap.to(e.currentTarget, {
-      y: -10,
-      scale: 1.04,
-      duration: 0.25,
-      ease: "power2.out",
-    })
-  }
-
-  const handleCharLeave = (e) => {
-    gsap.to(e.currentTarget, {
-      y: 0,
-      scale: 1,
-      duration: 0.45,
-      ease: "elastic.out(1.2, 0.3)",
-    })
-  }
-
   return (
     <div
       ref={containerRef}
@@ -71,19 +54,9 @@ export default function GsapBigTextHero() {
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                Wh
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                a
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                t
-              </span>
-              <span className="inline-block w-[2.5vw] sm:w-[2vw] md:w-[1.6vw]" />
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                we
-              </span>
+              <ShimmerText duration={2.5} delay={0.2} className="text-[#faf8f0]">
+                WHAT WE
+              </ShimmerText>
             </h1>
           </div>
         </div>
@@ -98,36 +71,9 @@ export default function GsapBigTextHero() {
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                d
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                o
-              </span>
-
-              <span className="inline-block w-[2.5vw] sm:w-[2vw] md:w-[1.6vw]" />
-
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                a
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                t
-              </span>
-
-              <span className="inline-block w-[2.5vw] sm:w-[2vw] md:w-[1.6vw]" />
-
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                N
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                C
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                S
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform shrink-0">
-                ?
-              </span>
+              <ShimmerText duration={2.5} delay={0.5} className="text-[#faf8f0]">
+                DO AT NCS?
+              </ShimmerText>
             </h1>
           </div>
         </div>
