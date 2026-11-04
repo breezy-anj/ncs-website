@@ -2,7 +2,6 @@ import { liquidMetalFragmentShader, ShaderMount } from "@paper-design/shaders";
 import { Sparkles } from "lucide-react";
 import type React from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { playClickSound } from "@/lib/sound";
 
 interface LiquidMetalButtonProps {
   label?: string;
@@ -152,7 +151,6 @@ export function LiquidMetalButton({
   };
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    playClickSound();
     if (shaderMount.current?.setSpeed) {
       shaderMount.current.setSpeed(2.4);
       setTimeout(() => {

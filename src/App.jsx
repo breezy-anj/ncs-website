@@ -17,7 +17,6 @@ const Contact = lazy(() => import("./pages/Contact"))
 const CardFanCarouselDemo = lazy(() => import("./components/ui/card-fan-carousel-demo"))
 
 import { preloadRoute } from "./lib/preloadRoute"
-import { initClickSoundListener } from "./lib/sound"
 
 export default function App() {
   const location = useLocation()
@@ -40,12 +39,6 @@ export default function App() {
   const [contentHeight, setContentHeight] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
   const innerRef = useRef(null)
-
-  // Initialize global click sound effect on all clicks and CTAs
-  useEffect(() => {
-    const cleanup = initClickSoundListener()
-    return cleanup
-  }, [])
 
   // Instantly scroll to top on page navigation and ensure scroll is unlocked
   useEffect(() => {
