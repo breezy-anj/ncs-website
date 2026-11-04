@@ -6,13 +6,13 @@ import { publicAsset } from "../lib/publicAsset"
 import { ProjectCard } from "../components/ProjectCard"
 
 const imgJssInfotech = publicAsset("projects/jss-infotech.webp?v=2")
-const imgMcqModule = publicAsset("projects/mcq-module.webp?v=2")
+const imgMcqModule = publicAsset("projects/mcq-module.jpg")
 const imgEventManager = publicAsset("projects/event-manager.webp?v=2")
 const imgTnPortal = publicAsset("projects/tnp-portal.webp?v=2")
-const imgKnowYourCollege = publicAsset("projects/know-your-college.webp?v=2")
+const imgKnowYourCollege = publicAsset("projects/know-your-college.jpg")
 const imgCodepad = publicAsset("projects/codepad.jpg")
 const imgRegistrationModule = publicAsset("projects/registration-module.webp?v=2")
-const imgPlexus = publicAsset("projects/plexus.webp?v=2")
+const imgPlexus = publicAsset("projects/plexus.jpg")
 const imgMarioApp = publicAsset("projects/mario-app.jpg")
 const imgNcsLogo = publicAsset("assets/d3aad.svg")
 const imgVector = publicAsset("assets/79f69.svg")
@@ -62,7 +62,7 @@ const allProjects = [
       "Picture this: an online theater for teachers and societies, where multiple-choice questions take the stage and the results pop up like magic tricks!",
     technologies: ["Php", "Laravel", "MySQL"],
     url: "https://github.com/ncs-jss",
-    glowColor: "orange",
+    glowColor: "green",
   },
   {
     name: "Event Manager",
@@ -116,7 +116,7 @@ const allProjects = [
       "It is an online platform to host all kinds of digital events like Quizes etc. without any friction or technical know-how.",
     technologies: ["PHP", "Laravel", "MySQL"],
     url: "https://github.com/ncs-jss/plexus",
-    glowColor: "green",
+    glowColor: "blue",
   },
 ]
 
