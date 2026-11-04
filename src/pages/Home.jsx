@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Footer from "../components/Footer"
 import CarouselStacked from "../components/ui/carousel-07"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
+import InteractiveRobot from "../components/ui/interactive-robot"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
 
@@ -251,25 +252,12 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </div>
               </div>
 
-              {/* Center Robot */}
-              <motion.div
-                animate={{
-                  y: [0, -8, 2, -6, 0],
-                  rotate: [0, 1.2, -0.8, 0.8, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative z-10 w-[85px] xs:w-[110px] sm:w-[145px] md:w-[180px] lg:w-[210px] xl:w-[230px] h-[105px] xs:h-[135px] sm:h-[180px] md:h-[215px] lg:h-[240px] xl:h-[260px] flex flex-col items-center justify-end shrink-0 select-none pointer-events-none"
-              >
-                <img
-                  src={imgRobotStatic}
-                  alt="Nibble Robot"
-                  className="w-full h-full object-contain filter drop-shadow-[0_20px_36px_rgba(0,0,0,0.85)]"
-                />
-              </motion.div>
+              {/* Center Robot - Interactive & Optimized (only moves when cursor moves around it) */}
+              <InteractiveRobot
+                src={imgRobotStatic}
+                alt="Nibble Robot"
+                className="w-[85px] xs:w-[110px] sm:w-[145px] md:w-[180px] lg:w-[210px] xl:w-[230px] h-[105px] xs:h-[135px] sm:h-[180px] md:h-[215px] lg:h-[240px] xl:h-[260px]"
+              />
 
               {/* Card 3: Design (Yellow) */}
               <div
