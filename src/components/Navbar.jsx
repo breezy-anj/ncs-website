@@ -13,6 +13,7 @@ import {
 } from "lucide-react"
 import { publicAsset } from "../lib/publicAsset"
 import { preloadRoute } from "../lib/preloadRoute"
+import { playClickSound } from "../lib/sound"
 
 const imgNcsLogo = publicAsset("assets/ncs-logo-white.svg")
 
@@ -57,6 +58,7 @@ export default function Navbar() {
   const activePage = getPageFromPath(optimisticPath || location.pathname)
 
   const onNavigate = (path) => {
+    playClickSound()
     if (location.pathname === path && optimisticPath === path) {
       window.scrollTo({ top: 0, behavior: "instant" })
       setIsMobileOpen(false)
