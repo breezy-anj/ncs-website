@@ -8,37 +8,35 @@ export interface InteractiveRobotProps {
   src: string
   alt?: string
   className?: string
-  /** Active distance in px around the robot where cursor movements trigger gaze. Default: 550 */
+  /** Active distance in px around the robot where cursor movements trigger 3D gaze. Default: 280 */
   radius?: number
-  /** Maximum degrees of 3D tilt. Default: 18 */
+  /** Maximum degrees of 3D tilt. Default: 16 */
   maxTilt?: number
   onClick?: () => void
 }
 
 /**
- * InteractiveRobot — High-performance robot mascot that only reacts and moves
- * when the cursor moves around it.
+ * InteractiveRobot — Statically grounded 3D mascot that only tilts/gazes
+ * when the cursor moves in its immediate vicinity.
  *
- * Performance optimizations:
- * 1. Zero autonomous loop animations: completely idle when the cursor is still.
- * 2. Framer Motion useMotionValue + useSpring runs outside React render loops (0 re-renders on mousemove).
- * 3. 300ms cached bounding rect with scroll/resize invalidation avoids forced synchronous layout reflows.
- * 4. Hardware-accelerated 3D GPU transforms with perspective.
- * 5. Touch device support with touchmove/touchend.
- * 6. Respects prefers-reduced-motion.
+ * Grounded & Stable:
+ * - Anchored at the base (`transformOrigin: "center bottom"`) — never slides or drifts across X/Y.
+ * - Only tilts in 3D (`rotateY`, `rotateX`, subtle `rotateZ`) to face the cursor.
+ * - Active strictly when the cursor moves around the robot (radius ~280px).
+ * - Smoothly eases back to neutral rest when the cursor leaves its vicinity.
+ * - Zero autonomous animations or CPU loops when idle.
  */
 export default function InteractiveRobot({
   src,
   alt = "Nibble Robot",
   className = "",
-  radius = 550,
-  maxTilt = 18,
+  radius = 280,
+  maxTilt = 16,
   onClick,
 }: InteractiveRobotProps) {
   const containerRef = React.useRef<HTMLDivElement>(null)
   const cachedRect = React.useRef<DOMRect | null>(null)
   const lastRectTime = React.useRef(0)
-  const idleTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null)
   const [isBouncing, setIsBouncing] = React.useState(false)
   const [reducedMotion, setReducedMotion] = React.useState(false)
 
@@ -47,16 +45,14 @@ export default function InteractiveRobot({
   const rawY = useMotionValue(0)
 
   // Spring physics: responsive, crisp, and smoothly damped
-  const springConfig = { damping: 22, stiffness: 190, mass: 0.55 }
+  const springConfig = { damping: 24, stiffness: 200, mass: 0.5 }
   const springX = useSpring(rawX, springConfig)
   const springY = useSpring(rawY, springConfig)
 
-  // 3D Perspective Transforms
+  // 3D Perspective Tilt (Grounded at base — NO X/Y translation sliding!)
   const rotateY = useTransform(springX, [-50, 50], [-maxTilt, maxTilt])
-  const rotateX = useTransform(springY, [-50, 50], [maxTilt * 0.8, -maxTilt * 0.8])
-  const rotateZ = useTransform(springX, [-50, 50], [-3, 3])
-  const transX = useTransform(springX, [-50, 50], [-12, 12])
-  const transY = useTransform(springY, [-50, 50], [-9, 9])
+  const rotateX = useTransform(springY, [-50, 50], [maxTilt * 0.7, -maxTilt * 0.7])
+  const rotateZ = useTransform(springX, [-50, 50], [-2.5, 2.5])
 
   // Reduced motion preference
   React.useEffect(() => {
@@ -80,7 +76,7 @@ export default function InteractiveRobot({
     }
   }, [])
 
-  // Cursor & touch tracking — ONLY moves when cursor/touch moves around it
+  // Cursor & touch tracking — ONLY triggers when cursor/touch moves around the robot
   React.useEffect(() => {
     if (reducedMotion) return
 
@@ -106,29 +102,21 @@ export default function InteractiveRobot({
       const dist = Math.hypot(dx, dy)
 
       if (dist < radius) {
-        // Within active radius: lean and gaze toward cursor
-        const effectiveRadius = radius * 0.75
+        // Within active radius around the robot: tilt to look towards cursor
+        const effectiveRadius = radius * 0.85
         const normX = Math.max(-1, Math.min(1, dx / effectiveRadius))
         const normY = Math.max(-1, Math.min(1, dy / effectiveRadius))
 
         rawX.set(normX * 50)
         rawY.set(normY * 50)
-
-        // Reset idle timer: if cursor stops moving for 1200ms, ease smoothly back to neutral
-        if (idleTimerRef.current) clearTimeout(idleTimerRef.current)
-        idleTimerRef.current = setTimeout(() => {
-          rawX.set(0)
-          rawY.set(0)
-        }, 1200)
       } else {
-        // Outside radius: settle at resting state
+        // Outside immediate vicinity: ease back to neutral standing pose
         rawX.set(0)
         rawY.set(0)
       }
     }
 
     const handlePointerLeave = () => {
-      if (idleTimerRef.current) clearTimeout(idleTimerRef.current)
       rawX.set(0)
       rawY.set(0)
     }
@@ -154,14 +142,13 @@ export default function InteractiveRobot({
       window.removeEventListener("mouseleave", handlePointerLeave)
       window.removeEventListener("touchmove", handleTouchMove)
       window.removeEventListener("touchend", handleTouchEnd)
-      if (idleTimerRef.current) clearTimeout(idleTimerRef.current)
     }
   }, [radius, reducedMotion, rawX, rawY])
 
   const handleClick = () => {
     playClickSound()
     setIsBouncing(true)
-    setTimeout(() => setIsBouncing(false), 600)
+    setTimeout(() => setIsBouncing(false), 500)
     onClick?.()
   }
 
@@ -175,35 +162,33 @@ export default function InteractiveRobot({
       <motion.div
         style={{
           transformStyle: "preserve-3d",
+          transformOrigin: "center bottom",
           rotateX: reducedMotion ? 0 : rotateX,
           rotateY: reducedMotion ? 0 : rotateY,
           rotateZ: reducedMotion ? 0 : rotateZ,
-          x: reducedMotion ? 0 : transX,
-          y: reducedMotion ? 0 : transY,
         }}
         animate={
           isBouncing
             ? {
-                y: [-4, -18, 0],
-                scale: [1, 1.08, 1],
-                rotateZ: [0, -3, 3, 0],
+                y: [0, -14, 0],
+                scale: [1, 1.06, 1],
               }
             : undefined
         }
         transition={
           isBouncing
             ? {
-                duration: 0.5,
+                duration: 0.45,
                 ease: "easeOut",
               }
             : undefined
         }
         whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.25, ease: "easeOut" },
+          scale: 1.04,
+          transition: { duration: 0.2, ease: "easeOut" },
         }}
         whileTap={{
-          scale: 0.96,
+          scale: 0.97,
         }}
         className="w-full h-full flex flex-col items-center justify-end select-none will-change-transform"
       >

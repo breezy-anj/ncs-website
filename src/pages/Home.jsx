@@ -252,11 +252,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </div>
               </div>
 
-              {/* Center Robot - Interactive & Optimized (only moves when cursor moves around it) */}
+              {/* Center Robot - Interactive & Optimized (20% larger, only tilts when cursor is around it) */}
               <InteractiveRobot
                 src={imgRobotStatic}
                 alt="Nibble Robot"
-                className="w-[85px] xs:w-[110px] sm:w-[145px] md:w-[180px] lg:w-[210px] xl:w-[230px] h-[105px] xs:h-[135px] sm:h-[180px] md:h-[215px] lg:h-[240px] xl:h-[260px]"
+                className="w-[102px] xs:w-[132px] sm:w-[174px] md:w-[216px] lg:w-[252px] xl:w-[276px] h-[126px] xs:h-[162px] sm:h-[216px] md:h-[258px] lg:h-[288px] xl:h-[312px]"
               />
 
               {/* Card 3: Design (Yellow) */}
