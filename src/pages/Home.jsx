@@ -2,11 +2,8 @@ import React, { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import Footer from "../components/Footer"
-import CursorDrivenParticleTypography from "../components/CursorDrivenParticleTypography"
-import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import CarouselStacked from "../components/ui/carousel-07"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
-import WaveText from "../components/ui/WaveText"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
 
@@ -126,208 +123,14 @@ let hasHomeLoadedOnce =
   typeof window !== "undefined" && Boolean(sessionStorage.getItem("ncs_home_loaded"))
 
 export default function Home({ activePage = "Home", onNavigate }) {
-  const splineRef = useRef(null)
-  const [isSplineLoaded, setIsSplineLoaded] = useState(() => hasHomeLoadedOnce)
+  const [isSplineLoaded, setIsSplineLoaded] = useState(true)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
-
-    let observer = null
-
-    const hideSplineWatermark = () => {
-      const viewer = splineRef.current || document.querySelector("spline-viewer")
-      if (viewer?.shadowRoot) {
-        // Inject an aggressive stylesheet directly into shadow DOM to hide #logo
-        let style = viewer.shadowRoot.querySelector("#hide-spline-logo-style")
-        if (!style) {
-          style = document.createElement("style")
-          style.id = "hide-spline-logo-style"
-          style.textContent = `
-            #logo,
-            #logo *,
-            a[href*="spline.design"],
-            a[href*="spline.design"] *,
-            .spline-watermark,
-            [aria-label*="Spline"] {
-              display: none !important;
-              opacity: 0 !important;
-              visibility: hidden !important;
-              pointer-events: none !important;
-              width: 0 !important;
-              height: 0 !important;
-              max-width: 0 !important;
-              max-height: 0 !important;
-              position: absolute !important;
-              top: -99999px !important;
-              left: -99999px !important;
-              clip: rect(0, 0, 0, 0) !important;
-              clip-path: inset(100%) !important;
-              transform: scale(0) !important;
-              overflow: hidden !important;
-            }
-            #spline,
-            canvas {
-              pointer-events: none !important;
-              touch-action: none !important;
-              user-select: none !important;
-            }
-          `
-          viewer.shadowRoot.appendChild(style)
-        }
-
-        // Permanently remove logo element from DOM
-        const logo =
-          viewer.shadowRoot.querySelector("#logo") ||
-          viewer.shadowRoot.querySelector('a[href*="spline.design"]')
-        if (logo) {
-          try {
-            logo.remove()
-          } catch (e) {
-            logo.style.setProperty("display", "none", "important")
-            logo.style.setProperty("opacity", "0", "important")
-            logo.style.setProperty("visibility", "hidden", "important")
-          }
-        }
-
-        if (viewer._logo) {
-          try {
-            viewer._logo.remove()
-          } catch (e) {
-            viewer._logo.style.display = "none"
-          }
-        }
-
-        if (viewer._spline?.data?.scene?.publish?.settings?.web) {
-          viewer._spline.data.scene.publish.settings.web.logo = false
-        }
-
-        if (viewer._spline?.controls?.orbitControls) {
-          viewer._spline.controls.orbitControls.enabled = false
-          viewer._spline.controls.orbitControls.enableRotate = false
-          viewer._spline.controls.orbitControls.enablePan = false
-          viewer._spline.controls.orbitControls.enableZoom = false
-          viewer._spline.controls.orbitControls.autoRotate = false
-        }
-        if (viewer._spline?.eventManager?.publish?.orbitControls) {
-          viewer._spline.eventManager.publish.orbitControls.enableRotate = false
-          viewer._spline.eventManager.publish.orbitControls.enablePan = false
-          viewer._spline.eventManager.publish.orbitControls.enableZoom = false
-          viewer._spline.eventManager.publish.orbitControls.autoRotate = false
-        }
-
-        // Attach observer to catch any delayed re-injection by Spline
-        if (!observer && typeof MutationObserver !== "undefined") {
-          observer = new MutationObserver(() => {
-            const el =
-              viewer.shadowRoot.querySelector("#logo") ||
-              viewer.shadowRoot.querySelector('a[href*="spline.design"]')
-            if (el) {
-              try {
-                el.remove()
-              } catch (e) {
-                el.style.setProperty("display", "none", "important")
-              }
-            }
-          })
-          observer.observe(viewer.shadowRoot, {
-            childList: true,
-            subtree: true,
-            attributes: true,
-          })
-        }
-      }
-    }
-
-    // On mobile screens or subsequent visits, no 3D loading overlay needed
-    const isMobileScreen = typeof window !== "undefined" && window.innerWidth < 768
-    if (isMobileScreen || hasHomeLoadedOnce) {
-      hasHomeLoadedOnce = true
-      try {
-        sessionStorage.setItem("ncs_home_loaded", "true")
-      } catch (e) {}
-      setIsSplineLoaded(true)
-      document.body.style.overflow = ""
-      document.body.classList.remove("spline-loading")
-
-      hideSplineWatermark()
-      const interval = setInterval(hideSplineWatermark, 100)
-      return () => {
-        clearInterval(interval)
-        if (observer) {
-          observer.disconnect()
-        }
-        document.body.style.overflow = ""
-        document.body.classList.remove("spline-loading")
-      }
-    }
-
-    document.body.style.overflow = "hidden"
-    document.body.classList.add("spline-loading")
-
-    let isFinished = false
-    const finishLoading = () => {
-      if (isFinished) return
-      isFinished = true
-      hasHomeLoadedOnce = true
-      try {
-        sessionStorage.setItem("ncs_home_loaded", "true")
-      } catch (e) {}
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            setIsSplineLoaded(true)
-            document.body.style.overflow = ""
-            document.body.classList.remove("spline-loading")
-          }, 350)
-        })
-      })
-    }
-
-    hideSplineWatermark()
-
-    const handleSplineReady = () => {
-      hideSplineWatermark()
-      const v = splineRef.current || document.querySelector("spline-viewer")
-      if (v?._spline?.controls?.orbitControls) {
-        v._spline.controls.orbitControls.enabled = false
-        v._spline.controls.orbitControls.enableRotate = false
-        v._spline.controls.orbitControls.enablePan = false
-        v._spline.controls.orbitControls.enableZoom = false
-        v._spline.controls.orbitControls.autoRotate = false
-      }
-      finishLoading()
-    }
-
-    const viewer = splineRef.current || document.querySelector("spline-viewer")
-    if (viewer) {
-      viewer.addEventListener("load-complete", handleSplineReady)
-      viewer.addEventListener("loaded", handleSplineReady)
-      // Only complete immediately if Spline has already finished loading previously
-      if (viewer._loaded === true) {
-        handleSplineReady()
-      }
-    }
-
-    const interval = setInterval(hideSplineWatermark, 100)
-    // Generous fallback safety timeout (18s) in case network is disconnected
-    const timeout = setTimeout(() => {
-      finishLoading()
-    }, 18000)
-
-    return () => {
-      clearInterval(interval)
-      clearTimeout(timeout)
-      if (observer) {
-        observer.disconnect()
-      }
-      document.body.style.overflow = ""
-      document.body.classList.remove("spline-loading")
-      if (viewer) {
-        viewer.removeEventListener("load-complete", handleSplineReady)
-        viewer.removeEventListener("loaded", handleSplineReady)
-      }
-    }
+    setIsSplineLoaded(true)
+    document.body.style.overflow = ""
+    document.body.classList.remove("spline-loading")
   }, [])
 
   return (
@@ -341,113 +144,180 @@ export default function Home({ activePage = "Home", onNavigate }) {
         data-node-id="1:25"
       >
         <div
-          className="content-stretch flex flex-col gap-24 md:gap-[200px] items-center relative shrink-0 w-full"
+          className="content-stretch flex flex-col gap-16 sm:gap-20 md:gap-28 items-center relative shrink-0 w-full"
           data-node-id="1:36"
         >
+          {/* Hero Section */}
           <div
-            className="relative w-full flex flex-col-reverse md:flex-row items-center justify-between min-h-[calc(100vh-103px)] md:min-h-[560px] lg:min-h-[660px] xl:min-h-[720px] md:-mt-[40px] overflow-visible"
+            className="relative w-full flex flex-col items-center justify-start pt-4 sm:pt-8 md:pt-12 pb-2 overflow-visible"
             data-node-id="1:37"
           >
-            {/* Mobile View: Static Robot Image with Infinite Multi-axis Floating Effect */}
-            <div
-              className="relative z-0 block md:hidden w-full max-w-[210px] xs:max-w-[230px] sm:max-w-[260px] h-[190px] xs:h-[210px] sm:h-[240px] mx-auto mt-12 xs:mt-16 sm:mt-20 mb-8 select-none pointer-events-none flex flex-col items-center justify-center"
-              data-node-id="1:38-mobile"
-              data-name="Hero Static Robot"
-            >
-              <motion.img
-                animate={{
-                  y: [0, -14, 2, -10, 0],
-                  x: [0, 4, -3, 3, 0],
-                  rotate: [0, 2.5, -2, 1.5, 0],
-                }}
-                transition={{
-                  duration: 5.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                src={imgRobotStatic}
-                alt="Nibble Robot"
-                className="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)]"
-              />
-              {/* Dynamic floating shadow beneath */}
-              <motion.div
-                animate={{
-                  scaleX: [1, 0.82, 1.05, 0.88, 1],
-                  opacity: [0.4, 0.22, 0.45, 0.28, 0.4],
-                }}
-                transition={{
-                  duration: 5.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="w-28 h-2.5 rounded-full bg-black/60 blur-[6px] -mt-1 pointer-events-none"
-              />
-            </div>
+            {/* Center Typography & CTA */}
+            <div className="flex flex-col items-center text-center w-full max-w-[1200px] gap-3 sm:gap-4 md:gap-5 z-10 select-none">
+              {/* 1. Tracked Subheading */}
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.25em] text-white/70 uppercase">
+                NIBBLE COMPUTER SOCIETY
+              </p>
 
-            {/* Desktop View: Full Interactive 3D Spline Scene */}
-            <div
-              className="relative z-0 hidden md:flex md:absolute md:right-[-24px] lg:right-[-12px] xl:right-[15px] md:top-1/2 md:-translate-y-1/2 w-[clamp(340px,46vw,816px)] h-[clamp(340px,43vw,725px)] select-none justify-center items-center pointer-events-none"
-              data-node-id="1:38"
-              data-name="Hero Spline 3D"
-            >
-              <spline-viewer
-                ref={splineRef}
-                url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
-                className="w-full h-full block pointer-events-none"
-                style={{ width: "100%", height: "100%", pointerEvents: "none" }}
-              ></spline-viewer>
-            </div>
+              {/* 2. Main Title: WHERE CURIOSITY BUILDS THE FUTURE */}
+              <h1 className="font-['Satoshi',Arial,sans-serif] font-black text-[34px] xs:text-[42px] sm:text-[56px] md:text-[68px] lg:text-[80px] xl:text-[90px] leading-[0.98] tracking-[-0.035em] uppercase text-center flex flex-col items-center">
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]">
+                  WHERE CURIOSITY
+                </span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]">
+                  BUILDS THE FUTURE
+                </span>
+              </h1>
 
-            {/* Left Typography & CTA */}
-            <div
-              className="flex flex-col gap-6 sm:gap-7 md:gap-8 items-center text-center relative z-10 w-full md:w-auto md:max-w-[58%] lg:max-w-[56%] xl:max-w-[780px] shrink-0"
-              data-node-id="1:39"
-            >
-              <div className="flex flex-col not-italic items-center text-center relative shrink-0 w-full gap-2 sm:gap-3">
-                {/* 1. NIBBLE */}
-                <WaveText
-                  as="h1"
-                  repeat
-                  base="#ffffff"
-                  shape="radial"
-                  className="mb-0 font-['Satoshi',Arial,sans-serif] font-black text-[34px] xs:text-[42px] sm:text-[56px] md:text-[clamp(44px,4.6vw,66px)] lg:text-[clamp(58px,5.2vw,82px)] xl:text-[88px] leading-[1.05] tracking-[-0.035em] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] select-none text-center"
+              {/* 3. Subtitle description */}
+              <div className="font-['Satoshi',Arial,sans-serif] font-normal text-[13px] xs:text-[14px] sm:text-[16px] md:text-[17px] leading-[1.45] text-white/60 max-w-[620px] px-4 text-center">
+                <p className="mb-0">A community of builders, designers, developers and problem solvers</p>
+                <p className="mb-0">turning bold ideas into technology</p>
+              </div>
+
+              {/* 4. Explore NCS Button */}
+              <div className="pt-1 sm:pt-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const clubsEl = document.getElementById("clubs-section")
+                    if (clubsEl) {
+                      clubsEl.scrollIntoView({ behavior: "smooth" })
+                    }
+                  }}
+                  className="inline-flex items-center gap-1.5 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white text-[12px] sm:text-[13px] md:text-[14px] font-medium backdrop-blur-md transition-all duration-200 cursor-pointer shadow-lg hover:scale-105 active:scale-95"
                 >
-                  NIBBLE
-                </WaveText>
+                  <span>Explore NCS</span>
+                  <span className="text-sm font-semibold">↗</span>
+                </button>
+              </div>
+            </div>
 
-                {/* 2. COMPUTER SOCIETY */}
-                <p className="mb-0 text-[#B0B0B8] font-['Satoshi',Arial,sans-serif] font-black text-[27px] xs:text-[34px] sm:text-[45px] md:text-[clamp(34px,3.8vw,54px)] lg:text-[clamp(46px,4.4vw,66px)] xl:text-[72px] leading-[1.05] tracking-[-0.035em] whitespace-nowrap text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] select-none">
-                  COMPUTER SOCIETY
-                </p>
-
-                {/* 3. Subtitle Description */}
-                <div className="font-['Playfair_Display',Georgia,serif] italic font-normal text-[15px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-[1.45] text-[#82828A] flex flex-col gap-0.5 sm:gap-1 mt-2.5 sm:mt-3 text-center select-none">
-                  <p className="mb-0">A community driven by curiosity, creativity, and innovation.</p>
-                  <p className="mb-0">Turning bold ideas into technology that shapes tomorrow.</p>
+            {/* 5. Five-Element Row: 4 Club Cards + Center Robot */}
+            <div className="relative w-full max-w-[1240px] mx-auto mt-8 sm:mt-12 md:mt-14 flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
+              {/* Card 1: Technical (Green) */}
+              <div
+                onClick={() => {
+                  const target = document.querySelector('[data-node-id="1:64"]') || document.getElementById("clubs-section")
+                  target?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="group relative w-[75px] xs:w-[100px] sm:w-[135px] md:w-[170px] lg:w-[195px] xl:w-[215px] h-[110px] xs:h-[145px] sm:h-[195px] md:h-[250px] lg:h-[285px] xl:h-[310px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <img
+                    alt="Technical"
+                    className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgTechnicalIcon}
+                  />
+                </div>
+                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    Technical
+                  </span>
                 </div>
               </div>
 
-              {/* Join the Community Pill Button with Liquid Metal Shader */}
-              <div className="w-full flex justify-center pt-6 sm:pt-8 md:pt-10 lg:pt-12">
-                <LiquidMetalButton
-                  label="Join the Community"
-                  onClick={() => {
-                    const connectEl = document.getElementById("connect-section")
-                    if (connectEl) {
-                      connectEl.scrollIntoView({ behavior: "smooth" })
-                    } else {
-                      window.scrollTo({
-                        top: document.body.scrollHeight,
-                        behavior: "smooth",
-                      })
-                    }
-                  }}
+              {/* Card 2: Development (Blue) */}
+              <div
+                onClick={() => {
+                  const target = document.querySelector('[data-node-id="1:56"]') || document.getElementById("clubs-section")
+                  target?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="group relative w-[70px] xs:w-[92px] sm:w-[125px] md:w-[155px] lg:w-[180px] xl:w-[195px] h-[90px] xs:h-[120px] sm:h-[160px] md:h-[210px] lg:h-[240px] xl:h-[260px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <svg className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M84.714 79.8L73.836 90.678L79.8 96.6L96.6 79.8L79.8 63L73.836 68.922L84.714 79.8ZM49.686 79.8L60.564 68.922L54.6 63L37.8 79.8L54.6 96.6L60.564 90.678L49.686 79.8Z" fill="black"/>
+                    <path d="M37.8 37.8C40.1196 37.8 42 35.9196 42 33.6C42 31.2804 40.1196 29.4 37.8 29.4C35.4804 29.4 33.6 31.2804 33.6 33.6C33.6 35.9196 35.4804 37.8 37.8 37.8Z" fill="black"/>
+                    <path d="M25.2 37.8C27.5196 37.8 29.4 35.9196 29.4 33.6C29.4 31.2804 27.5196 29.4 25.2 29.4C22.8804 29.4 21 31.2804 21 33.6C21 35.9196 22.8804 37.8 25.2 37.8Z" fill="black"/>
+                    <path d="M117.6 16.8H16.8C12.1674 16.8 8.40002 20.5716 8.40002 25.2V109.2C8.40002 113.833 12.1674 117.6 16.8 117.6H117.6C122.233 117.6 126 113.833 126 109.2V25.2C126 20.5716 122.233 16.8 117.6 16.8ZM117.6 25.2V42H16.8V25.2H117.6ZM16.8 109.2V50.4001H117.6V109.2H16.8Z" fill="black"/>
+                  </svg>
+                </div>
+                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    Development
+                  </span>
+                </div>
+              </div>
+
+              {/* Center Robot */}
+              <motion.div
+                animate={{
+                  y: [0, -10, 2, -8, 0],
+                  rotate: [0, 1.5, -1, 1, 0],
+                }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10 w-[95px] xs:w-[125px] sm:w-[175px] md:w-[225px] lg:w-[260px] xl:w-[290px] h-[125px] xs:h-[165px] sm:h-[225px] md:h-[295px] lg:h-[340px] xl:h-[370px] flex flex-col items-center justify-end shrink-0 select-none pointer-events-none"
+              >
+                <img
+                  src={imgRobotStatic}
+                  alt="Nibble Robot"
+                  className="w-full h-full object-contain filter drop-shadow-[0_20px_36px_rgba(0,0,0,0.85)]"
                 />
+              </motion.div>
+
+              {/* Card 3: Design (Yellow) */}
+              <div
+                onClick={() => {
+                  const target = document.querySelector('[data-node-id="1:60"]') || document.getElementById("clubs-section")
+                  target?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="group relative w-[70px] xs:w-[92px] sm:w-[125px] md:w-[155px] lg:w-[180px] xl:w-[195px] h-[90px] xs:h-[120px] sm:h-[160px] md:h-[210px] lg:h-[240px] xl:h-[260px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <img
+                    alt="Design"
+                    className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110"
+                    src={imgVector1}
+                  />
+                </div>
+                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    Design
+                  </span>
+                </div>
+              </div>
+
+              {/* Card 4: Programming (Pink) */}
+              <div
+                onClick={() => {
+                  const target = document.querySelector('[data-node-id="1:52"]') || document.getElementById("clubs-section")
+                  target?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="group relative w-[75px] xs:w-[100px] sm:w-[135px] md:w-[170px] lg:w-[195px] xl:w-[215px] h-[110px] xs:h-[145px] sm:h-[195px] md:h-[250px] lg:h-[285px] xl:h-[310px] rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3.5 md:p-4 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-size-[1024px_1024px,auto_auto] bg-top-left shrink-0"
+                style={{
+                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                }}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
+                  <svg className="w-[60%] h-[60%] max-w-[85px] max-h-[85px] object-contain transition-transform duration-300 group-hover:scale-110" viewBox="0 0 113 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.6688 28.1416L13.9295 40.655L30.6688 53.1682C31.224 53.5764 31.6836 54.0792 32.0212 54.6474C32.3586 55.2158 32.5674 55.8384 32.6354 56.4794C32.7034 57.1204 32.6292 57.7672 32.4172 58.3824C32.2052 58.9976 31.8596 59.569 31.4002 60.0638C30.9408 60.5586 30.3768 60.9668 29.7406 61.2652C29.1046 61.5634 28.409 61.7456 27.6938 61.8016C26.9788 61.8574 26.2586 61.7858 25.5746 61.5906C24.8904 61.3956 24.2562 61.081 23.7084 60.6648L1.95733 44.4032C1.34472 43.9454 0.851836 43.3724 0.513586 42.7246C0.175336 42.0768 0 41.3702 0 40.655C0 39.9396 0.175336 39.2332 0.513586 38.5854C0.851836 37.9376 1.34472 37.3646 1.95733 36.9066L23.7084 20.6452C24.8182 19.8293 26.2422 19.4399 27.6704 19.5618C29.0986 19.6838 30.4152 20.307 31.3334 21.296C32.2516 22.285 32.697 23.5594 32.5726 24.8416C32.448 26.1238 31.7638 27.31 30.6688 28.1416ZM110.423 36.9066L88.6718 20.6452C88.124 20.229 87.4898 19.9144 86.8058 19.7193C86.1218 19.5242 85.4016 19.4525 84.6864 19.5084C83.9714 19.5642 83.2758 19.7466 82.6396 20.0448C82.0036 20.343 81.4396 20.7514 80.9802 21.2462C80.5208 21.7408 80.1752 22.3124 79.9632 22.9276C79.7512 23.5428 79.677 24.1896 79.745 24.8306C79.813 25.4716 80.0218 26.0942 80.3592 26.6626C80.6968 27.2308 81.1564 27.7336 81.7116 28.1416L98.4508 40.655L81.7116 53.1682C81.1564 53.5764 80.6968 54.0792 80.3592 54.6474C80.0218 55.2158 79.813 55.8384 79.745 56.4794C79.677 57.1204 79.7512 57.7672 79.9632 58.3824C80.1752 58.9976 80.5208 59.569 80.9802 60.0638C81.4396 60.5586 82.0036 60.9668 82.6396 61.2652C83.2758 61.5634 83.9714 61.7456 84.6864 61.8016C85.4016 61.8574 86.1218 61.7858 86.8058 61.5906C87.4898 61.3956 88.124 61.081 88.6718 60.6648L110.423 44.4032C111.036 43.9454 111.529 43.3724 111.867 42.7246C112.205 42.0768 112.38 41.3702 112.38 40.655C112.38 39.9396 112.205 39.2332 111.867 38.5854C111.529 37.9376 111.036 37.3646 110.423 36.9066ZM72.5488 0.29376C71.8776 0.0747588 71.1648 -0.023458 70.4512 0.00471889C69.7378 0.0328958 69.0374 0.186915 68.3902 0.457978C67.743 0.72904 67.1616 1.11184 66.6794 1.5845C66.197 2.05716 65.8234 2.61044 65.5794 3.21272L36.578 74.7636C36.0864 75.9794 36.1528 77.3204 36.763 78.492C37.373 79.6638 38.4768 80.5702 39.8316 81.0122C40.4262 81.2092 41.0554 81.3096 41.6894 81.3088C42.8058 81.309 43.8954 81.001 44.8098 80.4264C45.7244 79.8518 46.4194 79.0386 46.801 78.0972L75.8024 6.54634C76.0466 5.94412 76.156 5.30468 76.1246 4.66452C76.0932 4.02434 75.9216 3.396 75.6194 2.81536C75.3172 2.23474 74.8906 1.71319 74.3638 1.28053C73.8368 0.847864 73.2202 0.512558 72.5488 0.29376Z" fill="black"/>
+                  </svg>
+                </div>
+                <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
+                  <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    Programming
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
           <div
+            id="clubs-section"
             className="flex flex-col gap-10 md:gap-[20px] items-center relative shrink-0 w-full max-w-[1400px]"
             data-node-id="1:48"
           >

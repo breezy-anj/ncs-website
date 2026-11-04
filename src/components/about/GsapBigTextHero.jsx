@@ -63,13 +63,12 @@ export default function GsapBigTextHero() {
 
         {/* LINE 1: "WHAT WE" */}
         <div className="relative w-full flex justify-center overflow-visible">
-          <div className="overflow-hidden py-1">
+          <div className="overflow-visible py-1">
             <h1
               ref={line1Ref}
-              className="font-['Satoshi'] font-black text-[18vw] sm:text-[17vw] md:text-[16vw] lg:text-[15vw] xl:text-[175px] 2xl:text-[215px] leading-[0.82] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
+              className="font-['Satoshi'] font-black text-[13.5vw] sm:text-[14vw] md:text-[13vw] lg:text-[12.5vw] xl:text-[150px] 2xl:text-[185px] leading-[0.85] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
               style={{
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
-                textShadow: "0 6px 50px rgba(0,0,0,0.5)",
               }}
             >
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
@@ -81,7 +80,7 @@ export default function GsapBigTextHero() {
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 t
               </span>
-              <span className="inline-block w-[3vw] sm:w-[2.5vw] md:w-[2vw]" />
+              <span className="inline-block w-[2.5vw] sm:w-[2vw] md:w-[1.6vw]" />
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 we
               </span>
@@ -90,14 +89,13 @@ export default function GsapBigTextHero() {
         </div>
 
         {/* LINE 2: "DO AT NCS?" */}
-        <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-3 md:-mt-6">
-          <div className="overflow-hidden py-1">
+        <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-2 md:-mt-4">
+          <div className="overflow-visible py-1 px-1">
             <h1
               ref={line2Ref}
-              className="font-['Satoshi'] font-black text-[18vw] sm:text-[17vw] md:text-[16vw] lg:text-[15vw] xl:text-[175px] 2xl:text-[215px] leading-[0.82] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
+              className="font-['Satoshi'] font-black text-[13.5vw] sm:text-[14vw] md:text-[13vw] lg:text-[12.5vw] xl:text-[150px] 2xl:text-[185px] leading-[0.85] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
               style={{
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
-                textShadow: "0 6px 50px rgba(0,0,0,0.5)",
               }}
             >
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
@@ -107,7 +105,7 @@ export default function GsapBigTextHero() {
                 o
               </span>
 
-              <span className="inline-block w-[3vw] sm:w-[2.5vw] md:w-[2vw]" />
+              <span className="inline-block w-[2.5vw] sm:w-[2vw] md:w-[1.6vw]" />
 
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 a
@@ -116,7 +114,7 @@ export default function GsapBigTextHero() {
                 t
               </span>
 
-              <span className="inline-block w-[3vw] sm:w-[2.5vw] md:w-[2vw]" />
+              <span className="inline-block w-[2.5vw] sm:w-[2vw] md:w-[1.6vw]" />
 
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 N
@@ -127,7 +125,7 @@ export default function GsapBigTextHero() {
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 S
               </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
+              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform shrink-0">
                 ?
               </span>
             </h1>
