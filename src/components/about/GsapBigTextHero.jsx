@@ -10,10 +10,10 @@ export default function GsapBigTextHero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      
+      // 1. Master Entrance Timeline
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } })
 
-      
+      // Text lines reveal upwards with scale and blur fade
       tl.fromTo(
         line1Ref.current,
         { yPercent: 110, opacity: 0, rotateX: 30, filter: "blur(12px)" },
@@ -46,8 +46,7 @@ export default function GsapBigTextHero() {
 
         {/* LINE 1: "WHAT WE" */}
         <div className="relative w-full flex justify-center overflow-visible">
-          <div className="overflow-hidden px-4 sm:px-8 py-2 md:py-3">
-          <div className="overflow-visible py-1">
+          <div className="overflow-visible py-1 px-2">
             <h1
               ref={line1Ref}
               className="font-['Satoshi'] font-black text-[13.5vw] sm:text-[14vw] md:text-[13vw] lg:text-[12.5vw] xl:text-[150px] 2xl:text-[185px] leading-[0.85] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
@@ -63,10 +62,8 @@ export default function GsapBigTextHero() {
         </div>
 
         {/* LINE 2: "DO AT NCS?" */}
-        <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-3 md:-mt-6">
-          <div className="overflow-hidden px-4 sm:px-8 py-2 md:py-3">
         <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-2 md:-mt-4">
-          <div className="overflow-visible py-1 px-1">
+          <div className="overflow-visible py-1 px-3 sm:px-6">
             <h1
               ref={line2Ref}
               className="font-['Satoshi'] font-black text-[13.5vw] sm:text-[14vw] md:text-[13vw] lg:text-[12.5vw] xl:text-[150px] 2xl:text-[185px] leading-[0.85] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
@@ -74,42 +71,9 @@ export default function GsapBigTextHero() {
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                d
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                o
-              </span>
-
-              <span className="inline-block w-[3vw] sm:w-[2.5vw] md:w-[2vw]" />
-
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                a
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                t
-              </span>
-
-              <span className="inline-block w-[3vw] sm:w-[2.5vw] md:w-[2vw]" />
-
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                N
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                C
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                S
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform ml-1 sm:ml-2 pr-2 sm:pr-3">
-                ?
-              </span>
-
-              <ShimmerText duration={2.5} delay={0.5} className="text-[#faf8f0]">
+              <ShimmerText duration={2.5} delay={0.5} className="text-[#faf8f0] pr-2 sm:pr-4">
                 DO AT NCS?
               </ShimmerText>
-
             </h1>
           </div>
         </div>
