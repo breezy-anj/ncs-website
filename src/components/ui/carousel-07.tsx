@@ -11,6 +11,7 @@ import {
 } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { playScrollSound, preloadScrollSound } from "@/lib/sound";
 
 export interface Slide {
   image: string;
@@ -110,8 +111,31 @@ export const CarouselStacked = ({
   const scrollProgress = useMotionValue(0);
   const startProgress = React.useRef(0);
   const [windowWidth, setWindowWidth] = React.useState(0);
+  const wheelSnapTimeout = React.useRef<NodeJS.Timeout | null>(null);
 
   const total = slides.length;
+
+  React.useEffect(() => {
+    preloadScrollSound();
+    let lastCardIndex = Math.round(scrollProgress.get());
+    let accumulatedDistance = 0;
+    let prevProgress = scrollProgress.get();
+
+    const unsubscribe = scrollProgress.on("change", (latest) => {
+      const delta = Math.abs(latest - prevProgress);
+      prevProgress = latest;
+      accumulatedDistance += delta;
+
+      const currentCard = Math.round(latest);
+      if (currentCard !== lastCardIndex || accumulatedDistance >= 0.5) {
+        lastCardIndex = currentCard;
+        accumulatedDistance = 0;
+        playScrollSound(0.5);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollProgress]);
 
   React.useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -127,6 +151,32 @@ export const CarouselStacked = ({
 
   const handleDragStart = () => {
     startProgress.current = scrollProgress.get();
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    const deltaX = e.deltaX;
+    const deltaY = e.deltaY;
+    const isHorizontal = Math.abs(deltaX) > Math.abs(deltaY);
+
+    if (isHorizontal && Math.abs(deltaX) > 2) {
+      const delta = deltaX / config.sensitivity;
+      scrollProgress.set(scrollProgress.get() + delta);
+    } else if (e.shiftKey && Math.abs(deltaY) > 2) {
+      const delta = deltaY / config.sensitivity;
+      scrollProgress.set(scrollProgress.get() + delta);
+    } else {
+      return;
+    }
+
+    if (wheelSnapTimeout.current) clearTimeout(wheelSnapTimeout.current);
+    wheelSnapTimeout.current = setTimeout(() => {
+      animate(scrollProgress, Math.round(scrollProgress.get()), {
+        type: "spring",
+        stiffness: 200,
+        damping: 30,
+        mass: 1,
+      });
+    }, 120);
   };
 
   const handleDragEnd = (
@@ -165,6 +215,7 @@ export const CarouselStacked = ({
             scrollProgress.set(scrollProgress.get() + delta);
           }}
           onDragEnd={handleDragEnd}
+          onWheel={handleWheel}
           className="absolute inset-0 z-50 cursor-grab active:cursor-grabbing"
         />
 
