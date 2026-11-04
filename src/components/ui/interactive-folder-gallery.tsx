@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, X, Camera } from "lucide-react";
+import { X, Camera } from "lucide-react";
+import MorphGallery, { type MorphItem } from "./morph-gallery";
 
 export interface GalleryPhoto {
   id: string | number;
@@ -28,11 +29,7 @@ export function InteractiveFolderGallery({
   const [hasBeenOpened, setHasBeenOpened] = useState(false);
   const [hoverFolder, setHoverFolder] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [flashTrigger, setFlashTrigger] = useState(false);
   const [mounted, setMounted] = useState(false);
-
-  const filmstripRef = useRef<HTMLDivElement>(null);
-  const activeThumbnailRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -47,36 +44,15 @@ export function InteractiveFolderGallery({
   // Take top 4 preview photos for the 3D folded stack preview
   const previewPhotos = photos.slice(0, 4);
 
-  // Trigger camera shutter flash effect
-  const changePhoto = useCallback((newIndex: number) => {
-    if (photos.length === 0) return;
-    setSelectedIndex(newIndex);
-    setFlashTrigger(true);
-    setTimeout(() => setFlashTrigger(false), 140);
-  }, [photos.length]);
+  const morphItems: MorphItem[] = useMemo(() => {
+    return photos.map((p, idx) => ({
+      src: p.image,
+      thumb: p.image,
+      alt: p.title || p.caption || `Photo ${idx + 1}`,
+    }));
+  }, [photos]);
 
-  const handleNext = useCallback(() => {
-    if (photos.length === 0) return;
-    changePhoto((selectedIndex + 1) % photos.length);
-  }, [selectedIndex, photos.length, changePhoto]);
-
-  const handlePrev = useCallback(() => {
-    if (photos.length === 0) return;
-    changePhoto((selectedIndex - 1 + photos.length) % photos.length);
-  }, [selectedIndex, photos.length, changePhoto]);
-
-  // Keep active thumbnail centered in filmstrip reel
-  useEffect(() => {
-    if (activeThumbnailRef.current && filmstripRef.current) {
-      activeThumbnailRef.current.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
-    }
-  }, [selectedIndex, isPhotoBoothOpen]);
-
-  // Manage body scroll & navbar hide class when Photo Booth is active
+  // Manage body scroll & ESC key when Photo Booth is active
   useEffect(() => {
     if (!isPhotoBoothOpen) {
       document.body.classList.remove("photo-booth-open");
@@ -90,10 +66,6 @@ export function InteractiveFolderGallery({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsPhotoBoothOpen(false);
-      } else if (e.key === "ArrowRight") {
-        handleNext();
-      } else if (e.key === "ArrowLeft") {
-        handlePrev();
       }
     };
 
@@ -103,7 +75,7 @@ export function InteractiveFolderGallery({
       document.body.style.overflow = originalOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isPhotoBoothOpen, handleNext, handlePrev]);
+  }, [isPhotoBoothOpen]);
 
   const activePhoto = photos.length > 0 ? (photos[selectedIndex] || photos[0]) : null;
 
@@ -279,70 +251,27 @@ export function InteractiveFolderGallery({
                   </div>
                 </div>
 
-                {/* Central Stage Viewfinder (Full Height Screen) */}
-                <div className="flex-1 w-full bg-[#08080a] relative flex items-center justify-center p-3 sm:p-6 md:p-8 overflow-hidden min-h-0">
-                  {/* Shutter Flash Animation */}
-                  <AnimatePresence>
-                    {flashTrigger && (
-                      <motion.div
-                        className="absolute inset-0 bg-white z-40 pointer-events-none"
-                        initial={{ opacity: 0.6 }}
-                        animate={{ opacity: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.12 }}
-                      />
-                    )}
-                  </AnimatePresence>
-
-                  {activePhoto ? (
+                {/* Main Body: MorphGallery WebGL Dissolve Viewport */}
+                <div className="flex-1 w-full bg-[#08080a] relative flex items-center justify-center overflow-hidden min-h-0">
+                  {photos.length > 0 ? (
                     <>
-                      {/* Photo Title Overlay */}
-                      {activePhoto.title && (
+                      {/* Photo Title Overlay Badge */}
+                      {photos[selectedIndex]?.title && (
                         <div className="absolute top-4 left-6 z-20 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium tracking-wide pointer-events-none">
-                          {activePhoto.title}
+                          {photos[selectedIndex].title}
                         </div>
                       )}
 
-                      {/* Active High-Res Photo */}
-                      <div className="relative size-full flex items-center justify-center">
-                        <AnimatePresence mode="wait">
-                          <motion.img
-                            key={activePhoto.id}
-                            src={activePhoto.image}
-                            alt={activePhoto.title || `Photo ${selectedIndex + 1}`}
-                            className="max-h-full max-w-full object-contain rounded-xl sm:rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.95)] border border-white/10"
-                            initial={{ opacity: 0, scale: 0.98 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.98 }}
-                            transition={{ duration: 0.18 }}
-                            decoding="async"
-                          />
-                        </AnimatePresence>
-                      </div>
-
-                      {/* Left Navigation Chevron */}
-                      {photos.length > 1 && (
-                        <button
-                          type="button"
-                          onClick={handlePrev}
-                          className="absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 size-11 sm:size-14 rounded-full bg-black/65 hover:bg-black/90 border border-white/20 hover:border-white/50 text-white flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer z-20"
-                          aria-label="Previous photo"
-                        >
-                          <ChevronLeft size={26} />
-                        </button>
-                      )}
-
-                      {/* Right Navigation Chevron */}
-                      {photos.length > 1 && (
-                        <button
-                          type="button"
-                          onClick={handleNext}
-                          className="absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 size-11 sm:size-14 rounded-full bg-black/65 hover:bg-black/90 border border-white/20 hover:border-white/50 text-white flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer z-20"
-                          aria-label="Next photo"
-                        >
-                          <ChevronRight size={26} />
-                        </button>
-                      )}
+                      <MorphGallery
+                        items={morphItems}
+                        height="100%"
+                        index={selectedIndex}
+                        onIndexChange={setSelectedIndex}
+                        arrows={true}
+                        thumbnails={true}
+                        loop={true}
+                        className="size-full"
+                      />
                     </>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-3 p-8 text-center">
@@ -358,51 +287,6 @@ export function InteractiveFolderGallery({
                     </div>
                   )}
                 </div>
-
-                {/* Bottom Filmstrip Reel Dock (White scroll removed, smooth scrolling preserved) */}
-                {photos.length > 0 && (
-                  <div className="bg-[#141416] border-t border-white/10 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 shrink-0 flex flex-col gap-1">
-                    <div className="flex items-center justify-between text-[11px] text-white/50 font-medium">
-                      <span>FILMSTRIP ({photos.length} MOMENTS)</span>
-                      <span className="hidden sm:inline">USE ARROW KEYS ← → TO NAVIGATE · ESC TO EXIT</span>
-                    </div>
-
-                    <div
-                      ref={filmstripRef}
-                      className="flex items-center gap-2.5 overflow-x-auto py-1 scrollbar-hide scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                    >
-                      {photos.map((photo, idx) => {
-                        const isActive = idx === selectedIndex;
-                        return (
-                          <button
-                            key={photo.id}
-                            type="button"
-                            ref={isActive ? activeThumbnailRef : null}
-                            onClick={() => changePhoto(idx)}
-                            className={`relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden border-2 cursor-pointer transition-all duration-200 ${
-                              isActive
-                                ? "border-blue-500 ring-2 ring-blue-500/80 shadow-[0_0_15px_rgba(59,130,246,0.65)] scale-105 z-10"
-                                : "border-white/15 opacity-60 hover:opacity-100 hover:border-white/40 hover:scale-105"
-                            }`}
-                            aria-label={`Select photo ${idx + 1}`}
-                          >
-                            <img
-                              src={photo.image}
-                              alt={photo.title || `Thumbnail ${idx + 1}`}
-                              loading="lazy"
-                              decoding="async"
-                              className="size-full object-cover pointer-events-none"
-                            />
-                            <span className="absolute bottom-1 right-1 px-1 py-0.2 rounded bg-black/80 text-[9px] font-mono text-white/90 pointer-events-none">
-                              {idx + 1}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
               </motion.div>
             )}
           </AnimatePresence>,

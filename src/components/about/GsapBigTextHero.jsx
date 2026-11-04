@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
+import { ShimmerText } from "../ui/shimmer-text"
 
 export default function GsapBigTextHero() {
   const containerRef = useRef(null)
@@ -9,10 +10,10 @@ export default function GsapBigTextHero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // 1. Master Entrance Timeline
+      
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } })
 
-      // Text lines reveal upwards with scale and blur fade
+      
       tl.fromTo(
         line1Ref.current,
         { yPercent: 110, opacity: 0, rotateX: 30, filter: "blur(12px)" },
@@ -35,24 +36,6 @@ export default function GsapBigTextHero() {
     return () => ctx.revert()
   }, [])
 
-  const handleCharHover = (e) => {
-    gsap.to(e.currentTarget, {
-      y: -10,
-      scale: 1.04,
-      duration: 0.25,
-      ease: "power2.out",
-    })
-  }
-
-  const handleCharLeave = (e) => {
-    gsap.to(e.currentTarget, {
-      y: 0,
-      scale: 1,
-      duration: 0.45,
-      ease: "elastic.out(1.2, 0.3)",
-    })
-  }
-
   return (
     <div
       ref={containerRef}
@@ -64,27 +47,17 @@ export default function GsapBigTextHero() {
         {/* LINE 1: "WHAT WE" */}
         <div className="relative w-full flex justify-center overflow-visible">
           <div className="overflow-hidden px-4 sm:px-8 py-2 md:py-3">
+          <div className="overflow-visible py-1">
             <h1
               ref={line1Ref}
-              className="font-['Satoshi'] font-black text-[18vw] sm:text-[17vw] md:text-[16vw] lg:text-[15vw] xl:text-[175px] 2xl:text-[215px] leading-[0.82] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
+              className="font-['Satoshi'] font-black text-[13.5vw] sm:text-[14vw] md:text-[13vw] lg:text-[12.5vw] xl:text-[150px] 2xl:text-[185px] leading-[0.85] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
               style={{
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
-                textShadow: "0 6px 50px rgba(0,0,0,0.5)",
               }}
             >
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                Wh
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                a
-              </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                t
-              </span>
-              <span className="inline-block w-[3vw] sm:w-[2.5vw] md:w-[2vw]" />
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
-                we
-              </span>
+              <ShimmerText duration={2.5} delay={0.2} className="text-[#faf8f0]">
+                WHAT WE
+              </ShimmerText>
             </h1>
           </div>
         </div>
@@ -92,14 +65,16 @@ export default function GsapBigTextHero() {
         {/* LINE 2: "DO AT NCS?" */}
         <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-3 md:-mt-6">
           <div className="overflow-hidden px-4 sm:px-8 py-2 md:py-3">
+        <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-2 md:-mt-4">
+          <div className="overflow-visible py-1 px-1">
             <h1
               ref={line2Ref}
-              className="font-['Satoshi'] font-black text-[18vw] sm:text-[17vw] md:text-[16vw] lg:text-[15vw] xl:text-[175px] 2xl:text-[215px] leading-[0.82] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
+              className="font-['Satoshi'] font-black text-[13.5vw] sm:text-[14vw] md:text-[13vw] lg:text-[12.5vw] xl:text-[150px] 2xl:text-[185px] leading-[0.85] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
               style={{
                 fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif",
-                textShadow: "0 6px 50px rgba(0,0,0,0.5)",
               }}
             >
+
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 d
               </span>
@@ -130,6 +105,11 @@ export default function GsapBigTextHero() {
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform ml-1 sm:ml-2 pr-2 sm:pr-3">
                 ?
               </span>
+
+              <ShimmerText duration={2.5} delay={0.5} className="text-[#faf8f0]">
+                DO AT NCS?
+              </ShimmerText>
+
             </h1>
           </div>
         </div>

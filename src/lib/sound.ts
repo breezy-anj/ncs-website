@@ -5,6 +5,10 @@ let audioBuffer: AudioBuffer | null = null
 let isFetching = false
 let lastPlayTime = 0
 
+let scrollAudioBuffer: AudioBuffer | null = null
+let isFetchingScroll = false
+let lastScrollPlayTime = 0
+
 // Get or initialize AudioContext
 function getAudioContext(): AudioContext | null {
   if (typeof window === "undefined") return null
@@ -35,6 +39,89 @@ export async function preloadClickSound(): Promise<void> {
     // Silently handle if audio loading fails
   } finally {
     isFetching = false
+  }
+}
+
+// Preload the scroll tick sound buffer in background
+export async function preloadScrollSound(): Promise<void> {
+  if (typeof window === "undefined" || scrollAudioBuffer || isFetchingScroll) return
+
+  const ctx = getAudioContext()
+  if (!ctx) return
+
+  isFetchingScroll = true
+  try {
+    const soundUrl = publicAsset("sounds/scroll.mp3")
+    const response = await fetch(soundUrl)
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const arrayBuffer = await response.arrayBuffer()
+    scrollAudioBuffer = await ctx.decodeAudioData(arrayBuffer)
+  } catch (err) {
+    // Silently handle if audio loading fails
+  } finally {
+    isFetchingScroll = false
+  }
+}
+
+// Play scroll sound with micro-pitch modulation and ultra-low latency
+export function playScrollSound(volume = 0.5): void {
+  if (typeof window === "undefined") return
+
+  // Deduplicate rapid scroll calls within 28ms to prevent distortion
+  const now = performance.now()
+  if (now - lastScrollPlayTime < 28) return
+  lastScrollPlayTime = now
+
+  const ctx = getAudioContext()
+
+  if (ctx) {
+    try {
+      if (ctx.state === "suspended") {
+        ctx.resume().catch(() => {})
+      }
+
+      if (scrollAudioBuffer) {
+        const source = ctx.createBufferSource()
+        const gainNode = ctx.createGain()
+        gainNode.gain.value = Math.max(0, Math.min(1, volume))
+
+        // Subtle micro-pitch variation (0.97 to 1.03) for natural tactile feel
+        source.playbackRate.value = 0.97 + Math.random() * 0.06
+
+        source.buffer = scrollAudioBuffer
+        source.connect(gainNode)
+        gainNode.connect(ctx.destination)
+        source.start(0)
+        return
+      } else {
+        // Instant synthetic Web Audio fallback if buffer is still fetching
+        const osc = ctx.createOscillator()
+        const gainNode = ctx.createGain()
+        const t = ctx.currentTime
+        osc.frequency.setValueAtTime(2200 + Math.random() * 200, t)
+        osc.frequency.exponentialRampToValueAtTime(320, t + 0.02)
+        gainNode.gain.setValueAtTime(volume * 0.35, t)
+        gainNode.gain.exponentialRampToValueAtTime(0.001, t + 0.022)
+        osc.connect(gainNode)
+        gainNode.connect(ctx.destination)
+        osc.start(t)
+        osc.stop(t + 0.025)
+        return
+      }
+    } catch {
+      // Fallback below
+    }
+  }
+
+  // HTML5 Audio fallback
+  try {
+    const audio = new Audio(publicAsset("sounds/scroll.mp3"))
+    audio.volume = Math.max(0, Math.min(1, volume))
+    audio.play().catch(() => {})
+  } catch {}
+
+  if (!scrollAudioBuffer && !isFetchingScroll) {
+    preloadScrollSound()
   }
 }
 
@@ -87,8 +174,9 @@ export function playClickSound(volume = 0.7): void {
 export function initClickSoundListener(): () => void {
   if (typeof window === "undefined") return () => {}
 
-  // Preload sound immediately
+  // Preload sounds immediately
   preloadClickSound()
+  preloadScrollSound()
 
   // Unlock AudioContext on first user interaction
   const unlockAudio = () => {
