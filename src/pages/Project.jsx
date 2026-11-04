@@ -10,7 +10,7 @@ const imgMcqModule = publicAsset("projects/mcq-module.webp?v=2")
 const imgEventManager = publicAsset("projects/event-manager.webp?v=2")
 const imgTnPortal = publicAsset("projects/tnp-portal.webp?v=2")
 const imgKnowYourCollege = publicAsset("projects/know-your-college.webp?v=2")
-const imgCodepad = publicAsset("projects/codepad.webp?v=2")
+const imgCodepad = publicAsset("projects/codepad.jpg")
 const imgRegistrationModule = publicAsset("projects/registration-module.webp?v=2")
 const imgPlexus = publicAsset("projects/plexus.webp?v=2")
 const imgMarioApp = publicAsset("projects/mario-app.jpg")
@@ -98,7 +98,7 @@ const allProjects = [
       "An online IDE (compiler) for running programs in C, C++, Python, Java with frequent questions to solve.",
     technologies: ["PHP", "Laravel", "MySQL"],
     url: "https://github.com/ncs-jss/Code-Pad",
-    glowColor: "blue",
+    glowColor: "purple",
   },
   {
     name: "Registration Module",
