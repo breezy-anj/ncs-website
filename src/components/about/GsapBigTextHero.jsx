@@ -63,7 +63,7 @@ export default function GsapBigTextHero() {
 
         {/* LINE 1: "WHAT WE" */}
         <div className="relative w-full flex justify-center overflow-visible">
-          <div className="overflow-hidden py-1">
+          <div className="overflow-hidden px-4 sm:px-8 py-2 md:py-3">
             <h1
               ref={line1Ref}
               className="font-['Satoshi'] font-black text-[18vw] sm:text-[17vw] md:text-[16vw] lg:text-[15vw] xl:text-[175px] 2xl:text-[215px] leading-[0.82] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
@@ -91,7 +91,7 @@ export default function GsapBigTextHero() {
 
         {/* LINE 2: "DO AT NCS?" */}
         <div className="relative w-full flex justify-center overflow-visible -mt-1 sm:-mt-3 md:-mt-6">
-          <div className="overflow-hidden py-1">
+          <div className="overflow-hidden px-4 sm:px-8 py-2 md:py-3">
             <h1
               ref={line2Ref}
               className="font-['Satoshi'] font-black text-[18vw] sm:text-[17vw] md:text-[16vw] lg:text-[15vw] xl:text-[175px] 2xl:text-[215px] leading-[0.82] tracking-[-0.045em] text-[#faf8f0] uppercase flex items-baseline justify-center flex-nowrap"
@@ -127,7 +127,7 @@ export default function GsapBigTextHero() {
               <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
                 S
               </span>
-              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform">
+              <span onMouseEnter={handleCharHover} onMouseLeave={handleCharLeave} className="inline-block transition-transform ml-1 sm:ml-2 pr-2 sm:pr-3">
                 ?
               </span>
             </h1>
@@ -142,8 +142,8 @@ export default function GsapBigTextHero() {
         className="relative z-10 mt-6 sm:mt-10 md:mt-12 text-center"
       >
         <p
-          className="font-['Playfair_Display',Georgia,serif] italic text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/60 font-normal tracking-tight"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          className="font-['Satoshi',Arial,sans-serif] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/70 font-normal tracking-tight"
+          style={{ fontFamily: "'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif" }}
         >
           (and how curious minds turn raw ideas into software)
         </p>
