@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Footer from "../components/Footer"
 import CarouselStacked from "../components/ui/carousel-07"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
-import InteractiveRobot from "../components/ui/interactive-robot"
+import SplineRobot from "../components/ui/SplineRobot"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
 
@@ -150,7 +150,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
         >
           {/* Hero Section */}
           <div
-            className="relative w-full min-h-[calc(100vh-84px)] lg:h-[calc(100vh-84px)] lg:max-h-[820px] flex flex-col justify-between items-center pt-1 sm:pt-2 md:pt-4 pb-2 sm:pb-4 overflow-visible select-none"
+            className="relative w-full min-h-[calc(100vh-84px)] flex flex-col justify-center items-center py-6 sm:py-8 md:py-10 overflow-visible select-none"
             data-node-id="1:37"
           >
             {/* Center Typography & CTA */}
@@ -195,7 +195,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
             </div>
 
             {/* 5. Five-Element Row: 4 Club Cards + Center Robot */}
-            <div className="relative w-full max-w-[1240px] mx-auto mt-auto flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
+            <div className="relative w-full max-w-[1240px] mx-auto mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
               {/* Card 1: Technical (Green) */}
               <div
                 onClick={() => {
@@ -252,11 +252,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </div>
               </div>
 
-              {/* Center Robot - Interactive & Optimized (20% larger, only tilts when cursor is around it) */}
-              <InteractiveRobot
-                src={imgRobotStatic}
-                alt="Nibble Robot"
-                className="w-[102px] xs:w-[132px] sm:w-[174px] md:w-[216px] lg:w-[252px] xl:w-[276px] h-[126px] xs:h-[162px] sm:h-[216px] md:h-[258px] lg:h-[288px] xl:h-[312px]"
+              {/* Center Robot - Interactive Spline 3D Mascot */}
+              <SplineRobot
+                className="w-[85px] xs:w-[110px] sm:w-[145px] md:w-[180px] lg:w-[210px] xl:w-[230px] h-[105px] xs:h-[135px] sm:h-[180px] md:h-[215px] lg:h-[240px] xl:h-[260px] z-20"
               />
 
               {/* Card 3: Design (Yellow) */}
