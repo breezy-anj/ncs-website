@@ -13,6 +13,7 @@ const imgKnowYourCollege = publicAsset("projects/know-your-college.webp?v=2")
 const imgCodepad = publicAsset("projects/codepad.webp?v=2")
 const imgRegistrationModule = publicAsset("projects/registration-module.webp?v=2")
 const imgPlexus = publicAsset("projects/plexus.webp?v=2")
+const imgMarioApp = publicAsset("projects/mario-app.jpg")
 const imgNcsLogo = publicAsset("assets/d3aad.svg")
 const imgVector = publicAsset("assets/79f69.svg")
 const imgVector1 = publicAsset("assets/54ba9.svg")
@@ -37,12 +38,22 @@ function ViewProjectButton({ url, className = "" }) {
 
 const allProjects = [
   {
+    name: "Mario App",
+    image: imgMarioApp,
+    description:
+      "Exclusive community engagement and event-tracking mobile app for NCS, gamifying participation with scores, leaderboards, and leveling up.",
+    technologies: ["Kotlin", "Android", "Firebase"],
+    url: "https://github.com/ncs-jss/Mario-App",
+    glowColor: "blue",
+  },
+  {
     name: "JSS Infotech",
     image: imgJssInfotech,
     description:
       "A digital hub of knowledge, bringing you updates on notices, assignments, and placement opportunities.",
     technologies: ["Django", "Python", "PostgreSQL"],
     url: "https://github.com/ncs-jss",
+    glowColor: "purple",
   },
   {
     name: "MCQ Module",
@@ -51,6 +62,7 @@ const allProjects = [
       "Picture this: an online theater for teachers and societies, where multiple-choice questions take the stage and the results pop up like magic tricks!",
     technologies: ["Php", "Laravel", "MySQL"],
     url: "https://github.com/ncs-jss",
+    glowColor: "orange",
   },
   {
     name: "Event Manager",
@@ -59,6 +71,7 @@ const allProjects = [
       "A college event-tracking web app, keeping students informed about daily happenings on campus. Stay in the loop, never miss out!",
     technologies: ["React", "Node", "MongoDB"],
     url: "https://github.com/ncs-jss",
+    glowColor: "blue",
   },
   {
     name: "T & P Portal",
@@ -67,6 +80,7 @@ const allProjects = [
       "An online portal for managing & automating the recruitment procedure for T&P Centre.",
     technologies: ["Python", "Html", "JavaScript"],
     url: "https://github.com/ncs-jss",
+    glowColor: "green",
   },
   {
     name: "Know Your College",
@@ -75,6 +89,7 @@ const allProjects = [
       "'Know Your College', is a nifty web application that's your virtual compass for navigating the expansive world of JSS. It's your go-to guide for unraveling the intriguing corners of the college and its lively neighborhood.",
     technologies: ["React", "Node", "MongoDB"],
     url: "https://github.com/ncs-jss/Proj_kc01",
+    glowColor: "purple",
   },
   {
     name: "Codepad",
@@ -83,6 +98,7 @@ const allProjects = [
       "An online IDE (compiler) for running programs in C, C++, Python, Java with frequent questions to solve.",
     technologies: ["PHP", "Laravel", "MySQL"],
     url: "https://github.com/ncs-jss/Code-Pad",
+    glowColor: "blue",
   },
   {
     name: "Registration Module",
@@ -91,6 +107,7 @@ const allProjects = [
       "A platform for registration of students with record of their Unique IDs for various events like Zealicon.",
     technologies: ["JavaScript"],
     url: "https://github.com/ncs-jss/Registration_Module",
+    glowColor: "orange",
   },
   {
     name: "Plexus",
@@ -99,6 +116,7 @@ const allProjects = [
       "It is an online platform to host all kinds of digital events like Quizes etc. without any friction or technical know-how.",
     technologies: ["PHP", "Laravel", "MySQL"],
     url: "https://github.com/ncs-jss/plexus",
+    glowColor: "green",
   },
 ]
 
@@ -203,7 +221,7 @@ export default function Project({ activePage = "Project", onNavigate }) {
                 technologies={project.technologies}
                 image={project.image}
                 url={project.url}
-                glowColor="blue"
+                glowColor={project.glowColor || "blue"}
               />
             ))}
           </div>
