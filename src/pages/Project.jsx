@@ -9,7 +9,7 @@ const imgJssInfotech = publicAsset("projects/jss-infotech.jpg")
 const imgMcqModule = publicAsset("projects/mcq-module.jpg")
 const imgEventManager = publicAsset("projects/event-manager.jpg")
 const imgTnPortal = publicAsset("projects/tnp-portal.webp?v=2")
-const imgKnowYourCollege = publicAsset("projects/know-your-college.webp?v=2")
+const imgKnowYourCollege = publicAsset("projects/know-your-college.jpg")
 const imgCodepad = publicAsset("projects/codepad.jpg")
 const imgRegistrationModule = publicAsset("projects/registration-module.webp?v=2")
 const imgPlexus = publicAsset("projects/plexus.jpg")
@@ -89,7 +89,7 @@ const allProjects = [
       "'Know Your College', is a nifty web application that's your virtual compass for navigating the expansive world of JSS. It's your go-to guide for unraveling the intriguing corners of the college and its lively neighborhood.",
     technologies: ["React", "Node", "MongoDB"],
     url: "https://github.com/ncs-jss/Proj_kc01",
-    glowColor: "purple",
+    glowColor: "green",
   },
   {
     name: "Codepad",
