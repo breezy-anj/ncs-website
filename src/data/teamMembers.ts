@@ -180,7 +180,7 @@ const teamMembers: ImageData[] = [
   },
   {
     id: "member-2147239161",
-    src: "/assets/team_avatars/avatar_2147239161.png",
+    src: "/assets/team_avatars/avatar_2147239161.png?v=20261106_1",
     alt: "Anjneya Singh",
     title: "Anjneya Singh",
     designation: "NCS Developer",

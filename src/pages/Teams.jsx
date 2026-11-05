@@ -12,6 +12,7 @@ const imgSanskar = publicAsset("change_people/sanskar.png");
 const imgShreyansh = publicAsset("change_people/shreyansh pandey.png");
 const imgVishnu = publicAsset("change_people/vishnu.png");
 const imgAditya = publicAsset("change_people/aditya.png");
+const imgAnjneya = publicAsset("change_people/anjneya.png?v=20261106_1");
 
 const assetPathPrefix = "/assets";
 const imgRectangle31 = `${assetPathPrefix}/13843.png`;
@@ -51,7 +52,7 @@ const imgRectangle64 = `${assetPathPrefix}/219bc.png`;
 const imgRectangle65 = `${assetPathPrefix}/7555f.png`;
 const imgRectangle66 = `${assetPathPrefix}/70fac.png`;
 const imgRectangle67 = `${assetPathPrefix}/a110b.png`;
-const imgRectangle68 = `${assetPathPrefix}/98caf.png`;
+const imgRectangle68 = imgAnjneya;
 const imgVector3 = `${assetPathPrefix}/d7780.png`;
 const imgVector4 = `${assetPathPrefix}/09399.png`;
 const imgVector5 = `${assetPathPrefix}/7f2b2.png`;
@@ -625,12 +626,12 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:282"
-  image={imgRectangle68}
+  image={imgAnjneya}
   color="#6663ff"
   word="DEVELOP"
   nameParts={["Anjneya","Singh"]}
   designation="Developer"
-  photoClasses="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+  photoClasses="-translate-x-1/2 absolute h-[420px] left-1/2 shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[80px] w-[270px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
   linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/"
   bio="Everyone knows that development is the real coding."

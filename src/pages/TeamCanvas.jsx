@@ -36,7 +36,7 @@ const imgRectangle64 = `${assetPathPrefix}/219bc.png`;
 const imgRectangle65 = `${assetPathPrefix}/7555f.png`;
 const imgRectangle66 = `${assetPathPrefix}/70fac.png`;
 const imgRectangle67 = `${assetPathPrefix}/a110b.png`;
-const imgRectangle68 = `${assetPathPrefix}/98caf.png`;
+const imgRectangle68 = "/change_people/anjneya.png?v=20261106_1";
 const imgVector3 = `${assetPathPrefix}/d7780.png`;
 const imgVector4 = `${assetPathPrefix}/09399.png`;
 const imgVector5 = `${assetPathPrefix}/7f2b2.png`;
@@ -1123,7 +1123,7 @@ export default function Team() {
   <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
-                    <div className="-translate-x-1/2 absolute h-[492px] left-[calc(50%+0.09px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[331px]" data-node-id="1:283">
+                    <div className="-translate-x-1/2 absolute h-[420px] left-1/2 shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[80px] w-[270px]" data-node-id="1:283">
                       <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgRectangle68} />
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:284" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
