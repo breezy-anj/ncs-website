@@ -227,10 +227,6 @@ export function InteractiveFolderGallery({
                     <span className="font-['Satoshi',Arial,sans-serif] font-bold text-sm sm:text-base tracking-tight truncate max-w-[220px] sm:max-w-md">
                       {folderName}
                     </span>
-                    <span className="text-white/30 text-xs hidden sm:inline">·</span>
-                    <span className="text-white/60 text-xs sm:text-sm font-medium hidden sm:inline">
-                      macOS Photo Booth
-                    </span>
                   </div>
 
                   {/* Counter & Close Action */}
