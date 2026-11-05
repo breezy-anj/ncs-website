@@ -69,8 +69,8 @@ const teamMembers: ImageData[] = [
   {
     id: "member-2147239147",
     src: "/assets/team_avatars/avatar_2147239147.png",
-    alt: "Atharva Gupta",
-    title: "Atharva Gupta",
+    alt: "Athrva Gupta",
+    title: "Athrva Gupta",
     designation: "NCS Designer",
     description: "NCS Designer"
   },

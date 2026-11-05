@@ -136,6 +136,25 @@ export default function Home({ activePage = "Home", onNavigate }) {
     design: false,
     technical: false,
   })
+  const [hoveredCards, setHoveredCards] = useState({
+    programming: false,
+    development: false,
+    design: false,
+    technical: false,
+  })
+
+  const [flippedClubs, setFlippedClubs] = useState({
+    programming: false,
+    development: false,
+    design: false,
+    technical: false,
+  })
+  const [hoveredClubs, setHoveredClubs] = useState({
+    programming: false,
+    development: false,
+    design: false,
+    technical: false,
+  })
 
   useEffect(() => {
     setIsMounted(true)
@@ -157,6 +176,17 @@ export default function Home({ activePage = "Home", onNavigate }) {
         }
         return prev
       })
+      setFlippedClubs((prev) => {
+        if (prev.programming || prev.development || prev.design || prev.technical) {
+          return {
+            programming: false,
+            development: false,
+            design: false,
+            technical: false,
+          }
+        }
+        return prev
+      })
     }
 
     const handleWheel = (e) => {
@@ -165,14 +195,33 @@ export default function Home({ activePage = "Home", onNavigate }) {
       }
     }
 
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setFlippedCards({
+          programming: false,
+          development: false,
+          design: false,
+          technical: false,
+        })
+        setFlippedClubs({
+          programming: false,
+          development: false,
+          design: false,
+          technical: false,
+        })
+      }
+    }
+
     window.addEventListener("scroll", handleScroll, { passive: true })
     window.addEventListener("wheel", handleWheel, { passive: true })
     window.addEventListener("touchmove", handleScroll, { passive: true })
+    window.addEventListener("keydown", handleKeyDown)
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("wheel", handleWheel)
       window.removeEventListener("touchmove", handleScroll)
+      window.removeEventListener("keydown", handleKeyDown)
     }
   }, [])
 
@@ -181,6 +230,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
     setFlippedCards((prev) => ({
       ...prev,
       [cardKey]: !prev[cardKey],
+    }))
+  }
+
+  const handleClubClick = (clubKey) => {
+    playCardFlipSound()
+    setFlippedClubs((prev) => ({
+      ...prev,
+      [clubKey]: !prev[clubKey],
     }))
   }
 
@@ -253,12 +310,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
               {/* Card 1: Programming (Pink) - Outer Left */}
               <div
                 onClick={() => handleCardClick("programming")}
+                onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, programming: true }))}
+                onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, programming: false }))}
                 className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: flippedCards.programming ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transform: (flippedCards.programming || hoveredCards.programming) ? "rotateY(180deg)" : "rotateY(0deg)",
                     transformStyle: "preserve-3d",
                   }}
                 >
@@ -323,9 +382,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[12px] xs:text-[15px] sm:text-[19px] md:text-[23px] lg:text-[27px] xl:text-[30px]">
-                      <span className="block">WE</span>
-                      <span className="block whitespace-nowrap">CODE</span>
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[1.0] select-none text-[9.5px] xs:text-[12px] sm:text-[15.5px] md:text-[19px] lg:text-[22.5px] xl:text-[25px]">
+                      <span className="block whitespace-nowrap">WE SOLVE</span>
+                      <span className="block whitespace-nowrap">PROBLEMS!</span>
                     </div>
                   </div>
                 </div>
@@ -334,12 +393,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
               {/* Card 2: Development (Blue) - Inner Left */}
               <div
                 onClick={() => handleCardClick("development")}
+                onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, development: true }))}
+                onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, development: false }))}
                 className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: flippedCards.development ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transform: (flippedCards.development || hoveredCards.development) ? "rotateY(180deg)" : "rotateY(0deg)",
                     transformStyle: "preserve-3d",
                   }}
                 >
@@ -382,9 +443,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[11px] xs:text-[13px] sm:text-[16.5px] md:text-[21px] lg:text-[24.5px] xl:text-[27px]">
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[12px] xs:text-[15px] sm:text-[19px] md:text-[23px] lg:text-[27px] xl:text-[30px]">
                       <span className="block">WE</span>
-                      <span className="block whitespace-nowrap">DEVELOP</span>
+                      <span className="block whitespace-nowrap">BUILD!</span>
                     </div>
                   </div>
                 </div>
@@ -398,12 +459,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
               {/* Card 3: Design (Yellow) - Inner Right */}
               <div
                 onClick={() => handleCardClick("design")}
+                onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, design: true }))}
+                onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, design: false }))}
                 className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: flippedCards.design ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transform: (flippedCards.design || hoveredCards.design) ? "rotateY(180deg)" : "rotateY(0deg)",
                     transformStyle: "preserve-3d",
                   }}
                 >
@@ -448,7 +511,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   >
                     <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[11.5px] xs:text-[13.5px] sm:text-[17px] md:text-[21.5px] lg:text-[25px] xl:text-[28px]">
                       <span className="block">WE</span>
-                      <span className="block whitespace-nowrap">DESIGN</span>
+                      <span className="block whitespace-nowrap">DESIGN!</span>
                     </div>
                   </div>
                 </div>
@@ -457,12 +520,14 @@ export default function Home({ activePage = "Home", onNavigate }) {
               {/* Card 4: Technical (Green) - Outer Right */}
               <div
                 onClick={() => handleCardClick("technical")}
+                onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, technical: true }))}
+                onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, technical: false }))}
                 className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: flippedCards.technical ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transform: (flippedCards.technical || hoveredCards.technical) ? "rotateY(180deg)" : "rotateY(0deg)",
                     transformStyle: "preserve-3d",
                   }}
                 >
@@ -505,9 +570,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[11px] xs:text-[13px] sm:text-[16.5px] md:text-[21px] lg:text-[24.5px] xl:text-[27.5px]">
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[10.5px] xs:text-[12.5px] sm:text-[16px] md:text-[20px] lg:text-[23.5px] xl:text-[26.5px]">
                       <span className="block">WE</span>
-                      <span className="block whitespace-nowrap">INNOVATE</span>
+                      <span className="block whitespace-nowrap">INNOVATE!</span>
                     </div>
                   </div>
                 </div>
@@ -541,119 +606,267 @@ export default function Home({ activePage = "Home", onNavigate }) {
             <div className="grid grid-cols-2 gap-3.5 w-full max-w-[420px] mx-auto px-2 md:hidden">
               {/* Card 1: Programming */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleClubClick("programming")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, programming: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, programming: false }))}
+                className="relative h-[215px] select-none cursor-pointer transition-transform duration-300 hover:scale-[1.03] active:scale-95 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <svg
-                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    viewBox="0 0 100 80"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: (flippedClubs.programming || hoveredClubs.programming) ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
                   >
-                    <path
-                      d="M30 24L12 40L30 56"
-                      stroke="black"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M59 15L41 65"
-                      stroke="black"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M70 24L88 40L70 56"
-                      stroke="black"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
-                    Programming
-                  </span>
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <svg
+                        className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        viewBox="0 0 100 80"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M30 24L12 40L30 56"
+                          stroke="black"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M59 15L41 65"
+                          stroke="black"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M70 24L88 40L70 56"
+                          stroke="black"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                        Programming
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col justify-center items-start p-4 shadow-lg border border-black/10 text-black text-left"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-1.5">Programming</span>
+                    <p className="opacity-95 text-[11.5px] font-['Satoshi',Arial,sans-serif] leading-[1.35]">
+                      Where problem-solving meets pure creativity. We take tricky problems and turn them into clean, working code.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Card 2: Development */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleClubClick("development")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, development: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, development: false }))}
+                className="relative h-[215px] select-none cursor-pointer transition-transform duration-300 hover:scale-[1.03] active:scale-95 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Development"
-                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgDevelopmentIcon}
-                  />
-                </div>
-                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
-                    Development
-                  </span>
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: (flippedClubs.development || hoveredClubs.development) ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <img
+                        alt="Development"
+                        className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        src={imgDevelopmentIcon}
+                      />
+                    </div>
+                    <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                        Development
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col justify-center items-start p-4 shadow-lg border border-black/10 text-black text-left"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-1.5">Development</span>
+                    <p className="opacity-95 text-[11.5px] font-['Satoshi',Arial,sans-serif] leading-[1.35]">
+                      From a rough idea to something you can actually use. We build web and mobile apps that bring fresh concepts to life.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Card 3: Designing */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleClubClick("design")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, design: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, design: false }))}
+                className="relative h-[215px] select-none cursor-pointer transition-transform duration-300 hover:scale-[1.03] active:scale-95 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Designing"
-                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgVector1}
-                  />
-                </div>
-                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
-                    Designing
-                  </span>
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: (flippedClubs.design || hoveredClubs.design) ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <img
+                        alt="Designing"
+                        className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        src={imgVector1}
+                      />
+                    </div>
+                    <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                        Designing
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col justify-center items-start p-4 shadow-lg border border-black/10 text-black text-left"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-1.5">Design</span>
+                    <p className="opacity-95 text-[11.5px] font-['Satoshi',Arial,sans-serif] leading-[1.35]">
+                      Giving ideas a visual voice. We focus on clean visuals, good user experience, and smart UI that feels effortless to use.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Card 4: Technical */}
               <div
-                className="group relative h-[215px] rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10 select-none cursor-pointer transition-all duration-300 active:scale-95"
-                style={{
-                  backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
-                  backgroundSize: "cover, 100% 100%",
-                  backgroundPosition: "center, center",
-                  backgroundRepeat: "no-repeat, no-repeat",
-                }}
+                onClick={() => handleClubClick("technical")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, technical: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, technical: false }))}
+                className="relative h-[215px] select-none cursor-pointer transition-transform duration-300 hover:scale-[1.03] active:scale-95 [perspective:1000px]"
               >
-                <div className="flex-1 flex items-center justify-center w-full">
-                  <img
-                    alt="Technical"
-                    className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
-                    src={imgTechnicalIcon}
-                  />
-                </div>
-                <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
-                  <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
-                    Technical
-                  </span>
+                <div
+                  className="relative w-full h-full transition-transform duration-500 ease-out"
+                  style={{
+                    transform: (flippedClubs.technical || hoveredClubs.technical) ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {/* Front Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col items-center justify-between p-3.5 shadow-lg border border-black/10"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <img
+                        alt="Technical"
+                        className="w-[72px] h-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        src={imgTechnicalIcon}
+                      />
+                    </div>
+                    <div className="w-full text-center py-1 px-2 rounded-full bg-black/15 backdrop-blur-sm">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-black text-[12px] tracking-[0.8px] text-black uppercase">
+                        Technical
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Back Face */}
+                  <div
+                    className="absolute inset-0 rounded-[24px] overflow-hidden flex flex-col justify-center items-start p-4 shadow-lg border border-black/10 text-black text-left"
+                    style={{
+                      backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
+                      backgroundSize: "cover, 100% 100%",
+                      backgroundPosition: "center, center",
+                      backgroundRepeat: "no-repeat, no-repeat",
+                      transform: "rotateY(180deg)",
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-1.5">Technical</span>
+                    <p className="opacity-95 text-[11.5px] font-['Satoshi',Arial,sans-serif] leading-[1.35]">
+                      Exploring what's coming next in tech. We dive hands-on into AI, open-source projects, and new tools under the hood.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -665,17 +878,26 @@ export default function Home({ activePage = "Home", onNavigate }) {
             >
               {/* Row 1: PROGRAMMING + Pink Card */}
               <div
+                onClick={() => handleClubClick("programming")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, programming: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, programming: false }))}
                 className="group flex flex-col md:flex-row items-center justify-center w-full cursor-pointer transition-all duration-300 hover:scale-[1.01] gap-6 md:gap-[clamp(20px,4vw,80px)]"
                 data-node-id="1:52"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-pink-100 transition-colors duration-300 text-center md:text-left"
+                  className={`font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none transition-colors duration-300 text-center md:text-left ${
+                    (flippedClubs.programming || hoveredClubs.programming) ? "text-pink-100" : "group-hover:text-pink-100"
+                  }`}
                   data-node-id="1:53"
                 >
                   PROGRAMMING
                 </p>
                 <div
-                  className="h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
+                  className={`h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 ${
+                    (flippedClubs.programming || hoveredClubs.programming)
+                      ? "scale-[1.2] -rotate-2 shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
+                      : "group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(255,109,253,0.4)]"
+                  }`}
                   data-node-id="1:54"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
@@ -685,7 +907,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   }}
                 >
                   <svg
-                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    className={`absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 ${
+                      (flippedClubs.programming || hoveredClubs.programming)
+                        ? "opacity-0 scale-50"
+                        : "group-hover:opacity-0 group-hover:scale-50"
+                    }`}
                     viewBox="0 0 100 80"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -711,7 +937,11 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
+                  <div className={`absolute inset-0 p-5 flex flex-col justify-center items-start transition-all duration-500 text-black ${
+                    (flippedClubs.programming || hoveredClubs.programming)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
+                  }`}>
                     <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Programming</span>
                     <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       Where problem-solving meets pure creativity. We take tricky problems and turn them into clean, working code, taking abstract logic and turning it into tools that actually work.
@@ -722,11 +952,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 2: Purple Card + DEVELOPMENT */}
               <div
+                onClick={() => handleClubClick("development")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, development: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, development: false }))}
                 className="group flex flex-col-reverse md:flex-row items-center justify-start gap-6 md:gap-[clamp(16px,2.5vw,35px)] w-full cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:56"
               >
                 <div
-                  className="h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
+                  className={`h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 ${
+                    (flippedClubs.development || hoveredClubs.development)
+                      ? "scale-[1.2] rotate-2 shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
+                      : "group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(102,99,255,0.4)]"
+                  }`}
                   data-node-id="1:58"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
@@ -737,10 +974,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   <img
                     alt="Development"
-                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    className={`absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 ${
+                      (flippedClubs.development || hoveredClubs.development)
+                        ? "opacity-0 scale-50"
+                        : "group-hover:opacity-0 group-hover:scale-50"
+                    }`}
                     src={imgDevelopmentIcon}
                   />
-                  <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
+                  <div className={`absolute inset-0 p-5 flex flex-col justify-center items-start transition-all duration-500 text-black ${
+                    (flippedClubs.development || hoveredClubs.development)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
+                  }`}>
                     <span className="opacity-70 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Development</span>
                     <p className="opacity-100 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       From a rough idea to something you can actually use. We build, tweak, and polish, creating web and mobile apps that bring fresh concepts to life.
@@ -748,7 +993,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-indigo-100 transition-colors duration-300 text-center md:text-left"
+                  className={`font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none transition-colors duration-300 text-center md:text-left ${
+                    (flippedClubs.development || hoveredClubs.development) ? "text-indigo-100" : "group-hover:text-indigo-100"
+                  }`}
                   data-node-id="1:57"
                 >
                   DEVELOPMENT
@@ -757,17 +1004,26 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 3: DESIGNING + Yellow Card */}
               <div
+                onClick={() => handleClubClick("design")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, design: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, design: false }))}
                 className="group flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[clamp(16px,2.5vw,35px)] w-full md:ml-[clamp(10px,3vw,60px)] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:60"
               >
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-amber-100 transition-colors duration-300 text-center md:text-left"
+                  className={`font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none transition-colors duration-300 text-center md:text-left ${
+                    (flippedClubs.design || hoveredClubs.design) ? "text-amber-100" : "group-hover:text-amber-100"
+                  }`}
                   data-node-id="1:61"
                 >
                   DESIGNING
                 </p>
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
+                  className={`bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 ${
+                    (flippedClubs.design || hoveredClubs.design)
+                      ? "scale-[1.2] -rotate-2 shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
+                      : "group-hover:scale-[1.2] group-hover:-rotate-2 group-hover:shadow-[0_20px_40px_rgba(253,211,68,0.4)]"
+                  }`}
                   data-node-id="1:62"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
@@ -775,10 +1031,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   <img
                     alt="Designing"
-                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    className={`absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 ${
+                      (flippedClubs.design || hoveredClubs.design)
+                        ? "opacity-0 scale-50"
+                        : "group-hover:opacity-0 group-hover:scale-50"
+                    }`}
                     src={imgVector1}
                   />
-                  <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
+                  <div className={`absolute inset-0 p-5 flex flex-col justify-center items-start transition-all duration-500 text-black ${
+                    (flippedClubs.design || hoveredClubs.design)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
+                  }`}>
                     <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Design</span>
                     <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       Giving ideas a visual voice. We focus on clean visuals, good user experience, and smart UI, creating designs that look great and feel effortless to use.
@@ -789,11 +1053,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* Row 4: Green Card + TECHNICAL */}
               <div
+                onClick={() => handleClubClick("technical")}
+                onMouseEnter={() => setHoveredClubs((prev) => ({ ...prev, technical: true }))}
+                onMouseLeave={() => setHoveredClubs((prev) => ({ ...prev, technical: false }))}
                 className="group flex flex-col-reverse md:flex-row items-center justify-start gap-6 md:gap-[clamp(16px,2.5vw,35px)] w-full md:ml-[clamp(10px,3.5vw,70px)] cursor-pointer transition-all duration-300 hover:scale-[1.01]"
                 data-node-id="1:64"
               >
                 <div
-                  className="bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(179,253,68,0.4)]"
+                  className={`bg-size-[1024px_1024px,auto_auto] bg-top-left h-[clamp(160px,18vw,229px)] overflow-clip relative rounded-[clamp(22px,2.5vw,34px)] w-[clamp(138px,15vw,198px)] flex items-center justify-center shadow-lg shrink-0 transition-all duration-300 ${
+                    (flippedClubs.technical || hoveredClubs.technical)
+                      ? "scale-[1.2] rotate-2 shadow-[0_20px_40px_rgba(179,253,68,0.4)]"
+                      : "group-hover:scale-[1.2] group-hover:rotate-2 group-hover:shadow-[0_20px_40px_rgba(179,253,68,0.4)]"
+                  }`}
                   data-node-id="1:66"
                   style={{
                     backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(90deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
@@ -801,10 +1072,18 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   <img
                     alt="Technical"
-                    className="absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-50"
+                    className={`absolute w-[clamp(80px,9vw,124px)] h-[clamp(80px,9vw,124px)] object-contain transition-all duration-500 ${
+                      (flippedClubs.technical || hoveredClubs.technical)
+                        ? "opacity-0 scale-50"
+                        : "group-hover:opacity-0 group-hover:scale-50"
+                    }`}
                     src={imgTechnicalIcon}
                   />
-                  <div className="absolute inset-0 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-black">
+                  <div className={`absolute inset-0 p-5 flex flex-col justify-center items-start transition-all duration-500 text-black ${
+                    (flippedClubs.technical || hoveredClubs.technical)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
+                  }`}>
                     <span className="opacity-60 text-[10px] font-['Satoshi',Arial,sans-serif] font-black uppercase tracking-[1px] mb-2">Technical</span>
                     <p className="opacity-95 text-[12px] font-['Satoshi',Arial,sans-serif] leading-[1.3]">
                       Exploring what's coming next in tech. We dive hands-on into AI, open-source projects, and new tools, figuring out how the newest tech works under the hood.
@@ -812,7 +1091,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                   </div>
                 </div>
                 <p
-                  className="font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none group-hover:text-lime-100 transition-colors duration-300 text-center md:text-left"
+                  className={`font-['Satoshi',Arial,sans-serif] font-black leading-none not-italic text-[30px] xs:text-[36px] sm:text-[50px] md:text-[clamp(44px,6vw,96px)] lg:text-[clamp(76px,7.5vw,120px)] xl:text-[140px] text-white tracking-tight whitespace-nowrap select-none transition-colors duration-300 text-center md:text-left ${
+                    (flippedClubs.technical || hoveredClubs.technical) ? "text-lime-100" : "group-hover:text-lime-100"
+                  }`}
                   data-node-id="1:65"
                 >
                   TECHNICAL

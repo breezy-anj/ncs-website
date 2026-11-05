@@ -1,4 +1,5 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import ProfileCardBackdrop from "./ProfileCardBackdrop";
 import ProfileCardGhostOverlay from "./ProfileCardGhost";
 
@@ -74,7 +75,9 @@ export default function TeamMemberCard({
   className = "",
   dataNodeId,
   expandDirection,
+  isFullCard = false,
 }) {
+  const isFullSvgCard = isFullCard;
   const allUrls = [
     ...(Array.isArray(socialLinks) ? socialLinks : []),
     linkedinUrl,
@@ -109,6 +112,7 @@ export default function TeamMemberCard({
     .trim();
 
   const cardRef = React.useRef(null);
+  const wingRef = React.useRef(null);
 
   // Static fallback based on className or explicit prop:
   // Cards in columns < 500px (ml-0, ml-[217px], ml-[434px]) expand right.
@@ -153,6 +157,11 @@ export default function TeamMemberCard({
 
   const handleCardClick = (e) => {
     if (e.target.closest("a, button")) return;
+    // If clicking inside the expansion wing, ensure it stays pinned open
+    if (wingRef.current && wingRef.current.contains(e.target)) {
+      setIsFocused(true);
+      return;
+    }
     setIsFocused((prev) => !prev);
   };
 
@@ -168,19 +177,13 @@ export default function TeamMemberCard({
       const spaceOnLeft = rect.left;
       const spaceOnRight = window.innerWidth - rect.right;
 
-      // 370px needed for the expansion wing
-      if (spaceOnLeft < 370) {
+      if (spaceOnLeft < 370 && spaceOnRight >= 370) {
         setExpandDir("right");
-        return;
-      }
-      if (spaceOnRight < 370) {
+      } else if (spaceOnRight < 370 && spaceOnLeft >= 370) {
         setExpandDir("left");
-        return;
+      } else {
+        setExpandDir(spaceOnRight >= spaceOnLeft ? "right" : "left");
       }
-
-      // If both sides have space, expand toward the center of the viewport
-      const cardCenter = rect.left + rect.width / 2;
-      setExpandDir(cardCenter < window.innerWidth / 2 ? "right" : "left");
     }
   }, [expandDirection]);
 
@@ -203,64 +206,82 @@ export default function TeamMemberCard({
           }
         }
       }}
-      className={`col-1 h-[600px] relative row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center ${
+      className={`col-1 h-[600px] relative row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center cursor-pointer ${
         isActive ? "scale-[1.06] z-[100]" : "scale-100 z-10"
       } ${className}`}
       data-node-id={dataNodeId}
     >
-      <div className="relative h-full w-full">
+      <div
+        className="relative h-full w-full"
+        onMouseEnter={() => {
+          updateDirection();
+          setIsHovered(true);
+        }}
+        onMouseMove={updateDirection}
+        onMouseLeave={() => {
+          setIsHovered(false);
+        }}
+      >
         {/* ========================================================
             1. BASE PILL (200px x 600px, rounded-[300px])
-            Hover is ONLY counted on this non-expanded base pill!
-            Leaving this 200x600 pill closes the expanded card immediately.
         ======================================================== */}
         <div
-          onMouseEnter={() => {
-            updateDirection();
-            setIsHovered(true);
-          }}
-          onMouseMove={updateDirection}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-          className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px] z-30 cursor-pointer pointer-events-auto"
+          className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px] z-30 pointer-events-auto"
         >
-          <ProfileCardBackdrop color={color} word={word} />
-          <ProfileCardGhostOverlay src={image} />
+          {isFullSvgCard ? (
+            <>
+              {/* Full SVG card representation */}
+              <img
+                alt={fullName}
+                className="absolute inset-0 size-full object-fill pointer-events-none"
+                src={image}
+              />
+              <div
+                className={`hidden md:block absolute inset-0 bg-black/60 transition-opacity duration-300 pointer-events-none ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </>
+          ) : (
+            <>
+              <ProfileCardBackdrop color={color} word={word} />
+              <ProfileCardGhostOverlay src={image} />
 
-          {/* Profile cutout photo - no scale on hover, completely static */}
-          <div className={cleanPhotoClasses || "-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow"}>
-            <img alt={fullName} className={imgClasses} src={image} />
-          </div>
-
-          {/* Bottom gradient vignette */}
-          <div
-            className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none"
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
-            }}
-          />
-
-          {/* Member Name & Designation (Desktop: fades out on card hover/active; Mobile: always visible) */}
-          <div
-            className={`absolute inset-0 transition-all duration-300 ease-out -translate-y-8 md:translate-y-0 pointer-events-none ${
-              isActive ? "md:opacity-0 md:scale-95" : "md:opacity-100 md:scale-100"
-            }`}
-          >
-            <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap">
-              <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white">
-                {displayNameArray.map((part, idx) => (
-                  <p key={idx} className={idx < displayNameArray.length - 1 ? "leading-[1.25] mb-0" : "leading-[1.25]"}>
-                    {part}
-                  </p>
-                ))}
+              {/* Profile cutout photo - no scale on hover, completely static */}
+              <div className={cleanPhotoClasses || "-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow"}>
+                <img alt={fullName} className={imgClasses} src={image} />
               </div>
-              <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]">
-                {designation}
-              </p>
-            </div>
-          </div>
+
+              {/* Bottom gradient vignette */}
+              <div
+                className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px] pointer-events-none"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)",
+                }}
+              />
+
+              {/* Member Name & Designation (Desktop: fades out on card hover/active; Mobile: always visible) */}
+              <div
+                className={`absolute inset-0 transition-all duration-300 ease-out -translate-y-8 md:translate-y-0 pointer-events-none ${
+                  isActive ? "md:opacity-0 md:scale-95" : "md:opacity-100 md:scale-100"
+                }`}
+              >
+                <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap">
+                  <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white">
+                    {displayNameArray.map((part, idx) => (
+                      <p key={idx} className={idx < displayNameArray.length - 1 ? "leading-[1.25] mb-0" : "leading-[1.25]"}>
+                        {part}
+                      </p>
+                    ))}
+                  </div>
+                  <p className="font-['Satoshi',Arial,sans-serif] leading-[normal] relative shrink-0 text-[#ffd9e5] text-[16px]">
+                    {designation}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
 
           {/* Desktop Hover Links: Appear right where the name was in the non-expanded card */}
           <div
@@ -311,6 +332,7 @@ export default function TeamMemberCard({
             - Pinned photo stays at exact size, shape, and position.
         ======================================================== */}
         <div
+          ref={wingRef}
           className={`hidden md:flex absolute top-0 ${
             expandDir === "left"
               ? "right-0 flex-row rounded-l-[32px] rounded-r-[100px]"
@@ -331,24 +353,126 @@ export default function TeamMemberCard({
               </p>
             </div>
 
-            {/* Middle: Description Quote */}
+            {/* Middle: Description Bio */}
             <div className="my-auto py-4">
-              <div className="flex items-start gap-2.5">
-                <span className="text-white/40 font-serif text-[32px] leading-none select-none">“</span>
-                <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[14.5px] sm:text-[15.5px] leading-[1.55] text-white/85">
-                  {finalBio}
-                </p>
-              </div>
+              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[14.5px] sm:text-[15.5px] leading-[1.55] text-white/85">
+                {finalBio}
+              </p>
             </div>
 
-            {/* Bottom empty spacing - no unnecessary NCS tag text */}
-            <div className="h-4" />
+            {/* Bottom: Social links inside the expansion wing */}
+            <div className="flex items-center gap-3 pt-2">
+              {parsedSocials.map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  onClick={(e) => e.stopPropagation()}
+                  className="size-10 p-2.5 rounded-full bg-white/10 hover:bg-white text-white hover:text-black active:scale-95 transition-all flex items-center justify-center border border-white/20 shadow-md backdrop-blur-md hover:scale-110"
+                >
+                  <SocialIcon type={item.type} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Transparent Spacer (200px x 600px): Keeps 360px wing offset without covering base pill */}
           <div className="w-[200px] h-[600px] shrink-0 pointer-events-none" />
         </div>
       </div>
+
+      {/* ========================================================
+          3. MOBILE RESPONSIVE MODAL (PORTAL)
+          Opens on click/tap on mobile devices (< md).
+      ======================================================== */}
+      {isFocused && typeof document !== "undefined" && createPortal(
+        <div
+          className="md:hidden fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-300"
+          onClick={() => setIsFocused(false)}
+        >
+          <div
+            className="w-full max-w-[340px] bg-[#121214] border border-white/20 rounded-[32px] p-6 shadow-[0_24px_60px_rgba(0,0,0,0.9)] relative flex flex-col items-center text-center max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Top row: Word/Domain pill + Close button */}
+            <div className="w-full flex items-center justify-between mb-4">
+              {word ? (
+                <span
+                  className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border"
+                  style={{
+                    backgroundColor: `${color || "#feb9ce"}25`,
+                    color: color || "#feb9ce",
+                    borderColor: `${color || "#feb9ce"}55`,
+                  }}
+                >
+                  {word}
+                </span>
+              ) : (
+                <span />
+              )}
+              <button
+                type="button"
+                aria-label="Close"
+                onClick={() => setIsFocused(false)}
+                className="size-8 rounded-full bg-white/10 hover:bg-white/20 active:scale-90 text-white/80 hover:text-white flex items-center justify-center transition-all cursor-pointer"
+              >
+                <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Member Photo cutout / Avatar */}
+            <div
+              className="size-28 rounded-full overflow-hidden border-2 shadow-xl mb-4 shrink-0 relative bg-black/60"
+              style={{ borderColor: color || "#feb9ce" }}
+            >
+              <img
+                src={image}
+                alt={fullName}
+                className="size-full object-cover object-top"
+              />
+            </div>
+
+            {/* Name */}
+            <h3 className="font-['Satoshi',Arial,sans-serif] font-bold text-[24px] leading-tight text-white tracking-tight">
+              {fullName}
+            </h3>
+
+            {/* Designation */}
+            <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[15px] text-[#ffd9e5] tracking-wide mt-1">
+              {designation}
+            </p>
+
+            {/* Bio / Quote */}
+            <div className="my-4 px-3 py-3 rounded-2xl bg-white/[0.05] border border-white/10 w-full text-center">
+              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[14.5px] leading-[1.55] text-white/85">
+                {finalBio}
+              </p>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center justify-center gap-3 pt-1 flex-wrap">
+              {parsedSocials.map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  onClick={(e) => e.stopPropagation()}
+                  className="size-11 p-2.5 rounded-full bg-white/15 hover:bg-white active:scale-90 text-white hover:text-black transition-all flex items-center justify-center border border-white/25 shadow-md"
+                >
+                  <SocialIcon type={item.type} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </div>
   );
 }

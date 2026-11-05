@@ -34,13 +34,18 @@ function extractCards(children) {
  *   - Hover animations on mobile are disabled.
  *   - The content inside every card remains 100% intact.
  */
-export default function ResponsiveWaveGrid({ children }) {
+export default function ResponsiveWaveGrid({ children, uniformHeight = false }) {
   const cards = extractCards(children);
 
-  // Group cards into rows of up to 3 cards
+  // Group cards into rows (if 4 cards, split 2x2 for symmetrical layout)
   const rows = [];
-  for (let i = 0; i < cards.length; i += 3) {
-    rows.push(cards.slice(i, i + 3));
+  if (cards.length === 4) {
+    rows.push(cards.slice(0, 2));
+    rows.push(cards.slice(2, 4));
+  } else {
+    for (let i = 0; i < cards.length; i += 3) {
+      rows.push(cards.slice(i, i + 3));
+    }
   }
 
   return (
@@ -56,11 +61,14 @@ export default function ResponsiveWaveGrid({ children }) {
           >
             {rowCards.map((child, colInRow) => {
               // Wave shift pattern:
+              // For uniformHeight: all cards are aligned level at mt-2
               // For 3-card rows: middle card is shifted up significantly (-mt-10), side cards down (mt-6)
-              // For 2-card rows: centered, level
-              // For 1-card rows: centered
+              // For 2-card rows: centered, level (mt-2)
+              // For 1-card rows: centered (mt-0)
               let shiftClass = "mt-0";
-              if (rowCards.length === 3) {
+              if (uniformHeight) {
+                shiftClass = "mt-2";
+              } else if (rowCards.length === 3) {
                 shiftClass = colInRow === 1 ? "-mt-10" : "mt-6";
               } else if (rowCards.length === 2) {
                 shiftClass = "mt-2";

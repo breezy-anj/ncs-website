@@ -18,9 +18,9 @@ export default function AlumniCardBottomOverlay({ children, linkedinUrl, githubU
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[300px] z-20">
-      {/* Desktop only: Bottom backdrop-blur panel activated on card hover */}
+      {/* Desktop only: Bottom backdrop-blur panel activated on card hover or focus/click */}
       <div
-        className="hidden md:block absolute bottom-0 inset-x-0 h-[205px] rounded-b-[200px] pointer-events-none transition-all duration-500 ease-out group-hover:backdrop-blur-md opacity-0 group-hover:opacity-100"
+        className="hidden md:block absolute bottom-0 inset-x-0 h-[205px] rounded-b-[200px] pointer-events-none transition-all duration-500 ease-out group-hover:backdrop-blur-md opacity-0 group-hover:opacity-100 group-focus-within:backdrop-blur-md group-focus-within:opacity-100"
         style={{
           background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 25%, rgba(0, 0, 0, 0.88) 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
@@ -29,13 +29,13 @@ export default function AlumniCardBottomOverlay({ children, linkedinUrl, githubU
       />
 
       {/* Member Name */}
-      {/* On desktop: fades out on hover. On mobile: always visible without hover */}
-      <div className="transition-all duration-400 ease-out md:group-hover:opacity-0 md:group-hover:scale-90 -translate-y-8 md:translate-y-0">
+      {/* On desktop: fades out on hover or focus/click. On mobile: always visible without hover */}
+      <div className="transition-all duration-400 ease-out md:group-hover:opacity-0 md:group-hover:scale-90 md:group-focus-within:opacity-0 md:group-focus-within:scale-90 -translate-y-8 md:translate-y-0">
         {children}
       </div>
 
-      {/* Desktop Hover State: Larger social media icons on desktop hover only */}
-      <div className="hidden md:flex absolute bottom-0 inset-x-0 h-[205px] items-center justify-center gap-4 px-4 pb-8 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-400 ease-out z-30">
+      {/* Desktop Hover & Focus State: Larger social media icons on desktop hover/click */}
+      <div className="hidden md:flex absolute bottom-0 inset-x-0 h-[205px] items-center justify-center gap-4 px-4 pb-8 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:pointer-events-auto transition-all duration-400 ease-out z-30">
         <a
           href={finalGithub}
           target="_blank"

@@ -36,7 +36,7 @@ const teamMembers = [
   },
   {
     image: publicAsset("assets/achievments/Athrva Gupta.webp"),
-    name: "Atharva Gupta",
+    name: "Athrva Gupta",
     role: "Smart India Hackathon (SIH) 2025 Winner",
   },
   {

@@ -12,7 +12,7 @@ const imgSanskar = publicAsset("change_people/sanskar.png");
 const imgShreyansh = publicAsset("change_people/shreyansh pandey.png");
 const imgVishnu = publicAsset("change_people/vishnu.png");
 const imgAditya = publicAsset("change_people/aditya.png");
-const imgAnjneya = publicAsset("change_people/anjneya.png?v=20261106_1");
+const imgAjPhoto = publicAsset("assets/ajPhoto.png");
 
 const assetPathPrefix = "/assets";
 const imgRectangle31 = `${assetPathPrefix}/13843.png`;
@@ -85,156 +85,166 @@ export default function Team() {
               <p className="[word-break:break-word] bg-clip-text font-['Satoshi',Arial,sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[44px] sm:text-[60px] md:text-[80px] text-[transparent] text-center tracking-[-2px] md:tracking-[-3.2px] whitespace-nowrap" data-node-id="1:32" style={{ backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 288 108' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.4 0 0 5.4 144 54)'><stop stop-color='rgba(255,255,255,1)' offset='0.33'/><stop stop-color='rgba(204,204,204,1)' offset='0.665'/><stop stop-color='rgba(153,153,153,1)' offset='1'/></radialGradient></defs></svg>\")" }}>
                 4th Year
               </p>
-              <div className="content-stretch flex flex-col gap-[17px] items-center leading-[0] relative shrink-0 w-full max-w-[1285px]" data-node-id="1:33">
-                <ResponsiveWaveGrid>
-                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:34">
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[1085px] mt-[192px] relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:35"
-  image={imgRectangle31}
-  color="#ffc931"
-  word="DESIGN"
-  nameParts={["Pranjyaditya","Singh","Chauhan"]}
-  designation="HOC Design"
-  photoClasses="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.instagram.com/pranjyaditya/?hl=en","https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:41"
-  image={imgRectangle32}
-  color="#feb9ce"
-  word="PROGRAM"
-  nameParts={["Om","Tripathi"]}
-  designation="HOC Programming"
-  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/om-tripathi-67332b26a/","https://github.com/OmTripathi7095"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:47"
-  image={imgRectangle33}
-  color="#ffc931"
-  word="DESIGN"
-  nameParts={["Ajeet","Bharti"]}
-  designation="Creative Head"
-  photoClasses="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-  socialLinks={["https://www.instagram.com/ajeet_3d/","https://www.linkedin.com/in/ajeet-bharti-191b94212"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[217px] mt-[192px] relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:53"
-  image={imgAjinkya}
-  color="#feb9ce"
-  word="PROGRAM"
-  nameParts={["Ajinkya","Mishra"]}
-  designation="CTC"
-  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[75px] profile-img-bottom-shadow"
-  imgClasses="w-full h-auto object-top pointer-events-none"
-  socialLinks={["https://github.com/AjinkyaMishra","https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"]}
-  bio="Caught somewhere between “Proceed to code” and “Why is this working?”"
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:59"
-  image={imgRectangle35}
-  color="#6663ff"
-  word="DEVELOP"
-  nameParts={["Kuldeep","Chaudhary"]}
-  designation="President"
-  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/kuldeepchaudhary108/","https://github.com/Kuldeepchaudhary108/"]}
-  bio="~wanted die with memories not with dreams"
-/>
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[651px] mt-[192px] relative row-1 w-[200px] group cursor-pointer"
-  expandDirection="left"
-  dataNodeId="1:66"
-  image={imgPranjal}
-  color="#feb9ce"
-  word="PROGRAM"
-  nameParts={["Pranjal","Gupta"]}
-  designation="Finance Head"
-  photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[68px] profile-img-bottom-shadow"
-  imgClasses="w-full h-auto object-top pointer-events-none"
-  socialLinks={["https://www.linkedin.com/in/pranjal-gupta-766898323","https://github.com/PranjalGupta280","https://x.com/TechnoVerse007c"]}
-/>
-                </div>
-                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:72">
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:73"
-  image={imgRectangle37}
-  color="#6663ff"
-  word="DEVELOP"
-  nameParts={["Naziya","Praveen"]}
-  designation="HOC Development"
-  photoClasses="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/naziya-parveen-769428303/"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:79"
-  image={imgRectangle38}
-  color="#feb9ce"
-  word="PROGRAM"
-  nameParts={["Gaurang","Agarwal"]}
-  designation="General Secretary"
-  photoClasses="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/gaurangagarwal12","https://x.com/Gaurangagar"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[651px] mt-[186px] relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:85"
-  image={imgRectangle39}
-  color="#6663ff"
-  word="DEVELOP"
-  nameParts={["Vibha","Gupta"]}
-  designation="General Secretary"
-  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/vibha-gupta-257952296/","https://github.com/vibha32145"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:91"
-  image={imgRectangle40}
-  color="#6663ff"
-  word="DEVELOP"
-  nameParts={["Shivam","Goyal"]}
-  designation="Management Head"
-  photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.instagram.com/shivushivam_?igsh=MThuM2Z3dmduaDdieg==","https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android"]}
-/>
-                  
-<TeamMemberCard
-  className="col-1 h-[600px] ml-[217px] mt-[189px] relative row-1 w-[200px] group cursor-pointer"
-  dataNodeId="1:97"
-  image={imgRectangle41}
-  color="#6663ff"
-  word="DEVELOP"
-  nameParts={["Khushi","Mishra"]}
-  designation="Media Head"
-  photoClasses="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/khushi-mishra-86502a26a","https://github.com/khushi8511"]}
-/>
+              <div className="content-stretch flex flex-col gap-[30px] md:gap-[50px] items-center leading-[0] relative shrink-0 w-full max-w-[1285px]" data-node-id="1:33">
+                {/* Level 1: President and CTC (both at mt-0) */}
+                <ResponsiveWaveGrid uniformHeight={true}>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:59"
+                      image={imgRectangle35}
+                      color="#6663ff"
+                      word="DEVELOP"
+                      nameParts={["Kuldeep","Chaudhary"]}
+                      designation="President"
+                      photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                      socialLinks={["https://www.linkedin.com/in/kuldeepchaudhary108/","https://github.com/Kuldeepchaudhary108/"]}
+                      bio="~wanted die with memories not with dreams"
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      expandDirection="left"
+                      dataNodeId="1:53"
+                      image={imgAjinkya}
+                      color="#feb9ce"
+                      word="PROGRAM"
+                      nameParts={["Ajinkya","Mishra"]}
+                      designation="CTC"
+                      photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[75px] profile-img-bottom-shadow"
+                      imgClasses="w-full h-auto object-top pointer-events-none"
+                      socialLinks={["https://github.com/AjinkyaMishra","https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"]}
+                      bio="Caught somewhere between “Proceed to code” and “Why is this working?”"
+                    />
+                  </div>
+                </ResponsiveWaveGrid>
+
+                {/* Level 2: All Heads (Finance, Creative, Media, Management) - All at same height */}
+                <ResponsiveWaveGrid uniformHeight={true}>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:66"
+                      image={imgPranjal}
+                      color="#feb9ce"
+                      word="PROGRAM"
+                      nameParts={["Pranjal","Gupta"]}
+                      designation="Finance Head"
+                      photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[68px] profile-img-bottom-shadow"
+                      imgClasses="w-full h-auto object-top pointer-events-none"
+                      socialLinks={["https://www.linkedin.com/in/pranjal-gupta-766898323","https://github.com/PranjalGupta280","https://x.com/TechnoVerse007c"]}
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:47"
+                      image={imgRectangle33}
+                      color="#ffc931"
+                      word="DESIGN"
+                      nameParts={["Ajeet","Bharti"]}
+                      designation="Creative Head"
+                      photoClasses="-translate-x-1/2 absolute h-[494px] left-[calc(50%-31px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[53px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+                      socialLinks={["https://www.instagram.com/ajeet_3d/","https://www.linkedin.com/in/ajeet-bharti-191b94212"]}
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:97"
+                      image={imgRectangle41}
+                      color="#6663ff"
+                      word="DEVELOP"
+                      nameParts={["Khushi","Mishra"]}
+                      designation="Media Head"
+                      photoClasses="-translate-x-1/2 absolute h-[433px] left-[calc(50%+33px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[90px] w-[268px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                      socialLinks={["https://www.linkedin.com/in/khushi-mishra-86502a26a","https://github.com/khushi8511"]}
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[651px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      expandDirection="left"
+                      dataNodeId="1:91"
+                      image={imgRectangle40}
+                      color="#ffc931"
+                      word="DESIGN"
+                      nameParts={["Shivam","Goyal"]}
+                      designation="Management Head"
+                      photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                      socialLinks={["https://www.instagram.com/shivushivam_?igsh=MThuM2Z3dmduaDdieg==","https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android"]}
+                    />
+                  </div>
+                </ResponsiveWaveGrid>
+
+                {/* Level 3: Secretaries Only - Both at same height */}
+                <ResponsiveWaveGrid uniformHeight={true}>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:79"
+                      image={imgRectangle38}
+                      color="#feb9ce"
+                      word="PROGRAM"
+                      nameParts={["Gaurang","Agarwal"]}
+                      designation="General Secretary"
+                      photoClasses="-translate-x-1/2 absolute h-[468.8px] left-[calc(50%+14.6px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[87px] w-[315.034px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                      socialLinks={["https://www.linkedin.com/in/gaurangagarwal12","https://x.com/Gaurangagar"]}
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      expandDirection="left"
+                      dataNodeId="1:85"
+                      image={imgRectangle39}
+                      color="#6663ff"
+                      word="DEVELOP"
+                      nameParts={["Vibha","Gupta"]}
+                      designation="General Secretary"
+                      photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-10px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[98px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                      socialLinks={["https://www.linkedin.com/in/vibha-gupta-257952296/","https://github.com/vibha32145"]}
+                    />
+                  </div>
+                </ResponsiveWaveGrid>
+
+                {/* Level 4: HOCs (Club Heads) - All at same height */}
+                <ResponsiveWaveGrid uniformHeight={true}>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:41"
+                      image={imgRectangle32}
+                      color="#feb9ce"
+                      word="PROGRAM"
+                      nameParts={["Om","Tripathi"]}
+                      designation="HOC Programming"
+                      photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                      socialLinks={["https://www.linkedin.com/in/om-tripathi-67332b26a/","https://github.com/OmTripathi7095"]}
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      dataNodeId="1:73"
+                      image={imgRectangle37}
+                      color="#6663ff"
+                      word="DEVELOP"
+                      nameParts={["Naziya","Praveen"]}
+                      designation="HOC Development"
+                      photoClasses="-translate-x-1/2 absolute h-[703.2px] left-[calc(50%-9.6px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-89px] w-[472.55px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                      socialLinks={["https://www.linkedin.com/in/naziya-parveen-769428303/"]}
+                    />
+                    <TeamMemberCard
+                      className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                      expandDirection="left"
+                      dataNodeId="1:35"
+                      image={imgRectangle31}
+                      color="#ffc931"
+                      word="DESIGN"
+                      nameParts={["Pranjyaditya","Singh","Chauhan"]}
+                      designation="HOC Design"
+                      photoClasses="-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                      socialLinks={["https://www.instagram.com/pranjyaditya/?hl=en","https://in.linkedin.com/in/pranjyaditya-singh-chauhan-6b959b2a5"]}
+                    />
                   </div>
                 </ResponsiveWaveGrid>
               </div>
@@ -626,15 +636,15 @@ export default function Team() {
 <TeamMemberCard
   className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer"
   dataNodeId="1:282"
-  image={imgAnjneya}
+  image={imgAjPhoto}
   color="#6663ff"
   word="DEVELOP"
   nameParts={["Anjneya","Singh"]}
   designation="Developer"
-  photoClasses="-translate-x-1/2 absolute h-[420px] left-1/2 shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[80px] w-[270px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-  imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+  photoClasses="left-1/2 -translate-x-1/2 absolute w-[250px] top-[90px] profile-img-bottom-shadow"
+  imgClasses="w-full h-auto object-top pointer-events-none"
   linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/"
-  bio="Everyone knows that development is the real coding."
+  bio="VIM-othée Chalamet"
 />
                   </div>
                 </ResponsiveWaveGrid>
