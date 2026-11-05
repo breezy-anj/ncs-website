@@ -199,10 +199,10 @@ export default function SplineRobot({ className = "" }) {
       <spline-viewer
         ref={viewerRef}
         url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[190%] h-[165%] block overflow-visible pointer-events-none scale-[0.88] origin-center"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450%] h-[350%] block overflow-visible pointer-events-none scale-[0.88] origin-center"
         style={{
-          width: "190%",
-          height: "165%",
+          width: "450%",
+          height: "350%",
           background: "transparent",
           pointerEvents: "none",
         }}
