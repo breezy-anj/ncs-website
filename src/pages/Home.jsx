@@ -24,6 +24,7 @@ const imgRectangle50 = `${assetPathPrefix}/78cf7.png`
 const imgNcsLogo = `${assetPathPrefix}/8f22e.svg`
 const imgNcsLogoWhite = publicAsset("assets/ncs-logo-white.svg")
 const imgRobotStatic = publicAsset("assets/robot-static.webp")
+const imgRobotHeroMobile = publicAsset("assets/robot-hero-mobile.webp")
 const imgVector = `${assetPathPrefix}/69fdb.svg`
 const imgVector1 = `${assetPathPrefix}/67b5d.svg`
 const imgGroup1000002935 = `${assetPathPrefix}/84ab0.svg`
@@ -306,13 +307,13 @@ export default function Home({ activePage = "Home", onNavigate }) {
             </div>
 
             {/* 5. Five-Element Row: 4 Club Cards + Center Robot */}
-            <div className="relative w-full max-w-[1240px] mx-auto mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex items-end justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-2 overflow-visible select-none">
+            <div className="relative w-full max-w-[1240px] mx-auto mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex items-end justify-center gap-2 xs:gap-2.5 sm:gap-3.5 md:gap-5 lg:gap-6 px-1 xs:px-2 sm:px-4 overflow-visible select-none">
               {/* Card 1: Programming (Pink) - Outer Left */}
               <div
                 onClick={() => handleCardClick("programming")}
                 onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, programming: true }))}
                 onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, programming: false }))}
-                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
+                className="group relative w-[68px] xs:w-[82px] sm:w-[115px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[105px] xs:h-[125px] sm:h-[170px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
@@ -323,7 +324,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   {/* Front Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-1.5 xs:p-2 sm:p-2.5 md:p-3.5 shadow-lg border border-black/10"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -333,9 +334,9 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex-1 flex items-center justify-center w-full">
+                    <div className="flex-1 flex items-center justify-center w-full min-h-0">
                       <svg
-                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="w-[52%] h-[52%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
                         viewBox="0 0 100 80"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -362,8 +363,8 @@ export default function Home({ activePage = "Home", onNavigate }) {
                         />
                       </svg>
                     </div>
-                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    <div className="w-full text-center py-1 sm:py-1.5 px-1 xs:px-1.5 rounded-full bg-black/15 backdrop-blur-sm border border-black/5 shrink-0">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[7.5px] xs:text-[9px] sm:text-[11px] md:text-[14px] text-black tracking-tight block truncate">
                         Programming
                       </span>
                     </div>
@@ -371,7 +372,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
                   {/* Back Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-1.5 xs:p-2 sm:p-3 md:p-5 shadow-lg border border-black/10 text-center"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(255, 109, 253) 0%, rgb(255, 109, 253) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -382,7 +383,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[1.0] select-none text-[9.5px] xs:text-[12px] sm:text-[15.5px] md:text-[19px] lg:text-[22.5px] xl:text-[25px]">
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[1.0] select-none text-[8px] xs:text-[10px] sm:text-[14px] md:text-[19px] lg:text-[22.5px] xl:text-[25px]">
                       <span className="block whitespace-nowrap">WE SOLVE</span>
                       <span className="block whitespace-nowrap">PROBLEMS!</span>
                     </div>
@@ -395,7 +396,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 onClick={() => handleCardClick("development")}
                 onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, development: true }))}
                 onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, development: false }))}
-                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
+                className="group relative w-[64px] xs:w-[76px] sm:w-[105px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[88px] xs:h-[105px] sm:h-[145px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
@@ -406,7 +407,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   {/* Front Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-1.5 xs:p-2 sm:p-2.5 md:p-3.5 shadow-lg border border-black/10"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -416,15 +417,15 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex-1 flex items-center justify-center w-full">
+                    <div className="flex-1 flex items-center justify-center w-full min-h-0">
                       <img
                         alt="Development"
-                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="w-[52%] h-[52%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
                         src={imgDevelopmentIcon}
                       />
                     </div>
-                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    <div className="w-full text-center py-1 sm:py-1.5 px-1 xs:px-1.5 rounded-full bg-black/15 backdrop-blur-sm border border-black/5 shrink-0">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[7px] xs:text-[8.5px] sm:text-[11px] md:text-[14px] text-black tracking-tight block truncate">
                         Development
                       </span>
                     </div>
@@ -432,7 +433,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
                   {/* Back Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-1.5 xs:p-2 sm:p-3 md:p-5 shadow-lg border border-black/10 text-center"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(102, 99, 255) 0%, rgb(102, 99, 255) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -443,7 +444,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[12px] xs:text-[15px] sm:text-[19px] md:text-[23px] lg:text-[27px] xl:text-[30px]">
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[9px] xs:text-[11.5px] sm:text-[16px] md:text-[23px] lg:text-[27px] xl:text-[30px]">
                       <span className="block">WE</span>
                       <span className="block whitespace-nowrap">BUILD!</span>
                     </div>
@@ -451,17 +452,19 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </div>
               </div>
 
-              {/* Center Robot - Interactive Spline 3D Mascot */}
-              <SplineRobot
-                className="w-[85px] xs:w-[110px] sm:w-[145px] md:w-[180px] lg:w-[210px] xl:w-[230px] h-[105px] xs:h-[135px] sm:h-[180px] md:h-[215px] lg:h-[240px] xl:h-[260px] z-20"
-              />
+              {/* Center Robot - Desktop Only: Interactive 3D Spline */}
+              <div className="hidden md:flex items-end justify-center z-20 shrink-0">
+                <SplineRobot
+                  className="w-[125px] lg:w-[145px] xl:w-[160px] h-[150px] lg:h-[170px] xl:h-[185px]"
+                />
+              </div>
 
               {/* Card 3: Design (Yellow) - Inner Right */}
               <div
                 onClick={() => handleCardClick("design")}
                 onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, design: true }))}
                 onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, design: false }))}
-                className="group relative w-[68px] xs:w-[88px] sm:w-[120px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[95px] xs:h-[122px] sm:h-[162px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
+                className="group relative w-[64px] xs:w-[76px] sm:w-[105px] md:w-[150px] lg:w-[172px] xl:w-[190px] h-[88px] xs:h-[105px] sm:h-[145px] md:h-[195px] lg:h-[220px] xl:h-[238px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
@@ -472,7 +475,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   {/* Front Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-1.5 xs:p-2 sm:p-2.5 md:p-3.5 shadow-lg border border-black/10"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -482,15 +485,15 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex-1 flex items-center justify-center w-full">
+                    <div className="flex-1 flex items-center justify-center w-full min-h-0">
                       <img
                         alt="Design"
-                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="w-[52%] h-[52%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
                         src={imgVector1}
                       />
                     </div>
-                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    <div className="w-full text-center py-1 sm:py-1.5 px-1 xs:px-1.5 rounded-full bg-black/15 backdrop-blur-sm border border-black/5 shrink-0">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[7.5px] xs:text-[9px] sm:text-[11px] md:text-[14px] text-black tracking-tight block truncate">
                         Design
                       </span>
                     </div>
@@ -498,7 +501,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
                   {/* Back Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-1.5 xs:p-2 sm:p-3 md:p-5 shadow-lg border border-black/10 text-center"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(253, 211, 68) 0%, rgb(253, 211, 68) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -509,7 +512,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[11.5px] xs:text-[13.5px] sm:text-[17px] md:text-[21.5px] lg:text-[25px] xl:text-[28px]">
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[9px] xs:text-[11.5px] sm:text-[15px] md:text-[21.5px] lg:text-[25px] xl:text-[28px]">
                       <span className="block">WE</span>
                       <span className="block whitespace-nowrap">DESIGN!</span>
                     </div>
@@ -522,7 +525,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 onClick={() => handleCardClick("technical")}
                 onMouseEnter={() => setHoveredCards((prev) => ({ ...prev, technical: true }))}
                 onMouseLeave={() => setHoveredCards((prev) => ({ ...prev, technical: false }))}
-                className="group relative w-[72px] xs:w-[95px] sm:w-[130px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[115px] xs:h-[148px] sm:h-[195px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
+                className="group relative w-[68px] xs:w-[82px] sm:w-[115px] md:w-[165px] lg:w-[190px] xl:w-[210px] h-[105px] xs:h-[125px] sm:h-[170px] md:h-[235px] lg:h-[265px] xl:h-[285px] select-none cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 shrink-0 [perspective:1000px]"
               >
                 <div
                   className="relative w-full h-full transition-transform duration-500 ease-out"
@@ -533,7 +536,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 >
                   {/* Front Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-2 xs:p-2.5 sm:p-3 md:p-3.5 shadow-lg border border-black/10"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-between p-1.5 xs:p-2 sm:p-2.5 md:p-3.5 shadow-lg border border-black/10"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -543,15 +546,15 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex-1 flex items-center justify-center w-full">
+                    <div className="flex-1 flex items-center justify-center w-full min-h-0">
                       <img
                         alt="Technical"
-                        className="w-[55%] h-[55%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="w-[52%] h-[52%] max-w-[80px] max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-110"
                         src={imgTechnicalIcon}
                       />
                     </div>
-                    <div className="w-full text-center py-1 sm:py-1.5 px-2 rounded-full bg-black/15 backdrop-blur-sm border border-black/5">
-                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[9px] xs:text-[11px] sm:text-[13px] md:text-[14px] text-black tracking-tight">
+                    <div className="w-full text-center py-1 sm:py-1.5 px-1 xs:px-1.5 rounded-full bg-black/15 backdrop-blur-sm border border-black/5 shrink-0">
+                      <span className="font-['Satoshi',Arial,sans-serif] font-bold text-[7.5px] xs:text-[9px] sm:text-[11px] md:text-[14px] text-black tracking-tight block truncate">
                         Technical
                       </span>
                     </div>
@@ -559,7 +562,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
                   {/* Back Face */}
                   <div
-                    className="absolute inset-0 rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-5 shadow-lg border border-black/10 text-center"
+                    className="absolute inset-0 rounded-[12px] xs:rounded-[16px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[34px] overflow-hidden flex flex-col items-center justify-center p-1.5 xs:p-2 sm:p-3 md:p-5 shadow-lg border border-black/10 text-center"
                     style={{
                       backgroundImage: `url("${imgFrame1171276288}"), linear-gradient(135deg, rgb(179, 253, 68) 0%, rgb(179, 253, 68) 100%)`,
                       backgroundSize: "cover, 100% 100%",
@@ -570,7 +573,7 @@ export default function Home({ activePage = "Home", onNavigate }) {
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[10.5px] xs:text-[12.5px] sm:text-[16px] md:text-[20px] lg:text-[23.5px] xl:text-[26.5px]">
+                    <div className="flex flex-col items-center justify-center text-center font-['Satoshi',Arial,sans-serif] font-black text-black uppercase tracking-tight leading-[0.96] select-none text-[8px] xs:text-[10px] sm:text-[14px] md:text-[20px] lg:text-[23.5px] xl:text-[26.5px]">
                       <span className="block">WE</span>
                       <span className="block whitespace-nowrap">INNOVATE!</span>
                     </div>
@@ -578,7 +581,24 @@ export default function Home({ activePage = "Home", onNavigate }) {
                 </div>
               </div>
             </div>
-          </div>
+
+            {/* Mobile Mascot Robot: Clean transparent image centered below the 4 cards */}
+            <div className="flex md:hidden flex-col items-center justify-center mt-4 xs:mt-5 sm:mt-6 z-20 select-none pointer-events-none">
+              <motion.img
+                animate={{
+                  y: [0, -6, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                src={imgRobotHeroMobile}
+                alt="Nibble Mascot"
+                className="w-[75px] xs:w-[88px] sm:w-[105px] h-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)]"
+                loading="eager"
+              />
+            </div>          </div>
 
           <div
             id="clubs-section"

@@ -2,7 +2,12 @@ import React, { useEffect } from "react"
 import { motion } from "framer-motion"
 import { InteractiveFolderGallery } from "../components/ui/interactive-folder-gallery"
 import { TextGenerateEffect } from "../components/ui/text-generate-effect"
-import { inoutHacks30Photos } from "../data/galleryPhotos"
+import {
+  inoutHacks30Photos,
+  workshopsPhotos,
+  zealiconPhotos,
+  orientation25Photos,
+} from "../data/galleryPhotos"
 import Footer from "../components/Footer"
 
 export default function Gallery({ activePage = "Gallery", onNavigate }) {
@@ -64,50 +69,53 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
             />
           </div>
 
-          {/* Folder 2: Nibble Month */}
+          {/* Folder 2: Workshops */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
               <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
-                Nibble Month
+                Workshops
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
-                Hands-on developer bootcamps & full-stack development
+                Hands-on developer workshops, logic building & tech mentorship
               </p>
             </div>
             <InteractiveFolderGallery
-              folderName="Nibble Month '25"
+              folderName="Workshops"
+              photos={workshopsPhotos}
               className="py-2"
             />
           </div>
 
-          {/* Folder 3: Blind Code */}
+          {/* Folder 3: Zealicon */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
               <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
-                Blind Code
+                Zealicon
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
-                Screen-off algorithmic problem solving under zealicon pressure
+                Competitive coding arena, keystroke duels & live stage finals
               </p>
             </div>
             <InteractiveFolderGallery
-              folderName="Blind Code Arena"
+              folderName="Zealicon"
+              photos={zealiconPhotos}
               className="py-2"
             />
           </div>
 
-          {/* Folder 4: Orientation Programme */}
+          {/* Folder 4: Orientation '25 */}
           <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
             <div className="text-center mb-1">
               <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
-                Orientation '26
+                Orientation '25
               </h3>
               <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
-                Induction walkthroughs, domain demos & society icebreakers
+                Freshers auditorium welcome, society keynote & domain intros
               </p>
             </div>
             <InteractiveFolderGallery
-              folderName="Orientation '26"
+              folderName="Orientation '25"
+              photos={orientation25Photos}
               className="py-2"
             />
           </div>

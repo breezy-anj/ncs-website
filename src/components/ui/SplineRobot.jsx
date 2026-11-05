@@ -4,6 +4,11 @@ export default function SplineRobot({ className = "" }) {
   const viewerRef = useRef(null)
 
   useEffect(() => {
+    // Skip 3D Spline initialization on mobile viewports (<768px)
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      return
+    }
+
     const viewer = viewerRef.current
     if (!viewer) return
 
@@ -194,12 +199,12 @@ export default function SplineRobot({ className = "" }) {
 
   return (
     <div
-      className={`relative flex items-center justify-center shrink-0 overflow-visible select-none pointer-events-none ${className}`}
+      className={`relative items-center justify-center shrink-0 overflow-visible select-none pointer-events-none ${className || "flex"}`}
     >
       <spline-viewer
         ref={viewerRef}
         url="https://prod.spline.design/uf2wIxgO0yhwMjDR/scene.splinecode"
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450%] h-[350%] block overflow-visible pointer-events-none scale-[0.88] origin-center"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450%] h-[350%] block overflow-visible pointer-events-none scale-[0.68] origin-center"
         style={{
           width: "450%",
           height: "350%",

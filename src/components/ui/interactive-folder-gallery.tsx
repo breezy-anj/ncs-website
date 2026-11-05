@@ -1,16 +1,12 @@
 "use client";
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Camera } from "lucide-react";
-import MorphGallery, { type MorphItem } from "./morph-gallery";
+import { Camera } from "lucide-react";
+import { MacOSPhotoBooth } from "./macos-photo-booth";
+import type { GalleryPhoto } from "../../data/galleryPhotos";
 
-export interface GalleryPhoto {
-  id: string | number;
-  image: string;
-  title?: string;
-  caption?: string;
-}
+export type { GalleryPhoto };
 
 const defaultPhotos: GalleryPhoto[] = [];
 
@@ -44,15 +40,7 @@ export function InteractiveFolderGallery({
   // Take top 4 preview photos for the 3D folded stack preview
   const previewPhotos = photos.slice(0, 4);
 
-  const morphItems: MorphItem[] = useMemo(() => {
-    return photos.map((p, idx) => ({
-      src: p.image,
-      thumb: p.image,
-      alt: p.title || p.caption || `Photo ${idx + 1}`,
-    }));
-  }, [photos]);
-
-  // Manage body scroll & ESC key when Photo Booth is active
+  // Manage body scroll when Photo Booth is active
   useEffect(() => {
     if (!isPhotoBoothOpen) {
       document.body.classList.remove("photo-booth-open");
@@ -130,7 +118,7 @@ export function InteractiveFolderGallery({
                 >
                   {isPhoto ? (
                     <img
-                      src={(item as GalleryPhoto).image}
+                      src={(item as GalleryPhoto).thumb || (item as GalleryPhoto).image}
                       alt="Preview"
                       loading="lazy"
                       decoding="async"
@@ -183,109 +171,16 @@ export function InteractiveFolderGallery({
         </div>
       </div>
 
-      {/* Full-Screen macOS Photo Booth Modal */}
+      {/* Authentic macOS Photo Booth Modal */}
       {mounted &&
         createPortal(
-          <AnimatePresence>
-            {isPhotoBoothOpen && (
-              <motion.div
-                className="fixed inset-0 z-[99999] w-screen h-screen bg-[#0d0d0f] flex flex-col overflow-hidden select-none"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {/* Full Screen macOS Title Bar */}
-                <div className="h-13 sm:h-14 bg-[#1b1b1e] border-b border-white/10 px-4 sm:px-6 md:px-8 flex items-center justify-between shrink-0 z-30 shadow-md">
-                  {/* Traffic Light Buttons */}
-                  <div className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setIsPhotoBoothOpen(false)}
-                      aria-label="Close Photo Booth"
-                      className="w-3.5 h-3.5 rounded-full bg-[#ff5f56] hover:bg-[#ff3b30] border border-[#e0443e] cursor-pointer flex items-center justify-center group transition-colors"
-                    >
-                      <X size={8} className="text-[#4d0000] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setIsPhotoBoothOpen(false)}
-                      aria-label="Minimize"
-                      className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e] hover:bg-[#ffaa00] border border-[#dea123] cursor-pointer"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setIsPhotoBoothOpen(false)}
-                      aria-label="Full Screen"
-                      className="w-3.5 h-3.5 rounded-full bg-[#27c93f] hover:bg-[#20b835] border border-[#1aab29] cursor-pointer"
-                    />
-                  </div>
-
-                  {/* Window Title */}
-                  <div className="flex items-center gap-2 text-white">
-                    <Camera size={16} className="text-white/70" />
-                    <span className="font-['Satoshi',Arial,sans-serif] font-bold text-sm sm:text-base tracking-tight truncate max-w-[220px] sm:max-w-md">
-                      {folderName}
-                    </span>
-                  </div>
-
-                  {/* Counter & Close Action */}
-                  <div className="flex items-center gap-3">
-                    {photos.length > 0 && (
-                      <div className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white font-mono text-xs">
-                        {String(selectedIndex + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
-                      </div>
-                    )}
-                    <button
-                      type="button"
-                      onClick={() => setIsPhotoBoothOpen(false)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold cursor-pointer transition-colors"
-                    >
-                      <X size={14} />
-                      <span className="hidden sm:inline">Done</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Main Body: MorphGallery WebGL Dissolve Viewport */}
-                <div className="flex-1 w-full bg-[#08080a] relative flex items-center justify-center overflow-hidden min-h-0">
-                  {photos.length > 0 ? (
-                    <>
-                      {/* Photo Title Overlay Badge */}
-                      {photos[selectedIndex]?.title && (
-                        <div className="absolute top-4 left-6 z-20 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium tracking-wide pointer-events-none">
-                          {photos[selectedIndex].title}
-                        </div>
-                      )}
-
-                      <MorphGallery
-                        items={morphItems}
-                        height="100%"
-                        index={selectedIndex}
-                        onIndexChange={setSelectedIndex}
-                        arrows={true}
-                        thumbnails={true}
-                        loop={true}
-                        className="size-full"
-                      />
-                    </>
-                  ) : (
-                    <div className="flex flex-col items-center justify-center gap-3 p-8 text-center">
-                      <div className="size-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
-                        <Camera size={28} className="text-white/40" />
-                      </div>
-                      <h4 className="text-lg font-bold text-white font-['Satoshi',Arial,sans-serif]">
-                        No Photos Yet
-                      </h4>
-                      <p className="text-sm text-white/50 max-w-sm">
-                        Photos for this event folder will be added soon. Check back shortly!
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>,
+          <MacOSPhotoBooth
+            isOpen={isPhotoBoothOpen}
+            onClose={() => setIsPhotoBoothOpen(false)}
+            photos={photos}
+            folderName={folderName}
+            initialIndex={selectedIndex}
+          />,
           document.body
         )}
     </div>
