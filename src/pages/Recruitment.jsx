@@ -1,11 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Footer from "../components/Footer"
 import { motion } from "framer-motion"
-
-const assetPathPrefix = "/assets"
-const heroIllustration = `${assetPathPrefix}/reqruitment.svg`
+import PuzzleCube from "../components/ui/puzzle-cube"
+import { Shuffle, RotateCcw, Sparkles } from "lucide-react"
 
 export default function Recruitment({ activePage = "Recruitment", onNavigate }) {
+  const cubeControls = useRef(null)
+  const [isSolvedState, setIsSolvedState] = useState(true)
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" })
   }, [])
@@ -72,20 +74,75 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Illustration */}
+          {/* Right Column: Interactive 3D Puzzle Cube */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-            className="relative flex items-center justify-center w-full md:w-auto max-w-[420px] sm:max-w-[580px] md:max-w-[800px] lg:max-w-[920px] xl:max-w-[980px] shrink-0 z-10"
+            className="relative flex flex-col items-center justify-center w-full md:w-auto max-w-[420px] sm:max-w-[500px] md:max-w-[560px] lg:max-w-[620px] shrink-0 z-10"
           >
-            {/* Floating Container */}
-            <div className="animate-float-gentle relative flex items-center justify-center w-full">
-              <img
-                src={heroIllustration}
-                alt="Recruitment Portal Illustration"
-                className="w-full max-w-[420px] sm:max-w-[580px] md:w-[740px] lg:w-[860px] xl:w-[940px] h-auto object-contain pointer-events-none drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+            {/* Ambient Radial Backlight Glow */}
+            <div className="absolute inset-0 max-w-[480px] max-h-[480px] m-auto bg-gradient-to-tr from-blue-600/25 via-indigo-500/20 to-purple-600/25 rounded-full blur-[100px] pointer-events-none" />
+
+            {/* Cube Interactive Container */}
+            <div className="relative z-10 flex flex-col items-center justify-center w-full">
+              <PuzzleCube
+                size={480}
+                order={3}
+                view="iso"
+                variant="solid"
+                behavior="solve"
+                speed={0.8}
+                interactive={true}
+                showGround={true}
+                dark="#10121a"
+                glow="#3b82f6"
+                accent="#60a5fa"
+                metal="#334155"
+                controls={(api) => {
+                  cubeControls.current = api
+                }}
+                onSolvedChange={(solved) => setIsSolvedState(solved)}
+                className="w-full max-w-[290px] xs:max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
               />
+
+              {/* Quick Interactive Control Bar */}
+              <div className="mt-2 sm:mt-4 flex items-center gap-2 sm:gap-2.5 z-20">
+                <button
+                  type="button"
+                  onClick={() => cubeControls.current?.scramble()}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white/90 hover:text-white text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-md cursor-pointer select-none"
+                  title="Scramble the cube"
+                >
+                  <Shuffle className="size-3.5 text-blue-400" />
+                  <span>Scramble</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => cubeControls.current?.solve()}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-600/80 hover:bg-blue-600 active:scale-95 border border-blue-400/40 text-white text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-md shadow-blue-600/30 cursor-pointer select-none"
+                  title="Auto solve the cube"
+                >
+                  <Sparkles className="size-3.5 text-amber-300" />
+                  <span>Solve</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => cubeControls.current?.reset()}
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-white/5 hover:bg-white/15 active:scale-95 border border-white/10 text-white/70 hover:text-white text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-sm cursor-pointer select-none"
+                  title="Reset to solved state"
+                >
+                  <RotateCcw className="size-3.5 text-white/60" />
+                  <span className="hidden xs:inline">Reset</span>
+                </button>
+              </div>
+
+              {/* Interaction Hint */}
+              <p className="mt-2 text-[11px] sm:text-[12px] font-['Satoshi',Arial,sans-serif] text-white/50 text-center tracking-tight select-none">
+                Drag stickers to twist layers • Drag outside to rotate view
+              </p>
             </div>
           </motion.div>
         </div>
