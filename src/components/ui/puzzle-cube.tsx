@@ -434,6 +434,8 @@ export interface PuzzleCubeApi {
   solve: () => CubeMove[] | null
   /** The next move of that solve, queued and returned. `null` if none. */
   hint: () => CubeMove | null
+  /** Stop any running animation, solve sequence, or background behaviour. */
+  stop: () => void
   state: () => CubeState
   history: () => CubeMove[]
   solved: () => boolean
@@ -569,6 +571,7 @@ function PuzzleCube({
   const wasSolved = React.useRef(isSolved(cube))
   const celebrate = React.useRef(0)
   const holdRef = React.useRef<CubeHold | null>(null)
+  const stoppedRef = React.useRef(false)
   const runningRef = React.useRef(false)
   const wakeRef = React.useRef<() => void>(() => {})
 
@@ -673,13 +676,48 @@ function PuzzleCube({
 
   const api = React.useMemo<PuzzleCubeApi>(
     () => ({
-      turn: (move) => push(move),
+      turn: (move) => {
+        stoppedRef.current = false
+        push(move)
+      },
       scramble: (count = 20, scrambleSeed = Math.floor(Math.random() * 1e9)) => {
+        stoppedRef.current = false
         plan.current = []
         future.current = []
         for (const move of scrambleMoves(n, count, scrambleSeed)) push(move, "scramble")
       },
-      reset: () => rebuild([]),
+      reset: () => {
+        stoppedRef.current = true
+        rebuild([])
+      },
+      stop: () => {
+        stoppedRef.current = true
+        plan.current = []
+        queue.current = []
+        if (active.current) {
+          const travel = active.current
+          active.current = null
+          if (travel.turn.quarterTurns) {
+            const next = applyTurn(stateRef.current, travel.turn)
+            stateRef.current = next
+            if (travel.record) {
+              history.current = [...history.current, travel.move]
+              setMoveCount(history.current.length)
+              if (travel.source === "user") future.current = []
+              historyChanged.current?.(history.current)
+            }
+            setCube(next)
+            frameRef.current.onMove?.(travel.move, next, travel.source)
+            frameRef.current.onStateChange?.(next)
+            const solved = isSolved(next)
+            if (solved !== wasSolved.current) {
+              wasSolved.current = solved
+              frameRef.current.onSolvedChange?.(solved)
+              if (solved) frameRef.current.onSolved?.()
+            }
+          }
+        }
+      },
       undo: () => {
         const last = history.current.at(-1)
         if (!last) return
@@ -696,6 +734,7 @@ function PuzzleCube({
         push(next, "redo")
       },
       solve: () => {
+        stoppedRef.current = false
         const line = solveCube(stateRef.current)
         if (!line) return null
         plan.current = line
@@ -704,6 +743,7 @@ function PuzzleCube({
         return line
       },
       hint: () => {
+        stoppedRef.current = false
         // The cached line is only a hint if it still starts where we are; any
         // turn the person made since invalidates it, so it is dropped.
         const line = plan.current.length ? plan.current : solveCube(stateRef.current)
@@ -790,7 +830,7 @@ function PuzzleCube({
       last = now
       const reduced = prefersReducedMotion()
       clock.current += dt
-      const loopActive = config.animate && !config.controlled && config.behavior !== "static"
+      const loopActive = config.animate && !config.controlled && config.behavior !== "static" && !stoppedRef.current
 
       // A hand on the cube outranks everything; then the queue; then the
       // behaviour, which only runs when nothing else is driving.
@@ -1035,6 +1075,7 @@ function PuzzleCube({
   const beginHold = React.useCallback(
     (event: React.PointerEvent, index: number, face: CubeFace) => {
       if (!interactive || event.button !== 0) return
+      stoppedRef.current = false
       event.preventDefault()
       // One press, one hand: taking a layer takes the camera back with it.
       setOrbitPress(null)
