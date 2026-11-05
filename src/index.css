@@ -396,10 +396,10 @@ body.spline-loading header {
 
 @keyframes wave-text {
   0% {
-    --wave-text-offset: -35;
+    --wave-text-offset: -30;
   }
   100% {
-    --wave-text-offset: 135;
+    --wave-text-offset: 105;
   }
 }
 

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Marquee } from "@/demos/ui/marquee"
+import { ShimmerText } from "../ui/shimmer-text"
 import { publicAsset } from "../../lib/publicAsset"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -123,13 +124,19 @@ export default function TeamMembersMarquee() {
         {/* =========================================================================
             BIG "ACHIEVEMENTS" HEADLINE
         ========================================================================= */}
-        <div className="relative z-0 w-full max-w-[1650px] mx-auto px-6 sm:px-10 lg:px-16 -mb-2 sm:-mb-3 md:-mb-5 lg:-mb-6 select-none">
+        <div className="relative z-20 w-full max-w-[1650px] mx-auto px-6 sm:px-10 lg:px-16 mb-2 sm:mb-4 select-none">
           <div className="achieve-heading flex items-baseline gap-3 sm:gap-5 flex-wrap">
             <h2
-              className="font-['Playfair_Display',Georgia,serif] text-[15vw] sm:text-[13vw] md:text-[11vw] lg:text-[130px] xl:text-[158px] text-[#faf8f0] font-normal leading-[0.9] tracking-tight drop-shadow-[0_12px_32px_rgba(0,0,0,0.85)] inline-block select-none"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="font-['Satoshi'] font-black text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[130px] xl:text-[158px] text-[#faf8f0] leading-[0.9] tracking-tight drop-shadow-[0_12px_32px_rgba(0,0,0,0.85)] inline-block select-none"
+              style={{ fontFamily: "'Satoshi', sans-serif" }}
             >
-              Achievements
+              <ShimmerText
+                duration={2.5}
+                delay={0.2}
+                className="text-[#faf8f0]"
+              >
+                Achievements
+              </ShimmerText>
             </h2>
           </div>
         </div>

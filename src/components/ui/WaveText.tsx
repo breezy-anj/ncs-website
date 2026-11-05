@@ -160,8 +160,8 @@ function WaveText({
     let animId: number;
     let startTime: number | null = null;
     const totalDuration = (duration || 3.75) * 1000;
-    const startVal = -45;
-    const endVal = 135;
+    const startVal = -30;
+    const endVal = 105;
 
     let delayTimer: any = null;
 

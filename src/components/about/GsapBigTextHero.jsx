@@ -44,7 +44,7 @@ export default function GsapBigTextHero() {
       {/* Main Massive Screen-Covering Headline Box - Centered */}
       <div className="relative flex flex-col items-center justify-center text-center w-full max-w-[1550px] mx-auto py-2 sm:py-6">
 
-        {/* LINE 1: "WHAT WE" */}
+        {/* LINE 1: "WHAT DO WE" */}
         <div className="relative w-full flex justify-center overflow-visible">
           <div className="overflow-visible py-1 px-2">
             <h1
@@ -55,7 +55,7 @@ export default function GsapBigTextHero() {
               }}
             >
               <ShimmerText duration={2.5} delay={0.2} className="text-[#faf8f0]">
-                WHAT WE
+                WHAT DO WE
               </ShimmerText>
             </h1>
           </div>

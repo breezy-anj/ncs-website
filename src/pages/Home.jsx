@@ -5,6 +5,8 @@ import Footer from "../components/Footer"
 import CarouselStacked from "../components/ui/carousel-07"
 import { ImageAutoSlider } from "../components/ui/image-auto-slider"
 import SplineRobot from "../components/ui/SplineRobot"
+import { LiquidMetalButton } from "../components/LiquidMetalButton"
+import { ShimmerText } from "../components/ui/shimmer-text"
 import { preloadCardFlipSound, playCardFlipSound } from "../lib/sound"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
@@ -209,12 +211,20 @@ export default function Home({ activePage = "Home", onNavigate }) {
 
               {/* 2. Main Title: WHERE CURIOSITY BUILDS THE FUTURE */}
               <h1 className="font-['Satoshi',Arial,sans-serif] font-black text-[32px] xs:text-[40px] sm:text-[54px] md:text-[66px] lg:text-[76px] xl:text-[84px] leading-[0.96] tracking-[-0.035em] uppercase text-center flex flex-col items-center">
-                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]">
+                <ShimmerText
+                  duration={2.5}
+                  delay={0.2}
+                  className="text-white drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]"
+                >
                   WHERE CURIOSITY
-                </span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]">
+                </ShimmerText>
+                <ShimmerText
+                  duration={2.5}
+                  delay={0.5}
+                  className="text-white drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]"
+                >
                   BUILDS THE FUTURE
-                </span>
+                </ShimmerText>
               </h1>
 
               {/* 3. Subtitle description */}
@@ -224,20 +234,16 @@ export default function Home({ activePage = "Home", onNavigate }) {
               </div>
 
               {/* 4. Explore NCS Button */}
-              <div className="pt-1">
-                <button
-                  type="button"
+              <div className="pt-1.5 flex justify-center">
+                <LiquidMetalButton
+                  label="Explore NCS ↗"
                   onClick={() => {
                     const clubsEl = document.getElementById("clubs-section")
                     if (clubsEl) {
                       clubsEl.scrollIntoView({ behavior: "smooth" })
                     }
                   }}
-                  className="inline-flex items-center gap-1.5 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white text-[12px] sm:text-[13px] md:text-[14px] font-medium backdrop-blur-md transition-all duration-200 cursor-pointer shadow-lg hover:scale-105 active:scale-95"
-                >
-                  <span>Explore NCS</span>
-                  <span className="text-sm font-semibold">↗</span>
-                </button>
+                />
               </div>
             </div>
 
