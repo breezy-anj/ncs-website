@@ -26,12 +26,12 @@ const teamMembers = [
   {
     image: publicAsset("assets/achievments/Ajinkya Mishra.webp"),
     name: "Ajinkya Mishra",
-    role: "Cleared the ICPC World Finals",
+    role: "Cleared the ICPC Regionalists",
   },
   {
     image: publicAsset("assets/achievments/Om Tripathi.webp"),
     name: "Om Tripathi",
-    role: "Cleared the ICPC World Finals",
+    role: "Cleared the ICPC Regionalists",
   },
   {
     image: publicAsset("assets/achievments/Athrva Gupta.webp"),
