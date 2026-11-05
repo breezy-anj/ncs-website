@@ -1,13 +1,9 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect } from "react"
 import Footer from "../components/Footer"
 import { motion } from "framer-motion"
 import PuzzleCube from "../components/ui/puzzle-cube"
-import { Shuffle, RotateCcw, Sparkles, Square } from "lucide-react"
 
 export default function Recruitment({ activePage = "Recruitment", onNavigate }) {
-  const cubeControls = useRef(null)
-  const [isSolvedState, setIsSolvedState] = useState(true)
-  const [isStopped, setIsStopped] = useState(false)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" })
@@ -92,7 +88,7 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
                 order={3}
                 view="iso"
                 variant="solid"
-                behavior={isStopped ? "static" : "solve"}
+                behavior="solve"
                 speed={0.8}
                 interactive={true}
                 showGround={true}
@@ -100,72 +96,8 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
                 glow="#3b82f6"
                 accent="#60a5fa"
                 metal="#334155"
-                controls={(api) => {
-                  cubeControls.current = api
-                }}
-                onSolvedChange={(solved) => setIsSolvedState(solved)}
                 className="w-full max-w-[290px] xs:max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
               />
-
-              {/* Quick Interactive Control Bar */}
-              <div className="mt-2 sm:mt-4 flex items-center gap-2 sm:gap-2.5 z-20">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsStopped(false)
-                    cubeControls.current?.scramble()
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white/90 hover:text-white text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-md cursor-pointer select-none"
-                  title="Scramble the cube"
-                >
-                  <Shuffle className="size-3.5 text-blue-400" />
-                  <span>Scramble</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsStopped(false)
-                    cubeControls.current?.solve()
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-600/80 hover:bg-blue-600 active:scale-95 border border-blue-400/40 text-white text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-md shadow-blue-600/30 cursor-pointer select-none"
-                  title="Auto solve the cube"
-                >
-                  <Sparkles className="size-3.5 text-amber-300" />
-                  <span>Solve</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsStopped(true)
-                    cubeControls.current?.stop()
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-500/15 hover:bg-red-500/25 active:scale-95 border border-red-500/30 text-red-300 hover:text-red-200 text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-md cursor-pointer select-none"
-                  title="Stop cube animation"
-                >
-                  <Square className="size-3 fill-current text-red-400" />
-                  <span>Stop</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsStopped(true)
-                    cubeControls.current?.reset()
-                  }}
-                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-white/5 hover:bg-white/15 active:scale-95 border border-white/10 text-white/70 hover:text-white text-[12px] sm:text-[13px] font-medium backdrop-blur-md transition-all shadow-sm cursor-pointer select-none"
-                  title="Reset to solved state"
-                >
-                  <RotateCcw className="size-3.5 text-white/60" />
-                  <span className="hidden xs:inline">Reset</span>
-                </button>
-              </div>
-
-              {/* Interaction Hint */}
-              <p className="mt-2 text-[11px] sm:text-[12px] font-['Satoshi',Arial,sans-serif] text-white/50 text-center tracking-tight select-none">
-                Drag stickers to twist layers • Drag outside to rotate view
-              </p>
             </div>
           </motion.div>
         </div>
