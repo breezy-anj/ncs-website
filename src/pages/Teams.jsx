@@ -13,6 +13,7 @@ const imgShreyansh = publicAsset("change_people/shreyansh pandey.png");
 const imgVishnu = publicAsset("change_people/vishnu.png");
 const imgAditya = publicAsset("change_people/aditya.png");
 const imgAjPhoto = publicAsset("assets/ajPhoto.png");
+const imgAnjneya = imgAjPhoto;
 
 const assetPathPrefix = "/assets";
 const imgRectangle31 = `${assetPathPrefix}/13843.png`;
