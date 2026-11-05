@@ -7,6 +7,7 @@ import { ImageAutoSlider } from "../components/ui/image-auto-slider"
 import SplineRobot from "../components/ui/SplineRobot"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
 import { ShimmerText } from "../components/ui/shimmer-text"
+import { TextGenerateEffect } from "../components/ui/text-generate-effect"
 import { preloadCardFlipSound, playCardFlipSound } from "../lib/sound"
 import { highlightImages } from "../data/highlightImages"
 import { publicAsset } from "../lib/publicAsset"
@@ -530,9 +531,10 @@ export default function Home({ activePage = "Home", onNavigate }) {
               >
                 CLUBS
               </h2>
-              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[22px] lg:text-[24px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center break-words">
-                Explore our specialized clubs in Web Development, Programming, Design, and Technology. Discover new skills, unleash your creativity, and turn your ideas into reality. Join our vibrant community and build your future with us!
-              </p>
+              <TextGenerateEffect
+                words="Explore our specialized clubs in Web Development, Programming, Design, and Technology. Discover new skills, unleash your creativity, and turn your ideas into reality. Join our vibrant community and build your future with us!"
+                className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[22px] lg:text-[24px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center break-words"
+              />
             </div>
 
             {/* Mobile 2x2 Grid of Club Cards */}
@@ -832,9 +834,10 @@ export default function Home({ activePage = "Home", onNavigate }) {
               >
                 HIGHLIGHTS
               </h2>
-              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[22px] lg:text-[24px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center break-words">
-                From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive.
-              </p>
+              <TextGenerateEffect
+                words="From brainstorming ideas to building amazing things, every moment tells a story. Take a look at our events, workshops, and the people who make our community thrive."
+                className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[17px] md:text-[22px] lg:text-[24px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center break-words"
+              />
             </div>
 
             <div className="relative mt-8 md:mt-12 w-full overflow-hidden bg-transparent">
@@ -859,11 +862,10 @@ export default function Home({ activePage = "Home", onNavigate }) {
               className="content-stretch flex flex-col gap-[24px] sm:gap-[32px] items-center relative shrink-0 w-full"
               data-node-id="1:153"
             >
-              <div className="font-['Satoshi',Arial,sans-serif] font-medium text-[14px] sm:text-[18px] md:text-[24px] lg:text-[28px] text-center text-white/60 md:text-white/70 tracking-normal leading-[1.6] max-w-[1200px] w-full mt-2 mb-6 px-4 break-words">
-                <p>
-                  Ideas worth sharing. Experiences worth remembering. Join us for events that spark curiosity, inspire creativity, and bring our community together.
-                </p>
-              </div>
+              <TextGenerateEffect
+                words="Ideas worth sharing. Experiences worth remembering. Join us for events that spark curiosity, inspire creativity, and bring our community together."
+                className="font-['Satoshi',Arial,sans-serif] font-medium text-[14px] sm:text-[18px] md:text-[24px] lg:text-[28px] text-center text-white/60 md:text-white/70 tracking-normal leading-[1.6] max-w-[1200px] w-full mt-2 mb-6 px-4 break-words"
+              />
               <CarouselStacked slides={eventSlides} />
             </div>
           </div>

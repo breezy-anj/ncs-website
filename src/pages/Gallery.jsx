@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { motion } from "framer-motion"
 import { InteractiveFolderGallery } from "../components/ui/interactive-folder-gallery"
+import { TextGenerateEffect } from "../components/ui/text-generate-effect"
 import { inoutHacks30Photos } from "../data/galleryPhotos"
 import Footer from "../components/Footer"
 
@@ -38,14 +39,10 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
             PHOTO BOOTH
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <TextGenerateEffect
+            words="Click any event folder below to open the Photo Booth gallery. Browse snapshots with your arrow keys or through the bottom filmstrip reel."
             className="font-['Satoshi',Arial,sans-serif] font-normal text-[15px] sm:text-[18px] md:text-[22px] leading-[1.55] text-white/70 max-w-[960px] w-full px-2 text-center"
-          >
-            Click any event folder below to open the Photo Booth gallery. Browse snapshots with your arrow keys or through the bottom filmstrip reel.
-          </motion.p>
+          />
         </div>
 
         {/* 4 Interactive Folder Galleries Side by Side in One Row */}

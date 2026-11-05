@@ -1,6 +1,7 @@
 
 import Footer from "../components/Footer"
 import { LiquidMetalButton } from "../components/LiquidMetalButton"
+import { TextGenerateEffect } from "../components/ui/text-generate-effect"
 import { ExternalLink } from "lucide-react"
 import { publicAsset } from "../lib/publicAsset"
 import { ProjectCard } from "../components/ProjectCard"
@@ -145,9 +146,10 @@ export default function Project({ activePage = "Project", onNavigate }) {
             >
               PROJECTS
             </p>
-            <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words">
-              We build a tech-driven campus culture by hosting hands-on events and building tools for students and faculty. Our projects help the college community stay updated, sharpen their problem-solving skills, and stay connected.
-            </p>
+            <TextGenerateEffect
+              words="We build a tech-driven campus culture by hosting hands-on events and building tools for students and faculty. Our projects help the college community stay updated, sharpen their problem-solving skills, and stay connected."
+              className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words"
+            />
           </div>
           {/* Mobile 2x4 Grid of Project Cards */}
           <div className="grid grid-cols-2 gap-3.5 sm:gap-4 w-full max-w-[420px] mx-auto px-1 md:hidden select-none">
