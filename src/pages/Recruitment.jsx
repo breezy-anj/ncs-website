@@ -39,10 +39,10 @@ export default function Recruitment({ activePage = "Recruitment", onNavigate }) 
                 OOPS!
               </h1>
               <h2 className="font-['Satoshi',Arial,sans-serif] font-bold text-[28px] xs:text-[34px] sm:text-[52px] lg:text-[80px] text-white tracking-normal leading-[1.2] mt-2 break-words">
-                <span className="bg-gradient-to-r from-[#2563eb] via-[#ec4899] to-[#3b82f6] bg-clip-text text-transparent font-normal">
+                <span className="bg-gradient-to-r from-[#2563eb] via-[#ec4899] to-[#3b82f6] bg-clip-text text-transparent font-bold font-['Satoshi',Arial,sans-serif]">
                   NOT
                 </span>
-                <span className="text-white font-normal ml-2 sm:ml-3">
+                <span className="text-white font-bold font-['Satoshi',Arial,sans-serif] ml-2 sm:ml-3">
                   STARTED YET.
                 </span>
               </h2>
