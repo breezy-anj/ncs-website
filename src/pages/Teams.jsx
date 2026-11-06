@@ -170,7 +170,7 @@ export default function Team() {
                       designation="Management Head"
                       photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                       imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-                      socialLinks={["https://www.instagram.com/shivushivam_?igsh=MThuM2Z3dmduaDdieg==","https://www.linkedin.com/in/shivamgoyal0308?utm_source=share_via&utm_content=profile&utm_medium=member_android"]}
+                      socialLinks={["https://www.linkedin.com/in/shivamgoyal0308","https://www.instagram.com/shivushivam"]}
                     />
                   </div>
                 </ResponsiveWaveGrid>
@@ -392,7 +392,7 @@ export default function Team() {
   designation="Programmer"
   photoClasses="-translate-x-1/2 absolute h-[1018.416px] left-[calc(50%+18.17px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-197px] w-[631.289px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/shreyansh-shrivastva-416956300/"]}
+  socialLinks={["https://www.linkedin.com/in/shreyansh-shrivastva-416956300/","https://github.com/ShreyanshShri"]}
   bio="A collection of oddly specific interests, endless rabbit holes, and whatever I’m obsessed with this week."
 />
                 </div>
@@ -459,8 +459,8 @@ export default function Team() {
   designation="Designer"
   photoClasses="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/darshita-jain-56747b31a/"
-  bio="Designer by passion, creative by nature, fashion enthusiast by choice. I love experimenting with visuals, aesthetics, and style to create things that feel uniquely mine."
+  socialLinks={["https://www.linkedin.com/in/darshita-jain-23144137b"]}
+  bio="A little tech, a little fashion, a lot of imagination. Turning random ideas into pretty designs & little moments into aesthetics."
 />
                   
 <TeamMemberCard
@@ -473,7 +473,7 @@ export default function Team() {
   designation="Designer"
   photoClasses="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/piyush-gautam-625478332/"
+  socialLinks={["https://www.linkedin.com/in/piyush-gautam-970502395/"]}
   bio="A creative mind with too many tabs open."
 />
                   
@@ -487,7 +487,7 @@ export default function Team() {
   designation="Designer"
   photoClasses="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/bhaskar-shah-455478332/"
+  socialLinks={["https://www.linkedin.com/in/bhaskarshah05/","https://github.com/BhaskarShah05","https://x.com/bhaskarshah05"]}
 />
                   
 <TeamMemberCard
@@ -496,11 +496,11 @@ export default function Team() {
   image={imgRectangle58}
   color="#feb9ce"
   word="PROGRAM"
-  nameParts={["Karnika"]}
+  nameParts={["Karnika","Jaiswal"]}
   designation="Programmer"
   photoClasses="-translate-x-1/2 absolute h-[415px] left-[calc(50%+8.5px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[12px] w-[279px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/karnika-singh-465478332/"
+  socialLinks={["https://www.linkedin.com/in/karnika-jaiswal-a2507a383","https://github.com/karnika404x","https://codolio.com/profile/serious_am"]}
   bio="Quiet interface, organised setup. CP runner with a curious mind , passionate about tech and bringing good vibe."
 />
                   
@@ -514,7 +514,7 @@ export default function Team() {
   designation="Programmer"
   photoClasses="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/aanya-gogia-585478332/"
+  socialLinks={["https://www.linkedin.com/in/aanya-gogia-732608385/","https://codolio.com/profile/AanyaGogia"]}
   bio="A tech enthusiast who enjoys coding, competitive programming, and trying out new things. Always learning, building, and having fun along the way."
 />
 <TeamMemberCard
@@ -528,7 +528,7 @@ export default function Team() {
   designation="Programmer"
   photoClasses="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/sidhi-saxena-885478332/"
+  socialLinks={["https://www.linkedin.com/in/sidhi-saxena-672068377","https://codolio.com/profile/Sidhisaxena/card"]}
   bio="A curious mind, a passionate programmer, and a dancer at heart. I love solving problems, exploring new ideas, and bringing positive energy wherever I go."
 />
                 </div>
@@ -544,7 +544,7 @@ export default function Team() {
   designation="Developer"
   photoClasses="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/tanishka-israni-685478332/"
+  socialLinks={["https://www.linkedin.com/in/tanishka-israni-852923380"]}
   bio="A curious tech enthusiast who loves turning ideas into real projects. Always up for hackathons, learning something new, and trying things beyond my comfort zone. Creative and always looking for the next challenge."
 />
                   
@@ -558,7 +558,7 @@ export default function Team() {
   designation="Developer"
   photoClasses="-translate-x-1/2 absolute h-[679px] left-[calc(50%-0.91px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[-149.74px] w-[421px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/saishree-saxena-785478332/"
+  socialLinks={["https://www.linkedin.com/in/saishree-saxena-605580372","https://github.com/saitee5"]}
   bio="heyo peeps, sai here, i like building new stuff and get in awe with it, currently in 2nd year, I love leading a slow life, also i love music and groovin duhh.Also, imma barbie girl in the cs world~ haha"
 />
                   
@@ -572,7 +572,7 @@ export default function Team() {
   designation="Programmer"
   photoClasses="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  socialLinks={["https://www.linkedin.com/in/aryan-singh-661819286/","https://github.com/Coder-Aryan09"]}
+  socialLinks={["https://www.linkedin.com/in/oxy8en","https://codolio.com/profile/oxy8en"]}
   bio="My Codes have trust issues with the Time Limit"
 />
                   
@@ -586,7 +586,7 @@ export default function Team() {
   designation="Programmer"
   photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-0 profile-img-bottom-shadow"
   imgClasses="w-full h-auto object-top pointer-events-none"
-  linkedinUrl="https://www.linkedin.com/in/sanskar-pal-985478332/"
+  socialLinks={["https://www.linkedin.com/in/sanskarpal23/","https://codolio.com/profile/sanskarpal"]}
   bio="I write code like I make jokes: recklessly, unnecessarily, and usually wrong."
 />
                   
@@ -600,7 +600,7 @@ export default function Team() {
   designation="Programmer"
   photoClasses="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/mohd-fahad-085478332/"
+  socialLinks={["https://www.linkedin.com/in/fahadxiii/"]}
   bio="My peace isn't inner peace; it's “All test cases passed”"
 />
                 </div>
@@ -616,7 +616,7 @@ export default function Team() {
   designation="Technical"
   photoClasses="-translate-x-1/2 absolute h-[558px] left-[calc(50%+20.08px)] shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-[106.88px] w-[346px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-  linkedinUrl="https://www.linkedin.com/in/tanishq-marwari-185478332/"
+  socialLinks={["https://www.linkedin.com/in/tanishq-marwari-109772390/"]}
   bio="Professional overthinker Part time coder Full time learner"
 />
                   
@@ -630,7 +630,7 @@ export default function Team() {
   designation="Technical"
   photoClasses="-translate-x-1/2 absolute h-[485px] left-1/2 top-0 w-[200px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
   imgClasses="w-full h-full object-contain pointer-events-none"
-  linkedinUrl="https://www.linkedin.com/in/ansh-mittal-285478332/"
+  socialLinks={["https://www.linkedin.com/in/ansh-mittal-xr/","https://github.com/phoenix-xr"]}
   bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶."
 />
                   
@@ -644,8 +644,12 @@ export default function Team() {
   designation="Developer"
   photoClasses="left-1/2 -translate-x-1/2 absolute w-[250px] top-[90px] profile-img-bottom-shadow"
   imgClasses="w-full h-auto object-top pointer-events-none"
-  linkedinUrl="https://www.linkedin.com/in/anjneya-singh-385478332/"
-  bio="VIM-othée Chalamet"
+  socialLinks={["https://github.com/breezy-anj"]}
+  bio={`In buggiest day,
+In glitchiest night,
+No error shall escape my sight.
+Let those who worship Claude's might,
+Beware my power, Neovim's sleight!`}
 />
                   </div>
                 </ResponsiveWaveGrid>

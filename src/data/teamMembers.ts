@@ -88,7 +88,7 @@ const teamMembers: ImageData[] = [
     alt: "Darshita Jain",
     title: "Darshita Jain",
     designation: "NCS Designer",
-    description: "NCS Designer"
+    description: "A little tech, a little fashion, a lot of imagination. Turning random ideas into pretty designs & little moments into aesthetics."
   },
   {
     id: "member-2147239150",
@@ -180,11 +180,11 @@ const teamMembers: ImageData[] = [
   },
   {
     id: "member-2147239161",
-    src: "/assets/team_avatars/avatar_2147239161.png?v=20261106_1",
+    src: "/assets/team_avatars/avatar_2147239161.png?v=color_1",
     alt: "Anjneya Singh",
     title: "Anjneya Singh",
     designation: "NCS Developer",
-    description: "NCS Developer"
+    description: "- Software Development is true coding ;)\n- VIM-othée Chalamet"
   },
   {
     id: "member-2147239162",
@@ -325,10 +325,10 @@ export const TEAM_FAN_CARDS = ALL_38_TEAM_MEMBERS.map((member) => {
 });
 
 export const SPHERE_TEAM_MEMBERS: ImageData[] = ALL_38_TEAM_MEMBERS.map((m) => {
-  const filename = m.src.split("/").pop()?.replace(".png", ".webp") || ""
+  const cleanFilename = m.src.split("/").pop()?.split("?")[0].replace(".png", ".webp") || ""
   return {
     ...m,
-    src: publicAsset(`/assets/team_avatars/thumbs/${filename}`),
+    src: publicAsset(`/assets/team_avatars/thumbs/${cleanFilename}`),
     fullSrc: m.src,
   }
 });

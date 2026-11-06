@@ -1,5 +1,4 @@
 import React from "react";
-import { createPortal } from "react-dom";
 import ProfileCardBackdrop from "./ProfileCardBackdrop";
 import ProfileCardGhostOverlay from "./ProfileCardGhost";
 
@@ -36,6 +35,14 @@ function SocialIcon({ type }) {
       </svg>
     );
   }
+  if (type === "codolio") {
+    return (
+      <svg className="size-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 18l6-6-6-6" />
+        <path d="M8 6l-6 6 6 6" />
+      </svg>
+    );
+  }
   return (
     <svg className="size-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -50,6 +57,7 @@ function parseSocialLink(url) {
   if (lower.includes("linkedin.com")) return { type: "linkedin", url, label: "LinkedIn" };
   if (lower.includes("x.com") || lower.includes("twitter.com")) return { type: "x", url, label: "X" };
   if (lower.includes("instagram.com")) return { type: "instagram", url, label: "Instagram" };
+  if (lower.includes("codolio.com")) return { type: "codolio", url, label: "Codolio" };
   return { type: "generic", url, label: "Link" };
 }
 
@@ -113,6 +121,7 @@ export default function TeamMemberCard({
 
   const cardRef = React.useRef(null);
   const wingRef = React.useRef(null);
+  const cardId = React.useId();
 
   // Static fallback based on className or explicit prop:
   // Cards in columns < 500px (ml-0, ml-[217px], ml-[434px]) expand right.
@@ -129,62 +138,159 @@ export default function TeamMemberCard({
   }, [className, expandDirection]);
 
   const [expandDir, setExpandDir] = React.useState(staticDir);
+  const [clampOffset, setClampOffset] = React.useState(0);
   const [isHovered, setIsHovered] = React.useState(false);
-  const [isFocused, setIsFocused] = React.useState(false);
+  const [isPinned, setIsPinned] = React.useState(false);
+  const [isDismissed, setIsDismissed] = React.useState(false);
 
-  const isActive = isHovered || isFocused;
+  const isActive = (!isDismissed && isHovered) || isPinned;
 
-  // Clear focus when clicking outside the card or pressing Escape
+  // Listen for another card opening anywhere and immediately close this card
   React.useEffect(() => {
-    if (!isFocused) return;
+    const handleOtherCardOpened = (e) => {
+      if (e.detail !== cardId) {
+        setIsPinned(false);
+        setIsHovered(false);
+        setIsDismissed(false);
+      }
+    };
+    window.addEventListener("ncs-card-opened", handleOtherCardOpened);
+    return () => window.removeEventListener("ncs-card-opened", handleOtherCardOpened);
+  }, [cardId]);
+
+  // Elevate parent column and row stacking context so active wing always paints on top
+  React.useEffect(() => {
+    if (!cardRef.current) return;
+    const colWrapper = cardRef.current.closest("[data-grid-col='true']");
+    const rowWrapper = cardRef.current.closest("[data-grid-row='true']");
+    if (isActive) {
+      if (colWrapper) colWrapper.style.zIndex = "50";
+      if (rowWrapper) rowWrapper.style.zIndex = "50";
+    } else {
+      if (colWrapper) colWrapper.style.zIndex = "";
+      if (rowWrapper) rowWrapper.style.zIndex = "";
+    }
+  }, [isActive]);
+
+  // Clear state when clicking outside the card or pressing Escape
+  React.useEffect(() => {
+    if (!isPinned && !isDismissed && !isHovered) return;
     const handleClickOutside = (e) => {
       if (cardRef.current && !cardRef.current.contains(e.target)) {
-        setIsFocused(false);
+        setIsPinned(false);
+        setIsHovered(false);
+        setIsDismissed(false);
       }
     };
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
-        setIsFocused(false);
+        setIsPinned(false);
+        setIsHovered(false);
+        setIsDismissed(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isFocused]);
+  }, [isPinned, isDismissed, isHovered]);
 
   const handleCardClick = (e) => {
     if (e.target.closest("a, button")) return;
     // If clicking inside the expansion wing, ensure it stays pinned open
     if (wingRef.current && wingRef.current.contains(e.target)) {
-      setIsFocused(true);
+      setIsPinned(true);
+      setIsDismissed(false);
       return;
     }
-    setIsFocused((prev) => !prev);
+
+    updateDirection();
+
+    if (isActive) {
+      // Clicking an active card closes it
+      setIsPinned(false);
+      setIsHovered(false);
+      setIsDismissed(true);
+    } else {
+      // Clicking an inactive card activates/pins it and closes any other card
+      setIsDismissed(false);
+      setIsPinned(true);
+      window.dispatchEvent(new CustomEvent("ncs-card-opened", { detail: cardId }));
+    }
   };
 
-  // Dynamic viewport-aware collision detection:
+  // Only trigger hover on devices with fine pointer / real hover support (e.g. desktop mouse)
+  // This completely eliminates synthetic touch-event hover glitches on mobile
+  const handleMouseEnter = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      updateDirection();
+      setIsHovered(true);
+      setIsDismissed(false);
+    }
+  };
+
+  const handleMouseMove = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      updateDirection();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsHovered(false);
+      setIsDismissed(false);
+    }
+  };
+
+  // Dynamic viewport-aware collision detection & clamp offset:
   // Ensures cards never overflow the browser viewport horizontally regardless of screen size or zoom.
   const updateDirection = React.useCallback(() => {
-    if (expandDirection) {
-      setExpandDir(expandDirection);
-      return;
-    }
-    if (cardRef.current) {
-      const rect = cardRef.current.getBoundingClientRect();
-      const spaceOnLeft = rect.left;
-      const spaceOnRight = window.innerWidth - rect.right;
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const isMobile = window.innerWidth < 768;
+    const scale = isMobile ? (rect.width / 200 || 0.54) : 1;
+    const contentWidth = isMobile ? 220 : 360;
+    const neededSpace = contentWidth * scale;
 
-      if (spaceOnLeft < 370 && spaceOnRight >= 370) {
-        setExpandDir("right");
-      } else if (spaceOnRight < 370 && spaceOnLeft >= 370) {
-        setExpandDir("left");
+    const spaceOnLeft = rect.left;
+    const spaceOnRight = window.innerWidth - rect.right;
+
+    let dir = expandDirection;
+    if (!dir) {
+      if (spaceOnLeft < neededSpace && spaceOnRight >= neededSpace) {
+        dir = "right";
+      } else if (spaceOnRight < neededSpace && spaceOnLeft >= neededSpace) {
+        dir = "left";
       } else {
-        setExpandDir(spaceOnRight >= spaceOnLeft ? "right" : "left");
+        dir = spaceOnRight >= spaceOnLeft ? "right" : "left";
       }
     }
+    setExpandDir(dir);
+
+    // Dynamic viewport boundary collision clamping:
+    // Ensures wing never clips off the browser edges regardless of device screen width.
+    const totalWingWidth = (200 + contentWidth) * scale;
+    const margin = 8;
+    let offset = 0;
+
+    if (dir === "right") {
+      const wingRightEdge = rect.left + totalWingWidth;
+      if (wingRightEdge > window.innerWidth - margin) {
+        const overflow = wingRightEdge - (window.innerWidth - margin);
+        offset = -(overflow / scale);
+      }
+    } else {
+      const wingLeftEdge = rect.right - totalWingWidth;
+      if (wingLeftEdge < margin) {
+        const overflow = margin - wingLeftEdge;
+        offset = overflow / scale;
+      }
+    }
+    setClampOffset(offset);
   }, [expandDirection]);
 
   React.useEffect(() => {
@@ -193,16 +299,23 @@ export default function TeamMemberCard({
     return () => window.removeEventListener("resize", updateDirection);
   }, [updateDirection]);
 
+  React.useEffect(() => {
+    if (isActive) {
+      updateDirection();
+    }
+  }, [isActive, updateDirection]);
+
   return (
     <div
       ref={cardRef}
       tabIndex={0}
+      data-active={isActive ? "true" : "false"}
       onClick={handleCardClick}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           if (!e.target.closest("a, button")) {
             e.preventDefault();
-            setIsFocused((prev) => !prev);
+            handleCardClick(e);
           }
         }
       }}
@@ -213,14 +326,9 @@ export default function TeamMemberCard({
     >
       <div
         className="relative h-full w-full"
-        onMouseEnter={() => {
-          updateDirection();
-          setIsHovered(true);
-        }}
-        onMouseMove={updateDirection}
-        onMouseLeave={() => {
-          setIsHovered(false);
-        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
       >
         {/* ========================================================
             1. BASE PILL (200px x 600px, rounded-[300px])
@@ -261,12 +369,8 @@ export default function TeamMemberCard({
                 }}
               />
 
-              {/* Member Name & Designation (Desktop: fades out on card hover/active; Mobile: always visible) */}
-              <div
-                className={`absolute inset-0 transition-all duration-300 ease-out -translate-y-8 md:translate-y-0 pointer-events-none ${
-                  isActive ? "md:opacity-0 md:scale-95" : "md:opacity-100 md:scale-100"
-                }`}
-              >
+              {/* Member Name & Designation: Always visible */}
+              <div className="absolute inset-0 -translate-y-8 pointer-events-none">
                 <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap">
                   <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white">
                     {displayNameArray.map((part, idx) => (
@@ -283,12 +387,8 @@ export default function TeamMemberCard({
             </>
           )}
 
-          {/* Desktop Hover Links: Appear right where the name was in the non-expanded card */}
-          <div
-            className={`hidden md:flex -translate-x-1/2 absolute left-1/2 top-[440px] items-center justify-center gap-3 z-40 transition-all duration-300 ease-out ${
-              isActive ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"
-            }`}
-          >
+          {/* Social Links on Name Card: Always visible within the card */}
+          <div className="absolute bottom-5 inset-x-0 flex items-center justify-center gap-2.5 z-30 pointer-events-auto flex-wrap px-2">
             {parsedSocials.map((item, idx) => (
               <a
                 key={idx}
@@ -297,24 +397,7 @@ export default function TeamMemberCard({
                 rel="noreferrer"
                 aria-label={item.label}
                 onClick={(e) => e.stopPropagation()}
-                className="size-11 p-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-black active:scale-90 transition-all flex items-center justify-center border border-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.9)] backdrop-blur-md hover:scale-115"
-              >
-                <SocialIcon type={item.type} />
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile Only (md:hidden): Direct Social Links */}
-          <div className="md:hidden absolute bottom-3.5 inset-x-0 flex items-center justify-center gap-2 z-30 pointer-events-auto flex-wrap px-2">
-            {parsedSocials.map((item, idx) => (
-              <a
-                key={idx}
-                href={item.url}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={item.label}
-                onClick={(e) => e.stopPropagation()}
-                className="size-10 p-2 rounded-full bg-white/15 hover:bg-white/30 active:scale-90 transition-all flex items-center justify-center border border-white/25 text-white cursor-pointer pointer-events-auto shadow-md"
+                className="size-10 p-2 rounded-full bg-white/15 hover:bg-white text-white hover:text-black active:scale-90 transition-all flex items-center justify-center border border-white/25 shadow-md hover:scale-110"
               >
                 <SocialIcon type={item.type} />
               </a>
@@ -323,156 +406,48 @@ export default function TeamMemberCard({
         </div>
 
         {/* ========================================================
-            2. DESKTOP HOVER EXPANSION CARD (OUTSIDE overflow-clip!)
-            Matches the reference card layout:
-            - Dark rounded container (rounded-[28px], bg-[#121214])
-            - Top: Big bold designation/role
-            - Middle: Description quote with quotation mark
-            - Bottom: Name badge, title/society, social links
-            - Pinned photo stays at exact size, shape, and position.
+            2. HOVER/CLICK EXPANSION CARD (OUTSIDE overflow-clip!)
+            Shows Name, Designation, and Bio quote.
+            Social links are NOT duplicated here (only on base card).
         ======================================================== */}
         <div
           ref={wingRef}
-          className={`hidden md:flex absolute top-0 ${
+          style={clampOffset ? { transform: `translateX(${clampOffset}px)` } : undefined}
+          className={`flex absolute top-0 ${
             expandDir === "left"
-              ? "right-0 flex-row rounded-l-[32px] rounded-r-[100px]"
-              : "left-0 flex-row-reverse rounded-l-[100px] rounded-r-[32px]"
-          } w-[560px] h-[600px] bg-[#121214]/95 backdrop-blur-2xl border border-white/15 shadow-[0_28px_70px_rgba(0,0,0,0.95)] ${
-            isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+              ? "right-0 flex-row rounded-l-[28px] md:rounded-l-[32px] rounded-r-[100px]"
+              : "left-0 flex-row-reverse rounded-l-[100px] rounded-r-[28px] md:rounded-r-[32px]"
+          } w-[420px] md:w-[560px] h-[600px] bg-[#121214]/95 backdrop-blur-2xl border border-white/15 shadow-[0_28px_70px_rgba(0,0,0,0.95)] ${
+            isActive ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"
           } transition-all duration-300 ease-out z-20`}
         >
-          {/* Content Column (360px wide) */}
-          <div className="w-[360px] h-full flex flex-col justify-between py-10 px-8 shrink-0 text-left">
+          {/* Content Column (220px mobile, 360px desktop) */}
+          <div className="w-[220px] md:w-[360px] h-full flex flex-col justify-between py-8 px-4 md:py-12 md:px-8 shrink-0 text-left">
             {/* Top: Name on top, with Club / Designation below that */}
             <div>
-              <p className="font-['Satoshi',Arial,sans-serif] font-bold text-[30px] sm:text-[34px] leading-[1.15] text-white tracking-tight">
+              <p className="font-['Satoshi',Arial,sans-serif] font-bold text-[26px] sm:text-[28px] md:text-[34px] leading-[1.15] text-white tracking-tight break-words">
                 {fullName}
               </p>
-              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[16px] sm:text-[18px] text-[#ffd9e5] tracking-wide mt-2">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[15px] sm:text-[16px] md:text-[18px] text-[#ffd9e5] tracking-wide mt-1.5 md:mt-2 break-words">
                 {designation}
               </p>
             </div>
 
             {/* Middle: Description Bio */}
-            <div className="my-auto py-4">
-              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[14.5px] sm:text-[15.5px] leading-[1.55] text-white/85">
+            <div className="my-auto py-3 md:py-4 max-h-[380px] overflow-y-auto">
+              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[22px] sm:text-[24px] md:text-[16px] leading-[1.4] md:leading-[1.6] text-white/95 break-words whitespace-pre-line">
                 {finalBio}
               </p>
             </div>
 
-            {/* Bottom: Social links inside the expansion wing */}
-            <div className="flex items-center gap-3 pt-2">
-              {parsedSocials.map((item, idx) => (
-                <a
-                  key={idx}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={item.label}
-                  onClick={(e) => e.stopPropagation()}
-                  className="size-10 p-2.5 rounded-full bg-white/10 hover:bg-white text-white hover:text-black active:scale-95 transition-all flex items-center justify-center border border-white/20 shadow-md backdrop-blur-md hover:scale-110"
-                >
-                  <SocialIcon type={item.type} />
-                </a>
-              ))}
-            </div>
+            {/* Bottom spacer for visual balance */}
+            <div className="h-4 md:h-6" />
           </div>
 
-          {/* Transparent Spacer (200px x 600px): Keeps 360px wing offset without covering base pill */}
+          {/* Transparent Spacer (200px x 600px): Keeps 220px/360px wing offset without covering base pill */}
           <div className="w-[200px] h-[600px] shrink-0 pointer-events-none" />
         </div>
       </div>
-
-      {/* ========================================================
-          3. MOBILE RESPONSIVE MODAL (PORTAL)
-          Opens on click/tap on mobile devices (< md).
-      ======================================================== */}
-      {isFocused && typeof document !== "undefined" && createPortal(
-        <div
-          className="md:hidden fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-300"
-          onClick={() => setIsFocused(false)}
-        >
-          <div
-            className="w-full max-w-[340px] bg-[#121214] border border-white/20 rounded-[32px] p-6 shadow-[0_24px_60px_rgba(0,0,0,0.9)] relative flex flex-col items-center text-center max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Top row: Word/Domain pill + Close button */}
-            <div className="w-full flex items-center justify-between mb-4">
-              {word ? (
-                <span
-                  className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border"
-                  style={{
-                    backgroundColor: `${color || "#feb9ce"}25`,
-                    color: color || "#feb9ce",
-                    borderColor: `${color || "#feb9ce"}55`,
-                  }}
-                >
-                  {word}
-                </span>
-              ) : (
-                <span />
-              )}
-              <button
-                type="button"
-                aria-label="Close"
-                onClick={() => setIsFocused(false)}
-                className="size-8 rounded-full bg-white/10 hover:bg-white/20 active:scale-90 text-white/80 hover:text-white flex items-center justify-center transition-all cursor-pointer"
-              >
-                <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Member Photo cutout / Avatar */}
-            <div
-              className="size-28 rounded-full overflow-hidden border-2 shadow-xl mb-4 shrink-0 relative bg-black/60"
-              style={{ borderColor: color || "#feb9ce" }}
-            >
-              <img
-                src={image}
-                alt={fullName}
-                className="size-full object-cover object-top"
-              />
-            </div>
-
-            {/* Name */}
-            <h3 className="font-['Satoshi',Arial,sans-serif] font-bold text-[24px] leading-tight text-white tracking-tight">
-              {fullName}
-            </h3>
-
-            {/* Designation */}
-            <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[15px] text-[#ffd9e5] tracking-wide mt-1">
-              {designation}
-            </p>
-
-            {/* Bio / Quote */}
-            <div className="my-4 px-3 py-3 rounded-2xl bg-white/[0.05] border border-white/10 w-full text-center">
-              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[14.5px] leading-[1.55] text-white/85">
-                {finalBio}
-              </p>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center justify-center gap-3 pt-1 flex-wrap">
-              {parsedSocials.map((item, idx) => (
-                <a
-                  key={idx}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={item.label}
-                  onClick={(e) => e.stopPropagation()}
-                  className="size-11 p-2.5 rounded-full bg-white/15 hover:bg-white active:scale-90 text-white hover:text-black transition-all flex items-center justify-center border border-white/25 shadow-md"
-                >
-                  <SocialIcon type={item.type} />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>,
-        document.body
-      )}
     </div>
   );
 }

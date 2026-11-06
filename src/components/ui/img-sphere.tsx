@@ -545,7 +545,11 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
               src={selectedImage.src}
               alt={selectedImage.alt}
               className={`w-full h-full object-cover transition-all duration-300 ${
-                hasDistinctFullSrc && !highResLoaded ? 'scale-105 blur-[3px]' : 'scale-100 blur-0'
+                hasDistinctFullSrc && !highResLoaded
+                  ? 'scale-105 blur-[3px] opacity-100'
+                  : hasDistinctFullSrc
+                    ? 'opacity-0 pointer-events-none'
+                    : 'scale-100 blur-0 opacity-100'
               }`}
             />
 
