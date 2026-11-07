@@ -120,19 +120,30 @@ export default function TeamMemberCard({
     .trim();
 
   const cardRef = React.useRef(null);
+  const wingRef = React.useRef(null);
   const cardId = React.useId();
 
+  // Static fallback based on className or explicit prop:
+  // Cards in columns < 500px (ml-0, ml-[217px], ml-[434px]) expand right.
+  // Cards in columns >= 500px (ml-[651px], ml-[868px], ml-[1085px]) expand left.
+  const staticDir = React.useMemo(() => {
+    if (expandDirection) return expandDirection;
+    const mlMatch = className.match(/\bml-\[([\d.]+)px\]/);
+    if (mlMatch) {
+      const ml = parseFloat(mlMatch[1]);
+      if (ml < 500) return "right";
+      return "left";
+    }
+    return "right";
+  }, [className, expandDirection]);
+
+  const [expandDir, setExpandDir] = React.useState(staticDir);
+  const [clampOffset, setClampOffset] = React.useState(0);
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPinned, setIsPinned] = React.useState(false);
   const [isDismissed, setIsDismissed] = React.useState(false);
 
   const isActive = (!isDismissed && isHovered) || isPinned;
-  const panelSide = React.useMemo(() => {
-    if (expandDirection) return expandDirection;
-    const mlMatch = className.match(/\bml-\[([\d.]+)px\]/);
-    const columnOffset = mlMatch ? Number.parseFloat(mlMatch[1]) : 0;
-    return columnOffset < 500 ? "right" : "left";
-  }, [className, expandDirection]);
 
   // Listen for another card opening anywhere and immediately close this card
   React.useEffect(() => {
@@ -146,6 +157,20 @@ export default function TeamMemberCard({
     window.addEventListener("ncs-card-opened", handleOtherCardOpened);
     return () => window.removeEventListener("ncs-card-opened", handleOtherCardOpened);
   }, [cardId]);
+
+  // Elevate parent column and row stacking context so active wing always paints on top
+  React.useEffect(() => {
+    if (!cardRef.current) return;
+    const colWrapper = cardRef.current.closest("[data-grid-col='true']");
+    const rowWrapper = cardRef.current.closest("[data-grid-row='true']");
+    if (isActive) {
+      if (colWrapper) colWrapper.style.zIndex = "50";
+      if (rowWrapper) rowWrapper.style.zIndex = "50";
+    } else {
+      if (colWrapper) colWrapper.style.zIndex = "";
+      if (rowWrapper) rowWrapper.style.zIndex = "";
+    }
+  }, [isActive]);
 
   // Clear state when clicking outside the card or pressing Escape
   React.useEffect(() => {
@@ -176,6 +201,14 @@ export default function TeamMemberCard({
 
   const handleCardClick = (e) => {
     if (e.target.closest("a, button")) return;
+    // If clicking inside the expansion wing, ensure it stays pinned open
+    if (wingRef.current && wingRef.current.contains(e.target)) {
+      setIsPinned(true);
+      setIsDismissed(false);
+      return;
+    }
+
+    updateDirection();
 
     if (isActive) {
       // Clicking an active card closes it
@@ -190,12 +223,19 @@ export default function TeamMemberCard({
     }
   };
 
-  // Trigger hover on desktop mouse and immediately close any other card
+  // Only trigger hover on devices with fine pointer / real hover support (e.g. desktop mouse)
+  // This completely eliminates synthetic touch-event hover glitches on mobile
   const handleMouseEnter = () => {
     if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      updateDirection();
       setIsHovered(true);
       setIsDismissed(false);
-      window.dispatchEvent(new CustomEvent("ncs-card-opened", { detail: cardId }));
+    }
+  };
+
+  const handleMouseMove = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      updateDirection();
     }
   };
 
@@ -203,13 +243,72 @@ export default function TeamMemberCard({
     if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
       setIsHovered(false);
       setIsDismissed(false);
-      setIsPinned(false);
     }
   };
+
+  // Dynamic viewport-aware collision detection & clamp offset:
+  // Ensures cards never overflow the browser viewport horizontally regardless of screen size or zoom.
+  const updateDirection = React.useCallback(() => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const isMobile = window.innerWidth < 768;
+    const scale = isMobile ? (rect.width / 200 || 0.54) : 1;
+    const contentWidth = isMobile ? 220 : 360;
+    const neededSpace = contentWidth * scale;
+
+    const spaceOnLeft = rect.left;
+    const spaceOnRight = window.innerWidth - rect.right;
+
+    let dir = expandDirection;
+    if (!dir) {
+      if (spaceOnLeft < neededSpace && spaceOnRight >= neededSpace) {
+        dir = "right";
+      } else if (spaceOnRight < neededSpace && spaceOnLeft >= neededSpace) {
+        dir = "left";
+      } else {
+        dir = spaceOnRight >= spaceOnLeft ? "right" : "left";
+      }
+    }
+    setExpandDir(dir);
+
+    // Dynamic viewport boundary collision clamping:
+    // Ensures wing never clips off the browser edges regardless of device screen width.
+    const totalWingWidth = (200 + contentWidth) * scale;
+    const margin = 8;
+    let offset = 0;
+
+    if (dir === "right") {
+      const wingRightEdge = rect.left + totalWingWidth;
+      if (wingRightEdge > window.innerWidth - margin) {
+        const overflow = wingRightEdge - (window.innerWidth - margin);
+        offset = -(overflow / scale);
+      }
+    } else {
+      const wingLeftEdge = rect.right - totalWingWidth;
+      if (wingLeftEdge < margin) {
+        const overflow = margin - wingLeftEdge;
+        offset = overflow / scale;
+      }
+    }
+    setClampOffset(offset);
+  }, [expandDirection]);
+
+  React.useEffect(() => {
+    updateDirection();
+    window.addEventListener("resize", updateDirection);
+    return () => window.removeEventListener("resize", updateDirection);
+  }, [updateDirection]);
+
+  React.useEffect(() => {
+    if (isActive) {
+      updateDirection();
+    }
+  }, [isActive, updateDirection]);
 
   return (
     <div
       ref={cardRef}
+      tabIndex={0}
       data-active={isActive ? "true" : "false"}
       onClick={handleCardClick}
       onKeyDown={(e) => {
@@ -221,22 +320,21 @@ export default function TeamMemberCard({
         }
       }}
       className={`col-1 h-[600px] relative row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center cursor-pointer ${
-        isActive ? "scale-[1.03] z-30" : "scale-100 z-10"
+        isActive ? "scale-[1.06] z-[100]" : "scale-100 z-10"
       } ${className}`}
       data-node-id={dataNodeId}
     >
       <div
         className="relative h-full w-full"
         onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         {/* ========================================================
             1. BASE PILL (200px x 600px, rounded-[300px])
         ======================================================== */}
         <div
-          className={`absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px] z-20 pointer-events-auto transition-shadow duration-300 ${
-            isActive ? "ring-2 ring-white/75 shadow-[0_0_28px_rgba(255,255,255,0.35)]" : ""
-          }`}
+          className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px] z-30 pointer-events-auto"
         >
           {isFullSvgCard ? (
             <>
@@ -247,7 +345,9 @@ export default function TeamMemberCard({
                 src={image}
               />
               <div
-                className="hidden md:block absolute inset-0 bg-black/40 transition-opacity duration-300 pointer-events-none opacity-0 group-hover:opacity-100"
+                className={`hidden md:block absolute inset-0 bg-black/60 transition-opacity duration-300 pointer-events-none ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
               />
             </>
           ) : (
@@ -255,7 +355,7 @@ export default function TeamMemberCard({
               <ProfileCardBackdrop color={color} word={word} />
               <ProfileCardGhostOverlay src={image} />
 
-              {/* Profile cutout photo */}
+              {/* Profile cutout photo - no scale on hover, completely static */}
               <div className={cleanPhotoClasses || "-translate-x-1/2 absolute h-[494px] left-1/2 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[106px] w-[332px] profile-img-bottom-shadow"}>
                 <img alt={fullName} className={imgClasses} src={image} />
               </div>
@@ -269,7 +369,7 @@ export default function TeamMemberCard({
                 }}
               />
 
-              {/* Member Name & Designation */}
+              {/* Member Name & Designation: Always visible */}
               <div className="absolute inset-0 -translate-y-8 pointer-events-none">
                 <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap">
                   <div className="flex flex-col font-['Satoshi',Arial,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[28px] text-white">
@@ -287,7 +387,7 @@ export default function TeamMemberCard({
             </>
           )}
 
-          {/* Social Links on Base Card */}
+          {/* Social Links on Name Card: Always visible within the card */}
           <div className="absolute bottom-5 inset-x-0 flex items-center justify-center gap-2.5 z-30 pointer-events-auto flex-wrap px-2">
             {parsedSocials.map((item, idx) => (
               <a
@@ -305,33 +405,47 @@ export default function TeamMemberCard({
           </div>
         </div>
 
-        {/* Compact popup is attached to the nearest side of the card. */}
+        {/* ========================================================
+            2. HOVER/CLICK EXPANSION CARD (OUTSIDE overflow-clip!)
+            Shows Name, Designation, and Bio quote.
+            Social links are NOT duplicated here (only on base card).
+        ======================================================== */}
         <div
-          className={`absolute top-1/2 z-40 flex h-[260px] w-[200px] -translate-y-1/2 flex-col rounded-2xl border border-white/35 ring-1 ring-white/20 bg-[#080b12]/60 px-4 py-4 text-left shadow-[0_0_24px_rgba(255,255,255,0.16),0_18px_42px_rgba(0,0,0,0.8)] backdrop-blur-sm ${
-            panelSide === "left" ? "right-full" : "left-full"
-          } ${
-            isActive ? "opacity-100 visible scale-100" : "opacity-0 invisible scale-[0.96]"
-          } pointer-events-none transition-all duration-300 ease-out`}
+          ref={wingRef}
+          style={clampOffset ? { transform: `translateX(${clampOffset}px)` } : undefined}
+          className={`flex absolute top-0 ${
+            expandDir === "left"
+              ? "right-0 flex-row rounded-l-[28px] md:rounded-l-[32px] rounded-r-[100px]"
+              : "left-0 flex-row-reverse rounded-l-[100px] rounded-r-[28px] md:rounded-r-[32px]"
+          } w-[420px] md:w-[560px] h-[600px] bg-[#121214]/95 backdrop-blur-2xl border border-white/15 shadow-[0_28px_70px_rgba(0,0,0,0.95)] ${
+            isActive ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"
+          } transition-all duration-300 ease-out z-20`}
         >
-          <div className="flex h-full w-full flex-col justify-between">
-            {/* Name and designation */}
+          {/* Content Column (220px mobile, 360px desktop) */}
+          <div className="w-[220px] md:w-[360px] h-full flex flex-col justify-between py-8 px-4 md:py-12 md:px-8 shrink-0 text-left">
+            {/* Top: Name on top, with Club / Designation below that */}
             <div>
-              <p className="font-['Satoshi',Arial,sans-serif] font-bold text-[16px] leading-[1.15] text-white tracking-tight break-words">
+              <p className="font-['Satoshi',Arial,sans-serif] font-bold text-[26px] sm:text-[28px] md:text-[34px] leading-[1.15] text-white tracking-tight break-words">
                 {fullName}
               </p>
-              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[12px] text-[#ffd9e5] tracking-wide mt-1 break-words">
+              <p className="font-['Satoshi',Arial,sans-serif] font-medium text-[15px] sm:text-[16px] md:text-[18px] text-[#ffd9e5] tracking-wide mt-1.5 md:mt-2 break-words">
                 {designation}
               </p>
             </div>
 
-            {/* Member bio */}
-            <div className="my-auto py-2 max-h-[105px] overflow-y-auto">
-              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[12px] leading-[1.4] text-white/95 break-words whitespace-pre-line">
+            {/* Middle: Description Bio */}
+            <div className="my-auto py-3 md:py-4 max-h-[380px] overflow-y-auto">
+              <p className="font-['Playfair_Display',Georgia,serif] italic font-medium text-[22px] sm:text-[24px] md:text-[16px] leading-[1.4] md:leading-[1.6] text-white/95 break-words whitespace-pre-line">
                 {finalBio}
               </p>
             </div>
 
+            {/* Bottom spacer for visual balance */}
+            <div className="h-4 md:h-6" />
           </div>
+
+          {/* Transparent Spacer (200px x 600px): Keeps 220px/360px wing offset without covering base pill */}
+          <div className="w-[200px] h-[600px] shrink-0 pointer-events-none" />
         </div>
       </div>
     </div>

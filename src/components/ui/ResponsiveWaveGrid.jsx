@@ -58,7 +58,7 @@ export default function ResponsiveWaveGrid({ children, uniformHeight = false }) 
           <div
             key={rowIndex}
             data-grid-row="true"
-            className="flex items-start justify-center gap-x-2 w-full relative"
+            className="flex items-start justify-center gap-x-2 w-full relative has-[[data-active='true']]:z-50"
           >
             {rowCards.map((child, colInRow) => {
               // Wave shift pattern:
@@ -94,9 +94,9 @@ export default function ResponsiveWaveGrid({ children, uniformHeight = false }) 
                 <div
                   key={colInRow}
                   data-grid-col="true"
-                  className={`w-[108px] h-[315px] shrink-0 flex items-start justify-center ${shiftClass} relative`}
+                  className={`w-[108px] h-[315px] shrink-0 flex items-start justify-center ${shiftClass} relative has-[[data-active='true']]:z-50`}
                 >
-                  <div className="w-[200px] h-[600px] shrink-0 origin-top scale-[0.54] relative">
+                  <div className="w-[200px] h-[600px] shrink-0 origin-top scale-[0.54] relative has-[[data-active='true']]:z-50">
                     {mobileChild}
                   </div>
                 </div>
