@@ -7,6 +7,7 @@ import {
   workshopsPhotos,
   zealiconPhotos,
   orientation25Photos,
+  howToHackathonPhotos,
 } from "../data/galleryPhotos"
 import Footer from "../components/Footer"
 
@@ -63,7 +64,7 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
               </p>
             </div>
             <InteractiveFolderGallery
-              folderName="INOUT Hacks '25"
+              folderName="INOUT Hacks"
               photos={inoutHacks30Photos}
               className="py-2"
             />
@@ -114,8 +115,25 @@ export default function Gallery({ activePage = "Gallery", onNavigate }) {
               </p>
             </div>
             <InteractiveFolderGallery
-              folderName="Orientation '25"
+              folderName="Orientation"
               photos={orientation25Photos}
+              className="py-2"
+            />
+          </div>
+
+          {/* Folder 5: How to Hackathon */}
+          <div className="flex flex-col items-center justify-between rounded-[24px] bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 p-3.5 sm:p-4 backdrop-blur-xl shadow-xl overflow-visible transition-all duration-300 hover:border-white/25">
+            <div className="text-center mb-1">
+              <h3 className="text-lg sm:text-xl font-bold text-white font-['Satoshi',Arial,sans-serif] tracking-tight">
+                How to Hackathon
+              </h3>
+              <p className="text-white/60 text-xs mt-1 line-clamp-2 max-w-[250px] leading-relaxed">
+                Roadmap, networking & mentoring for first-time hackers
+              </p>
+            </div>
+            <InteractiveFolderGallery
+              folderName="How to Hackathon"
+              photos={howToHackathonPhotos}
               className="py-2"
             />
           </div>
