@@ -41,8 +41,6 @@ export const inoutHacks30Photos: GalleryPhoto[] = [
   { id: 30, image: publicAsset("assets/events/craffiti.webp"), title: "Craffiti Design Sprint", caption: "Digital art and design workshop" },
 ]
 
-export const howToHackathonPhotos: GalleryPhoto[] = []
-
 export const orientation25Photos: GalleryPhoto[] = [
   { id: "orien-1", image: publicAsset("assets/gallery/orien/web/orien_01.webp"), thumb: publicAsset("assets/gallery/orien/thumbs/orien_01.webp"), title: "Freshers Auditorium", caption: "Auditorium packed for the grand orientation kickoff" },
   { id: "orien-2", image: publicAsset("assets/gallery/orien/web/orien_02.webp"), thumb: publicAsset("assets/gallery/orien/thumbs/orien_02.webp"), title: "Executive Keynote", caption: "Society leads sharing the vision and roadmap" },
