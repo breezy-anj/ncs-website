@@ -64,6 +64,31 @@ const teamMembers = [
     name: "Sankalp Saxena",
     role: "Android Developer at Groww",
   },
+  {
+    image: publicAsset("assets/achievments/Pranjal Gupta.webp"),
+    name: "Pranjal Gupta",
+    role: "ICPC Asia West Regionalist",
+  },
+  {
+    image: publicAsset("assets/achievments/Aryan Singh.webp"),
+    name: "Aryan Singh",
+    role: "ICPC Asia West Regionalist",
+  },
+  {
+    image: publicAsset("assets/achievments/Shreyansh Srivastava.webp"),
+    name: "Shreyansh Srivastava",
+    role: "ICPC Asia West Regionalist",
+  },
+  {
+    image: publicAsset("assets/achievments/Utkarsh Shukla.webp"),
+    name: "Utkarsh Shukla",
+    role: "ICPC Asia West Regionalist",
+  },
+  {
+    image: publicAsset("assets/achievments/Shreyansh Pandey.webp"),
+    name: "Shreyansh Pandey",
+    role: "ICPC Asia West Regionalist",
+  },
 ]
 
 export default function TeamMembersMarquee() {
