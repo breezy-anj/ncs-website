@@ -127,7 +127,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:593"
                   >
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:594"
                   >
   <div className="relative h-full w-full">
@@ -141,7 +141,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle31}
                       />
                     </div>
@@ -171,7 +171,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:599"
                   >
   <div className="relative h-full w-full">
@@ -185,7 +185,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle32}
                       />
                     </div>
@@ -219,7 +219,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:604"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:605"
                     >
   <div className="relative h-full w-full">
@@ -233,7 +233,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle33}
                         />
                       </div>
@@ -264,7 +264,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 </div>
                   </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:610"
                   >
   <div className="relative h-full w-full">
@@ -278,7 +278,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle34}
                       />
                     </div>
@@ -308,7 +308,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:615"
                   >
   <div className="relative h-full w-full">
@@ -322,7 +322,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle35}
                       />
                     </div>
@@ -352,7 +352,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:620"
                   >
   <div className="relative h-full w-full">
@@ -366,7 +366,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle36}
                       />
                     </div>
@@ -401,7 +401,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   data-node-id="1:625"
                 >
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:626"
                   >
   <div className="relative h-full w-full">
@@ -415,7 +415,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle37}
                       />
                     </div>
@@ -445,7 +445,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:631"
                   >
   <div className="relative h-full w-full">
@@ -459,7 +459,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle38}
                       />
                     </div>
@@ -490,7 +490,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:636"
                   >
   <div className="relative h-full w-full">
@@ -504,7 +504,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle39}
                       />
                     </div>
@@ -534,7 +534,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:641"
                   >
   <div className="relative h-full w-full">
@@ -548,7 +548,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle40}
                       />
                     </div>
@@ -578,7 +578,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:646"
                   >
   <div className="relative h-full w-full">
@@ -592,7 +592,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle41}
                       />
                     </div>
@@ -645,7 +645,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:654"
                     >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:655"
                     >
   <div className="relative h-full w-full">
@@ -659,7 +659,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle42}
                         />
                       </div>
@@ -689,7 +689,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:660"
                     >
   <div className="relative h-full w-full">
@@ -703,7 +703,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle43}
                         />
                       </div>
@@ -737,7 +737,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:665"
                     >
                       
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                         data-node-id="1:666"
                       >
   <div className="relative h-full w-full">
@@ -751,7 +751,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                             src={imgRectangle44}
                           />
                         </div>
@@ -782,7 +782,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 </div>
                     </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:671"
                     >
   <div className="relative h-full w-full">
@@ -796,7 +796,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle45}
                         />
                       </div>
@@ -826,7 +826,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:676"
                     >
   <div className="relative h-full w-full">
@@ -840,7 +840,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle46}
                         />
                       </div>
@@ -870,7 +870,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:681"
                     >
   <div className="relative h-full w-full">
@@ -884,7 +884,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle47}
                         />
                       </div>
@@ -919,7 +919,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:686"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:687"
                     >
   <div className="relative h-full w-full">
@@ -933,7 +933,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle48}
                         />
                       </div>
@@ -965,7 +965,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:692"
                     >
   <div className="relative h-full w-full">
@@ -979,7 +979,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle49}
                         />
                       </div>
@@ -1013,7 +1013,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:697"
                     >
                       
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                         data-node-id="1:698"
                       >
   <div className="relative h-full w-full">
@@ -1027,7 +1027,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                            className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                             src={imgRectangle50}
                           />
                         </div>
@@ -1058,7 +1058,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 </div>
                     </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:703"
                     >
   <div className="relative h-full w-full">
@@ -1072,7 +1072,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle51}
                         />
                       </div>
@@ -1102,7 +1102,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:708"
                     >
   <div className="relative h-full w-full">
@@ -1116,7 +1116,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle52}
                         />
                       </div>
@@ -1151,7 +1151,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:713"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:714"
                     >
   <div className="relative h-full w-full">
@@ -1165,7 +1165,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle53}
                         />
                       </div>
@@ -1195,7 +1195,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:719"
                     >
   <div className="relative h-full w-full">
@@ -1209,7 +1209,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle54}
                         />
                       </div>
@@ -1243,7 +1243,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:724"
                     >
                       
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                         data-node-id="1:725"
                       >
   <div className="relative h-full w-full">
@@ -1257,7 +1257,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                             src={imgRectangle55}
                           />
                         </div>
@@ -1288,7 +1288,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 </div>
                     </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:730"
                     >
   <div className="relative h-full w-full">
@@ -1302,7 +1302,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle56}
                         />
                       </div>
@@ -1332,7 +1332,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:735"
                     >
   <div className="relative h-full w-full">
@@ -1346,7 +1346,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle57}
                         />
                       </div>
@@ -1385,7 +1385,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:741"
                     >
                       
-<div tabIndex={0} className="col-1 h-[600px] ml-[217px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[217px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                         data-node-id="1:742"
                       >
   <div className="relative h-full w-full">
@@ -1399,7 +1399,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                             src={imgRectangle58}
                           />
                         </div>
@@ -1429,7 +1429,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                       
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                         data-node-id="1:747"
                       >
   <div className="relative h-full w-full">
@@ -1443,7 +1443,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                         >
                           <img
                             alt=""
-                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                            className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                             src={imgRectangle59}
                           />
                         </div>
@@ -1473,7 +1473,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     </div>
-                    <div tabIndex={0} className="bg-black border border-white/10 h-[600px] overflow-clip relative rounded-[300px] group cursor-pointer shrink-0 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+                    <div className="bg-black border border-white/10 h-[600px] overflow-clip relative rounded-[300px] group cursor-pointer shrink-0 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:752"
                     >
                       <ProfileCardBackdrop color="#feb9ce" />
@@ -1483,7 +1483,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle60}
                         />
                       </div>
@@ -1535,7 +1535,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:760"
                     >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:761"
                     >
   <div className="relative h-full w-full">
@@ -1549,7 +1549,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle61}
                         />
                       </div>
@@ -1579,7 +1579,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:766"
                     >
   <div className="relative h-full w-full">
@@ -1593,7 +1593,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle62}
                         />
                       </div>
@@ -1622,7 +1622,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:771"
                     >
   <div className="relative h-full w-full">
@@ -1636,7 +1636,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle63}
                         />
                       </div>
@@ -1666,7 +1666,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:776"
                     >
   <div className="relative h-full w-full">
@@ -1680,7 +1680,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle64}
                         />
                       </div>
@@ -1710,7 +1710,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:781"
                     >
   <div className="relative h-full w-full">
@@ -1724,7 +1724,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle65}
                         />
                       </div>
@@ -1759,7 +1759,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:786"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:787"
                     >
   <div className="relative h-full w-full">
@@ -1773,7 +1773,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle66}
                         />
                       </div>
@@ -1803,7 +1803,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:792"
                     >
   <div className="relative h-full w-full">
@@ -1817,7 +1817,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle67}
                         />
                       </div>
@@ -1847,7 +1847,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:797"
                     >
   <div className="relative h-full w-full">
@@ -1861,7 +1861,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle68}
                         />
                       </div>
@@ -1891,7 +1891,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:802"
                     >
   <div className="relative h-full w-full">
@@ -1905,7 +1905,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle69}
                         />
                       </div>
@@ -1935,7 +1935,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:807"
                     >
   <div className="relative h-full w-full">
@@ -1949,7 +1949,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle70}
                         />
                       </div>
@@ -1998,7 +1998,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:814"
                   >
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:815"
                   >
   <div className="relative h-full w-full">
@@ -2012,7 +2012,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle71}
                       />
                     </div>
@@ -2042,7 +2042,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:820"
                   >
   <div className="relative h-full w-full">
@@ -2056,7 +2056,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle72}
                       />
                     </div>
@@ -2090,7 +2090,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:825"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:826"
                     >
   <div className="relative h-full w-full">
@@ -2104,7 +2104,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle73}
                         />
                       </div>
@@ -2135,7 +2135,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 </div>
                   </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:831"
                   >
   <div className="relative h-full w-full">
@@ -2149,7 +2149,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle74}
                       />
                     </div>
@@ -2179,7 +2179,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:836"
                   >
   <div className="relative h-full w-full">
@@ -2193,7 +2193,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle75}
                       />
                     </div>
@@ -2223,7 +2223,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:841"
                   >
   <div className="relative h-full w-full">
@@ -2237,7 +2237,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle76}
                       />
                     </div>
@@ -2272,7 +2272,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                   data-node-id="1:846"
                 >
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:847"
                   >
   <div className="relative h-full w-full">
@@ -2286,7 +2286,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle77}
                       />
                     </div>
@@ -2316,7 +2316,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434.88px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:852"
                   >
   <div className="relative h-full w-full">
@@ -2330,7 +2330,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle78}
                       />
                     </div>
@@ -2364,7 +2364,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:857"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:858"
                     >
   <div className="relative h-full w-full">
@@ -2378,7 +2378,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle79}
                         />
                       </div>
@@ -2409,7 +2409,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
 </div>
                   </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[652.32px] mt-[177.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:863"
                   >
   <div className="relative h-full w-full">
@@ -2423,7 +2423,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle80}
                       />
                     </div>
@@ -2453,7 +2453,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[869.76px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:868"
                   >
   <div className="relative h-full w-full">
@@ -2467,7 +2467,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle81}
                       />
                     </div>
@@ -2497,7 +2497,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                   
-<div tabIndex={0} className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[1095.84px] mt-[179.12px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                     data-node-id="1:873"
                   >
   <div className="relative h-full w-full">
@@ -2511,7 +2511,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     >
                       <img
                         alt=""
-                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                         src={imgRectangle82}
                       />
                     </div>
@@ -2564,7 +2564,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       data-node-id="1:881"
                     >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:882"
                     >
   <div className="relative h-full w-full">
@@ -2578,7 +2578,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle83}
                         />
                       </div>
@@ -2608,7 +2608,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:887"
                     >
   <div className="relative h-full w-full">
@@ -2622,7 +2622,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle84}
                         />
                       </div>
@@ -2652,7 +2652,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:892"
                     >
   <div className="relative h-full w-full">
@@ -2666,7 +2666,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle85}
                         />
                       </div>
@@ -2696,7 +2696,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:897"
                     >
   <div className="relative h-full w-full">
@@ -2710,7 +2710,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle86}
                         />
                       </div>
@@ -2740,7 +2740,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:902"
                     >
   <div className="relative h-full w-full">
@@ -2754,7 +2754,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle87}
                         />
                       </div>
@@ -2790,7 +2790,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                     data-node-id="1:907"
                   >
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-0 mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:908"
                     >
   <div className="relative h-full w-full">
@@ -2804,7 +2804,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle88}
                         />
                       </div>
@@ -2834,7 +2834,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[217px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:913"
                     >
   <div className="relative h-full w-full">
@@ -2848,7 +2848,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle89}
                         />
                       </div>
@@ -2878,7 +2878,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[434px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:918"
                     >
   <div className="relative h-full w-full">
@@ -2892,7 +2892,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle90}
                         />
                       </div>
@@ -2922,7 +2922,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[868px] mt-0 relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:923"
                     >
   <div className="relative h-full w-full">
@@ -2936,7 +2936,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle91}
                         />
                       </div>
@@ -2966,7 +2966,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
   </div>
 </div>
                     
-<div tabIndex={0} className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.06] hover:z-50 focus:scale-[1.06] focus:z-50 focus-visible:scale-[1.06] focus-visible:z-50"
+<div className="col-1 h-[600px] ml-[651px] mt-[177px] relative group cursor-pointer row-1 w-[200px] outline-none transition-transform duration-300 ease-out origin-center hover:scale-[1.03] active:scale-[1.03] hover:z-20 active:z-20"
                       data-node-id="1:928"
                     >
   <div className="relative h-full w-full">
@@ -2980,7 +2980,7 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
                       >
                         <img
                           alt=""
-                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="absolute inset-0 max-w-none object-contain pointer-events-none size-full transition-transform duration-500"
                           src={imgRectangle92}
                         />
                       </div>
