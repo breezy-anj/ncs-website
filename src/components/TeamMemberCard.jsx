@@ -201,12 +201,6 @@ export default function TeamMemberCard({
 
   const handleCardClick = (e) => {
     if (e.target.closest("a, button")) return;
-    // If clicking inside the expansion wing, ensure it stays pinned open
-    if (wingRef.current && wingRef.current.contains(e.target)) {
-      setIsPinned(true);
-      setIsDismissed(false);
-      return;
-    }
 
     updateDirection();
 
@@ -324,16 +318,14 @@ export default function TeamMemberCard({
       } ${className}`}
       data-node-id={dataNodeId}
     >
-      <div
-        className="relative h-full w-full"
-        onMouseEnter={handleMouseEnter}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="relative h-full w-full">
         {/* ========================================================
             1. BASE PILL (200px x 600px, rounded-[300px])
         ======================================================== */}
         <div
+          onMouseEnter={handleMouseEnter}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
           className="absolute inset-0 bg-black border border-white/10 overflow-clip rounded-[300px] z-30 pointer-events-auto"
         >
           {isFullSvgCard ? (
@@ -412,6 +404,16 @@ export default function TeamMemberCard({
         ======================================================== */}
         <div
           ref={wingRef}
+          onMouseEnter={() => {
+            setIsHovered(false);
+            setIsPinned(false);
+          }}
+          onMouseMove={() => {
+            if (isHovered || isPinned) {
+              setIsHovered(false);
+              setIsPinned(false);
+            }
+          }}
           style={clampOffset ? { transform: `translateX(${clampOffset}px)` } : undefined}
           className={`flex absolute top-0 ${
             expandDir === "left"

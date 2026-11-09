@@ -92,6 +92,7 @@ export default function Team() {
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="left"
                         dataNodeId="1:59"
                         image={imgRectangle35}
                         color="#6663ff"
@@ -105,7 +106,7 @@ export default function Team() {
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        expandDirection="left"
+                        expandDirection="right"
                         dataNodeId="1:53"
                         image={imgAjinkya}
                         color="#feb9ce"
@@ -125,6 +126,7 @@ export default function Team() {
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="right"
                         dataNodeId="1:66"
                         image={imgPranjal}
                         color="#feb9ce"
@@ -138,6 +140,7 @@ export default function Team() {
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="left"
                         dataNodeId="1:47"
                         image={imgRectangle33}
                         color="#ffc931"
@@ -150,6 +153,7 @@ export default function Team() {
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="right"
                         dataNodeId="1:97"
                         image={imgRectangle41}
                         color="#6663ff"
@@ -181,6 +185,7 @@ export default function Team() {
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="left"
                         dataNodeId="1:79"
                         image={imgRectangle38}
                         color="#feb9ce"
@@ -193,7 +198,7 @@ export default function Team() {
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        expandDirection="left"
+                        expandDirection="right"
                         dataNodeId="1:85"
                         image={imgRectangle39}
                         color="#6663ff"
@@ -212,6 +217,7 @@ export default function Team() {
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="right"
                         dataNodeId="1:41"
                         image={imgRectangle32}
                         color="#feb9ce"
@@ -225,6 +231,7 @@ export default function Team() {
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        expandDirection="left"
                         dataNodeId="1:73"
                         image={imgRectangle37}
                         color="#6663ff"
@@ -490,6 +497,7 @@ export default function Team() {
                         photoClasses="-translate-x-1/2 absolute h-[616.8px] left-[calc(50%+17.79px)] shadow-[4.8px_4.8px_4.8px_0px_rgba(0,0,0,0.25)] top-[-34.74px] w-[398.946px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
                         socialLinks={["https://www.linkedin.com/in/bhaskarshah05/", "https://github.com/BhaskarShah05", "https://x.com/bhaskarshah05"]}
+                        bio="One minute I'm fixing typography, the next I'm exploring AI, and five minutes later I've convinced myself to build an entirely new product. My hobbies include overthinking small details and making unnecessarily ambitious plans."
                       />
 
                       <TeamMemberCard

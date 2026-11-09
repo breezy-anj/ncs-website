@@ -65,8 +65,8 @@ const teamMembers = [
     role: "Android Developer at Groww",
   },
   {
-    image: publicAsset("assets/achievments/Pranjal Gupta.webp"),
-    name: "Pranjal Gupta",
+    image: publicAsset("assets/achievments/Pranjal Singh.webp"),
+    name: "Pranjal Singh",
     role: "ICPC Asia West Regionalist",
   },
   {
