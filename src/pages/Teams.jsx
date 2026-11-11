@@ -136,7 +136,7 @@ export default function Team() {
                         photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[68px] profile-img-bottom-shadow"
                         imgClasses="w-full h-auto object-top pointer-events-none"
                         socialLinks={["https://www.linkedin.com/in/pranjal-gupta-766898323", "https://github.com/PranjalGupta280", "https://x.com/TechnoVerse007c"]}
-                        bio="Do your work, Leave the rest to almighty"
+                        bio="Do your work, leave the rest to almighty"
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
@@ -227,7 +227,7 @@ export default function Team() {
                         photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%-97px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[33px] w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
                         socialLinks={["https://www.linkedin.com/in/om-tripathi-67332b26a/", "https://github.com/OmTripathi7095"]}
-                        bio="Believe in yourself, it will take you to heights which rationality never will."
+                        bio="Belief in yourself will take you to heights rationality never will"
                       />
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
