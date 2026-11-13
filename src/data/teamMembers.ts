@@ -100,7 +100,7 @@ const teamMembers: ImageData[] = [
   },
   {
     id: "member-2147239151",
-    src: "/assets/team_avatars/avatar_2147239151.png?v=20261113_1",
+    src: "/assets/team_avatars/avatar_2147239151.png?v=20261113_2",
     alt: "Kuldeep Chaudhary",
     title: "Kuldeep Chaudhary",
     designation: "NCS President",
@@ -328,7 +328,7 @@ export const SPHERE_TEAM_MEMBERS: ImageData[] = ALL_38_TEAM_MEMBERS.map((m) => {
   const cleanFilename = m.src.split("/").pop()?.split("?")[0].replace(".png", ".webp") || ""
   return {
     ...m,
-    src: publicAsset(`/assets/team_avatars/thumbs/${cleanFilename}`),
+    src: publicAsset(`/assets/team_avatars/thumbs/${cleanFilename}?v=20261113_2`),
     fullSrc: m.src,
   }
 });
