@@ -27,12 +27,12 @@ const teamMembers = [
   {
     image: publicAsset("assets/achievments/Ajinkya Mishra.webp"),
     name: "Ajinkya Mishra",
-    role: "Cleared the ICPC Regionalists",
+    role: "2x Asia West ICPC Regionalists",
   },
   {
     image: publicAsset("assets/achievments/Om Tripathi.webp"),
     name: "Om Tripathi",
-    role: "Cleared the ICPC Regionalists",
+    role: "2x Asia West ICPC Regionalists",
   },
   {
     image: publicAsset("assets/achievments/Athrva Gupta.webp"),
@@ -50,7 +50,7 @@ const teamMembers = [
     role: "Smart India Hackathon (SIH) 2025 Winner",
   },
   {
-    image: publicAsset("assets/achievments/Kuldeep Chaudhary.png?v=20261113_3"),
+    image: publicAsset("assets/achievments/Kuldeep Chaudhary.webp"),
     name: "Kuldeep Chaudhary",
     role: "4-Time Hackathon Winner",
   },
@@ -65,8 +65,8 @@ const teamMembers = [
     role: "Android Developer at Groww",
   },
   {
-    image: publicAsset("assets/achievments/Pranjal Singh.webp"),
-    name: "Pranjal Singh",
+    image: publicAsset("assets/achievments/Pranjal Gupta.webp"),
+    name: "Pranjal Gupta",
     role: "ICPC Asia West Regionalist",
   },
   {

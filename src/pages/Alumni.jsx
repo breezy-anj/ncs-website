@@ -2,6 +2,7 @@ import ProfileCardBackdrop from "../components/ProfileCardBackdrop";
 import AlumniCardBottomOverlay from "../components/AlumniCardBottomOverlay";
 import ProfileCardGhostOverlay from "../components/ProfileCardGhost"
 import ResponsiveWaveGrid from "../components/ui/ResponsiveWaveGrid";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 
 import Footer from "../components/Footer"
 
@@ -98,9 +99,10 @@ export default function Alumni({ activePage = "Alumni", onNavigate }) {
               >
                 ALUMNI
               </p>
-              <p className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words">
-                Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we&apos;ve spent over two decades shaping curious minds into visionaries and leaders.
-              </p>
+              <TextGenerateEffect
+                words="Since 2000, our society has been a launchpad for world-class tech talent. Fueled by an relentless passion for computer science and a drive to push boundaries, we've spent over two decades shaping curious minds into visionaries and leaders."
+                className="font-['Satoshi',Arial,sans-serif] font-normal text-[14px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-[1.5] text-white/60 md:text-white/70 max-w-[1340px] w-full px-4 text-center tracking-tight break-words"
+              />
             </div>
             <div
               className="content-stretch flex flex-col gap-[40px] md:gap-[110px] items-center md:items-start relative shrink-0 w-full"
