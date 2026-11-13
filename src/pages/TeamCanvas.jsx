@@ -212,8 +212,8 @@ export default function Team() {
   <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
     <div className="absolute inset-0 bg-[#cbd5d4] overflow-clip rounded-[300px] [backface-visibility:hidden]">
 
-                    <div className="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px]" data-node-id="1:60">
-                      <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle35} />
+                    <div className="left-1/2 -translate-x-1/2 absolute w-[285px] h-[380px] top-[22px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]" data-node-id="1:60">
+                      <img alt="" className="w-full h-full object-contain pointer-events-none" src={imgRectangle35} />
                     </div>
                     <div className="-translate-x-1/2 absolute h-[248px] left-1/2 rounded-bl-[200px] rounded-br-[200px] top-[352px] w-[200px]" data-node-id="1:61" style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.875) 22.125%, rgba(0, 0, 0, 0.95) 65.133%, rgb(0, 0, 0) 100%)" }} />
                     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[8px] items-center justify-center left-1/2 not-italic text-center top-[427px] whitespace-nowrap" data-node-id="1:62">

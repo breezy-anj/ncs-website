@@ -100,8 +100,8 @@ export default function Team() {
                         word="DEVELOP"
                         nameParts={["Kuldeep", "Chaudhary"]}
                         designation="President"
-                        photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[285px] h-[380px] top-[22px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="w-full h-full object-contain pointer-events-none"
                         socialLinks={["https://www.linkedin.com/in/kuldeepchaudhary108/", "https://github.com/Kuldeepchaudhary108/"]}
                         bio="~wanted die with memories not with dreams"
                       />
