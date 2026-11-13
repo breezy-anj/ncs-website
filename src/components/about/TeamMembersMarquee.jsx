@@ -50,7 +50,7 @@ const teamMembers = [
     role: "Smart India Hackathon (SIH) 2025 Winner",
   },
   {
-    image: publicAsset("assets/achievments/Kuldeep Chaudhary.webp"),
+    image: publicAsset("assets/achievments/Kuldeep Chaudhary.png?v=20261113_3"),
     name: "Kuldeep Chaudhary",
     role: "4-Time Hackathon Winner",
   },
