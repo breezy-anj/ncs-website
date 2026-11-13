@@ -267,6 +267,20 @@ export default function Team() {
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:105">
 
                       <TeamMemberCard
+                        className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:192"
+                        image={imgAditya}
+                        color="#6663ff"
+                        word="DEVELOP"
+                        nameParts={["Aditya", "Kumar"]}
+                        designation="Developer"
+                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] h-[480px] top-[38px] profile-img-bottom-shadow"
+                        imgClasses="w-full h-full object-contain pointer-events-none"
+                        linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/"
+                        bio="Curious by nature, always building and experimenting. Love tech, good conversations, and late-night ideas. Here to learn, create, and enjoy the journey."
+                      />
+
+                      <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:106"
                         image={imgRectangle42}
@@ -296,34 +310,6 @@ export default function Team() {
 
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[650.89px] mt-[178.26px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:118"
-                        image={imgRectangle44}
-                        color="#feb9ce"
-                        word="PROGRAM"
-                        nameParts={["Utkarsh", "Shukla"]}
-                        designation="Programmer"
-                        photoClasses="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-                        socialLinks={["https://x.com/Utkarsh00018232", "https://www.linkedin.com/in/utkarsh-shukla-b2442b329/"]}
-                        bio="Programmer by day, Larper by night."
-                      />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:124"
-                        image={imgShreyansh}
-                        color="#feb9ce"
-                        word="PROGRAM"
-                        nameParts={["Shreyansh", "Pandey"]}
-                        designation="Programmer"
-                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[41px] profile-img-bottom-shadow"
-                        imgClasses="w-full h-auto object-top pointer-events-none"
-                        socialLinks={["https://x.com/shrey_007", "https://www.linkedin.com/in/shreyansh-pandey-54949730b"]}
-                        bio="Minding your own business is a quality only a mature mind possesses."
-                      />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:130"
                         image={imgRectangle46}
                         color="#ffc931"
@@ -334,11 +320,53 @@ export default function Team() {
                         imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
                         socialLinks={["https://www.linkedin.com/in/athrva-gupta-93936736a"]}
                       />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[870.89px] mt-[4.26px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:143"
+                        image={imgRectangle48}
+                        color="#6663ff"
+                        word="DEVELOP"
+                        nameParts={["Ayush", "Vashisth"]}
+                        designation="Developer"
+                        photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                        socialLinks={["https://x.com/ayushv005", "https://www.linkedin.com/in/ayush-vashisth-4600a5338", "https://github.com/vasayu"]}
+                        bio="Just having fun with creating unconventional things and coming up with unique solutions to simple problem."
+                      />
                     </div>
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:136">
 
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:149"
+                        image={imgRectangle50}
+                        color="#6663ff"
+                        word="DEVELOP"
+                        nameParts={["Lakshya", "Dubey"]}
+                        designation="Developer"
+                        photoClasses="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                        socialLinks={["https://x.com/Lakshya92116503", "https://www.linkedin.com/in/lakshya-dubey01/", "https://github.com/lakshya-byte"]}
+                        bio="Part-time overthinker, full-time curious human. I love building random things, exploring AI, meeting cool people, and starting projects at 2 AM because apparently sleep can wait. Always down for a good conversation, a crazy idea, or figuring out something I probably didn't need to know 😂"
+                      />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:180"
+                        image={imgRectangle52}
+                        color="#b3fd44"
+                        word="TECHNICAL"
+                        nameParts={["Pragati", "Rajput"]}
+                        designation="Technical"
+                        photoClasses="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                        socialLinks={["https://www.linkedin.com/in/pragati-rajput-96100432b", "https://github.com/Pragati132005", "https://x.com/PragatiRaj1794?t=JJJVoQNak437wk0uUept5w&s=09"]}
+                        bio="Curious, ambitious, and a little unpredictable. I think deeply, dream big, and love making things happen."
+                      />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:137"
                         image={imgRectangle47}
                         color="#feb9ce"
@@ -352,31 +380,17 @@ export default function Team() {
                       />
 
                       <TeamMemberCard
-                        className="col-1 h-[600px] ml-[433.89px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:143"
-                        image={imgRectangle48}
-                        color="#6663ff"
-                        word="DEVELOP"
-                        nameParts={["Ayush", "Vashisth"]}
-                        designation="Developer"
-                        photoClasses="-translate-x-1/2 absolute h-[586px] left-[calc(50%+12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-0 w-[394px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-                        socialLinks={["https://x.com/ayushv005", "https://www.linkedin.com/in/ayush-vashisth-4600a5338", "https://github.com/vasayu"]}
-                        bio="Just having fun with creating unconventional things and coming up with unique solutions to simple problem."
-                      />
-
-                      <TeamMemberCard
                         className="col-1 h-[600px] ml-[650.89px] mt-[160px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:149"
-                        image={imgRectangle50}
-                        color="#6663ff"
-                        word="DEVELOP"
-                        nameParts={["Lakshya", "Dubey"]}
-                        designation="Developer"
-                        photoClasses="-translate-x-1/2 absolute h-[618px] left-[calc(50%+46.16px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[-18.12px] w-[416px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                        socialLinks={["https://x.com/Lakshya92116503", "https://www.linkedin.com/in/lakshya-dubey01/", "https://github.com/lakshya-byte"]}
-                        bio="Part-time overthinker, full-time curious human. I love building random things, exploring AI, meeting cool people, and starting projects at 2 AM because apparently sleep can wait. Always down for a good conversation, a crazy idea, or figuring out something I probably didn't need to know 😂"
+                        dataNodeId="1:124"
+                        image={imgShreyansh}
+                        color="#feb9ce"
+                        word="PROGRAM"
+                        nameParts={["Shreyansh", "Pandey"]}
+                        designation="Programmer"
+                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] top-[41px] profile-img-bottom-shadow"
+                        imgClasses="w-full h-auto object-top pointer-events-none"
+                        socialLinks={["https://x.com/shrey_007", "https://www.linkedin.com/in/shreyansh-pandey-54949730b"]}
+                        bio="Minding your own business is a quality only a mature mind possesses."
                       />
 
                       <TeamMemberCard
@@ -392,9 +406,11 @@ export default function Team() {
                         socialLinks={["https://x.com/ShreyanshD44145", "https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320"]}
                         bio="Talk is cheap. Show me the code."
                       />
+                    </div>
+                    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:179">
 
                       <TeamMemberCard
-                        className="col-1 h-[600px] ml-[216.79px] mt-[160px] relative row-1 w-[200px] group cursor-pointer"
+                        className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:167"
                         image={imgRectangle49}
                         color="#feb9ce"
@@ -406,21 +422,19 @@ export default function Team() {
                         socialLinks={["https://www.linkedin.com/in/shreyansh-shrivastva-416956300/", "https://github.com/ShreyanshShri"]}
                         bio="A collection of oddly specific interests, endless rabbit holes, and whatever I’m obsessed with this week."
                       />
-                    </div>
-                    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:179">
 
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:180"
-                        image={imgRectangle52}
-                        color="#b3fd44"
-                        word="TECHNICAL"
-                        nameParts={["Pragati", "Rajput"]}
-                        designation="Technical"
-                        photoClasses="-translate-x-1/2 absolute h-[600px] left-1/2 shadow-[10.161px_10.161px_10.161px_0px_rgba(0,0,0,0.25)] top-0 w-[372px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        dataNodeId="1:118"
+                        image={imgRectangle44}
+                        color="#feb9ce"
+                        word="PROGRAM"
+                        nameParts={["Utkarsh", "Shukla"]}
+                        designation="Programmer"
+                        photoClasses="-translate-x-1/2 absolute h-[439px] left-[calc(50%-47.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[115.88px] w-[295px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/pragati-rajput-96100432b", "https://github.com/Pragati132005", "https://x.com/PragatiRaj1794?t=JJJVoQNak437wk0uUept5w&s=09"]}
-                        bio="Curious, ambitious, and a little unpredictable. I think deeply, dream big, and love making things happen."
+                        socialLinks={["https://x.com/Utkarsh00018232", "https://www.linkedin.com/in/utkarsh-shukla-b2442b329/"]}
+                        bio="Programmer by day, Larper by night."
                       />
 
                       <TeamMemberCard
@@ -436,20 +450,6 @@ export default function Team() {
                         linkedinUrl="https://www.linkedin.com/in/vishnu-tiwari-930267332/"
                         bio="An ambitious mind with a curious soul. Into AI, tech, and building something meaningful. Quietly competitive, always evolving, and letting actions speak louder than words. 🚀"
                       />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-0 mt-[179px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:192"
-                        image={imgAditya}
-                        color="#6663ff"
-                        word="DEVELOP"
-                        nameParts={["Aditya", "Kumar"]}
-                        designation="Developer"
-                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[200px] h-[480px] top-[38px] profile-img-bottom-shadow"
-                        imgClasses="w-full h-full object-contain pointer-events-none"
-                        linkedinUrl="https://www.linkedin.com/in/aditya-kumar-42861a332/"
-                        bio="Curious by nature, always building and experimenting. Love tech, good conversations, and late-night ideas. Here to learn, create, and enjoy the journey."
-                      />
                     </div>
                   </ResponsiveWaveGrid>
                 </div>
@@ -462,34 +462,66 @@ export default function Team() {
 
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:201"
-                        image={imgRectangle55}
-                        color="#ffc931"
-                        word="DESIGN"
-                        nameParts={["Darshita", "Jain"]}
-                        designation="Designer"
-                        photoClasses="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/darshita-jain-23144137b"]}
-                        bio="A little tech, a little fashion, a lot of imagination. Turning random ideas into pretty designs & little moments into aesthetics."
-                      />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:207"
-                        image={imgRectangle56}
-                        color="#ffc931"
-                        word="DESIGN"
-                        nameParts={["Piyush", "Gautam"]}
-                        designation="Designer"
-                        photoClasses="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        dataNodeId="1:225"
+                        image={imgRectangle59}
+                        color="#feb9ce"
+                        word="PROGRAM"
+                        nameParts={["Aanya", "Gogia"]}
+                        designation="Programmer"
+                        photoClasses="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/piyush-gautam-970502395/"]}
-                        bio="A creative mind with too many tabs open."
+                        socialLinks={["https://www.linkedin.com/in/aanya-gogia-732608385/", "https://codolio.com/profile/AanyaGogia"]}
+                        bio="A tech enthusiast who enjoys coding, competitive programming, and trying out new things. Always learning, building, and having fun along the way."
                       />
 
                       <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:282"
+                        image={imgAjPhoto}
+                        color="#6663ff"
+                        word="DEVELOP"
+                        nameParts={["Anjneya", "Singh"]}
+                        designation="Developer"
+                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[250px] top-[90px] profile-img-bottom-shadow"
+                        imgClasses="w-full h-auto object-top pointer-events-none"
+                        socialLinks={["https://github.com/breezy-anj"]}
+                        bio={`In buggiest day,
+In glitchiest night,
+No error shall escape my sight.
+Let those who worship Claude's might,
+Beware my power, Neovim's sleight!`}
+                      />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[435px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:276"
+                        image={imgRectangle67}
+                        color="#b3fd44"
+                        word="TECHNICAL"
+                        nameParts={["Ansh", "Mittal"]}
+                        designation="Technical"
+                        photoClasses="-translate-x-1/2 absolute h-[485px] left-1/2 top-0 w-[200px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="w-full h-full object-contain pointer-events-none"
+                        socialLinks={["https://www.linkedin.com/in/ansh-mittal-xr/", "https://github.com/phoenix-xr"]}
+                        bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶."
+                      />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:251"
+                        image={imgRectangle63}
+                        color="#feb9ce"
+                        word="PROGRAM"
+                        nameParts={["Aryan", "Singh"]}
+                        designation="Programmer"
+                        photoClasses="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                        socialLinks={["https://www.linkedin.com/in/oxy8en", "https://codolio.com/profile/oxy8en"]}
+                        bio="My Codes have trust issues with the Time Limit"
+                      />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[869px] mt-0 relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:213"
                         image={imgRectangle57}
                         color="#ffc931"
@@ -503,7 +535,23 @@ export default function Team() {
                       />
 
                       <TeamMemberCard
-                        className="col-1 h-[600px] ml-[652px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+                        className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:201"
+                        image={imgRectangle55}
+                        color="#ffc931"
+                        word="DESIGN"
+                        nameParts={["Darshita", "Jain"]}
+                        designation="Designer"
+                        photoClasses="-translate-x-1/2 absolute h-[394px] left-[calc(50%-17.91px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[82.26px] w-[253px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                        socialLinks={["https://www.linkedin.com/in/darshita-jain-23144137b"]}
+                        bio="A little tech, a little fashion, a lot of imagination. Turning random ideas into pretty designs & little moments into aesthetics."
+                      />
+                    </div>
+                    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:238">
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:219"
                         image={imgRectangle58}
                         color="#feb9ce"
@@ -517,47 +565,31 @@ export default function Team() {
                       />
 
                       <TeamMemberCard
-                        className="col-1 h-[600px] ml-[1086px] mt-[179px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:225"
-                        image={imgRectangle59}
+                        className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:263"
+                        image={imgRectangle65}
                         color="#feb9ce"
                         word="PROGRAM"
-                        nameParts={["Aanya", "Gogia"]}
+                        nameParts={["Mohd", "Fahad"]}
                         designation="Programmer"
-                        photoClasses="-translate-x-1/2 absolute h-[375px] left-[calc(50%+0.12px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[37px] w-[282px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/aanya-gogia-732608385/", "https://codolio.com/profile/AanyaGogia"]}
-                        bio="A tech enthusiast who enjoys coding, competitive programming, and trying out new things. Always learning, building, and having fun along the way."
+                        photoClasses="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
+                        socialLinks={["https://www.linkedin.com/in/fahadxiii/"]}
+                        bio="My peace isn't inner peace; it's “All test cases passed”"
                       />
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-[869px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        expandDirection="left"
-                        dataNodeId="1:232"
-                        image={imgRectangle60}
-                        color="#feb9ce"
-                        word="PROGRAM"
-                        nameParts={["Sidhi", "Saxena"]}
-                        designation="Programmer"
-                        photoClasses="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/sidhi-saxena-672068377", "https://codolio.com/profile/Sidhisaxena/card"]}
-                        bio="A curious mind, a passionate programmer, and a dancer at heart. I love solving problems, exploring new ideas, and bringing positive energy wherever I go."
-                      />
-                    </div>
-                    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:238">
 
                       <TeamMemberCard
-                        className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:239"
-                        image={imgRectangle61}
-                        color="#6663ff"
-                        word="DEVELOP"
-                        nameParts={["Tanishka", "Israni"]}
-                        designation="Developer"
-                        photoClasses="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:207"
+                        image={imgRectangle56}
+                        color="#ffc931"
+                        word="DESIGN"
+                        nameParts={["Piyush", "Gautam"]}
+                        designation="Designer"
+                        photoClasses="-translate-x-1/2 absolute h-[436px] left-[calc(50%-0.5px)] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] top-[61px] w-[293px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/tanishka-israni-852923380"]}
-                        bio="A curious tech enthusiast who loves turning ideas into real projects. Always up for hackathons, learning something new, and trying things beyond my comfort zone. Creative and always looking for the next challenge."
+                        socialLinks={["https://www.linkedin.com/in/piyush-gautam-970502395/"]}
+                        bio="A creative mind with too many tabs open."
                       />
 
                       <TeamMemberCard
@@ -575,21 +607,7 @@ export default function Team() {
                       />
 
                       <TeamMemberCard
-                        className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:251"
-                        image={imgRectangle63}
-                        color="#feb9ce"
-                        word="PROGRAM"
-                        nameParts={["Aryan", "Singh"]}
-                        designation="Programmer"
-                        photoClasses="-translate-x-1/2 absolute h-[474px] left-[calc(50%-0.82px)] shadow-[2.88px_2.88px_2.88px_0px_rgba(0,0,0,0.25)] top-[14.88px] w-[319px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/oxy8en", "https://codolio.com/profile/oxy8en"]}
-                        bio="My Codes have trust issues with the Time Limit"
-                      />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-[217px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+                        className="col-1 h-[600px] ml-[868px] mt-0 relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:257"
                         image={imgSanskar}
                         color="#feb9ce"
@@ -601,25 +619,39 @@ export default function Team() {
                         socialLinks={["https://www.linkedin.com/in/sanskarpal23/", "https://codolio.com/profile/sanskarpal"]}
                         bio="I write code like I make jokes: recklessly, unnecessarily, and usually wrong."
                       />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-[434px] mt-0 relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:263"
-                        image={imgRectangle65}
-                        color="#feb9ce"
-                        word="PROGRAM"
-                        nameParts={["Mohd", "Fahad"]}
-                        designation="Programmer"
-                        photoClasses="-translate-x-1/2 absolute h-[486px] left-[calc(50%+45.66px)] shadow-[4.32px_4.32px_4.32px_0px_rgba(0,0,0,0.25)] top-[30.88px] w-[327px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
-                        socialLinks={["https://www.linkedin.com/in/fahadxiii/"]}
-                        bio="My peace isn't inner peace; it's “All test cases passed”"
-                      />
                     </div>
                     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="1:269">
 
                       <TeamMemberCard
+                        className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:232"
+                        image={imgRectangle60}
+                        color="#feb9ce"
+                        word="PROGRAM"
+                        nameParts={["Sidhi", "Saxena"]}
+                        designation="Programmer"
+                        photoClasses="-translate-x-1/2 absolute h-[1168px] left-[calc(50%-0.94px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[-535.12px] w-[785px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                        socialLinks={["https://www.linkedin.com/in/sidhi-saxena-672068377", "https://codolio.com/profile/Sidhisaxena/card"]}
+                        bio="A curious mind, a passionate programmer, and a dancer at heart. I love solving problems, exploring new ideas, and bringing positive energy wherever I go."
+                      />
+
+                      <TeamMemberCard
                         className="col-1 h-[600px] ml-[217px] mt-0 relative row-1 w-[200px] group cursor-pointer"
+                        dataNodeId="1:239"
+                        image={imgRectangle61}
+                        color="#6663ff"
+                        word="DEVELOP"
+                        nameParts={["Tanishka", "Israni"]}
+                        designation="Developer"
+                        photoClasses="-translate-x-1/2 absolute h-[458px] left-[calc(50%-8.41px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[31.26px] w-[308px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                        socialLinks={["https://www.linkedin.com/in/tanishka-israni-852923380"]}
+                        bio="A curious tech enthusiast who loves turning ideas into real projects. Always up for hackathons, learning something new, and trying things beyond my comfort zone. Creative and always looking for the next challenge."
+                      />
+
+                      <TeamMemberCard
+                        className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
                         dataNodeId="1:270"
                         image={imgRectangle66}
                         color="#b3fd44"
@@ -630,38 +662,6 @@ export default function Team() {
                         imgClasses="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
                         socialLinks={["https://www.linkedin.com/in/tanishq-marwari-109772390/"]}
                         bio="Professional overthinker Part time coder Full time learner"
-                      />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-[434px] mt-[177px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:276"
-                        image={imgRectangle67}
-                        color="#b3fd44"
-                        word="TECHNICAL"
-                        nameParts={["Ansh", "Mittal"]}
-                        designation="Technical"
-                        photoClasses="-translate-x-1/2 absolute h-[485px] left-1/2 top-0 w-[200px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                        imgClasses="w-full h-full object-contain pointer-events-none"
-                        socialLinks={["https://www.linkedin.com/in/ansh-mittal-xr/", "https://github.com/phoenix-xr"]}
-                        bio="Cooks better than Walter White when it comes to tech. Prefers calls over texts. Always have Weeknd on repeat 🎶."
-                      />
-
-                      <TeamMemberCard
-                        className="col-1 h-[600px] ml-0 mt-[177px] relative row-1 w-[200px] group cursor-pointer"
-                        dataNodeId="1:282"
-                        image={imgAjPhoto}
-                        color="#6663ff"
-                        word="DEVELOP"
-                        nameParts={["Anjneya", "Singh"]}
-                        designation="Developer"
-                        photoClasses="left-1/2 -translate-x-1/2 absolute w-[250px] top-[90px] profile-img-bottom-shadow"
-                        imgClasses="w-full h-auto object-top pointer-events-none"
-                        socialLinks={["https://github.com/breezy-anj"]}
-                        bio={`In buggiest day,
-In glitchiest night,
-No error shall escape my sight.
-Let those who worship Claude's might,
-Beware my power, Neovim's sleight!`}
                       />
                     </div>
                   </ResponsiveWaveGrid>
