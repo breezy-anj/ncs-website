@@ -1,4 +1,4 @@
-import { publicAsset } from "../lib/publicAsset"
+﻿import { publicAsset } from "../lib/publicAsset"
 
 export interface GalleryPhoto {
   id: string | number
@@ -25,7 +25,7 @@ export const inoutHacks30Photos: GalleryPhoto[] = [
   { id: "inout-14", image: publicAsset("assets/gallery/inout/web/inout_14.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_14.webp"), title: "Winner Felicitations", caption: "Honoring top innovative solutions" },
   { id: "inout-15", image: publicAsset("assets/gallery/inout/web/inout_15.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_15.webp"), title: "Trophy Celebration", caption: "Winners crowned on the grand stage" },
   { id: "inout-16", image: publicAsset("assets/gallery/inout/web/inout_16.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_16.webp"), title: "Organizing Crew", caption: "The Nibble team orchestrating the event" },
-  { id: "inout-17", image: publicAsset("assets/gallery/inout/web/inout_17.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_17.webp"), title: "Society Group Photo", caption: "Mentors, leads, and coordinators" },
+  { id: "inout-17", image: publicAsset("assets/gallery/inout/web/inout_17.jpeg"), thumb: publicAsset("assets/gallery/inout/web/inout_17.jpeg"), title: "Society Group Photo", caption: "Mentors, leads, and coordinators" },
   { id: "inout-18", image: publicAsset("assets/gallery/inout/web/inout_18.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_18.webp"), title: "Awards & Mementos", caption: "Recognizing outstanding technical craft" },
   { id: "inout-19", image: publicAsset("assets/gallery/inout/web/inout_19.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_19.webp"), title: "Grand Finale Wrap-up", caption: "Celebrating unforgettable memories and builds" },
   { id: "inout-20", image: publicAsset("assets/gallery/inout/web/inout_20.webp"), thumb: publicAsset("assets/gallery/inout/thumbs/inout_20.webp"), title: "INOUT Hacks '25", caption: "Another landmark chapter in NCS history" },
@@ -56,9 +56,9 @@ export const nibbleMonthPhotos: GalleryPhoto[] = [
   { id: "workshop-3", image: publicAsset("assets/gallery/workshop/web/workshop_03.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_03.webp"), title: "Architecture Walkthrough", caption: "Exploring frontend and backend communication" },
   { id: "workshop-4", image: publicAsset("assets/gallery/workshop/web/workshop_04.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_04.webp"), title: "Pair Programming", caption: "Collaborative problem solving and debugging" },
   { id: "workshop-5", image: publicAsset("assets/gallery/workshop/web/workshop_05.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_05.webp"), title: "Tech Mentorship", caption: "Mentors assisting students with setup and syntax" },
-  { id: "workshop-6", image: publicAsset("assets/gallery/workshop/web/workshop_06.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_06.webp"), title: "Interactive Lab", caption: "Real-time practice on developer tooling and Git" },
+  { id: "workshop-6", image: publicAsset("assets/gallery/workshop/web/workshop_06.jpeg"), thumb: publicAsset("assets/gallery/workshop/web/workshop_06.jpeg"), title: "Interactive Lab", caption: "Real-time practice on developer tooling and Git" },
   { id: "workshop-7", image: publicAsset("assets/gallery/workshop/web/workshop_07.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_07.webp"), title: "Classroom Engagement", caption: "Deep focus during hands-on coding drills" },
-  { id: "workshop-8", image: publicAsset("assets/gallery/workshop/web/workshop_08.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_08.webp"), title: "Developer Sprint", caption: "Building full-stack prototypes from scratch" },
+  { id: "workshop-8", image: publicAsset("assets/gallery/workshop/web/workshop_08.jpeg"), thumb: publicAsset("assets/gallery/workshop/web/workshop_08.jpeg"), title: "Developer Sprint", caption: "Building full-stack prototypes from scratch" },
   { id: "workshop-9", image: publicAsset("assets/gallery/workshop/web/workshop_09.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_09.webp"), title: "Code Review Session", caption: "Examining clean code practices and structure" },
   { id: "workshop-10", image: publicAsset("assets/gallery/workshop/web/workshop_10.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_10.webp"), title: "Domain Deep Dive", caption: "Exploring web, app, and backend stacks" },
   { id: "workshop-11", image: publicAsset("assets/gallery/workshop/web/workshop_11.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_11.webp"), title: "Problem Solving Lab", caption: "Tackling algorithmic edge cases together" },
@@ -70,7 +70,7 @@ export const nibbleMonthPhotos: GalleryPhoto[] = [
   { id: "workshop-17", image: publicAsset("assets/gallery/workshop/web/workshop_17.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_17.webp"), title: "Mentor Assistance", caption: "Individual guidance for every aspiring developer" },
   { id: "workshop-18", image: publicAsset("assets/gallery/workshop/web/workshop_18.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_18.webp"), title: "Classroom Energy", caption: "Vibrant learning environment and tech curiosity" },
   { id: "workshop-19", image: publicAsset("assets/gallery/workshop/web/workshop_19.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_19.webp"), title: "Sprint Completion", caption: "Finalizing workshop assignments and challenges" },
-  { id: "workshop-20", image: publicAsset("assets/gallery/workshop/web/workshop_20.webp"), thumb: publicAsset("assets/gallery/workshop/thumbs/workshop_20.webp"), title: "Certificate & Wrap-up", caption: "Celebrating a month of dedicated learning and building" },
+  { id: "workshop-20", image: publicAsset("assets/gallery/workshop/web/workshop_20.jpeg"), thumb: publicAsset("assets/gallery/workshop/web/workshop_20.jpeg"), title: "Certificate & Wrap-up", caption: "Celebrating a month of dedicated learning and building" },
 ]
 
 export const workshopsPhotos = nibbleMonthPhotos
@@ -97,4 +97,9 @@ export const zealiconPhotos: GalleryPhoto[] = [
   { id: "zealicon-19", image: publicAsset("assets/gallery/zealicon/web/zealicon_19.webp"), thumb: publicAsset("assets/gallery/zealicon/thumbs/zealicon_19.webp"), title: "Volunteers & Crew", caption: "The team that made Zealicon technical events a triumph" },
   { id: "zealicon-20", image: publicAsset("assets/gallery/zealicon/web/zealicon_20.webp"), thumb: publicAsset("assets/gallery/zealicon/thumbs/zealicon_20.webp"), title: "Grand Finale Cheers", caption: "Closing ceremonies celebrating technical innovation" },
 ]
+
+
+
+
+
 
