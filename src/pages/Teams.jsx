@@ -348,6 +348,7 @@ export default function Team() {
                         photoClasses="-translate-x-1/2 absolute h-[548px] left-[calc(50%+13px)] shadow-[3.6px_3.6px_3.6px_0px_rgba(0,0,0,0.25)] top-[13px] w-[368px] profile-img-bottom-shadow transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         imgClasses="absolute inset-0 max-w-none object-bottom pointer-events-none size-full"
                         socialLinks={["https://www.linkedin.com/in/shivangi-trivedi031"]}
+                        bio="Currently in development, constantly overthinking, occasionally crashing, but fully confident to handle my own system."
                       />
 
                       <TeamMemberCard

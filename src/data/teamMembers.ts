@@ -248,7 +248,7 @@ const teamMembers: ImageData[] = [
     alt: "Shivangi Trivedi",
     title: "Shivangi Trivedi",
     designation: "NCS Programmer",
-    description: "NCS Programmer"
+    description: "Currently in development, constantly overthinking, occasionally crashing, but fully confident to handle my own system."
   },
   {
     id: "member-2147239170",
