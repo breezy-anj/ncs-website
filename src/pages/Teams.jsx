@@ -14,13 +14,14 @@ const imgVishnu = publicAsset("change_people/vishnu.png");
 const imgAditya = publicAsset("change_people/aditya.png");
 const imgAjPhoto = publicAsset("assets/ajPhoto.png");
 const imgAnjneya = imgAjPhoto;
+const imgKuldeep = publicAsset("change_people/kuldeep.png?v=20261113_1");
 
 const assetPathPrefix = "/assets";
 const imgRectangle31 = `${assetPathPrefix}/13843.png`;
 const imgRectangle32 = `${assetPathPrefix}/a965c.png`;
 const imgRectangle33 = `${assetPathPrefix}/4fb82.png`;
 const imgRectangle34 = `${assetPathPrefix}/2ba54.png`;
-const imgRectangle35 = `${assetPathPrefix}/76ffc.png`;
+const imgRectangle35 = imgKuldeep;
 const imgRectangle36 = `${assetPathPrefix}/fa11a.png`;
 const imgRectangle37 = `${assetPathPrefix}/e4014.png`;
 const imgRectangle38 = `${assetPathPrefix}/b08c2.png`;
@@ -94,7 +95,7 @@ export default function Team() {
                         className="col-1 h-[600px] ml-0 mt-0 relative row-1 w-[200px] group cursor-pointer"
                         expandDirection="left"
                         dataNodeId="1:59"
-                        image={imgRectangle35}
+                        image={imgKuldeep}
                         color="#6663ff"
                         word="DEVELOP"
                         nameParts={["Kuldeep", "Chaudhary"]}

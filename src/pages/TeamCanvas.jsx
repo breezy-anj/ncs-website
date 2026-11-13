@@ -3,7 +3,7 @@ const imgRectangle31 = `${assetPathPrefix}/13843.png`;
 const imgRectangle32 = `${assetPathPrefix}/a965c.png`;
 const imgRectangle33 = `${assetPathPrefix}/4fb82.png`;
 const imgRectangle34 = `${assetPathPrefix}/2ba54.png`;
-const imgRectangle35 = `${assetPathPrefix}/76ffc.png`;
+const imgRectangle35 = "/change_people/kuldeep.png?v=20261113_1";
 const imgRectangle36 = `${assetPathPrefix}/fa11a.png`;
 const imgRectangle37 = `${assetPathPrefix}/e4014.png`;
 const imgRectangle38 = `${assetPathPrefix}/b08c2.png`;

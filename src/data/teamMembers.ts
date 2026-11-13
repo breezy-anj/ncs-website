@@ -100,7 +100,7 @@ const teamMembers: ImageData[] = [
   },
   {
     id: "member-2147239151",
-    src: "/assets/team_avatars/avatar_2147239151.png",
+    src: "/assets/team_avatars/avatar_2147239151.png?v=20261113_1",
     alt: "Kuldeep Chaudhary",
     title: "Kuldeep Chaudhary",
     designation: "NCS President",
