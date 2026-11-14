@@ -671,7 +671,7 @@ Beware my power, Neovim's sleight!`}
           </div>
         </div>
       </div>
-      <Footer hideParticleLogo />
+      <Footer />
     </div>
   );
 }
